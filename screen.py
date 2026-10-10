@@ -333,6 +333,66 @@ def rank_all(cands, feats, bars, asof, live):
     rows.sort(key=lambda r: (order[r["tier"]], -(r.get("exp_R") or -9)))
     return rows
 
+# ----------------------------------------------------------------------------- pooled backtest: does an archetype beat drift at all?
+def extra_signals(x, arch, spy):
+    """Candidate archetypes proposed by research, tested before they are adopted."""
+    c, v = x["close"], x["volume"]
+    if arch == "RECOVERY_LEADER":
+        j = c.index.intersection(spy.index); cs, ss = c[j], spy[j]; s200 = cs.rolling(200).mean()
+        return ((cs/cs.shift(63)-ss/ss.shift(63)) >= 0.25) & (cs/cs.rolling(252).max()-1 <= -0.15) & (cs > s200) & (s200 > s200.shift(20))
+    if arch == "GAP_UP_ON_VOLUME":
+        return (c.pct_change() >= 0.08) & (v/v.rolling(20).mean().shift(1) >= 3)
+    return None
+
+def backtest(bars, feats, universe):
+    """Every past signal, every stock, 10 years. Result = return over the next 20 and 60 sessions MINUS SPY over the
+    same sessions, so a rising market is not counted as edge. Baseline = the same measure on ordinary days.
+    Caveat printed with the output: today's index members only, so losers that left the index are missing."""
+    spy = bars["SPY"]["close"]; out = {}
+    archs = ["BASE_COIL", "MOMENTUM", "NARRATIVE_SCARE", "VALUE_DIVERGENCE", "MACRO_PUNISHED", "RECOVERY_LEADER", "GAP_UP_ON_VOLUME"]
+    acc = {a: [] for a in archs}; base = []
+    for t in universe:
+        x = bars.get(t)
+        if x is None or len(x) < 400 or t in BENCH: continue
+        c = x["close"]; j = c.index.intersection(spy.index)
+        if len(j) < 400: continue
+        cs, ss = c[j], spy[j]
+        ex = {h: (cs.shift(-h)/cs-1) - (ss.shift(-h)/ss-1) for h in (20, 60)}
+        yr = pd.Series(cs.index.year, index=cs.index)
+        idx_all = np.arange(252, len(cs)-60, 10)
+        base += [(ex[20].iloc[i]*100, ex[60].iloc[i]*100, yr.iloc[i]) for i in idx_all]
+        secbar = bars.get(SECTOR_ETF.get((feats.get(t) or {}).get("sector") or "", ""))
+        for a in archs:
+            try:
+                sig = signal_days(x, a, secbar["close"] if secbar is not None else None) if a in ENTRY_STYLE else extra_signals(x, a, spy)
+            except Exception:
+                sig = None
+            if sig is None: continue
+            sig = sig.reindex(cs.index).fillna(False)
+            for i in thin([k for k in np.flatnonzero(sig.values) if 252 <= k < len(cs)-60]):
+                acc[a].append((ex[20].iloc[i]*100, ex[60].iloc[i]*100, yr.iloc[i]))
+    b = pd.DataFrame(base, columns=["e20", "e60", "yr"]).dropna()
+    mid = int(b.yr.median())
+    def stat(d):
+        r = {"n": int(len(d))}
+        for h in ("e20", "e60"):
+            m, sd = float(d[h].mean()), float(d[h].std())
+            bm = float(b[h].mean())
+            se = sd/np.sqrt(len(d)) if len(d) > 1 else float("nan")
+            r[h] = dict(mean_excess=round(m, 2), baseline=round(bm, 2), edge=round(m-bm, 2), t=round((m-bm)/se, 1) if se and se == se else None,
+                        pct_beat_spy=round(float((d[h] > 0).mean()*100), 0), median=round(float(d[h].median()), 2))
+        r["edge60_first_half"] = round(float(d[d.yr <= mid].e60.mean() - b[b.yr <= mid].e60.mean()), 2) if (d.yr <= mid).any() else None
+        r["edge60_second_half"] = round(float(d[d.yr > mid].e60.mean() - b[b.yr > mid].e60.mean()), 2) if (d.yr > mid).any() else None
+        return r
+    for a in archs:
+        d = pd.DataFrame(acc[a], columns=["e20", "e60", "yr"]).dropna()
+        if len(d) >= 30: out[a] = stat(d)
+    out["_baseline"] = dict(n=int(len(b)), mean_excess_20=round(float(b.e20.mean()), 2), mean_excess_60=round(float(b.e60.mean()), 2), split_year=mid)
+    out["_note"] = ("Excess return vs SPY after every past signal, all stocks pooled, signals at least 20 sessions apart per stock. "
+                    "edge = signal mean minus ordinary-day mean. t above about 2 with both halves the same sign is a real effect; anything else is not shown to work. "
+                    "Survivorship bias: today's index members only, which flatters buy-the-dip archetypes. Entry at the signal-day close, no stops, no costs.")
+    return out
+
 # ----------------------------------------------------------------------------- outcome tracking
 def track(out, survivors, bars, asof):
     """Log each survivor the first time it appears (once per 20 sessions), then score every logged call
@@ -407,6 +467,11 @@ def main():
                                   **{x: f.get(x) for x in keep}))
             if not a.no_charts: chart(t, bars[t], f, k, out/"charts"/f"{t}_{k}.png")
     ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir)
+    try:
+        bt = backtest(bars, feats, [t for t in feats if "skip" not in feats[t] or feats[t].get("skip") == "deal-pinned"])
+    except Exception as e:
+        bt = {"_error": f"{type(e).__name__}: {str(e)[:120]}"}
+    (out/"backtest.json").write_text(json.dumps(bt, indent=1))
     scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
     ok = [f for f in feats.values() if "skip" not in f]
@@ -416,10 +481,13 @@ def main():
                    pct_within_5_of_52w_high=round(float(np.mean([f["dd52"] > -5 for f in ok])*100), 1))
     (out/"screen_output.json").write_text(json.dumps(dict(
         asof=asof, generated_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"), universe=len(feats), candidates_per_archetype=counts,
-        dropped=dropped, universe_note="; ".join(UNIVERSE_NOTE), scorecard=scorecard, ranked=ranked, breadth=breadth, benchmarks=bench, survivors=survivors,
+        dropped=dropped, universe_note="; ".join(UNIVERSE_NOTE), scorecard=scorecard, backtest=bt, ranked=ranked, breadth=breadth, benchmarks=bench, survivors=survivors,
         notes="Prices are raw split-adjusted closes (dividends not added back). ranked[] simulates each setup's own stop, target and 60-session time stop on the stock's 10-year history, against the same trade taken on any day (the drift). Estimates and earnings dates are from Yahoo when available. MACRO_PUNISHED names no driver; research must."), indent=1))
     (out/"market_state_full.json").write_text(json.dumps(feats, indent=0, sort_keys=True))
     print(f"asof {asof} universe {len(feats)} dropped {dropped} candidates {counts} survivors {len(survivors)} breadth {breadth}")
+    for a_, r_ in bt.items():
+        if not a_.startswith("_"): print(f"BACKTEST {a_:17} n {r_['n']:6} | 20d edge {r_['e20']['edge']:+.2f} t {r_['e20']['t']} | 60d edge {r_['e60']['edge']:+.2f} t {r_['e60']['t']} beat SPY {r_['e60']['pct_beat_spy']:.0f}% | halves {r_['edge60_first_half']} / {r_['edge60_second_half']}")
+    print("BACKTEST baseline", bt.get("_baseline"), bt.get("_error", ""))
     print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "WATCH", "PASS")))
     for r in ranked:
         if r["tier"] != "PASS": print(f"  {r['tier']:9} {r['ticker']:6} {r['archetype'][:10]:10} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
