@@ -21,7 +21,9 @@ SECTOR_ETF = {"Information Technology": "XLK", "Financials": "XLF", "Energy": "X
               "Industrials": "XLI", "Utilities": "XLU", "Consumer Discretionary": "XLY", "Consumer Staples": "XLP",
               "Real Estate": "XLRE", "Materials": "XLB", "Communication Services": "XLC"}
 BENCH = ["SPY", "QQQ", "IWM"] + sorted(set(SECTOR_ETF.values()))
-PER_ARCHETYPE = 8          # survivors kept per archetype
+PER_ARCHETYPE = 8          # survivors charted per archetype
+RANK_POOL = 12             # candidates per archetype sent to the ranking step
+HOLD = 60                  # sessions: time stop used in every simulated trade
 MIN_PRICE, MIN_DVOL, MIN_BARS = 5.0, 20e6, 260
 
 # ----------------------------------------------------------------------------- data
@@ -62,7 +64,7 @@ def pull_yf(tickers):
     out = {}
     for i in range(0, len(tickers), 100):
         chunk = tickers[i:i+100]
-        d = yf.download(chunk, period="3y", interval="1d", auto_adjust=True, group_by="ticker", threads=True, progress=False)
+        d = yf.download(chunk, period="10y", interval="1d", auto_adjust=False, group_by="ticker", threads=True, progress=False)
         for t in chunk:
             try:
                 x = d[t][["Close", "High", "Low", "Volume"]].dropna()
@@ -76,7 +78,7 @@ def pull_csv(folder):
     for f in sorted(Path(folder).glob("*.csv")):
         d = pd.read_csv(f, parse_dates=["timestamp"]).sort_values("timestamp").set_index("timestamp")
         k = d["adjusted_close"] / d["close"] if "adjusted_close" in d else 1.0
-        out[f.stem] = pd.DataFrame({"close": d["close"]*k, "high": d["high"]*k, "low": d["low"]*k, "volume": d["volume"]}).tail(756)
+        out[f.stem] = pd.DataFrame({"close": d["close"]*k, "high": d["high"]*k, "low": d["low"]*k, "volume": d["volume"]}).tail(2520)
     return out
 
 # ----------------------------------------------------------------------------- features
@@ -108,13 +110,16 @@ def features(t, x, spy):
     f.update(pivot=round(rhi, 2), base_low=round(rlo, 2), tightness=(rhi-rlo)/((rhi+rlo)/2),
              compression=float(atr.iloc[-1]/atr.iloc[-43]), dryup=float(v.tail(20).mean()/v.iloc[-60:-20].mean()),
              dist_pivot=(last/rhi-1)*100)
+    f.update(s50=float(s50.iloc[-1]), s200=float(s200.iloc[-1]), hi52c=hi52, min20=float(c.tail(20).min()),
+             pivot_c=float(c.iloc[-65:-5].max()), base_low_c=float(c.iloc[-65:-5].min()))
     bbw = 4*c.rolling(20).std()/s20
     f["bbw_pct"] = float((bbw.tail(504) < bbw.iloc[-1]).mean()*100)      # percentile of today's bandwidth, 2y
     # scare: worst single session inside the last 10, with its volume multiple and the trend before it
     ret = c.pct_change()*100; k = int(np.argmin(ret.tail(10).values)); pos = n-10+k
     f.update(worst_day=float(ret.iloc[pos]), worst_day_date=str(c.index[pos].date()),
              worst_day_volx=float(v.iloc[pos]/v.iloc[pos-20:pos].mean()),
-             pre_vs200=float((c.iloc[pos-1]/s200.iloc[pos-1]-1)*100))
+             pre_vs200=float((c.iloc[pos-1]/s200.iloc[pos-1]-1)*100),
+             pre_event_close=float(c.iloc[pos-1]), post_event_low=float(c.iloc[pos:].min()))
     # relative strength
     if spy is not None:
         j = c.index.intersection(spy.index)
@@ -129,7 +134,7 @@ def features(t, x, spy):
 # ----------------------------------------------------------------------------- archetypes
 # Each rule returns (score, reason) or None. Higher score = better example of the archetype.
 def a_base(f):
-    if not (f["tightness"] < 0.20 and f["compression"] < 1.0 and f["dryup"] < 1.0 and f["vs200"] > -5): return None
+    if not (f["tightness"] < 0.20 and f["compression"] < 1.0 and f["dryup"] < 1.0 and f["vs200"] > -5 and f["bbw_pct"] <= 30): return None   # tight vs its OWN history
     d = f["dist_pivot"]
     cls = "IN_BASE" if d < -3 else "AT_PIVOT" if d <= 0.5 else "BREAKOUT" if d <= 6 else None
     if cls is None: return None
@@ -145,7 +150,7 @@ def a_scare(f):
     return -f["worst_day"] + f["worst_day_volx"] + f["pre_vs200"]/5, f"{f['worst_day']:.1f}% on {f['worst_day_date']} at {f['worst_day_volx']:.1f}x volume; was {f['pre_vs200']:+.0f}% over the 200d before it; now RSI {f['rsi']:.0f}"
 
 def a_value_div(f):   # price half only. The estimates half (revisions turning up) is added by estimates.py when a key exists.
-    if not (f["dd52"] <= -25 and f["vs20"] > 0 and f["m1"] > 0 and f["rsi"] > 45 and f["rsi"] < 65): return None
+    if not (f["dd52"] <= -25 and f["vs20"] > 0 and 0 < f["m1"] <= 25 and f["rsi"] > 45 and f["rsi"] < 65): return None   # over +25% in a month: the idea is gone
     return -f["dd52"]/2 + f["m1"], f"{f['dd52']:.0f}% off the 52w high, back over the 20d, 1m {f['m1']:+.1f}%. Needs estimates: revisions must be turning up"
 
 def a_macro(f, sec):  # sector has recovered, the stock has not
@@ -187,6 +192,146 @@ def chart(t, x, f, arch, path):
     for a in (ax, av):
         for s in a.spines.values(): s.set_visible(False)
     fig.savefig(path, bbox_inches="tight", facecolor=PAPER); plt.close(fig)
+
+# ----------------------------------------------------------------------------- ranking: does this setup pay, on this stock's own history?
+ENTRY_STYLE = {"BASE_COIL": "confirmation", "MOMENTUM": "confirmation", "NARRATIVE_SCARE": "weakness", "VALUE_DIVERGENCE": "weakness",
+               "MACRO_PUNISHED": "weakness", "UNCLASSIFIED": "none"}
+
+def levels(f, arch):
+    """Entry, stop, target from raw closes. Target None = no natural target; exit is the stop or the time stop."""
+    last = f["last"]; floor20 = f["min20"]*0.98
+    if arch == "BASE_COIL":
+        entry = max(f["pivot_c"], last); stop = f["s50"] if 0.03 <= 1-f["s50"]/entry <= 0.10 else entry*0.93
+        return entry, stop, entry + (f["pivot_c"]-f["base_low_c"])
+    if arch == "MOMENTUM":
+        return last, (f["s50"] if 0.03 <= 1-f["s50"]/last <= 0.12 else last*0.90), None
+    if arch == "NARRATIVE_SCARE":
+        return last, min(f["post_event_low"]*0.97, last*0.95), f["pre_event_close"]
+    if arch == "VALUE_DIVERGENCE":
+        return last, min(floor20, last*0.95), (f["s200"] if f["s200"] > last*1.05 else last + 0.5*(f["hi52c"]-last))
+    if arch == "MACRO_PUNISHED":
+        return last, min(floor20, last*0.95), last*1.12
+    return last, min(floor20, last*0.95), None
+
+def signal_days(x, arch, sec=None):
+    """Boolean series: the days in this stock's past when the same archetype condition was true."""
+    c, v = x["close"], x["volume"]
+    s20, s50, s200 = c.rolling(20).mean(), c.rolling(50).mean(), c.rolling(200).mean()
+    hi, lo = c.rolling(252).max(), c.rolling(252).min()
+    if arch == "BASE_COIL":
+        rhi, rlo = c.rolling(60).max().shift(5), c.rolling(60).min().shift(5)
+        return ((rhi-rlo)/((rhi+rlo)/2) < 0.20) & (c > rhi) & (c.shift(1) <= rhi.shift(1))        # breakout day from a tight base
+    if arch == "MOMENTUM":
+        return ((c-lo)/(hi-lo) > 0.90) & (c/c.shift(126)-1 > 0.20) & (c > s50) & (c/s50-1 < 0.15) & (s50 > s50.shift(10)) & (s200 > s200.shift(20))
+    if arch == "NARRATIVE_SCARE":
+        return (c.pct_change() <= -0.07) & (v/v.rolling(20).mean().shift(1) >= 2.5) & (c.shift(1) > s200.shift(1))
+    if arch == "VALUE_DIVERGENCE":
+        return (c/hi-1 <= -0.25) & (c > s20) & (c/c.shift(21)-1 > 0) & (c/c.shift(21)-1 <= 0.25)
+    if arch == "MACRO_PUNISHED" and sec is not None:
+        j = c.index.intersection(sec.index); cs, ss = c[j], sec[j]
+        return ((cs/cs.shift(63)-ss/ss.shift(63)) < -0.10) & (cs < cs.rolling(50).mean()) & (ss > ss.rolling(50).mean())
+    return None
+
+def simulate(c, starts, T, S):
+    """Each start: exit at +T (if any), at -S, or at the close HOLD sessions later. Close-based. Returns % results."""
+    a = c.values; out = []
+    for i in starts:
+        if i+HOLD >= len(a): continue
+        path = a[i+1:i+1+HOLD]/a[i]-1; res = path[-1]
+        for r in path:
+            if r <= -S: res = -S; break
+            if T is not None and r >= T: res = T; break
+        out.append(res*100)
+    return np.array(out)
+
+def thin(idx, gap=20):
+    keep, last = [], -10**9
+    for i in idx:
+        if i-last >= gap: keep.append(i); last = i
+    return keep
+
+def rank_one(t, arch, f, x, sec):
+    entry, stop, target = levels(f, arch)
+    S = 1-stop/entry; T = (target/entry-1) if target else None
+    r = dict(ticker=t, archetype=arch, entry_style=ENTRY_STYLE[arch], entry=round(entry, 2), stop=round(stop, 2),
+             target=round(target, 2) if target else None, risk_pct=round(S*100, 1), reward_pct=round(T*100, 1) if T else None,
+             rr=round(T/S, 2) if T else None)
+    if T is not None and T <= 0.01: r.update(tier="PASS", reason="no room to the target"); return r
+    c = x["close"]
+    u = simulate(c, range(252, len(c)-HOLD, 5), T, S)                       # any day: this is the stock's drift
+    sig = signal_days(x, arch, sec)
+    cond = simulate(c, thin([i for i in np.flatnonzero(sig.values) if i >= 252]), T, S) if sig is not None else np.array([])
+    n = len(cond)
+    if len(u) < 50: r.update(tier="PASS", reason="not enough history"); return r
+    ev_u = float(u.mean()); ev_c = float(cond.mean()) if n else None
+    ev = (n*ev_c + 10*ev_u)/(n+10) if n else ev_u                           # shrink a small sample toward the stock's own drift
+    r.update(n_setups=n, ev_any_day=round(ev_u, 2), ev_setup=round(ev_c, 2) if n else None, ev_used=round(ev, 2),
+             edge_vs_drift=round(ev-ev_u, 2), win_any_day=round(float((u > 0).mean()*100), 0),
+             win_setup=round(float((cond > 0).mean()*100), 0) if n else None, exp_R=round(ev/(S*100), 2))
+    return r
+
+def fundamentals(t):
+    """Free Yahoo fields. Every piece is optional: a failure leaves it out rather than guessing."""
+    out = {}
+    try:
+        import yfinance as yf
+        tk = yf.Ticker(t)
+        try:
+            i = tk.info
+            for k_out, k_in in (("fwd_pe", "forwardPE"), ("trail_pe", "trailingPE"), ("analysts", "numberOfAnalystOpinions"), ("mean_target", "targetMeanPrice")):
+                if i.get(k_in) is not None: out[k_out] = round(float(i[k_in]), 2)
+        except Exception: pass
+        try:
+            tr = tk.eps_trend
+            row = tr.loc["+1y"]; cur = float(row["current"])
+            if cur: out.update(eps_next_fy=round(cur, 2), rev30_pct=round((cur/float(row["30daysAgo"])-1)*100, 1), rev90_pct=round((cur/float(row["90daysAgo"])-1)*100, 1))
+        except Exception: pass
+        try:
+            cal = tk.calendar; d = cal.get("Earnings Date") if isinstance(cal, dict) else None
+            if d: out["next_earnings"] = str(d[0])
+        except Exception: pass
+    except Exception: pass
+    return out
+
+def tier(r, asof):
+    if "tier" in r: return
+    days = None
+    if r.get("next_earnings"):
+        try: days = int(np.busday_count(asof, r["next_earnings"]))
+        except Exception: pass
+    r["sessions_to_earnings"] = days
+    why = []
+    if r["exp_R"] < 0: r.update(tier="PASS", reason="negative expectancy on its own history"); return
+    if r["rr"] is not None and r["rr"] < 1.0: why.append(f"pays {r['rr']} to 1")
+    if r["edge_vs_drift"] <= 0: why.append("no edge over the stock's normal drift")
+    if not r.get("n_setups"): why.append("no past examples to test")
+    elif r["n_setups"] < 5: why.append(f"only {r['n_setups']} past examples")
+    if r["archetype"] == "VALUE_DIVERGENCE" and r.get("rev30_pct") is not None and r["rev30_pct"] <= 0: why.append("estimates not rising")
+    if r["archetype"] == "MOMENTUM" and r.get("rev30_pct") is not None and r["rev30_pct"] < 0: why.append("estimates falling")
+    if days is not None and 0 <= days <= 3: why.append(f"earnings in {days} sessions")
+    hard = [w for w in why if not w.startswith("only ")]
+    if not hard and r["exp_R"] >= 0.25: r.update(tier="DEEP DIVE", reason="; ".join(why) or "passes every scripted test")
+    elif r["exp_R"] >= 0.10 and len(hard) <= 1: r.update(tier="WATCH", reason="; ".join(why) or "thin expectancy")
+    else: r.update(tier="PASS", reason="; ".join(why) or "thin expectancy")
+
+def rank_all(cands, feats, bars, asof, live):
+    rows = []
+    for arch, lst in cands.items():
+        for score, t, why in lst[:RANK_POOL]:
+            f = feats[t]; sec = bars.get(SECTOR_ETF.get(f.get("sector") or "", ""))
+            try:
+                r = rank_one(t, arch, f, bars[t], sec["close"] if sec is not None else None)
+            except Exception as e:
+                r = dict(ticker=t, archetype=arch, tier="PASS", reason=f"rank error {type(e).__name__}")
+            r.update(name=f.get("name"), sector=f.get("sector"), index=f.get("index"), last=f["last"], screen_why=why)
+            rows.append(r)
+    if live:
+        for r in rows:
+            if "exp_R" in r and r["exp_R"] >= 0.05: r.update(fundamentals(r["ticker"]))
+    for r in rows: tier(r, asof)
+    order = {"DEEP DIVE": 0, "WATCH": 1, "PASS": 2}
+    rows.sort(key=lambda r: (order[r["tier"]], -(r.get("exp_R") or -9)))
+    return rows
 
 # ----------------------------------------------------------------------------- outcome tracking
 def track(out, survivors, bars, asof):
@@ -239,6 +384,7 @@ def main():
         if f["date"] != asof: drop("stale last bar"); continue
         if f["last"] < MIN_PRICE or f["dvol20"] < MIN_DVOL: drop("liquidity gate"); continue
         if "suspect" in f: drop("suspect data"); continue
+        if f["compression"] < 0.3: drop("deal-pinned (ATR under 0.3x of 2m ago)"); f["skip"] = "deal-pinned"; continue
         for k, rule in RULES:
             r = rule(f)
             if r: cands[k].append((r[0], t, r[1]))
@@ -260,6 +406,7 @@ def main():
             survivors.append(dict(archetype=k, rank=rank, of=len(lst), score=round(float(score), 1), why=why, chart=f"charts/{t}_{k}.png",
                                   **{x: f.get(x) for x in keep}))
             if not a.no_charts: chart(t, bars[t], f, k, out/"charts"/f"{t}_{k}.png")
+    ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir)
     scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
     ok = [f for f in feats.values() if "skip" not in f]
@@ -269,10 +416,13 @@ def main():
                    pct_within_5_of_52w_high=round(float(np.mean([f["dd52"] > -5 for f in ok])*100), 1))
     (out/"screen_output.json").write_text(json.dumps(dict(
         asof=asof, generated_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"), universe=len(feats), candidates_per_archetype=counts,
-        dropped=dropped, universe_note="; ".join(UNIVERSE_NOTE), scorecard=scorecard, breadth=breadth, benchmarks=bench, survivors=survivors,
-        notes="Chart-only screen. VALUE_DIVERGENCE is the price half only until estimates are wired. MACRO_PUNISHED names no driver; research must."), indent=1))
+        dropped=dropped, universe_note="; ".join(UNIVERSE_NOTE), scorecard=scorecard, ranked=ranked, breadth=breadth, benchmarks=bench, survivors=survivors,
+        notes="Prices are raw split-adjusted closes (dividends not added back). ranked[] simulates each setup's own stop, target and 60-session time stop on the stock's 10-year history, against the same trade taken on any day (the drift). Estimates and earnings dates are from Yahoo when available. MACRO_PUNISHED names no driver; research must."), indent=1))
     (out/"market_state_full.json").write_text(json.dumps(feats, indent=0, sort_keys=True))
     print(f"asof {asof} universe {len(feats)} dropped {dropped} candidates {counts} survivors {len(survivors)} breadth {breadth}")
+    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "WATCH", "PASS")))
+    for r in ranked:
+        if r["tier"] != "PASS": print(f"  {r['tier']:9} {r['ticker']:6} {r['archetype'][:10]:10} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
     for s in survivors: print(f"  {s['archetype']:17} #{s['rank']}/{s['of']:<3} {s['ticker']:6} {s['why']}")
 
 if __name__ == "__main__":
