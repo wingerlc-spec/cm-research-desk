@@ -25,11 +25,37 @@ PER_ARCHETYPE = 8          # survivors kept per archetype
 MIN_PRICE, MIN_DVOL, MIN_BARS = 5.0, 20e6, 260
 
 # ----------------------------------------------------------------------------- data
+SP400_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_400_companies"
+UNIVERSE_NOTE = []
+
+def parse_wiki_table(html):
+    """First wikitable on the page -> {symbol: meta}. Columns found by header name, not position."""
+    from bs4 import BeautifulSoup
+    tb = BeautifulSoup(html, "html.parser").find("table", {"class": "wikitable"})
+    rows = tb.find_all("tr"); hdr = [c.get_text(strip=True).lower() for c in rows[0].find_all(["th", "td"])]
+    col = lambda *names: next(i for i, h in enumerate(hdr) if any(n in h for n in names))
+    i_sym, i_name, i_sec, i_ind = col("symbol", "ticker"), col("security", "company"), col("gics sector", "sector"), col("sub-industry", "sub industry")
+    out = {}
+    for r in rows[1:]:
+        c = [x.get_text(strip=True) for x in r.find_all(["th", "td"])]
+        if len(c) > max(i_sym, i_name, i_sec, i_ind) and c[i_sym]:
+            out[c[i_sym].replace(".", "-")] = dict(name=c[i_name], sector=c[i_sec], industry=c[i_ind], index="SP400")
+    return out
+
 def load_universe():
     raw = urllib.request.urlopen(UNIVERSE_URL, timeout=30).read().decode()
     df = pd.read_csv(io.StringIO(raw))
     df["Symbol"] = df["Symbol"].str.replace(".", "-", regex=False)   # BRK.B -> BRK-B for Yahoo
-    return {r.Symbol: dict(name=r.Security, sector=r["GICS Sector"], industry=r["GICS Sub-Industry"]) for _, r in df.iterrows()}
+    u = {r.Symbol: dict(name=r.Security, sector=r["GICS Sector"], industry=r["GICS Sub-Industry"], index="SP500") for _, r in df.iterrows()}
+    try:
+        req = urllib.request.Request(SP400_URL, headers={"User-Agent": "cm-research-desk/1.0 (github.com/wingerlc-spec/cm-research-desk)"})
+        mid = parse_wiki_table(urllib.request.urlopen(req, timeout=30).read().decode())
+        if len(mid) < 300: raise ValueError(f"only {len(mid)} rows parsed")
+        for k, v in mid.items(): u.setdefault(k, v)
+        UNIVERSE_NOTE.append(f"S&P 500 ({len(df)}) + S&P 400 ({len(mid)})")
+    except Exception as e:
+        UNIVERSE_NOTE.append(f"S&P 500 ONLY: S&P 400 list failed ({type(e).__name__}: {str(e)[:80]})")
+    return u
 
 def pull_yf(tickers):
     import yfinance as yf
@@ -128,6 +154,17 @@ def a_macro(f, sec):  # sector has recovered, the stock has not
     if not (sec["vs50"] > 0 and sec["m1"] > 2 and lag < -10 and f["vs50"] < 0): return None
     return -lag, f"sector ETF {sec['ticker']} is {sec['vs50']:+.1f}% over its 50d and {sec['m1']:+.1f}% on the month; the stock lags it by {lag:.0f}pts over 3m and sits {f['vs50']:.1f}% under its own 50d. Driver to be named in research"
 
+def a_unclassified(f):   # fits no archetype but the tape did something unusual. This is where new archetypes come from.
+    hit = []
+    if abs(f["d1"]) >= 5 and f["volx"] >= 2.5: hit.append(f"{f['d1']:+.1f}% on {f['volx']:.1f}x volume")
+    if f["pos52"] >= 99 and f["volx"] >= 2: hit.append(f"52w high on {f['volx']:.1f}x volume")
+    if f["pos52"] <= 1 and f["volx"] >= 2: hit.append(f"52w low on {f['volx']:.1f}x volume")
+    if abs(f["vs200"]) < 1 and abs(f["w1"]) >= 6: hit.append(f"crossed the 200d with a {f['w1']:+.1f}% week")
+    if f["bbw_pct"] <= 2: hit.append(f"tightest 20d range in 2 years ({f['bbw_pct']:.0f}th pct)")
+    if f.get("rs3", 0) >= 25 and f["dd52"] < -15: hit.append(f"+{f.get('rs3', 0):.0f}pts vs SPY in 3m while still {f['dd52']:.0f}% off the high")
+    if not hit: return None
+    return abs(f["d1"])*max(f["volx"], 1) + 10*len(hit), "; ".join(hit)
+
 RULES = [("BASE_COIL", a_base), ("MOMENTUM", a_momentum), ("NARRATIVE_SCARE", a_scare), ("VALUE_DIVERGENCE", a_value_div)]
 
 # ----------------------------------------------------------------------------- chart
@@ -150,6 +187,35 @@ def chart(t, x, f, arch, path):
     for a in (ax, av):
         for s in a.spines.values(): s.set_visible(False)
     fig.savefig(path, bbox_inches="tight", facecolor=PAPER); plt.close(fig)
+
+# ----------------------------------------------------------------------------- outcome tracking
+def track(out, survivors, bars, asof):
+    """Log each survivor the first time it appears (once per 20 sessions), then score every logged call
+    against SPY at 5, 20 and 40 sessions. This is what tells us whether an archetype is worth keeping."""
+    hp = out/"history.csv"
+    hist = pd.read_csv(hp, dtype=str) if hp.exists() else pd.DataFrame(columns=["date", "ticker", "archetype", "rank", "entry"])
+    spy = bars.get("SPY"); cal = [str(d.date()) for d in spy.index] if spy is not None else []
+    recent = set(cal[-20:])
+    seen = {(r.ticker, r.archetype) for r in hist.itertuples() if r.date in recent}
+    new = [dict(date=asof, ticker=s["ticker"], archetype=s["archetype"], rank=str(s["rank"]), entry=str(s["last"]))
+           for s in survivors if (s["ticker"], s["archetype"]) not in seen]
+    if new: hist = pd.concat([hist, pd.DataFrame(new)], ignore_index=True)
+    hist.to_csv(hp, index=False)
+    rows = []
+    for r in hist.itertuples():
+        if r.ticker not in bars or r.date not in cal: continue
+        c = bars[r.ticker]["close"]; idx = [str(d.date()) for d in c.index]
+        if r.date not in idx: continue
+        i, j = idx.index(r.date), cal.index(r.date)
+        for h in (5, 20, 40):
+            if i+h < len(c) and j+h < len(cal):
+                rows.append((r.archetype, h, (c.iloc[i+h]/c.iloc[i]-1)*100 - (spy["close"].iloc[j+h]/spy["close"].iloc[j]-1)*100))
+    sc = {}
+    if rows:
+        d = pd.DataFrame(rows, columns=["a", "h", "x"])
+        for (a_, h), g in d.groupby(["a", "h"]):
+            sc.setdefault(a_, {})[f"{h}d"] = dict(n=int(len(g)), mean_excess=round(float(g.x.mean()), 2), pct_beat_spy=round(float((g.x > 0).mean()*100), 0))
+    return dict(calls_logged=int(len(hist)), by_archetype=sc, note="excess return vs SPY from the close of the day first flagged; n under 25 is noise")
 
 # ----------------------------------------------------------------------------- main
 def main():
@@ -179,7 +245,13 @@ def main():
         sec = feats.get(SECTOR_ETF.get(f.get("sector") or "", ""))
         r = a_macro(f, sec if sec and "skip" not in sec else None)
         if r: cands["MACRO_PUNISHED"].append((r[0], t, r[1]))
-    keep = ["ticker", "name", "sector", "industry", "last", "d1", "w1", "m1", "m3", "m6", "vs50", "vs200", "rsi", "pos52", "dd52", "volx",
+    classified = {t for lst in cands.values() for _, t, _ in lst}
+    cands["UNCLASSIFIED"] = []
+    for t, f in feats.items():
+        if t in BENCH or t in classified or "skip" in f or "suspect" in f or f["date"] != asof or f["last"] < MIN_PRICE or f["dvol20"] < MIN_DVOL: continue
+        r = a_unclassified(f)
+        if r: cands["UNCLASSIFIED"].append((r[0], t, r[1]))
+    keep = ["ticker", "name", "index", "sector", "industry", "last", "d1", "w1", "m1", "m3", "m6", "vs50", "vs200", "rsi", "pos52", "dd52", "volx",
             "rs3", "rs6", "bbw_pct", "pivot", "base_low", "dist_pivot", "worst_day", "worst_day_date"]
     for k, lst in cands.items():
         lst.sort(reverse=True); counts[k] = len(lst)
@@ -188,6 +260,7 @@ def main():
             survivors.append(dict(archetype=k, rank=rank, of=len(lst), score=round(float(score), 1), why=why, chart=f"charts/{t}_{k}.png",
                                   **{x: f.get(x) for x in keep}))
             if not a.no_charts: chart(t, bars[t], f, k, out/"charts"/f"{t}_{k}.png")
+    scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
     ok = [f for f in feats.values() if "skip" not in f]
     breadth = dict(n=len(ok), pct_above_50d=round(float(np.mean([f["vs50"] > 0 for f in ok])*100), 1),
@@ -196,7 +269,7 @@ def main():
                    pct_within_5_of_52w_high=round(float(np.mean([f["dd52"] > -5 for f in ok])*100), 1))
     (out/"screen_output.json").write_text(json.dumps(dict(
         asof=asof, generated_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"), universe=len(feats), candidates_per_archetype=counts,
-        dropped=dropped, breadth=breadth, benchmarks=bench, survivors=survivors,
+        dropped=dropped, universe_note="; ".join(UNIVERSE_NOTE), scorecard=scorecard, breadth=breadth, benchmarks=bench, survivors=survivors,
         notes="Chart-only screen. VALUE_DIVERGENCE is the price half only until estimates are wired. MACRO_PUNISHED names no driver; research must."), indent=1))
     (out/"market_state_full.json").write_text(json.dumps(feats, indent=0, sort_keys=True))
     print(f"asof {asof} universe {len(feats)} dropped {dropped} candidates {counts} survivors {len(survivors)} breadth {breadth}")
