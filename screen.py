@@ -24,6 +24,7 @@ BENCH = ["SPY", "QQQ", "IWM"] + sorted(set(SECTOR_ETF.values()))
 PER_ARCHETYPE = 8          # survivors charted per archetype
 RANK_POOL = 12             # candidates per archetype sent to the ranking step
 HOLD = 120                 # sessions (~6 months): time stop in every simulated trade. The book holds weeks to quarters.
+PRICE_CAP = 60             # book rule (11 Oct): a delta 0.75-0.85 call 6-15 months out costs ~30-40% of the stock; ~$1,900 per slot caps the stock near $60
 EARNINGS_WINDOW = 15       # sessions: a name reporting inside this window is researched as a post-print trigger, not an entry
 MIN_PRICE, MIN_DVOL, MIN_BARS = 5.0, 20e6, 260
 
@@ -412,7 +413,10 @@ def rank_all(cands, feats, bars, asof, live, bt=None):
         tier(r, asof, bt)
         if r["tier"] != "PASS" and "stop" in r:
             r.update(entry_quality(r, feats[r["ticker"]], r.get("sessions_to_earnings")))
-    order = {"DEEP DIVE": 0, "AFTER PRINT": 1, "WATCH": 2, "PASS": 3}
+    for r in rows:
+        if r.get("last") and r["last"] > PRICE_CAP and r["tier"] in ("DEEP DIVE", "AFTER PRINT", "WATCH"):
+            r.update(tier="TOO EXPENSIVE", reason=f"stock {r['last']} above the ${PRICE_CAP} cap: no deep ITM call fits a ~$1,900 slot (was {r['tier']}: {r.get('reason', '')})")
+    order = {"DEEP DIVE": 0, "AFTER PRINT": 1, "WATCH": 2, "TOO EXPENSIVE": 3, "PASS": 4}
     rows.sort(key=lambda r: (order[r["tier"]], -(r.get("exp_R") or -9)))
     return rows
 
@@ -505,6 +509,85 @@ def backtest(bars, feats, universe):
                     "anything that buys a fallen stock), no stops, no costs.")
     return out
 
+# ----------------------------------------------------------------------------- survivorship test for RECOVERY_LEADER (added 11 Oct 2026)
+SP500_HIST_URL = "https://raw.githubusercontent.com/fja05680/sp500/master/S%26P%20500%20Historical%20Components%20%26%20Changes%20(Updated).csv"
+
+def load_membership():
+    raw = urllib.request.urlopen(SP500_HIST_URL, timeout=60).read().decode()
+    m = pd.read_csv(io.StringIO(raw), parse_dates=["date"]).sort_values("date")
+    m["set"] = m["tickers"].map(lambda x: set(t.strip().replace(".", "-") for t in str(x).split(",")))
+    return m[["date", "set"]].reset_index(drop=True)
+
+def survivorship_test(bars, feats, live):
+    """Does the recovery-leader edge survive point-in-time index membership? Five checks, all on S&P 500 history:
+    A current_members: today's S&P 500 names only, signals on any date (the original, biased test)
+    B point_in_time: only signals where the stock WAS in the S&P 500 on the signal date (removes stocks added after recovering)
+    C with_dropouts: B plus former members no longer in the index, wherever Yahoo still has prices (partial fix for stocks that fell out)
+    D ex_2020_21: C without signals from Mar 2020 to Dec 2021
+    E by_index: today's S&P 500 vs S&P 400 members, original method
+    Each: mean 120-session return vs SPY after the signal, minus the same on ordinary days in the same stocks, trimmed at
+    the baseline's 1st/99th percentile, t clustered by month."""
+    out = {}
+    try:
+        mem = load_membership()
+    except Exception as e:
+        return {"_error": f"membership download failed: {type(e).__name__}: {str(e)[:100]}"}
+    dates = mem["date"].values
+    def member(t, d):
+        i = np.searchsorted(dates, np.datetime64(d), side="right") - 1
+        return i >= 0 and t in mem["set"].iloc[i]
+    spy = bars["SPY"]["close"]
+    ever = set().union(*mem[mem["date"] >= spy.index[0]]["set"])
+    dropped = sorted(t for t in ever if t not in bars and "." not in t)
+    extra = {}
+    if live and dropped:
+        try: extra = pull_yf(dropped)
+        except Exception: extra = {}
+    out["former_members_in_window"] = len(dropped); out["former_members_with_prices"] = len(extra)
+    def collect(tickers, source, pit):
+        sig, base = [], []
+        for t in tickers:
+            x = source.get(t)
+            if x is None or len(x) < 400 or t in BENCH: continue
+            c = x["close"]; j = c.index.intersection(spy.index)
+            if len(j) < 400: continue
+            cs, ss = c[j], spy[j]
+            e = ((cs.shift(-120)/cs-1) - (ss.shift(-120)/ss-1)).values*100
+            ym = (cs.index.year*100 + cs.index.month).values
+            for i in range(252, len(cs)-120, 10):
+                if not pit or member(t, cs.index[i]): base.append((e[i], ym[i], t))
+            try: sg = signal_days(x.loc[j], "RECOVERY_LEADER", None, spy).reindex(cs.index).fillna(False).values
+            except Exception: continue
+            for i in thin([k for k in np.flatnonzero(sg) if 252 <= k < len(cs)-120]):
+                if not pit or member(t, cs.index[i]): sig.append((e[i], ym[i], t))
+        return pd.DataFrame(sig, columns=["e", "ym", "t"]).dropna(), pd.DataFrame(base, columns=["e", "ym", "t"]).dropna()
+    def score(d, b, label):
+        if len(d) < 30 or len(b) < 100: return dict(test=label, n=int(len(d)), note="too few signals")
+        lo, hi = float(b.e.quantile(0.01)), float(b.e.quantile(0.99)); d = d.assign(e=d.e.clip(lo, hi)); b = b.assign(e=b.e.clip(lo, hi))
+        pm = (d.groupby("ym").e.mean() - b.groupby("ym").e.mean()).dropna()
+        t = float(pm.mean()/(pm.std()/np.sqrt(len(pm)))) if len(pm) > 5 and pm.std() > 0 else None
+        return dict(test=label, n=int(len(d)), stocks=int(d.t.nunique()), months=int(pm.size), edge120=round(float(d.e.mean()-b.e.mean()), 2),
+                    t_clustered=round(t, 1) if t is not None else None, median=round(float(d.e.median()), 2), baseline_median=round(float(b.e.median()), 2),
+                    pct_beat_spy=round(float((d.e > 0).mean()*100), 0), baseline_pct_beat_spy=round(float((b.e > 0).mean()*100), 0))
+    sp5 = [t for t, f in feats.items() if f.get("index") == "SP500"]
+    sp4 = [t for t, f in feats.items() if f.get("index") == "SP400"]
+    a_s, a_b = collect(sp5, bars, False); out["A_current_members"] = score(a_s, a_b, "today's S&P 500 members, any date (original, biased)")
+    b_s, b_b = collect(sp5, bars, True); out["B_point_in_time"] = score(b_s, b_b, "only signals while the stock was in the S&P 500")
+    allsrc = dict(bars); allsrc.update(extra)
+    c_s, c_b = collect(sp5 + list(extra), allsrc, True); out["C_with_dropouts"] = score(c_s, c_b, "B plus former members Yahoo still has")
+    keep = ~c_s.ym.between(202003, 202112); keepb = ~c_b.ym.between(202003, 202112)
+    out["D_ex_2020_21"] = score(c_s[keep], c_b[keepb], "C without Mar 2020 to Dec 2021")
+    e_s, e_b = collect(sp4, bars, False); out["E_sp400_today"] = score(e_s, e_b, "today's S&P 400 members, any date")
+    yr = {}
+    if len(c_s):
+        for y, g in c_s.assign(y=c_s.ym//100).groupby("y"):
+            bb = c_b[c_b.ym//100 == y]
+            if len(g) >= 10 and len(bb) >= 50: yr[int(y)] = dict(n=int(len(g)), edge120=round(float(g.e.mean()-bb.e.mean()), 2))
+    out["C_by_year"] = yr
+    out["_read"] = ("If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. "
+                    "C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures.")
+    return out
+
 # ----------------------------------------------------------------------------- outcome tracking
 def track(out, survivors, bars, asof):
     """Log each survivor the first time it appears (once per 20 sessions), then score every logged call
@@ -583,6 +666,14 @@ def main():
     except Exception as e:
         bt = {"_error": f"{type(e).__name__}: {str(e)[:120]}"}
     (out/"backtest.json").write_text(json.dumps(bt, indent=1))
+    try:
+        surv = survivorship_test(bars, feats, live=not a.csv_dir)
+    except Exception as e:
+        surv = {"_error": f"{type(e).__name__}: {str(e)[:150]}"}
+    (out/"survivorship.json").write_text(json.dumps(surv, indent=1))
+    for k_, v_ in surv.items():
+        if isinstance(v_, dict) and "test" in v_: print(f"SURVIVORSHIP {k_:18} n {v_.get('n')} stocks {v_.get('stocks')} | 6m edge {v_.get('edge120')} t {v_.get('t_clustered')} | beat SPY {v_.get('pct_beat_spy')}% vs {v_.get('baseline_pct_beat_spy')}% | {v_.get('test')}")
+    print("SURVIVORSHIP former members", surv.get("former_members_in_window"), "with prices", surv.get("former_members_with_prices"), surv.get("_error", ""), "| by year", surv.get("C_by_year"))
     ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir, bt=bt)
     scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
@@ -601,10 +692,11 @@ def main():
         if not a_.startswith("_"): print(f"BACKTEST {a_:17} {r_['verdict']:9} n {r_['n']:6} months {r_['months_with_signals']:4} | 120d edge {r_['e120']['edge']:+.2f} (month-matched {r_['e120']['edge_month_matched']}) t {r_['e120']['t_clustered']} | median {r_['e120']['median']:+.2f} vs {r_['e120']['baseline_median']:+.2f} | beat SPY {r_['e120']['pct_beat_spy']:.0f}% vs {r_['e120']['baseline_pct_beat_spy']:.0f}% | halves {r_['edge120_first_half']} / {r_['edge120_second_half']} | 60d edge {r_['e60']['edge']:+.2f} t {r_['e60']['t_clustered']}")
     print("BACKTEST baseline", bt.get("_baseline"), bt.get("_error", ""))
     print("NOW", bt.get("_now"))
-    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "AFTER PRINT", "WATCH", "PASS")))
+    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "AFTER PRINT", "WATCH", "TOO EXPENSIVE", "PASS")))
     for r in ranked:
-        if r["tier"] != "PASS": print(f"  {r['tier']:9} entry {r.get('entry_grade')}{r.get('entry_score')} {r['ticker']:6} {r['archetype'][:10]:10} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
+        if r["tier"] not in ("PASS", "TOO EXPENSIVE"): print(f"  {r['tier']:9} entry {r.get('entry_grade')}{r.get('entry_score')} {r['ticker']:6} {r['archetype'][:10]:10} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
     for s in survivors: print(f"  {s['archetype']:17} #{s['rank']}/{s['of']:<3} {s['ticker']:6} {s['why']}")
 
 if __name__ == "__main__":
+    main()
     main()
