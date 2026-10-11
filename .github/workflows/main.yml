@@ -1,7 +1,7 @@
-name: screen
+name: screen-v2
 on:
   schedule:
-    - cron: "30 22 * * 1-5"
+    - cron: "30 22 * * 1-5"   # 5:30pm CT (CDT). After 1 Nov: "30 23 * * 1-5"
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,6 +15,8 @@ jobs:
           python-version: "3.12"
       - run: pip install -q yfinance pandas numpy matplotlib
       - run: rm -rf out/charts && python screen.py
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
       - run: |
           git config user.name "cm-screen-bot"
           git config user.email "actions@users.noreply.github.com"
