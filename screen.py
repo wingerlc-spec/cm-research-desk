@@ -510,6 +510,7 @@ def backtest(bars, feats, universe):
     return out
 
 # ----------------------------------------------------------------------------- survivorship test for RECOVERY_LEADER (added 11 Oct 2026)
+LAST_EVENTS = {}   # lens events from the latest lens_tests run, reused to list today's candidates
 FORMER_BARS = {}   # prices for former S&P 500 members, filled by survivorship_test and reused by the lens tests
 SP500_HIST_URL = "https://raw.githubusercontent.com/fja05680/sp500/master/S%26P%20500%20Historical%20Components%20%26%20Changes%20(Updated).csv"
 
@@ -787,9 +788,63 @@ def lens_tests(bars, feats, live, F=None, cikmap=None, mem=None):
             out["_sec_error"] = f"{type(e).__name__}: {str(e)[:160]}"; return out
     out["_coverage"] = {k: int(np.mean([len(v) for v in F[k].values()])) for k in F}
     ev = lens_events(F, cikmap, allbars, years)
+    LAST_EVENTS.clear(); LAST_EVENTS.update(ev)
+    if mem is not None: LAST_EVENTS["DELETION_REBOUND"] = dev
     for lens, events in ev.items():
         out[lens] = dict(all=event_score(events, allbars, spy), sp500_point_in_time=event_score(events, allbars, spy, member) if member else None)
     return out
+
+def lens_verdict(r):
+    """The decision rules fixed in strategy/lens-report-spec-2026-10-11.md, before any result was seen."""
+    pit, al = r.get("sp500_point_in_time") or {}, r.get("all") or {}
+    if "e120" not in pit:                       # deletion rebound: point-in-time by construction
+        e = al.get("e120") or {}
+        if not e: return "NO DATA", 0.0
+        if (e["t_clustered"] or 0) >= 2.5 and e["edge"] > 0: return "ADOPT", e["edge"]
+        return ("AVOID" if (e["t_clustered"] or 0) <= -2 else "PROMISING" if e["edge"] > 0 and (e["t_clustered"] or 0) >= 1.5 else "DROP"), 0.0
+    p, a = pit["e120"], (al.get("e120") or {})
+    tp, ta = p["t_clustered"] or 0, a.get("t_clustered") or 0
+    typical_ok = p["median"] > p["baseline_median"]
+    if p["edge"] >= 2 and typical_ok and (tp >= 2.5 or (tp >= 2 and ta >= 2 and a.get("edge", 0) > 0)): return "ADOPT", p["edge"]
+    if tp <= -2: return "AVOID", 0.0
+    if p["edge"] > 0 and a.get("edge", 0) > 0 and 1.5 <= tp < 2.5: return "PROMISING", 0.0
+    return "DROP", 0.0
+
+def lens_candidates(lens, bars, feats, live, asof):
+    """Today's names: stocks whose latest lens event is recent enough to still be actionable (entry within the last 100 days).
+    Score = sum of the measured point-in-time 6-month edges of the ADOPTED lenses firing. PROMISING hits are listed, not scored."""
+    verdicts = {k: lens_verdict(v) for k, v in lens.items() if not k.startswith("_") and isinstance(v, dict)}
+    cutoff = pd.Timestamp(asof) - pd.Timedelta(days=100)
+    hits = {}
+    for k, evs in LAST_EVENTS.items():
+        for t, d, tag in evs:
+            if pd.Timestamp(d) >= cutoff and t in bars and t not in BENCH:
+                hits.setdefault(t, []).append(dict(lens=k, entry=str(pd.Timestamp(d).date()), high_accrual=tag, verdict=verdicts.get(k, ("?", 0))[0]))
+    uber = bars.get("UBER"); rows = []
+    for t, hs in hits.items():
+        f = feats.get(t) or {}; last = float(bars[t]["close"].iloc[-1])
+        lenses = sorted(set(h["lens"] for h in hs))
+        score = sum(verdicts.get(l, ("", 0))[1] for l in lenses)
+        corr = None
+        if uber is not None and t != "UBER":
+            j = bars[t]["close"].index.intersection(uber["close"].index)[-121:]
+            if len(j) > 60: corr = round(float(bars[t]["close"][j].pct_change().corr(uber["close"][j].pct_change())), 2)
+        rows.append(dict(ticker=t, name=f.get("name"), sector=f.get("sector"), index=f.get("index"), last=round(last, 2), score=round(score, 2),
+                         lenses=lenses, adopted=[l for l in lenses if verdicts.get(l, ("",))[0] == "ADOPT"],
+                         promising=[l for l in lenses if verdicts.get(l, ("",))[0] == "PROMISING"], hits=hs,
+                         instrument="deep ITM call" if last <= PRICE_CAP else "shares (over the price cap)", uber_corr_120d=corr,
+                         chart_gate=("falling hard: below the 50-day and 200-day" if f.get("vs50", 0) < 0 and f.get("vs200", 0) < -10
+                                     else "spike: 20%+ over the 50-day" if f.get("vs50", 0) > 20 else "ok")))
+    any_adopted = any(v[0] == "ADOPT" for v in verdicts.values())
+    rows.sort(key=lambda r: (-r["score"], -len(r["promising"]), -len(r["lenses"])))
+    top = rows[:60]
+    if live:
+        for r in top: r.update(fundamentals(r["ticker"]))
+    if not any_adopted:   # fallback, labelled: no lens proven, rank by number of lens hits then 30-day estimate revisions
+        top.sort(key=lambda r: (-len(r["promising"]), -len(r["lenses"]), -(r.get("rev30_pct") or -99)))
+    return dict(asof=asof, verdicts={k: v[0] for k, v in verdicts.items()}, weights={k: v[1] for k, v in verdicts.items()},
+                mode="ranked by adopted-lens edge" if any_adopted else "FALLBACK: no lens adopted; ranked by PROMISING-lens hits, then lens-hit count, then estimate revisions (unproven ideas)",
+                n_names=len(rows), candidates=top)
 
 # ----------------------------------------------------------------------------- outcome tracking
 def track(out, survivors, bars, asof):
@@ -879,6 +934,14 @@ def main():
     except Exception as e:
         import traceback; lens = {"_error": f"{type(e).__name__}: {str(e)[:150]}", "_trace": traceback.format_exc()[-600:]}
     (out/"lens_tests.json").write_text(json.dumps(lens, indent=1, default=str))
+    try:
+        lc = lens_candidates(lens, {**bars, **FORMER_BARS}, feats, live=not a.csv_dir, asof=asof)
+    except Exception as e:
+        import traceback; lc = {"_error": f"{type(e).__name__}: {str(e)[:150]}", "_trace": traceback.format_exc()[-600:]}
+    (out/"lens_candidates.json").write_text(json.dumps(lc, indent=1, default=str))
+    print("LENS VERDICTS", lc.get("verdicts"), "|", lc.get("mode"), "| names", lc.get("n_names"), lc.get("_error", ""))
+    for r_ in (lc.get("candidates") or [])[:15]:
+        print(f"  CAND {r_['ticker']:6} score {r_['score']:5} {r_['last']:>8} {r_['instrument'][:13]:13} corrUBER {r_['uber_corr_120d']} gate {r_['chart_gate'][:20]:20} | {','.join(r_['lenses'])} | rev30 {r_.get('rev30_pct')}")
     for k_, v_ in lens.items():
         if k_.startswith("_"): print("LENS", k_, v_ if k_ != "_note" else ""); continue
         for sub, r_ in v_.items():
@@ -912,5 +975,4 @@ def main():
     for s in survivors: print(f"  {s['archetype']:17} #{s['rank']}/{s['of']:<3} {s['ticker']:6} {s['why']}")
 
 if __name__ == "__main__":
-    main()
     main()
