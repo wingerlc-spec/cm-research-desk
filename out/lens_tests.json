@@ -29,6 +29,7 @@
   "rev": 3564,
   "ni": 4725,
   "gp": 1937,
+  "oi": 3792,
   "shares": 3286,
   "inv": 2393,
   "cwl": 1266,
@@ -38,66 +39,73 @@
   "ni_fy": 5768,
   "cfo_fy": 5840
  },
+ "_drift_dates": "8-K Item 2.02 dates found for 957 companies",
+ "_drift_stats": {
+  "qualified": 1970,
+  "no_date": 69,
+  "failed_reaction": 1416,
+  "events": 479
+ },
  "EARNINGS_DRIFT": {
   "all": {
-   "n": 333,
-   "stocks": 210,
-   "months": 67,
+   "n": 388,
+   "stocks": 237,
+   "months": 79,
    "e60": {
-    "edge": 3.21,
-    "t_clustered": 2.0,
-    "median": 3.05,
-    "baseline_median": -0.05,
-    "pct_beat_spy": 60.0,
+    "edge": 1.04,
+    "t_clustered": 1.6,
+    "median": 1.69,
+    "baseline_median": 0.11,
+    "pct_beat_spy": 56.0,
     "baseline_pct_beat_spy": 50.0
    },
    "e120": {
-    "edge": 2.67,
-    "t_clustered": 1.1,
-    "median": 2.5,
-    "baseline_median": -0.32,
-    "pct_beat_spy": 55.0,
-    "baseline_pct_beat_spy": 49.0
+    "edge": 0.37,
+    "t_clustered": 0.8,
+    "median": 0.47,
+    "baseline_median": -0.16,
+    "pct_beat_spy": 51.0,
+    "baseline_pct_beat_spy": 50.0
    },
    "e120_high_accrual": {
-    "n": 69,
-    "mean": 10.31
+    "n": 80,
+    "mean": 5.73
    },
    "e120_clean_earnings": {
-    "n": 253,
-    "mean": 1.01
+    "n": 287,
+    "mean": -0.54
    },
    "verdict": "NOT SHOWN"
   },
   "sp500_point_in_time": {
-   "n": 116,
-   "stocks": 86,
-   "months": 54,
+   "n": 126,
+   "stocks": 91,
+   "months": 56,
    "e60": {
-    "edge": 5.63,
-    "t_clustered": 2.4,
-    "median": 3.1,
-    "baseline_median": -0.84,
-    "pct_beat_spy": 61.0,
+    "edge": 2.51,
+    "t_clustered": 1.6,
+    "median": 1.1,
+    "baseline_median": -0.49,
+    "pct_beat_spy": 53.0,
     "baseline_pct_beat_spy": 48.0
    },
    "e120": {
-    "edge": 6.39,
-    "t_clustered": 2.3,
-    "median": 2.38,
-    "baseline_median": -1.85,
-    "pct_beat_spy": 56.0,
+    "edge": 2.3,
+    "t_clustered": 1.1,
+    "median": -0.69,
+    "baseline_median": -1.26,
+    "pct_beat_spy": 48.0,
     "baseline_pct_beat_spy": 47.0
    },
    "e120_high_accrual": {
-    "n": 24,
-    "mean": 19.16
+    "n": 25,
+    "mean": 5.86
    },
    "e120_clean_earnings": {
-    "n": 89,
-    "mean": 3.05
+    "n": 95,
+    "mean": 2.03
    },
-   "verdict": "WORKS"
+   "verdict": "NOT SHOWN"
   }
  },
  "SHARE_SHRINK": {
