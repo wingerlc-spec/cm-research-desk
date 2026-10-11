@@ -510,6 +510,9 @@ def backtest(bars, feats, universe):
     return out
 
 # ----------------------------------------------------------------------------- survivorship test for RECOVERY_LEADER (added 11 Oct 2026)
+DRIFT_RESULT = {}
+DRIFT_STATS = {}    # v14: how many quarters qualified, lacked an 8-K date, failed the reaction test, became events
+DRIFT_DETAIL = []   # one dict per earnings-drift event with the conditioning variables known at entry
 LAST_EVENTS = {}   # lens events from the latest lens_tests run, reused to list today's candidates
 FORMER_BARS = {}   # prices for former S&P 500 members, filled by survivorship_test and reused by the lens tests
 SP500_HIST_URL = "https://raw.githubusercontent.com/fja05680/sp500/master/S%26P%20500%20Historical%20Components%20%26%20Changes%20(Updated).csv"
@@ -597,7 +600,7 @@ def survivorship_test(bars, feats, live):
 # detected announcement day + 1 for earnings drift. Every test reports all stocks AND the point-in-time S&P 500 subset.
 SEC_UA = __import__("os").environ.get("SEC_USER_AGENT") or "cm-research-desk research (github.com/wingerlc-spec/cm-research-desk)"
 DUR = {"rev": ["Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet"], "ni": ["NetIncomeLoss"],
-       "gp": ["GrossProfit"], "shares": ["WeightedAverageNumberOfDilutedSharesOutstanding"]}
+       "gp": ["GrossProfit"], "oi": ["OperatingIncomeLoss"], "shares": ["WeightedAverageNumberOfDilutedSharesOutstanding"]}
 INST = {"inv": ["InventoryNet"], "cwl": ["ContractWithCustomerLiabilityCurrent"], "cwln": ["ContractWithCustomerLiabilityNoncurrent"],
         "ltd": ["LongTermDebt", "LongTermDebtNoncurrent"], "assets": ["Assets"]}
 ANN = {"ni_fy": ["NetIncomeLoss"], "cfo_fy": ["NetCashProvidedByUsedInOperatingActivities"]}
@@ -648,12 +651,32 @@ def ticker_cik():
     d = sec_get("https://www.sec.gov/files/company_tickers.json") or {}
     return {v["ticker"].replace(".", "-"): int(v["cik_str"]) for v in d.values()}
 
+def earnings_dates(ciks, start_year):
+    """v14: real earnings release dates = SEC 8-K filings carrying Item 2.02 (Results of Operations). One submissions call per
+    company plus its older-filings pages back to start_year. Returns {cik: sorted list of Timestamps}."""
+    out = {}
+    def take(block, acc):
+        for f, d, it in zip(block.get("form", []), block.get("filingDate", []), block.get("items", [])):
+            if f in ("8-K", "8-K/A") and "2.02" in (it or ""): acc.add(pd.Timestamp(d))
+    for cik in ciks:
+        d = sec_get(f"https://data.sec.gov/submissions/CIK{cik:010d}.json")
+        if not d: continue
+        acc = set(); take(d.get("filings", {}).get("recent", {}), acc)
+        for extra in d.get("filings", {}).get("files", []):
+            if str(extra.get("filingTo", "9999"))[:4] >= str(start_year):
+                e = sec_get(f"https://data.sec.gov/submissions/{extra['name']}")
+                if e: take(e, acc)
+        if acc: out[cik] = sorted(acc)
+    return out
+
 def qlabel(y, q): return f"CY{y}Q{q}"
 def qend(y, q): return pd.Timestamp(y, 3*q, 1) + pd.offsets.MonthEnd(0)
 
-def lens_events(F, cikmap, bars, years):
+def lens_events(F, cikmap, bars, years, edates=None):
     """Scan every (stock, quarter) for the five fundamental signals. Returns {lens: [(ticker, entry_date, tag)]}."""
     ev = {k: [] for k in ("EARNINGS_DRIFT", "SHARE_SHRINK", "BILLINGS_AHEAD", "INVENTORY_REVERSAL")}
+    edates = edates or {}; DRIFT_STATS.update(qualified=0, no_date=0, failed_reaction=0, events=0)
+    DRIFT_DETAIL.clear(); spy_c = bars["SPY"]["close"]; spy_up = spy_c > spy_c.rolling(200).mean()
     tick = {c: t for t, c in cikmap.items() if t in bars}
     g = lambda key, y, q, cik: F[key].get(qlabel(y, q), {}).get(cik)
     def acc_ratio(cik, y):
@@ -672,15 +695,39 @@ def lens_events(F, cikmap, bars, years):
                 end = qend(y, q); entry45 = end + pd.Timedelta(days=45); tag = high_accrual(cik, y)
                 rev, rev_ly = g("rev", y, q, cik), g("rev", y-1, q, cik)
                 ni, ni_ly = g("ni", y, q, cik), g("ni", y-1, q, cik)
-                # 1 earnings drift: revenue +20% and net income +30% YoY, and the announcement day (biggest-volume session 15-50 days after
-                #   quarter end) closed up 5%+ on 2x+ volume. Entry: close of the next session.
-                if rev and rev_ly and ni and ni_ly and rev_ly > 0 and ni_ly > 0 and rev/rev_ly-1 > 0.20 and ni/ni_ly-1 > 0.30:
-                    w = vr[(vr.index > end + pd.Timedelta(days=15)) & (vr.index <= end + pd.Timedelta(days=50))].dropna()
-                    if len(w):
-                        dday = w.idxmax()
-                        if w.max() >= 2 and ret.get(dday, 0) >= 0.05:
-                            k = c.index.get_loc(dday)
-                            if k+1 < len(c): ev["EARNINGS_DRIFT"].append((t, c.index[k+1], tag))
+                # 1 earnings drift (v14): revenue +20% and OPERATING income +30% YoY (operating income positive a year ago), dated by the
+                #   company's own 8-K Item 2.02 filed 10-75 days after quarter end. Reaction = close before the filing day to the close of
+                #   the session after it (covers before-open and after-close reporters), must be +5% with 2x+ volume on either day.
+                #   Entry: close of the second session after the filing day.
+                oi, oi_ly = g("oi", y, q, cik), g("oi", y-1, q, cik)
+                if rev and rev_ly and oi and oi_ly and rev_ly > 0 and oi_ly > 0 and rev/rev_ly-1 > 0.20 and oi/oi_ly-1 > 0.30:
+                    DRIFT_STATS["qualified"] += 1
+                    fd = [d for d in edates.get(cik, []) if end + pd.Timedelta(days=10) < d <= end + pd.Timedelta(days=75)]
+                    k0 = int(c.index.searchsorted(fd[0])) if fd else None
+                    if k0 is None: DRIFT_STATS["no_date"] += 1
+                    elif 0 < k0 and k0+2 < len(c):
+                        react2 = float(c.iloc[k0+1]/c.iloc[k0-1]-1); vx = float(np.nanmax(vr.iloc[k0:k0+2].values))
+                        if not (react2 >= 0.05 and vx >= 2): DRIFT_STATS["failed_reaction"] += 1
+                        else:
+                            k = k0+1; DRIFT_STATS["events"] += 1
+                            ev["EARNINGS_DRIFT"].append((t, c.index[k+1], tag))
+                            if k > 260 and k+6 < len(c):
+                                sh_q = g("shares", y, q, cik); cap = float(c.iloc[k])*sh_q if sh_q else None
+                                rev_py = g("rev", py, pq, cik); rev_pyly = g("rev", py-1, pq, cik)
+                                gp_, gp_ly = g("gp", y, q, cik), g("gp", y-1, q, cik)
+                                ttm = [g("rev", *yq, cik) for yq in ((y, q), (py, pq))]
+                                DRIFT_DETAIL.append(dict(
+                                    t=t, ann=c.index[k], entry=c.index[k+1], entry_held=c.index[k+6],
+                                    react=react2, volx=vx,
+                                    held5=bool(c.iloc[k+5] >= c.iloc[k]),
+                                    runup63=float(c.iloc[k0-1]/c.iloc[k0-64]-1),
+                                    dist_high=float(c.iloc[k]/c.iloc[k-252:k].max()-1),
+                                    spy_up=bool(spy_up.reindex([c.index[k+1]]).fillna(False).iloc[0]),
+                                    cap=cap,
+                                    ps=(cap/(2*sum(ttm))) if cap and all(ttm) else None,
+                                    rev_accel=(rev/rev_ly-1) > (rev_py/rev_pyly-1) if rev_py and rev_pyly and rev_pyly > 0 else None,
+                                    gm_expand=(gp_/rev > gp_ly/rev_ly) if gp_ and gp_ly else None,
+                                    high_accrual=tag))
                 # 2 share shrink: diluted shares down 3%+ YoY, long-term debt up less than 20%
                 sh, sh_ly = g("shares", y, q, cik), g("shares", y-1, q, cik)
                 d0, d1 = g("ltd", y, q, cik), g("ltd", y-1, q, cik)
@@ -780,18 +827,26 @@ def lens_tests(bars, feats, live, F=None, cikmap=None, mem=None):
     if mem is not None:
         dev = deletion_events(mem, allbars)
         out["DELETION_REBOUND"] = dict(all=event_score(dev, allbars, spy), note="no SEC data needed; former members without Yahoo prices are missing")
+    edates = None
     if F is None:
         if not live: return out
         try:
             cikmap = ticker_cik(); F = load_fundamentals(years)
+            edates = earnings_dates(sorted({cikmap[t] for t in allbars if t in cikmap}), years[0])
         except Exception as e:
             out["_sec_error"] = f"{type(e).__name__}: {str(e)[:160]}"; return out
     out["_coverage"] = {k: int(np.mean([len(v) for v in F[k].values()])) for k in F}
-    ev = lens_events(F, cikmap, allbars, years)
+    out["_drift_dates"] = f"8-K Item 2.02 dates found for {len(edates)} companies" if edates is not None else "no 8-K dates"
+    ev = lens_events(F, cikmap, allbars, years, edates)
+    out["_drift_stats"] = dict(DRIFT_STATS)
     LAST_EVENTS.clear(); LAST_EVENTS.update(ev)
     if mem is not None: LAST_EVENTS["DELETION_REBOUND"] = dev
     for lens, events in ev.items():
         out[lens] = dict(all=event_score(events, allbars, spy), sp500_point_in_time=event_score(events, allbars, spy, member) if member else None)
+    try:
+        DRIFT_RESULT.clear(); DRIFT_RESULT.update(drift_conditions(allbars, spy, member))
+    except Exception as e:
+        DRIFT_RESULT.clear(); DRIFT_RESULT["_error"] = f"{type(e).__name__}: {str(e)[:150]}"
     return out
 
 def lens_verdict(r):
@@ -845,6 +900,68 @@ def lens_candidates(lens, bars, feats, live, asof):
     return dict(asof=asof, verdicts={k: v[0] for k, v in verdicts.items()}, weights={k: v[1] for k, v in verdicts.items()},
                 mode="ranked by adopted-lens edge" if any_adopted else "FALLBACK: no lens adopted; ranked by PROMISING-lens hits, then lens-hit count, then estimate revisions (unproven ideas)",
                 n_names=len(rows), candidates=top)
+
+# ----------------------------------------------------------------------------- what separates good and bad earnings-drift events (added 11 Oct 2026)
+# Protocol, fixed before results: 10 yes/no conditions. DISCOVERY = events entered 2021 or earlier, CONFIRMATION = 2022 or later.
+# A condition HELPS (or HURTS) only if: the yes-minus-no gap in 6-month excess return is at least 3 points in BOTH periods with the
+# same sign, the discovery t is at least 2.8 (Bonferroni for 10 tests at 5%), and the confirmation t is at least 1.5.
+# Held-5 is measured from day 6 for both groups (the information is not known before then).
+DRIFT_CONDITIONS = [
+    ("held5", "reaction held: close 5 sessions later at or above the reaction-day close", lambda d, m: d["held5"]),
+    ("big_reaction", "reaction day up 10% or more (vs 5 to 10%)", lambda d, m: d["react"] >= 0.10),
+    ("heavy_volume", "reaction volume 4x or more (vs 2 to 4x)", lambda d, m: d["volx"] >= 4),
+    ("small_cap", "market value under $10B at the reaction", lambda d, m: d["cap"] < 10e9 if d["cap"] else None),
+    ("market_up", "SPY above its 200-day at entry", lambda d, m: d["spy_up"]),
+    ("ran_up_before", "3-month return before the print above the median event", lambda d, m: d["runup63"] > m["runup63"]),
+    ("near_high", "within 10% of the 52-week high after the reaction", lambda d, m: d["dist_high"] > -0.10),
+    ("cheap_sales", "price-to-sales below the median event", lambda d, m: d["ps"] < m["ps"] if d["ps"] else None),
+    ("accelerating", "revenue growth faster than the prior quarter's", lambda d, m: d["rev_accel"]),
+    ("margin_up", "gross margin above the same quarter last year", lambda d, m: d["gm_expand"]),
+]
+
+def drift_conditions(bars, spy, members_fn=None):
+    if len(DRIFT_DETAIL) < 60: return {"_note": f"only {len(DRIFT_DETAIL)} drift events with full detail"}
+    def ex120(t, d):
+        x = bars.get(t)
+        if x is None: return None
+        c = x["close"]; j = c.index.intersection(spy.index); cs, ss = c[j], spy[j]; k = cs.index.searchsorted(d)
+        if k+120 >= len(cs): return None
+        return ((cs.iloc[k+120]/cs.iloc[k]-1)-(ss.iloc[k+120]/ss.iloc[k]-1))*100
+    rows, last = [], {}
+    for d in sorted(DRIFT_DETAIL, key=lambda z: (z["t"], z["entry"])):
+        if d["t"] in last and (d["entry"]-last[d["t"]]).days < 120: continue
+        last[d["t"]] = d["entry"]
+        e, eh = ex120(d["t"], d["entry"]), ex120(d["t"], d["entry_held"])
+        if e is None or eh is None: continue
+        rows.append(dict(d, e=e, eh=eh, pit=bool(members_fn(d["t"], d["entry"])) if members_fn else None))
+    D = pd.DataFrame(rows)
+    lo, hi = D.e.quantile(0.02), D.e.quantile(0.98); D["e"] = D.e.clip(lo, hi); D["eh"] = D.eh.clip(lo, hi)
+    med = {"runup63": D.runup63.median(), "ps": D.ps.dropna().median() if D.ps.notna().any() else None}
+    D["disc"] = D.entry.map(lambda z: z.year <= 2021)
+    def gap(sub, col, flag):
+        a, b = sub[flag == True][col], sub[flag == False][col]
+        if len(a) < 15 or len(b) < 15: return None
+        diff = a.mean()-b.mean(); se = np.sqrt(a.var()/len(a) + b.var()/len(b))
+        return dict(gap=round(float(diff), 2), t=round(float(diff/se), 2) if se > 0 else None, n_yes=int(len(a)), n_no=int(len(b)),
+                    yes_mean=round(float(a.mean()), 2), no_mean=round(float(b.mean()), 2), yes_beat=round(float((a > 0).mean()*100)), no_beat=round(float((b > 0).mean()*100)))
+    out = {"n_events": int(len(D)), "n_discovery": int(D.disc.sum()), "n_confirmation": int((~D.disc).sum()),
+           "all_events_mean_6m_vs_spy": round(float(D.e.mean()), 2), "conditions": {}}
+    for key, label, fn in DRIFT_CONDITIONS:
+        flag = D.apply(lambda r: fn(r, med), axis=1)
+        col = "eh" if key == "held5" else "e"
+        res = {"label": label, "full": gap(D, col, flag), "discovery": gap(D[D.disc], col, flag[D.disc]), "confirmation": gap(D[~D.disc], col, flag[~D.disc])}
+        if D.pit.notna().any(): res["sp500_point_in_time"] = gap(D[D.pit == True], col, flag[D.pit == True])
+        di, co = res["discovery"], res["confirmation"]
+        if di and co and di["t"] is not None and co["t"] is not None:
+            same = np.sign(di["gap"]) == np.sign(co["gap"])
+            ok = same and abs(di["gap"]) >= 3 and abs(co["gap"]) >= 3 and abs(di["t"]) >= 2.8 and abs(co["t"]) >= 1.5
+            res["verdict"] = ("HELPS" if di["gap"] > 0 else "HURTS") if ok else ("CONSISTENT, NOT PROVEN" if same and abs(di["gap"]) >= 3 and abs(co["gap"]) >= 3 else "NO EFFECT")
+        else:
+            res["verdict"] = "TOO FEW EVENTS"
+        out["conditions"][key] = res
+    out["_rule"] = ("HELPS/HURTS needs a gap of 3+ points in both periods, same sign, discovery t 2.8+ (10 tests), confirmation t 1.5+. "
+                    "CONSISTENT, NOT PROVEN: same sign and 3+ points both periods but not significant. Discovery = 2021 or earlier, confirmation = 2022 on.")
+    return out
 
 # ----------------------------------------------------------------------------- outcome tracking
 def track(out, survivors, bars, asof):
@@ -934,6 +1051,11 @@ def main():
     except Exception as e:
         import traceback; lens = {"_error": f"{type(e).__name__}: {str(e)[:150]}", "_trace": traceback.format_exc()[-600:]}
     (out/"lens_tests.json").write_text(json.dumps(lens, indent=1, default=str))
+    (out/"drift_conditions.json").write_text(json.dumps(DRIFT_RESULT, indent=1, default=str))
+    print("DRIFT CONDITIONS events", DRIFT_RESULT.get("n_events"), "discovery", DRIFT_RESULT.get("n_discovery"), "confirmation", DRIFT_RESULT.get("n_confirmation"), DRIFT_RESULT.get("_error", ""), DRIFT_RESULT.get("_note", ""))
+    for k_, r_ in (DRIFT_RESULT.get("conditions") or {}).items():
+        f_, d_, c_ = r_.get("full") or {}, r_.get("discovery") or {}, r_.get("confirmation") or {}
+        print(f"  {k_:14} {r_['verdict']:22} full gap {f_.get('gap')} t {f_.get('t')} | disc {d_.get('gap')} t {d_.get('t')} | conf {c_.get('gap')} t {c_.get('t')} | yes {f_.get('yes_mean')} n{f_.get('n_yes')} vs no {f_.get('no_mean')} n{f_.get('n_no')}")
     try:
         lc = lens_candidates(lens, {**bars, **FORMER_BARS}, feats, live=not a.csv_dir, asof=asof)
     except Exception as e:
