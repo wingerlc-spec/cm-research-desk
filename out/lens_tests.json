@@ -2,22 +2,22 @@
  "_note": "Fundamental signals from SEC XBRL frames, entered when the data was public (quarter end + 45 days, or the day after a detected earnings reaction). Each lens is scored on all stocks and on the point-in-time S&P 500 subset. WORKS needs a clustered t of 2+ on the 6-month edge. Survivorship: former S&P 500 members are included where Yahoo has prices and SEC maps their ticker; former mid caps are not, so the all-stocks line is flattered. Trust a lens only if the S&P 500 point-in-time line agrees.",
  "DELETION_REBOUND": {
   "all": {
-   "n": 164,
-   "stocks": 157,
+   "n": 165,
+   "stocks": 158,
    "months": 55,
    "e60": {
-    "edge": 3.96,
+    "edge": 3.87,
     "t_clustered": -0.5,
-    "median": 0.79,
-    "baseline_median": -1.88,
+    "median": 0.78,
+    "baseline_median": -1.86,
     "pct_beat_spy": 53.0,
     "baseline_pct_beat_spy": 45.0
    },
    "e120": {
-    "edge": 4.84,
+    "edge": 4.76,
     "t_clustered": -0.0,
-    "median": 2.43,
-    "baseline_median": -4.01,
+    "median": 2.35,
+    "baseline_median": -3.96,
     "pct_beat_spy": 57.0,
     "baseline_pct_beat_spy": 43.0
    },
@@ -68,12 +68,12 @@
     "baseline_pct_beat_spy": 50.0
    },
    "e120_high_accrual": {
-    "n": 80,
-    "mean": 5.73
+    "n": 78,
+    "mean": 5.76
    },
    "e120_clean_earnings": {
-    "n": 287,
-    "mean": -0.54
+    "n": 289,
+    "mean": -0.5
    },
    "verdict": "NOT SHOWN"
   },
@@ -98,12 +98,12 @@
     "baseline_pct_beat_spy": 47.0
    },
    "e120_high_accrual": {
-    "n": 25,
-    "mean": 5.86
+    "n": 24,
+    "mean": 5.98
    },
    "e120_clean_earnings": {
-    "n": 95,
-    "mean": 2.03
+    "n": 96,
+    "mean": 2.04
    },
    "verdict": "NOT SHOWN"
   }
@@ -130,12 +130,12 @@
     "baseline_pct_beat_spy": 45.0
    },
    "e120_high_accrual": {
-    "n": 729,
-    "mean": 0.35
+    "n": 730,
+    "mean": 0.29
    },
    "e120_clean_earnings": {
-    "n": 2097,
-    "mean": -0.43
+    "n": 2096,
+    "mean": -0.4
    },
    "verdict": "NOT SHOWN"
   },
