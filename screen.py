@@ -20,7 +20,21 @@ UNIVERSE_URL = "https://raw.githubusercontent.com/datasets/s-and-p-500-companies
 SECTOR_ETF = {"Information Technology": "XLK", "Financials": "XLF", "Energy": "XLE", "Health Care": "XLV",
               "Industrials": "XLI", "Utilities": "XLU", "Consumer Discretionary": "XLY", "Consumer Staples": "XLP",
               "Real Estate": "XLRE", "Materials": "XLB", "Communication Services": "XLC"}
-BENCH = ["SPY", "QQQ", "IWM"] + sorted(set(SECTOR_ETF.values()))
+# v15 theme screen. Each theme = one driver proxy, the close BEFORE the shock (None = exposure list only), and the futures-curve
+# change from spot over ~12-15 months when known (manual, dated). Edit this list as themes change; never edit after reading results.
+THEMES = [
+    dict(key="OIL", proxy="BNO", alt="USO", shock="2026-02-27", curve_change=-0.176,
+         note="Hormuz: US/Israel strikes on Iran 28 Feb 2026. Curve: Brent Dec-27 82.62 vs front 100.32 (5 Oct settles)."),
+    dict(key="RATES_DOWN", proxy="TLT", shock="2026-09-15", curve_change=None, note="Fed hiked 16 Sep 2026; TLT up = yields down."),
+    dict(key="TELECOM", proxy="IYZ", shock="2026-10-08", curve_change=None, note="SpaceX buys Grain spectrum 9 Oct 2026; carriers -9%."),
+    dict(key="AI_CAPEX", proxy="SMH", shock=None, curve_change=None, note="exposure only"),
+    dict(key="DOLLAR", proxy="UUP", shock=None, curve_change=None, note="exposure only"),
+    dict(key="GOLD", proxy="GLD", shock=None, curve_change=None, note="exposure only"),
+    dict(key="COPPER", proxy="CPER", shock=None, curve_change=None, note="exposure only"),
+    dict(key="CREDIT", proxy="HYG", shock=None, curve_change=None, note="exposure only"),
+]
+THEME_PROXIES = sorted({th["proxy"] for th in THEMES} | {th["alt"] for th in THEMES if th.get("alt")})
+BENCH = ["SPY", "QQQ", "IWM"] + sorted(set(SECTOR_ETF.values()) | set(THEME_PROXIES))
 PER_ARCHETYPE = 8          # survivors charted per archetype
 RANK_POOL = 12             # candidates per archetype sent to the ranking step
 HOLD = 120                 # sessions (~6 months): time stop in every simulated trade. The book holds weeks to quarters.
@@ -993,6 +1007,75 @@ def track(out, survivors, bars, asof):
     return dict(calls_logged=int(len(hist)), by_archetype=sc, note="excess return vs SPY from the close of the day first flagged; n under 25 is noise")
 
 # ----------------------------------------------------------------------------- main
+
+# ----------------------------------------------------------------------------- v15 theme screen (added 11 Oct 2026)
+def _ols(y, m, p):
+    """y = c + a*m + b*p. Returns a, b, t(b), corr(y, p)."""
+    X = np.column_stack([np.ones(len(y)), m, p]); coef, *_ = np.linalg.lstsq(X, y, rcond=None)
+    res = y - X @ coef; dof = max(len(y) - 3, 1); s2 = float(res @ res) / dof
+    try: se = np.sqrt(np.diag(s2 * np.linalg.inv(X.T @ X)))
+    except np.linalg.LinAlgError: return None
+    return float(coef[1]), float(coef[2]), float(coef[2] / se[2]) if se[2] > 0 else 0.0, float(np.corrcoef(y, p)[0, 1])
+
+def theme_screen(bars, feats, meta, asof, live, top=10, window=250):
+    """1) EXPOSURE: every liquid stock's sensitivity to each driver, controlling for the market (SPY), last 250 sessions.
+    2) PRICED-IN: for exposed names, the pre-shock sensitivity turns the stock's move since the shock (net of the market) into the
+    driver move it IMPLIES. Compare with the driver's actual move (spot) and the futures curve. CHEAP = the stock prices a worse
+    driver than both spot and curve; PRICED = it already prices a better driver than both; FAIR in between."""
+    lr = lambda c: np.log(c).diff()
+    spy_c = bars["SPY"]["close"]; out = {"_note": theme_screen.__doc__.split("\n")[0], "asof": asof, "themes": {}}
+    names = [t for t, f in feats.items() if t in meta and t not in BENCH and "skip" not in f and "suspect" not in f
+             and f.get("date") == asof and f["last"] >= MIN_PRICE and f["dvol20"] >= MIN_DVOL]
+    fcache = {}
+    for th in THEMES:
+        px = bars.get(th["proxy"]) if th["proxy"] in bars else bars.get(th.get("alt") or "")
+        if px is None: out["themes"][th["key"]] = {"_error": f"no prices for {th['proxy']}"}; continue
+        pc = px["close"]; R = pd.concat([lr(spy_c).rename("m"), lr(pc).rename("p")], axis=1)
+        rows = []
+        for t in names:
+            d = pd.concat([R, lr(bars[t]["close"]).rename("y")], axis=1).dropna().tail(window)
+            if len(d) < window * 0.9: continue
+            o = _ols(d["y"].values, d["m"].values, d["p"].values)
+            if o and abs(o[2]) >= 3: rows.append(dict(ticker=t, b=o[1], t_b=o[2], corr=o[3]))
+        rows.sort(key=lambda r: r["t_b"])
+        pick = [r for r in rows if r["t_b"] > 0][-top:][::-1] + [r for r in rows if r["t_b"] < 0][:top]
+        res = []
+        for r in pick:
+            t = r["ticker"]; c = bars[t]["close"]; f = feats[t]
+            e = dict(ticker=t, name=meta[t].get("name"), sector=meta[t].get("sector"), last=f["last"], side="gains when driver rises" if r["b"] > 0 else "gains when driver falls",
+                     beta_now=round(r["b"], 3), t_now=round(r["t_b"], 1), corr_now=round(r["corr"], 2))
+            if th["shock"]:
+                sd = pd.Timestamp(th["shock"])
+                d = pd.concat([R, lr(c).rename("y")], axis=1).dropna()
+                pre = d[d.index <= sd].tail(window)
+                cs, ms, ps = c[c.index <= sd], spy_c[spy_c.index <= sd], pc[pc.index <= sd]
+                if len(pre) < window * 0.9 or not len(cs) or not len(ps):
+                    e["priced"] = "UNTESTABLE (no pre-shock history)"
+                else:
+                    o = _ols(pre["y"].values, pre["m"].values, pre["p"].values)
+                    Rs, Rm, Rp = np.log(c.iloc[-1]/cs.iloc[-1]), np.log(spy_c.iloc[-1]/ms.iloc[-1]), np.log(pc.iloc[-1]/ps.iloc[-1])
+                    e.update(price_at_shock=round(float(cs.iloc[-1]), 2), stock_since_shock_pct=round(float(np.expm1(Rs))*100, 1),
+                             spy_since_shock_pct=round(float(np.expm1(Rm))*100, 1), driver_since_shock_pct=round(float(np.expm1(Rp))*100, 1))
+                    if not o or abs(o[2]) < 2:
+                        e["priced"] = "UNTESTABLE (no stable pre-shock sensitivity)"
+                    else:
+                        a, b = o[0], o[1]; implied = (Rs - a*Rm)/b
+                        curve = Rp + (np.log1p(th["curve_change"]) if th.get("curve_change") is not None else 0.0)
+                        sg = np.sign(b); u, us, uc = sg*implied, sg*Rp, sg*curve
+                        tol = max(0.05, 0.25*abs(Rp))
+                        cls = "CHEAP" if u < min(us, uc) - tol else "PRICED" if u > max(us, uc) + tol else "FAIR"
+                        e.update(beta_pre=round(b, 3), t_pre=round(o[2], 1), implied_driver_pct=round(float(np.expm1(implied))*100, 1),
+                                 curve_driver_pct=round(float(np.expm1(curve))*100, 1), priced=cls,
+                                 reading=f"stock prices the driver at {np.expm1(implied)*100:+.0f}% since shock; spot {np.expm1(Rp)*100:+.0f}%, curve {np.expm1(curve)*100:+.0f}%")
+            if live and e.get("priced") in ("CHEAP", "FAIR"):
+                if t not in fcache: fcache[t] = fundamentals(t)
+                e.update({k: fcache[t].get(k) for k in ("fwd_pe", "eps_next_fy", "rev30_pct", "rev90_pct", "next_earnings")})
+                if e["priced"] == "CHEAP" and (e.get("rev30_pct") or 0) < -1: e["priced"] = "CHEAP BUT ESTIMATES STILL FALLING"
+            res.append(e)
+        out["themes"][th["key"]] = dict(proxy=th["proxy"] if th["proxy"] in bars else th.get("alt"), shock=th["shock"], curve_change=th.get("curve_change"),
+                                        note=th["note"], n_exposed=len(rows), names=res)
+    return out
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--csv-dir"); ap.add_argument("--out", default="out"); ap.add_argument("--no-charts", action="store_true")
     a = ap.parse_args()
@@ -1073,6 +1156,16 @@ def main():
     for k_, v_ in surv.items():
         if isinstance(v_, dict) and "test" in v_: print(f"SURVIVORSHIP {k_:18} n {v_.get('n')} stocks {v_.get('stocks')} | 6m edge {v_.get('edge120')} t {v_.get('t_clustered')} | beat SPY {v_.get('pct_beat_spy')}% vs {v_.get('baseline_pct_beat_spy')}% | {v_.get('test')}")
     print("SURVIVORSHIP former members", surv.get("former_members_in_window"), "with prices", surv.get("former_members_with_prices"), surv.get("_error", ""), "| by year", surv.get("C_by_year"))
+    try:
+        themes = theme_screen(bars, feats, meta, asof, live=not a.csv_dir)
+    except Exception as e:
+        import traceback; themes = {"_error": f"{type(e).__name__}: {str(e)[:150]}", "_trace": traceback.format_exc()[-600:]}
+    (out/"themes.json").write_text(json.dumps(themes, indent=1, default=str))
+    for k_, v_ in (themes.get("themes") or {}).items():
+        print(f"THEME {k_} proxy {v_.get('proxy')} shock {v_.get('shock')} exposed {v_.get('n_exposed')} {v_.get('_error', '')}")
+        for e_ in v_.get("names", []):
+            print(f"   {e_['ticker']:6} {e_['side'][:22]:22} b {e_['beta_now']:+.2f} t {e_['t_now']:+5.1f} | {e_.get('priced', '-'):34} {e_.get('reading', '')} | rev30 {e_.get('rev30_pct')}")
+    print("THEMES", themes.get("_error", ""))
     ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir, bt=bt)
     scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
