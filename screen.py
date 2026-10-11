@@ -24,6 +24,7 @@ BENCH = ["SPY", "QQQ", "IWM"] + sorted(set(SECTOR_ETF.values()))
 PER_ARCHETYPE = 8          # survivors charted per archetype
 RANK_POOL = 12             # candidates per archetype sent to the ranking step
 HOLD = 60                  # sessions: time stop used in every simulated trade
+EARNINGS_WINDOW = 15       # sessions: a name reporting inside this window is researched as a post-print trigger, not an entry
 MIN_PRICE, MIN_DVOL, MIN_BARS = 5.0, 20e6, 260
 
 # ----------------------------------------------------------------------------- data
@@ -115,7 +116,11 @@ def features(t, x, spy):
     bbw = 4*c.rolling(20).std()/s20
     f["bbw_pct"] = float((bbw.tail(504) < bbw.iloc[-1]).mean()*100)      # percentile of today's bandwidth, 2y
     # scare: worst single session inside the last 10, with its volume multiple and the trend before it
-    ret = c.pct_change()*100; k = int(np.argmin(ret.tail(10).values)); pos = n-10+k
+    ret = c.pct_change()*100
+    kb = int(np.argmax(ret.tail(5).values)); pb = n-5+kb
+    f.update(best_day=float(ret.iloc[pb]), best_day_date=str(c.index[pb].date()), best_day_volx=float(v.iloc[pb]/v.iloc[pb-20:pb].mean()),
+             pre_gap_close=float(c.iloc[pb-1]), gap_close=float(c.iloc[pb]))
+    k = int(np.argmin(ret.tail(10).values)); pos = n-10+k
     f.update(worst_day=float(ret.iloc[pos]), worst_day_date=str(c.index[pos].date()),
              worst_day_volx=float(v.iloc[pos]/v.iloc[pos-20:pos].mean()),
              pre_vs200=float((c.iloc[pos-1]/s200.iloc[pos-1]-1)*100),
@@ -159,6 +164,14 @@ def a_macro(f, sec):  # sector has recovered, the stock has not
     if not (sec["vs50"] > 0 and sec["m1"] > 2 and lag < -10 and f["vs50"] < 0): return None
     return -lag, f"sector ETF {sec['ticker']} is {sec['vs50']:+.1f}% over its 50d and {sec['m1']:+.1f}% on the month; the stock lags it by {lag:.0f}pts over 3m and sits {f['vs50']:.1f}% under its own 50d. Driver to be named in research"
 
+def a_recovery(f):   # added 10 Oct 2026: the only pattern with pooled evidence. Strong vs SPY, still well off its high, long trend rising.
+    if not (f.get("rs3", 0) >= 25 and f["dd52"] <= -15 and f["vs200"] > 0 and f["slope200"] > 0): return None
+    return f.get("rs3", 0) - max(f["vs50"]-10, 0), f"+{f.get('rs3', 0):.0f}pts vs SPY in 3m, still {f['dd52']:.0f}% off the 52w high, {f['vs200']:+.0f}% over a rising 200d, {f['vs50']:+.1f}% vs the 50d"
+
+def a_gap(f):   # candidate, added 11 Oct 2026: a big up-day on heavy volume in the last 5 sessions that has held. Earnings-drift style.
+    if not (f["best_day"] >= 5 and f["best_day_volx"] >= 2.5 and f["last"] >= f["gap_close"]*0.97): return None
+    return f["best_day"]*f["best_day_volx"], f"+{f['best_day']:.1f}% on {f['best_day_date']} at {f['best_day_volx']:.1f}x volume and holding ({(f['last']/f['gap_close']-1)*100:+.1f}% since)"
+
 def a_unclassified(f):   # fits no archetype but the tape did something unusual. This is where new archetypes come from.
     hit = []
     if abs(f["d1"]) >= 5 and f["volx"] >= 2.5: hit.append(f"{f['d1']:+.1f}% on {f['volx']:.1f}x volume")
@@ -166,11 +179,10 @@ def a_unclassified(f):   # fits no archetype but the tape did something unusual.
     if f["pos52"] <= 1 and f["volx"] >= 2: hit.append(f"52w low on {f['volx']:.1f}x volume")
     if abs(f["vs200"]) < 1 and abs(f["w1"]) >= 6: hit.append(f"crossed the 200d with a {f['w1']:+.1f}% week")
     if f["bbw_pct"] <= 2: hit.append(f"tightest 20d range in 2 years ({f['bbw_pct']:.0f}th pct)")
-    if f.get("rs3", 0) >= 25 and f["dd52"] < -15: hit.append(f"+{f.get('rs3', 0):.0f}pts vs SPY in 3m while still {f['dd52']:.0f}% off the high")
     if not hit: return None
     return abs(f["d1"])*max(f["volx"], 1) + 10*len(hit), "; ".join(hit)
 
-RULES = [("BASE_COIL", a_base), ("MOMENTUM", a_momentum), ("NARRATIVE_SCARE", a_scare), ("VALUE_DIVERGENCE", a_value_div)]
+RULES = [("RECOVERY_LEADER", a_recovery), ("EVENT_GAP_UP", a_gap), ("BASE_COIL", a_base), ("MOMENTUM", a_momentum), ("NARRATIVE_SCARE", a_scare), ("VALUE_DIVERGENCE", a_value_div)]
 
 # ----------------------------------------------------------------------------- chart
 PRICE, ACC, GRAY1, GRAY2, INK, PAPER = "#00568F", "#883136", "#8C948F", "#C9CEC9", "#171A19", "#FBF8F3"
@@ -194,12 +206,16 @@ def chart(t, x, f, arch, path):
     fig.savefig(path, bbox_inches="tight", facecolor=PAPER); plt.close(fig)
 
 # ----------------------------------------------------------------------------- ranking: does this setup pay, on this stock's own history?
-ENTRY_STYLE = {"BASE_COIL": "confirmation", "MOMENTUM": "confirmation", "NARRATIVE_SCARE": "weakness", "VALUE_DIVERGENCE": "weakness",
+ENTRY_STYLE = {"RECOVERY_LEADER": "strength", "EVENT_GAP_UP": "strength", "BASE_COIL": "confirmation", "MOMENTUM": "confirmation", "NARRATIVE_SCARE": "weakness", "VALUE_DIVERGENCE": "weakness",
                "MACRO_PUNISHED": "weakness", "UNCLASSIFIED": "none"}
 
 def levels(f, arch):
     """Entry, stop, target from raw closes. Target None = no natural target; exit is the stop or the time stop."""
     last = f["last"]; floor20 = f["min20"]*0.98
+    if arch == "RECOVERY_LEADER":
+        return last, (f["s50"] if 0.03 <= 1-f["s50"]/last <= 0.12 else last*0.90), f["hi52c"]
+    if arch == "EVENT_GAP_UP":
+        return last, max(f["pre_gap_close"]*0.99, last*0.90), None
     if arch == "BASE_COIL":
         entry = max(f["pivot_c"], last); stop = f["s50"] if 0.03 <= 1-f["s50"]/entry <= 0.10 else entry*0.93
         return entry, stop, entry + (f["pivot_c"]-f["base_low_c"])
@@ -213,11 +229,20 @@ def levels(f, arch):
         return last, min(floor20, last*0.95), last*1.12
     return last, min(floor20, last*0.95), None
 
-def signal_days(x, arch, sec=None):
+TARGET_BASIS = {"RECOVERY_LEADER": "the 52-week closing high", "EVENT_GAP_UP": "none: stop just under the pre-gap close, or the time stop", "BASE_COIL": "pivot plus the height of the base", "MOMENTUM": "none: stop or time stop only",
+                "NARRATIVE_SCARE": "the close before the event", "VALUE_DIVERGENCE": "the 200-day if it is 5%+ above, else halfway back to the 52-week high",
+                "MACRO_PUNISHED": "12% above entry (half the typical lag)", "UNCLASSIFIED": "none: stop or time stop only"}
+
+def signal_days(x, arch, sec=None, spy=None):
     """Boolean series: the days in this stock's past when the same archetype condition was true."""
     c, v = x["close"], x["volume"]
     s20, s50, s200 = c.rolling(20).mean(), c.rolling(50).mean(), c.rolling(200).mean()
     hi, lo = c.rolling(252).max(), c.rolling(252).min()
+    if arch == "RECOVERY_LEADER" and spy is not None:
+        j = c.index.intersection(spy.index); cs, ss = c[j], spy[j]; l200 = cs.rolling(200).mean()
+        return ((cs/cs.shift(63)-ss/ss.shift(63)) >= 0.25) & (cs/cs.rolling(252).max()-1 <= -0.15) & (cs > l200) & (l200 > l200.shift(20))
+    if arch == "EVENT_GAP_UP":
+        return (c.pct_change() >= 0.05) & (v/v.rolling(20).mean().shift(1) >= 2.5)
     if arch == "BASE_COIL":
         rhi, rlo = c.rolling(60).max().shift(5), c.rolling(60).min().shift(5)
         return ((rhi-rlo)/((rhi+rlo)/2) < 0.20) & (c > rhi) & (c.shift(1) <= rhi.shift(1))        # breakout day from a tight base
@@ -250,16 +275,19 @@ def thin(idx, gap=20):
         if i-last >= gap: keep.append(i); last = i
     return keep
 
-def rank_one(t, arch, f, x, sec):
+def rank_one(t, arch, f, x, sec, spy=None):
     entry, stop, target = levels(f, arch)
     S = 1-stop/entry; T = (target/entry-1) if target else None
     r = dict(ticker=t, archetype=arch, entry_style=ENTRY_STYLE[arch], entry=round(entry, 2), stop=round(stop, 2),
              target=round(target, 2) if target else None, risk_pct=round(S*100, 1), reward_pct=round(T*100, 1) if T else None,
-             rr=round(T/S, 2) if T else None)
+             rr=round(T/S, 2) if T else None, target_basis=TARGET_BASIS.get(arch),
+             shares_per_100_risk=round(100/(entry-stop), 2) if entry > stop else None,
+             position_per_100_risk=round(100/(entry-stop)*entry, 0) if entry > stop else None)
     if T is not None and T <= 0.01: r.update(tier="PASS", reason="no room to the target"); return r
     c = x["close"]
     u = simulate(c, range(252, len(c)-HOLD, 5), T, S)                       # any day: this is the stock's drift
-    sig = signal_days(x, arch, sec)
+    sig = signal_days(x, arch, sec, spy)
+    if sig is not None: sig = sig.reindex(c.index).fillna(False)
     cond = simulate(c, thin([i for i in np.flatnonzero(sig.values) if i >= 252]), T, S) if sig is not None else np.array([])
     n = len(cond)
     if len(u) < 50: r.update(tier="PASS", reason="not enough history"); return r
@@ -293,8 +321,11 @@ def fundamentals(t):
     except Exception: pass
     return out
 
-def tier(r, asof):
+def tier(r, asof, bt=None):
     if "tier" in r: return
+    pooled = (bt or {}).get(r["archetype"])
+    if pooled:
+        r["pooled_edge60"] = pooled["e60"]["edge"]; r["pooled_t"] = pooled["e60"]["t_clustered"]
     days = None
     if r.get("next_earnings"):
         try: days = int(np.busday_count(asof, r["next_earnings"]))
@@ -308,48 +339,69 @@ def tier(r, asof):
     elif r["n_setups"] < 5: why.append(f"only {r['n_setups']} past examples")
     if r["archetype"] == "VALUE_DIVERGENCE" and r.get("rev30_pct") is not None and r["rev30_pct"] <= 0: why.append("estimates not rising")
     if r["archetype"] == "MOMENTUM" and r.get("rev30_pct") is not None and r["rev30_pct"] < 0: why.append("estimates falling")
-    if days is not None and 0 <= days <= 3: why.append(f"earnings in {days} sessions")
+    cap = False
+    if pooled and pooled.get("verdict") == "HURTS":
+        why.append(f"this archetype has done worse than ordinary days across all stocks (edge {pooled['e60']['edge']:+.1f}, t {pooled['e60']['t_clustered']})")
+    elif pooled and pooled.get("verdict") != "WORKS":
+        cap = True; r["note"] = f"archetype not yet shown to beat ordinary days (edge {pooled['e60']['edge']:+.1f}, t {pooled['e60']['t_clustered']}): capped at WATCH"
     hard = [w for w in why if not w.startswith("only ")]
-    if not hard and r["exp_R"] >= 0.25: r.update(tier="DEEP DIVE", reason="; ".join(why) or "passes every scripted test")
-    elif r["exp_R"] >= 0.10 and len(hard) <= 1: r.update(tier="WATCH", reason="; ".join(why) or "thin expectancy")
+    if not hard and not cap and r["exp_R"] >= 0.25: r.update(tier="DEEP DIVE", reason="; ".join(why) or "passes every scripted test")
+    elif r["exp_R"] >= 0.10 and len(hard) <= 1: r.update(tier="WATCH", reason="; ".join(why) or r.get("note") or "thin expectancy")
     else: r.update(tier="PASS", reason="; ".join(why) or "thin expectancy")
+    if days is not None and 0 <= days <= EARNINGS_WINDOW and r["tier"] in ("DEEP DIVE", "WATCH"):
+        r["earnings_window"] = True
+        if r["tier"] == "DEEP DIVE":
+            r.update(tier="AFTER PRINT", reason=f"passes, but reports in {days} sessions ({r['next_earnings']}): write the trigger now, enter after the print")
 
-def rank_all(cands, feats, bars, asof, live):
-    rows = []
+def rank_all(cands, feats, bars, asof, live, bt=None):
+    rows, fcache = [], {}
+    def fund(t):
+        if t not in fcache: fcache[t] = fundamentals(t) if live else {}
+        return fcache[t]
+    spy3 = feats.get("SPY", {}).get("m3")
     for arch, lst in cands.items():
-        for score, t, why in lst[:RANK_POOL]:
-            f = feats[t]; sec = bars.get(SECTOR_ETF.get(f.get("sector") or "", ""))
+        pool = lst[:RANK_POOL]
+        if arch == "VALUE_DIVERGENCE" and live:
+            # the archetype is "estimates rising while price is down": pull revisions for the whole list and let them choose
+            wide = [(fund(t).get("rev30_pct"), score, t, why) for score, t, why in lst[:60]]
+            kept = [w for w in wide if w[0] is None or w[0] > 0]
+            kept.sort(key=lambda w: (-(w[0] if w[0] is not None else -1), -w[1]))
+            pool = [(score, t, why + (f" Estimates {rev:+.1f}% in 30 days." if rev is not None else " Estimates not available.")) for rev, score, t, why in kept[:RANK_POOL]]
+        for score, t, why in pool:
+            f = feats[t]; etf = SECTOR_ETF.get(f.get("sector") or "", ""); sec = bars.get(etf)
             try:
-                r = rank_one(t, arch, f, bars[t], sec["close"] if sec is not None else None)
+                r = rank_one(t, arch, f, bars[t], sec["close"] if sec is not None else None, bars["SPY"]["close"] if "SPY" in bars else None)
             except Exception as e:
                 r = dict(ticker=t, archetype=arch, tier="PASS", reason=f"rank error {type(e).__name__}")
             r.update(name=f.get("name"), sector=f.get("sector"), index=f.get("index"), last=f["last"], screen_why=why)
+            sm3 = feats.get(etf, {}).get("m3")
+            if sm3 is not None and spy3 is not None: r["sector_vs_spy_3m"] = round(sm3-spy3, 1)
             rows.append(r)
     if live:
         for r in rows:
-            if "exp_R" in r and r["exp_R"] >= 0.05: r.update(fundamentals(r["ticker"]))
-    for r in rows: tier(r, asof)
-    order = {"DEEP DIVE": 0, "WATCH": 1, "PASS": 2}
+            if "exp_R" in r and r["exp_R"] >= 0.05: r.update(fund(r["ticker"]))
+    for r in rows: tier(r, asof, bt)
+    order = {"DEEP DIVE": 0, "AFTER PRINT": 1, "WATCH": 2, "PASS": 3}
     rows.sort(key=lambda r: (order[r["tier"]], -(r.get("exp_R") or -9)))
     return rows
 
 # ----------------------------------------------------------------------------- pooled backtest: does an archetype beat drift at all?
 def extra_signals(x, arch, spy):
-    """Candidate archetypes proposed by research, tested before they are adopted."""
+    """Candidate patterns proposed by research, tested before they are adopted."""
     c, v = x["close"], x["volume"]
-    if arch == "RECOVERY_LEADER":
-        j = c.index.intersection(spy.index); cs, ss = c[j], spy[j]; s200 = cs.rolling(200).mean()
-        return ((cs/cs.shift(63)-ss/ss.shift(63)) >= 0.25) & (cs/cs.rolling(252).max()-1 <= -0.15) & (cs > s200) & (s200 > s200.shift(20))
     if arch == "GAP_UP_ON_VOLUME":
         return (c.pct_change() >= 0.08) & (v/v.rolling(20).mean().shift(1) >= 3)
     return None
 
 def backtest(bars, feats, universe):
     """Every past signal, every stock, 10 years. Result = return over the next 20 and 60 sessions MINUS SPY over the
-    same sessions, so a rising market is not counted as edge. Baseline = the same measure on ordinary days.
-    Caveat printed with the output: today's index members only, so losers that left the index are missing."""
+    same sessions. Baseline = the same measure on ordinary days in the same stocks.
+    Tightened 10 Oct 2026: results trimmed at the 1st and 99th percentile of the baseline (one bad print cannot carry an
+    average); medians and beat rates shown against the baseline's; and the t-statistic is clustered by calendar month,
+    because signals bunch up after sell-offs and are not independent."""
     spy = bars["SPY"]["close"]; out = {}
-    archs = ["BASE_COIL", "MOMENTUM", "NARRATIVE_SCARE", "VALUE_DIVERGENCE", "MACRO_PUNISHED", "RECOVERY_LEADER", "GAP_UP_ON_VOLUME"]
+    archs = ["RECOVERY_LEADER", "EVENT_GAP_UP", "BASE_COIL", "MOMENTUM", "NARRATIVE_SCARE", "VALUE_DIVERGENCE", "MACRO_PUNISHED"]
+    spy_up = (spy > spy.rolling(200).mean())
     acc = {a: [] for a in archs}; base = []
     for t in universe:
         x = bars.get(t)
@@ -357,40 +409,69 @@ def backtest(bars, feats, universe):
         c = x["close"]; j = c.index.intersection(spy.index)
         if len(j) < 400: continue
         cs, ss = c[j], spy[j]
-        ex = {h: (cs.shift(-h)/cs-1) - (ss.shift(-h)/ss-1) for h in (20, 60)}
-        yr = pd.Series(cs.index.year, index=cs.index)
-        idx_all = np.arange(252, len(cs)-60, 10)
-        base += [(ex[20].iloc[i]*100, ex[60].iloc[i]*100, yr.iloc[i]) for i in idx_all]
+        e20 = ((cs.shift(-20)/cs-1) - (ss.shift(-20)/ss-1)).values*100; e60 = ((cs.shift(-60)/cs-1) - (ss.shift(-60)/ss-1)).values*100
+        ym = (cs.index.year*100 + cs.index.month).values
         secbar = bars.get(SECTOR_ETF.get((feats.get(t) or {}).get("sector") or "", ""))
+        mk = spy_up.reindex(cs.index).fillna(False).values.astype(int)                       # 1 = SPY above its 200-day on the signal day
+        if secbar is not None:
+            sc = secbar["close"].reindex(cs.index).ffill()
+            sk = ((sc/sc.shift(63) - ss/ss.shift(63)) > 0).values.astype(int)                 # 1 = the stock's sector beat SPY over the prior 3 months
+        else:
+            sk = np.full(len(cs), -1)
+        for i in range(252, len(cs)-60, 10): base.append((e20[i], e60[i], ym[i], mk[i], sk[i]))
         for a in archs:
             try:
-                sig = signal_days(x, a, secbar["close"] if secbar is not None else None) if a in ENTRY_STYLE else extra_signals(x, a, spy)
+                sig = signal_days(x, a, secbar["close"] if secbar is not None else None, spy) if a in ENTRY_STYLE else extra_signals(x, a, spy)
             except Exception:
                 sig = None
             if sig is None: continue
-            sig = sig.reindex(cs.index).fillna(False)
-            for i in thin([k for k in np.flatnonzero(sig.values) if 252 <= k < len(cs)-60]):
-                acc[a].append((ex[20].iloc[i]*100, ex[60].iloc[i]*100, yr.iloc[i]))
-    b = pd.DataFrame(base, columns=["e20", "e60", "yr"]).dropna()
-    mid = int(b.yr.median())
+            sig = sig.reindex(cs.index).fillna(False).values
+            for i in thin([k for k in np.flatnonzero(sig) if 252 <= k < len(cs)-60]): acc[a].append((e20[i], e60[i], ym[i], mk[i], sk[i]))
+    COLS = ["e20", "e60", "ym", "mkt", "sec"]
+    b = pd.DataFrame(base, columns=COLS).dropna()
+    clip = {h: (float(b[h].quantile(0.01)), float(b[h].quantile(0.99))) for h in ("e20", "e60")}
+    for h in clip: b[h] = b[h].clip(*clip[h])
+    mid = int(b.ym.median())
+    bm = {h: b.groupby("ym")[h].mean() for h in ("e20", "e60")}
     def stat(d):
-        r = {"n": int(len(d))}
+        r = {"n": int(len(d)), "months_with_signals": int(d.ym.nunique())}
         for h in ("e20", "e60"):
-            m, sd = float(d[h].mean()), float(d[h].std())
-            bm = float(b[h].mean())
-            se = sd/np.sqrt(len(d)) if len(d) > 1 else float("nan")
-            r[h] = dict(mean_excess=round(m, 2), baseline=round(bm, 2), edge=round(m-bm, 2), t=round((m-bm)/se, 1) if se and se == se else None,
-                        pct_beat_spy=round(float((d[h] > 0).mean()*100), 0), median=round(float(d[h].median()), 2))
-        r["edge60_first_half"] = round(float(d[d.yr <= mid].e60.mean() - b[b.yr <= mid].e60.mean()), 2) if (d.yr <= mid).any() else None
-        r["edge60_second_half"] = round(float(d[d.yr > mid].e60.mean() - b[b.yr > mid].e60.mean()), 2) if (d.yr > mid).any() else None
+            d[h] = d[h].clip(*clip[h])
+            m = float(d[h].mean()); base_m = float(b[h].mean())
+            pm = (d.groupby("ym")[h].mean() - bm[h]).dropna()                    # one observation per month: signal mean minus that month's ordinary days
+            tc = float(pm.mean()/(pm.std()/np.sqrt(len(pm)))) if len(pm) > 5 and pm.std() > 0 else None
+            r[h] = dict(mean_excess=round(m, 2), baseline=round(base_m, 2), edge=round(m-base_m, 2),
+                        edge_month_matched=round(float(pm.mean()), 2) if len(pm) else None, t_clustered=round(tc, 1) if tc is not None else None,
+                        pct_months_positive=round(float((pm > 0).mean()*100), 0) if len(pm) else None,
+                        median=round(float(d[h].median()), 2), baseline_median=round(float(b[h].median()), 2),
+                        pct_beat_spy=round(float((d[h] > 0).mean()*100), 0), baseline_pct_beat_spy=round(float((b[h] > 0).mean()*100), 0))
+        f1, f2 = d[d.ym <= mid], d[d.ym > mid]
+        r["edge60_first_half"] = round(float(f1.e60.mean() - b[b.ym <= mid].e60.mean()), 2) if len(f1) else None
+        r["edge60_second_half"] = round(float(f2.e60.mean() - b[b.ym > mid].e60.mean()), 2) if len(f2) else None
+        cond = {}
+        for label, col, val in (("spy_above_200d", "mkt", 1), ("spy_below_200d", "mkt", 0), ("sector_leading", "sec", 1), ("sector_lagging", "sec", 0)):
+            ds, bs = d[d[col] == val], b[b[col] == val]
+            if len(ds) >= 30 and len(bs) >= 30:
+                pmc = (ds.groupby("ym").e60.mean() - bs.groupby("ym").e60.mean()).dropna()
+                tcc = float(pmc.mean()/(pmc.std()/np.sqrt(len(pmc)))) if len(pmc) > 5 and pmc.std() > 0 else None
+                cond[label] = dict(n=int(len(ds)), edge60=round(float(ds.e60.mean()-bs.e60.mean()), 2), t_clustered=round(tcc, 1) if tcc is not None else None)
+        r["by_condition"] = cond
+        e = r["e60"]
+        r["verdict"] = ("WORKS" if (e["t_clustered"] or 0) >= 2 and e["edge"] > 0 and (r["edge60_first_half"] or 0) > 0 and (r["edge60_second_half"] or 0) > 0
+                        else "HURTS" if (e["t_clustered"] or 0) <= -2 and e["edge"] < 0 else "NOT SHOWN")
         return r
     for a in archs:
-        d = pd.DataFrame(acc[a], columns=["e20", "e60", "yr"]).dropna()
+        d = pd.DataFrame(acc[a], columns=COLS).dropna()
         if len(d) >= 30: out[a] = stat(d)
-    out["_baseline"] = dict(n=int(len(b)), mean_excess_20=round(float(b.e20.mean()), 2), mean_excess_60=round(float(b.e60.mean()), 2), split_year=mid)
-    out["_note"] = ("Excess return vs SPY after every past signal, all stocks pooled, signals at least 20 sessions apart per stock. "
-                    "edge = signal mean minus ordinary-day mean. t above about 2 with both halves the same sign is a real effect; anything else is not shown to work. "
-                    "Survivorship bias: today's index members only, which flatters buy-the-dip archetypes. Entry at the signal-day close, no stops, no costs.")
+    out["_baseline"] = dict(n=int(len(b)), mean_excess_20=round(float(b.e20.mean()), 2), mean_excess_60=round(float(b.e60.mean()), 2),
+                            median_60=round(float(b.e60.median()), 2), pct_beat_spy_60=round(float((b.e60 > 0).mean()*100), 0), split_month=mid, trim=clip)
+    out["_now"] = dict(spy_above_200d=bool(spy_up.iloc[-1]),
+                       sectors_leading=sorted(e for e in set(SECTOR_ETF.values()) if e in bars and len(bars[e]) > 70 and
+                                              (bars[e]["close"].iloc[-1]/bars[e]["close"].iloc[-64] - spy.iloc[-1]/spy.iloc[-64]) > 0))
+    out["_note"] = ("Excess return vs SPY after every past signal, all stocks pooled, signals at least 20 sessions apart per stock, results trimmed at the "
+                    "baseline's 1st/99th percentile. edge = signal mean minus ordinary-day mean. t_clustered treats each calendar month as one observation. "
+                    "WORKS = clustered t of 2 or more and positive in both halves. by_condition splits each archetype by whether SPY was above its 200-day and whether the stock's sector was beating SPY on the signal day: a condition is a candidate filter only if its edge and t are clearly better than the other side. Still uncorrected: survivorship (today's index members only, which flatters "
+                    "anything that buys a fallen stock), no stops, no costs.")
     return out
 
 # ----------------------------------------------------------------------------- outcome tracking
@@ -457,7 +538,7 @@ def main():
         if t in BENCH or t in classified or "skip" in f or "suspect" in f or f["date"] != asof or f["last"] < MIN_PRICE or f["dvol20"] < MIN_DVOL: continue
         r = a_unclassified(f)
         if r: cands["UNCLASSIFIED"].append((r[0], t, r[1]))
-    keep = ["ticker", "name", "index", "sector", "industry", "last", "d1", "w1", "m1", "m3", "m6", "vs50", "vs200", "rsi", "pos52", "dd52", "volx",
+    keep = ["ticker", "name", "index", "sector", "industry", "last", "best_day", "best_day_date", "d1", "w1", "m1", "m3", "m6", "vs50", "vs200", "rsi", "pos52", "dd52", "volx",
             "rs3", "rs6", "bbw_pct", "pivot", "base_low", "dist_pivot", "worst_day", "worst_day_date"]
     for k, lst in cands.items():
         lst.sort(reverse=True); counts[k] = len(lst)
@@ -466,12 +547,12 @@ def main():
             survivors.append(dict(archetype=k, rank=rank, of=len(lst), score=round(float(score), 1), why=why, chart=f"charts/{t}_{k}.png",
                                   **{x: f.get(x) for x in keep}))
             if not a.no_charts: chart(t, bars[t], f, k, out/"charts"/f"{t}_{k}.png")
-    ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir)
     try:
         bt = backtest(bars, feats, [t for t in feats if "skip" not in feats[t] or feats[t].get("skip") == "deal-pinned"])
     except Exception as e:
         bt = {"_error": f"{type(e).__name__}: {str(e)[:120]}"}
     (out/"backtest.json").write_text(json.dumps(bt, indent=1))
+    ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir, bt=bt)
     scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
     ok = [f for f in feats.values() if "skip" not in f]
@@ -486,9 +567,10 @@ def main():
     (out/"market_state_full.json").write_text(json.dumps(feats, indent=0, sort_keys=True))
     print(f"asof {asof} universe {len(feats)} dropped {dropped} candidates {counts} survivors {len(survivors)} breadth {breadth}")
     for a_, r_ in bt.items():
-        if not a_.startswith("_"): print(f"BACKTEST {a_:17} n {r_['n']:6} | 20d edge {r_['e20']['edge']:+.2f} t {r_['e20']['t']} | 60d edge {r_['e60']['edge']:+.2f} t {r_['e60']['t']} beat SPY {r_['e60']['pct_beat_spy']:.0f}% | halves {r_['edge60_first_half']} / {r_['edge60_second_half']}")
+        if not a_.startswith("_"): print(f"BACKTEST {a_:17} {r_['verdict']:9} n {r_['n']:6} months {r_['months_with_signals']:4} | 60d edge {r_['e60']['edge']:+.2f} (month-matched {r_['e60']['edge_month_matched']}) t {r_['e60']['t_clustered']} | median {r_['e60']['median']:+.2f} vs {r_['e60']['baseline_median']:+.2f} | beat SPY {r_['e60']['pct_beat_spy']:.0f}% vs {r_['e60']['baseline_pct_beat_spy']:.0f}% | halves {r_['edge60_first_half']} / {r_['edge60_second_half']} | 20d edge {r_['e20']['edge']:+.2f} t {r_['e20']['t_clustered']}")
     print("BACKTEST baseline", bt.get("_baseline"), bt.get("_error", ""))
-    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "WATCH", "PASS")))
+    print("NOW", bt.get("_now"))
+    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "AFTER PRINT", "WATCH", "PASS")))
     for r in ranked:
         if r["tier"] != "PASS": print(f"  {r['tier']:9} {r['ticker']:6} {r['archetype'][:10]:10} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
     for s in survivors: print(f"  {s['archetype']:17} #{s['rank']}/{s['of']:<3} {s['ticker']:6} {s['why']}")
