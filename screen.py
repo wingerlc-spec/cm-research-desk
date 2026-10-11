@@ -510,6 +510,7 @@ def backtest(bars, feats, universe):
     return out
 
 # ----------------------------------------------------------------------------- survivorship test for RECOVERY_LEADER (added 11 Oct 2026)
+FORMER_BARS = {}   # prices for former S&P 500 members, filled by survivorship_test and reused by the lens tests
 SP500_HIST_URL = "https://raw.githubusercontent.com/fja05680/sp500/master/S%26P%20500%20Historical%20Components%20%26%20Changes%20(Updated).csv"
 
 def load_membership():
@@ -543,6 +544,7 @@ def survivorship_test(bars, feats, live):
     if live and dropped:
         try: extra = pull_yf(dropped)
         except Exception: extra = {}
+    FORMER_BARS.update(extra)
     out["former_members_in_window"] = len(dropped); out["former_members_with_prices"] = len(extra)
     def collect(tickers, source, pit):
         sig, base = [], []
@@ -586,6 +588,207 @@ def survivorship_test(bars, feats, live):
     out["C_by_year"] = yr
     out["_read"] = ("If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. "
                     "C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures.")
+    return out
+
+# ----------------------------------------------------------------------------- fundamental lens tests (added 11 Oct 2026)
+# Data: SEC XBRL "frames" (one call per concept per period, every filer at once), keyed on CIK. Entry dates are set so the
+# fundamental data was public: quarter end + 45 days for SEC-based signals (10-Q deadline 40 days for large filers), or the
+# detected announcement day + 1 for earnings drift. Every test reports all stocks AND the point-in-time S&P 500 subset.
+SEC_UA = __import__("os").environ.get("SEC_USER_AGENT") or "cm-research-desk research (github.com/wingerlc-spec/cm-research-desk)"
+DUR = {"rev": ["Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet"], "ni": ["NetIncomeLoss"],
+       "gp": ["GrossProfit"], "shares": ["WeightedAverageNumberOfDilutedSharesOutstanding"]}
+INST = {"inv": ["InventoryNet"], "cwl": ["ContractWithCustomerLiabilityCurrent"], "cwln": ["ContractWithCustomerLiabilityNoncurrent"],
+        "ltd": ["LongTermDebt", "LongTermDebtNoncurrent"], "assets": ["Assets"]}
+ANN = {"ni_fy": ["NetIncomeLoss"], "cfo_fy": ["NetCashProvidedByUsedInOperatingActivities"]}
+
+def sec_get(url):
+    import time
+    for k in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": SEC_UA, "Accept-Encoding": "identity"})
+            time.sleep(0.13)                                   # SEC fair-access limit is 10 requests a second
+            return json.loads(urllib.request.urlopen(req, timeout=60).read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code == 404: return None
+            if e.code == 403: raise RuntimeError("SEC refused the request (403): set a SEC_USER_AGENT secret with a contact email")
+            time.sleep(2)
+        except Exception:
+            time.sleep(2)
+    return None
+
+def fetch_frame(concept, unit, period):
+    d = sec_get(f"https://data.sec.gov/api/xbrl/frames/us-gaap/{concept}/{unit}/{period}.json")
+    return {int(r["cik"]): float(r["val"]) for r in (d or {}).get("data", [])}
+
+def load_fundamentals(years):
+    """Returns {key: {period_label: {cik: value}}}. Quarterly durations use CY####Q#; instants CY####Q#I; annual CY####."""
+    F = {}
+    qs = [f"CY{y}Q{q}" for y in years for q in (1, 2, 3, 4)]
+    for key, concepts in DUR.items():
+        unit = "shares" if key == "shares" else "USD"
+        F[key] = {}
+        for p in qs:
+            merged = {}
+            for c in concepts:
+                for cik, v in fetch_frame(c, unit, p).items(): merged.setdefault(cik, v)
+            F[key][p] = merged
+    for key, concepts in INST.items():
+        F[key] = {}
+        for p in qs:
+            merged = {}
+            for c in concepts:
+                for cik, v in fetch_frame(c, "USD", p + "I").items(): merged.setdefault(cik, v)
+            F[key][p] = merged
+    for key, concepts in ANN.items():
+        F[key] = {f"CY{y}": fetch_frame(concepts[0], "USD", f"CY{y}") for y in years}
+    return F
+
+def ticker_cik():
+    d = sec_get("https://www.sec.gov/files/company_tickers.json") or {}
+    return {v["ticker"].replace(".", "-"): int(v["cik_str"]) for v in d.values()}
+
+def qlabel(y, q): return f"CY{y}Q{q}"
+def qend(y, q): return pd.Timestamp(y, 3*q, 1) + pd.offsets.MonthEnd(0)
+
+def lens_events(F, cikmap, bars, years):
+    """Scan every (stock, quarter) for the five fundamental signals. Returns {lens: [(ticker, entry_date, tag)]}."""
+    ev = {k: [] for k in ("EARNINGS_DRIFT", "SHARE_SHRINK", "BILLINGS_AHEAD", "INVENTORY_REVERSAL")}
+    tick = {c: t for t, c in cikmap.items() if t in bars}
+    g = lambda key, y, q, cik: F[key].get(qlabel(y, q), {}).get(cik)
+    def acc_ratio(cik, y):
+        ni, cfo, a = F["ni_fy"].get(f"CY{y}", {}).get(cik), F["cfo_fy"].get(f"CY{y}", {}).get(cik), F["assets"].get(qlabel(y, 4), {}).get(cik)
+        return (ni-cfo)/a if None not in (ni, cfo, a) and a else None
+    acc_all = {y: sorted(v for v in (acc_ratio(c, y) for c in tick) if v is not None) for y in years}
+    def high_accrual(cik, y):          # top quintile of (net income - operating cash flow) / assets, prior fiscal year
+        r = acc_ratio(cik, y-1); arr = acc_all.get(y-1) or []
+        return None if r is None or len(arr) < 50 else r >= arr[int(len(arr)*0.8)]
+    for cik, t in tick.items():
+        x = bars[t]; c, v = x["close"], x["volume"]
+        ret = c.pct_change(); vr = v/v.rolling(20).mean().shift(1)
+        for y in years[1:]:
+            for q in (1, 2, 3, 4):
+                py, pq = (y, q-1) if q > 1 else (y-1, 4)
+                end = qend(y, q); entry45 = end + pd.Timedelta(days=45); tag = high_accrual(cik, y)
+                rev, rev_ly = g("rev", y, q, cik), g("rev", y-1, q, cik)
+                ni, ni_ly = g("ni", y, q, cik), g("ni", y-1, q, cik)
+                # 1 earnings drift: revenue +20% and net income +30% YoY, and the announcement day (biggest-volume session 15-50 days after
+                #   quarter end) closed up 5%+ on 2x+ volume. Entry: close of the next session.
+                if rev and rev_ly and ni and ni_ly and rev_ly > 0 and ni_ly > 0 and rev/rev_ly-1 > 0.20 and ni/ni_ly-1 > 0.30:
+                    w = vr[(vr.index > end + pd.Timedelta(days=15)) & (vr.index <= end + pd.Timedelta(days=50))].dropna()
+                    if len(w):
+                        dday = w.idxmax()
+                        if w.max() >= 2 and ret.get(dday, 0) >= 0.05:
+                            k = c.index.get_loc(dday)
+                            if k+1 < len(c): ev["EARNINGS_DRIFT"].append((t, c.index[k+1], tag))
+                # 2 share shrink: diluted shares down 3%+ YoY, long-term debt up less than 20%
+                sh, sh_ly = g("shares", y, q, cik), g("shares", y-1, q, cik)
+                d0, d1 = g("ltd", y, q, cik), g("ltd", y-1, q, cik)
+                if sh and sh_ly and sh/sh_ly-1 <= -0.03 and (d0 is None or d1 is None or d1 == 0 or d0/d1-1 < 0.20):
+                    ev["SHARE_SHRINK"].append((t, entry45, tag))
+                # 3 billings ahead of revenue two quarters running: (revenue + change in contract liabilities) growth beats revenue growth by 15 pts
+                def billings_gap(yy, qq):
+                    pyy, pqq = (yy, qq-1) if qq > 1 else (yy-1, 4)
+                    r0, r1 = g("rev", yy, qq, cik), g("rev", yy-1, qq, cik)
+                    l = lambda a, b: (g("cwl", a, b, cik) or 0) + (g("cwln", a, b, cik) or 0)
+                    if not (r0 and r1 and r1 > 0): return None
+                    b0 = r0 + l(yy, qq) - l(pyy, pqq); b1 = r1 + l(yy-1, qq) - l(pyy-1, pqq)
+                    if l(yy, qq) == 0 or b1 <= 0: return None
+                    return (b0/b1-1) - (r0/r1-1)
+                g1, g2 = billings_gap(y, q), billings_gap(py, pq)
+                if g1 is not None and g2 is not None and g1 >= 0.15 and g2 >= 0.15:
+                    ev["BILLINGS_AHEAD"].append((t, entry45, tag))
+                # 4 inventory reversal: inventory down YoY two quarters running, revenue growth beats inventory growth by 15 pts,
+                #   gross margin up on the prior quarter
+                i0, i1, j0, j1 = g("inv", y, q, cik), g("inv", y-1, q, cik), g("inv", py, pq, cik), g("inv", py-1, pq, cik)
+                gp0, gpp, rv0, rvp = g("gp", y, q, cik), g("gp", py, pq, cik), rev, g("rev", py, pq, cik)
+                if None not in (i0, i1, j0, j1, rev, rev_ly, gp0, gpp, rvp) and i1 > 0 and j1 > 0 and rev_ly > 0 and rv0 and rvp:
+                    if i0/i1-1 < 0 and j0/j1-1 < 0 and (rev/rev_ly-1) - (i0/i1-1) >= 0.15 and gp0/rv0 > gpp/rvp:
+                        ev["INVENTORY_REVERSAL"].append((t, entry45, tag))
+    return ev
+
+def deletion_events(mem, bars):
+    """S&P 500 deletions not explained by a takeover: the stock still trades 126 sessions later. Entry 10 sessions after deletion."""
+    out = []
+    for i in range(1, len(mem)):
+        gone = mem["set"].iloc[i-1] - mem["set"].iloc[i]; d = mem["date"].iloc[i]
+        for t in gone:
+            x = bars.get(t)
+            if x is None: continue
+            c = x["close"]; k = c.index.searchsorted(d)
+            if k+10+126 < len(c): out.append((t, c.index[k+10], None))
+    return out
+
+def event_score(events, bars, spy, members_fn=None):
+    """Excess return vs SPY 60 and 120 sessions after entry, against ordinary days of the same stocks. Trimmed, month-clustered."""
+    def ex(t, d):
+        x = bars.get(t)
+        if x is None: return None
+        c = x["close"]; j = c.index.intersection(spy.index); cs, ss = c[j], spy[j]
+        k = cs.index.searchsorted(d)
+        if k+120 >= len(cs) or k < 1: return None
+        return ((cs.iloc[k+60]/cs.iloc[k]-1)-(ss.iloc[k+60]/ss.iloc[k]-1))*100, ((cs.iloc[k+120]/cs.iloc[k]-1)-(ss.iloc[k+120]/ss.iloc[k]-1))*100, cs.index[k].year*100+cs.index[k].month
+    rows, last = [], {}
+    for t, d, tag in sorted(events, key=lambda e: (e[0], e[1])):
+        if t in last and (d - last[t]).days < 120: continue           # one event per stock per ~4 months, so repeats do not pile up
+        if members_fn and not members_fn(t, d): continue
+        last[t] = d
+        r = ex(t, d)
+        if r: rows.append((*r, t, tag))
+    if len(rows) < 30: return dict(n=len(rows), note="too few events")
+    D = pd.DataFrame(rows, columns=["e60", "e120", "ym", "t", "tag"])
+    base = []
+    for t in D.t.unique():
+        x = bars[t]; c = x["close"]; j = c.index.intersection(spy.index); cs, ss = c[j], spy[j]
+        e120 = ((cs.shift(-120)/cs-1)-(ss.shift(-120)/ss-1)).values*100; e60 = ((cs.shift(-60)/cs-1)-(ss.shift(-60)/ss-1)).values*100
+        ym = (cs.index.year*100+cs.index.month).values
+        for i in range(252, len(cs)-120, 10):
+            if members_fn and not members_fn(t, cs.index[i]): continue
+            base.append((e60[i], e120[i], ym[i]))
+    B = pd.DataFrame(base, columns=["e60", "e120", "ym"]).dropna()
+    res = {"n": int(len(D)), "stocks": int(D.t.nunique()), "months": int(D.ym.nunique())}
+    for h in ("e60", "e120"):
+        lo, hi = B[h].quantile(0.01), B[h].quantile(0.99); d_, b_ = D[h].clip(lo, hi), B[h].clip(lo, hi)
+        pm = (D.assign(v=d_).groupby("ym").v.mean() - B.assign(v=b_).groupby("ym").v.mean()).dropna()
+        t_ = float(pm.mean()/(pm.std()/np.sqrt(len(pm)))) if len(pm) > 5 and pm.std() > 0 else None
+        res[h] = dict(edge=round(float(d_.mean()-b_.mean()), 2), t_clustered=round(t_, 1) if t_ is not None else None,
+                      median=round(float(d_.median()), 2), baseline_median=round(float(b_.median()), 2),
+                      pct_beat_spy=round(float((d_ > 0).mean()*100), 0), baseline_pct_beat_spy=round(float((b_ > 0).mean()*100), 0))
+    if D.tag.notna().any():
+        for lab, sub in (("high_accrual", D[D.tag == True]), ("clean_earnings", D[D.tag == False])):
+            if len(sub) >= 20: res[f"e120_{lab}"] = dict(n=int(len(sub)), mean=round(float(sub.e120.clip(B.e120.quantile(0.01), B.e120.quantile(0.99)).mean() - B.e120.clip(B.e120.quantile(0.01), B.e120.quantile(0.99)).mean()), 2))
+    e = res["e120"]
+    res["verdict"] = "WORKS" if (e["t_clustered"] or 0) >= 2 and e["edge"] > 0 else "HURTS" if (e["t_clustered"] or 0) <= -2 else "NOT SHOWN"
+    return res
+
+def lens_tests(bars, feats, live, F=None, cikmap=None, mem=None):
+    spy = bars["SPY"]["close"]
+    allbars = dict(bars); allbars.update(FORMER_BARS)
+    years = list(range(max(2010, spy.index[0].year), spy.index[-1].year + 1))
+    out = {"_note": ("Fundamental signals from SEC XBRL frames, entered when the data was public (quarter end + 45 days, or the day after a detected "
+                     "earnings reaction). Each lens is scored on all stocks and on the point-in-time S&P 500 subset. WORKS needs a clustered t of 2+ "
+                     "on the 6-month edge. Survivorship: former S&P 500 members are included where Yahoo has prices and SEC maps their ticker; "
+                     "former mid caps are not, so the all-stocks line is flattered. Trust a lens only if the S&P 500 point-in-time line agrees.")}
+    try:
+        mem = mem if mem is not None else load_membership()
+        dates = mem["date"].values
+        def member(t, d):
+            i = np.searchsorted(dates, np.datetime64(d), side="right") - 1
+            return i >= 0 and t in mem["set"].iloc[i]
+    except Exception as e:
+        mem, member = None, None; out["_membership_error"] = str(e)[:120]
+    if mem is not None:
+        dev = deletion_events(mem, allbars)
+        out["DELETION_REBOUND"] = dict(all=event_score(dev, allbars, spy), note="no SEC data needed; former members without Yahoo prices are missing")
+    if F is None:
+        if not live: return out
+        try:
+            cikmap = ticker_cik(); F = load_fundamentals(years)
+        except Exception as e:
+            out["_sec_error"] = f"{type(e).__name__}: {str(e)[:160]}"; return out
+    out["_coverage"] = {k: int(np.mean([len(v) for v in F[k].values()])) for k in F}
+    ev = lens_events(F, cikmap, allbars, years)
+    for lens, events in ev.items():
+        out[lens] = dict(all=event_score(events, allbars, spy), sp500_point_in_time=event_score(events, allbars, spy, member) if member else None)
     return out
 
 # ----------------------------------------------------------------------------- outcome tracking
@@ -671,6 +874,17 @@ def main():
     except Exception as e:
         surv = {"_error": f"{type(e).__name__}: {str(e)[:150]}"}
     (out/"survivorship.json").write_text(json.dumps(surv, indent=1))
+    try:
+        lens = lens_tests(bars, feats, live=not a.csv_dir)
+    except Exception as e:
+        import traceback; lens = {"_error": f"{type(e).__name__}: {str(e)[:150]}", "_trace": traceback.format_exc()[-600:]}
+    (out/"lens_tests.json").write_text(json.dumps(lens, indent=1, default=str))
+    for k_, v_ in lens.items():
+        if k_.startswith("_"): print("LENS", k_, v_ if k_ != "_note" else ""); continue
+        for sub, r_ in v_.items():
+            if isinstance(r_, dict) and "e120" in r_:
+                print(f"LENS {k_:19} {sub:20} {r_['verdict']:9} n {r_['n']:5} stocks {r_['stocks']:4} | 6m edge {r_['e120']['edge']:+.2f} t {r_['e120']['t_clustered']} | median {r_['e120']['median']:+.2f} vs {r_['e120']['baseline_median']:+.2f} | beat SPY {r_['e120']['pct_beat_spy']:.0f}% vs {r_['e120']['baseline_pct_beat_spy']:.0f}% | 3m edge {r_['e60']['edge']:+.2f} t {r_['e60']['t_clustered']} | accrual split {r_.get('e120_high_accrual')} / {r_.get('e120_clean_earnings')}")
+            elif isinstance(r_, dict) and "note" in r_ and "n" in r_: print(f"LENS {k_:19} {sub:20} n {r_['n']} {r_['note']}")
     for k_, v_ in surv.items():
         if isinstance(v_, dict) and "test" in v_: print(f"SURVIVORSHIP {k_:18} n {v_.get('n')} stocks {v_.get('stocks')} | 6m edge {v_.get('edge120')} t {v_.get('t_clustered')} | beat SPY {v_.get('pct_beat_spy')}% vs {v_.get('baseline_pct_beat_spy')}% | {v_.get('test')}")
     print("SURVIVORSHIP former members", surv.get("former_members_in_window"), "with prices", surv.get("former_members_with_prices"), surv.get("_error", ""), "| by year", surv.get("C_by_year"))
