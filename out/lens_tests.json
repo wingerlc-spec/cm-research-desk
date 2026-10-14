@@ -6,19 +6,19 @@
    "stocks": 158,
    "months": 55,
    "e60": {
-    "edge": 5.36,
+    "edge": 5.09,
     "t_clustered": -0.5,
-    "median": 0.8,
-    "baseline_median": -1.79,
+    "median": 1.64,
+    "baseline_median": -1.83,
     "pct_beat_spy": 55.0,
     "baseline_pct_beat_spy": 45.0
    },
    "e120": {
-    "edge": 5.49,
-    "t_clustered": -0.1,
-    "median": 2.67,
-    "baseline_median": -3.94,
-    "pct_beat_spy": 57.0,
+    "edge": 5.54,
+    "t_clustered": -0.0,
+    "median": 2.34,
+    "baseline_median": -3.85,
+    "pct_beat_spy": 56.0,
     "baseline_pct_beat_spy": 43.0
    },
    "verdict": "NOT SHOWN"
@@ -27,17 +27,17 @@
  },
  "_coverage": {
   "rev": 3564,
-  "ni": 4725,
-  "gp": 1937,
+  "ni": 4726,
+  "gp": 1938,
   "oi": 3792,
-  "shares": 3286,
+  "shares": 3287,
   "inv": 2393,
   "cwl": 1266,
   "cwln": 562,
   "ltd": 2445,
-  "assets": 5890,
-  "ni_fy": 5768,
-  "cfo_fy": 5840
+  "assets": 5891,
+  "ni_fy": 5769,
+  "cfo_fy": 5841
  },
  "_drift_dates": "8-K Item 2.02 dates found for 957 companies",
  "_drift_stats": {
@@ -52,28 +52,28 @@
    "stocks": 237,
    "months": 79,
    "e60": {
-    "edge": 1.01,
+    "edge": 1.05,
     "t_clustered": 1.6,
     "median": 1.69,
-    "baseline_median": 0.23,
+    "baseline_median": 0.22,
     "pct_beat_spy": 56.0,
     "baseline_pct_beat_spy": 51.0
    },
    "e120": {
-    "edge": 0.31,
+    "edge": 0.36,
     "t_clustered": 0.8,
     "median": 0.47,
-    "baseline_median": -0.07,
+    "baseline_median": -0.09,
     "pct_beat_spy": 51.0,
     "baseline_pct_beat_spy": 50.0
    },
    "e120_high_accrual": {
     "n": 78,
-    "mean": 5.7
+    "mean": 5.75
    },
    "e120_clean_earnings": {
     "n": 289,
-    "mean": -0.56
+    "mean": -0.52
    },
    "verdict": "NOT SHOWN"
   },
@@ -82,15 +82,15 @@
    "stocks": 91,
    "months": 56,
    "e60": {
-    "edge": 2.49,
-    "t_clustered": 1.5,
+    "edge": 2.48,
+    "t_clustered": 1.6,
     "median": 1.1,
-    "baseline_median": -0.41,
+    "baseline_median": -0.37,
     "pct_beat_spy": 53.0,
     "baseline_pct_beat_spy": 49.0
    },
    "e120": {
-    "edge": 2.2,
+    "edge": 2.23,
     "t_clustered": 1.0,
     "median": -0.69,
     "baseline_median": -1.17,
@@ -99,11 +99,11 @@
    },
    "e120_high_accrual": {
     "n": 24,
-    "mean": 5.81
+    "mean": 5.84
    },
    "e120_clean_earnings": {
     "n": 96,
-    "mean": 1.95
+    "mean": 1.98
    },
    "verdict": "NOT SHOWN"
   }
@@ -114,28 +114,28 @@
    "stocks": 609,
    "months": 36,
    "e60": {
-    "edge": 0.53,
-    "t_clustered": 1.3,
+    "edge": 0.54,
+    "t_clustered": 1.4,
     "median": -0.48,
-    "baseline_median": -0.89,
+    "baseline_median": -0.86,
     "pct_beat_spy": 49.0,
     "baseline_pct_beat_spy": 47.0
    },
    "e120": {
-    "edge": -0.24,
-    "t_clustered": 1.0,
+    "edge": -0.21,
+    "t_clustered": 1.1,
     "median": -1.51,
     "baseline_median": -2.11,
     "pct_beat_spy": 47.0,
-    "baseline_pct_beat_spy": 46.0
+    "baseline_pct_beat_spy": 45.0
    },
    "e120_high_accrual": {
     "n": 730,
-    "mean": 0.2
+    "mean": 0.23
    },
    "e120_clean_earnings": {
     "n": 2096,
-    "mean": -0.48
+    "mean": -0.45
    },
    "verdict": "NOT SHOWN"
   },
@@ -145,29 +145,29 @@
    "months": 36,
    "e60": {
     "edge": 0.81,
-    "t_clustered": 2.0,
+    "t_clustered": 2.1,
     "median": -0.54,
-    "baseline_median": -1.1,
+    "baseline_median": -1.07,
     "pct_beat_spy": 48.0,
     "baseline_pct_beat_spy": 46.0
    },
    "e120": {
-    "edge": -0.01,
+    "edge": 0.01,
     "t_clustered": 2.6,
     "median": -1.8,
-    "baseline_median": -2.58,
+    "baseline_median": -2.56,
     "pct_beat_spy": 46.0,
     "baseline_pct_beat_spy": 44.0
    },
    "e120_high_accrual": {
     "n": 366,
-    "mean": 0.15
+    "mean": 0.17
    },
    "e120_clean_earnings": {
     "n": 1134,
-    "mean": -0.36
+    "mean": -0.34
    },
-   "verdict": "NOT SHOWN"
+   "verdict": "WORKS"
   }
  },
  "BILLINGS_AHEAD": {
@@ -186,28 +186,28 @@
    "stocks": 202,
    "months": 35,
    "e60": {
-    "edge": 2.73,
-    "t_clustered": 1.6,
+    "edge": 2.72,
+    "t_clustered": 1.7,
     "median": 0.46,
-    "baseline_median": -0.46,
+    "baseline_median": -0.41,
     "pct_beat_spy": 51.0,
     "baseline_pct_beat_spy": 49.0
    },
    "e120": {
-    "edge": 2.94,
+    "edge": 2.96,
     "t_clustered": 1.3,
     "median": -0.12,
-    "baseline_median": -1.26,
+    "baseline_median": -1.21,
     "pct_beat_spy": 50.0,
     "baseline_pct_beat_spy": 48.0
    },
    "e120_high_accrual": {
     "n": 48,
-    "mean": 7.74
+    "mean": 7.76
    },
    "e120_clean_earnings": {
     "n": 235,
-    "mean": 2.78
+    "mean": 2.81
    },
    "verdict": "NOT SHOWN"
   },
@@ -216,28 +216,28 @@
    "stocks": 88,
    "months": 33,
    "e60": {
-    "edge": 1.36,
+    "edge": 1.37,
     "t_clustered": 1.6,
     "median": -0.49,
-    "baseline_median": -1.15,
+    "baseline_median": -1.09,
     "pct_beat_spy": 49.0,
     "baseline_pct_beat_spy": 46.0
    },
    "e120": {
-    "edge": -1.0,
-    "t_clustered": 0.7,
+    "edge": -0.96,
+    "t_clustered": 0.6,
     "median": -2.53,
-    "baseline_median": -2.86,
+    "baseline_median": -2.75,
     "pct_beat_spy": 45.0,
     "baseline_pct_beat_spy": 44.0
    },
    "e120_high_accrual": {
     "n": 24,
-    "mean": 7.06
+    "mean": 7.0
    },
    "e120_clean_earnings": {
     "n": 92,
-    "mean": -2.38
+    "mean": -2.31
    },
    "verdict": "NOT SHOWN"
   }
