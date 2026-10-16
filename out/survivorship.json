@@ -6,10 +6,10 @@
   "n": 440,
   "stocks": 146,
   "months": 84,
-  "edge120": 16.35,
+  "edge120": 16.38,
   "t_clustered": 5.4,
   "median": 8.23,
-  "baseline_median": -1.36,
+  "baseline_median": -1.38,
   "pct_beat_spy": 62.0,
   "baseline_pct_beat_spy": 47.0
  },
@@ -18,10 +18,10 @@
   "n": 265,
   "stocks": 119,
   "months": 62,
-  "edge120": 7.75,
+  "edge120": 7.79,
   "t_clustered": 1.9,
   "median": 3.18,
-  "baseline_median": -2.08,
+  "baseline_median": -2.1,
   "pct_beat_spy": 55.0,
   "baseline_pct_beat_spy": 45.0
  },
@@ -30,10 +30,10 @@
   "n": 295,
   "stocks": 137,
   "months": 65,
-  "edge120": 7.03,
+  "edge120": 7.05,
   "t_clustered": 1.4,
   "median": 3.01,
-  "baseline_median": -2.51,
+  "baseline_median": -2.52,
   "pct_beat_spy": 55.0,
   "baseline_pct_beat_spy": 44.0
  },
@@ -42,10 +42,10 @@
   "n": 174,
   "stocks": 91,
   "months": 52,
-  "edge120": 5.36,
+  "edge120": 5.42,
   "t_clustered": 1.8,
   "median": 0.91,
-  "baseline_median": -2.96,
+  "baseline_median": -2.98,
   "pct_beat_spy": 51.0,
   "baseline_pct_beat_spy": 43.0
  },
@@ -54,10 +54,10 @@
   "n": 607,
   "stocks": 184,
   "months": 94,
-  "edge120": 8.35,
+  "edge120": 8.37,
   "t_clustered": 3.5,
   "median": 2.84,
-  "baseline_median": -2.15,
+  "baseline_median": -2.18,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 46.0
  },
@@ -92,7 +92,7 @@
   },
   "2026": {
    "n": 36,
-   "edge120": 35.43
+   "edge120": 35.4
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."
