@@ -6,7 +6,7 @@
   "n": 440,
   "stocks": 146,
   "months": 84,
-  "edge120": 16.38,
+  "edge120": 16.4,
   "t_clustered": 5.4,
   "median": 8.23,
   "baseline_median": -1.38,
@@ -30,7 +30,7 @@
   "n": 295,
   "stocks": 137,
   "months": 65,
-  "edge120": 7.05,
+  "edge120": 7.06,
   "t_clustered": 1.4,
   "median": 3.01,
   "baseline_median": -2.52,
@@ -42,10 +42,10 @@
   "n": 174,
   "stocks": 91,
   "months": 52,
-  "edge120": 5.42,
+  "edge120": 5.43,
   "t_clustered": 1.8,
   "median": 0.91,
-  "baseline_median": -2.98,
+  "baseline_median": -2.99,
   "pct_beat_spy": 51.0,
   "baseline_pct_beat_spy": 43.0
  },
@@ -54,10 +54,10 @@
   "n": 607,
   "stocks": 184,
   "months": 94,
-  "edge120": 8.37,
+  "edge120": 8.38,
   "t_clustered": 3.5,
   "median": 2.84,
-  "baseline_median": -2.18,
+  "baseline_median": -2.19,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 46.0
  },
@@ -92,7 +92,7 @@
   },
   "2026": {
    "n": 36,
-   "edge120": 35.4
+   "edge120": 35.28
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."
