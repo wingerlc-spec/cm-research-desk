@@ -1,28 +1,28 @@
 {
- "n_events": 351,
- "n_discovery": 181,
+ "n_events": 350,
+ "n_discovery": 180,
  "n_confirmation": 170,
- "all_events_mean_6m_vs_spy": 2.51,
+ "all_events_mean_6m_vs_spy": 2.56,
  "conditions": {
   "held5": {
    "label": "reaction held: close 5 sessions later at or above the reaction-day close",
    "full": {
-    "gap": -2.46,
-    "t": -0.81,
+    "gap": -2.65,
+    "t": -0.86,
     "n_yes": 210,
-    "n_no": 141,
+    "n_no": 140,
     "yes_mean": 1.77,
-    "no_mean": 4.23,
+    "no_mean": 4.41,
     "yes_beat": 49,
     "no_beat": 49
    },
    "discovery": {
-    "gap": -5.95,
-    "t": -1.59,
+    "gap": -6.28,
+    "t": -1.68,
     "n_yes": 104,
-    "n_no": 77,
+    "n_no": 76,
     "yes_mean": -2.26,
-    "no_mean": 3.68,
+    "no_mean": 4.02,
     "yes_beat": 46,
     "no_beat": 51
    },
@@ -37,38 +37,38 @@
     "no_beat": 47
    },
    "sp500_point_in_time": {
-    "gap": -4.72,
-    "t": -1.05,
+    "gap": -5.3,
+    "t": -1.17,
     "n_yes": 69,
-    "n_no": 45,
+    "n_no": 44,
     "yes_mean": -0.99,
-    "no_mean": 3.73,
+    "no_mean": 4.31,
     "yes_beat": 43,
-    "no_beat": 47
+    "no_beat": 48
    },
    "verdict": "NO EFFECT"
   },
   "big_reaction": {
    "label": "reaction day up 10% or more (vs 5 to 10%)",
    "full": {
-    "gap": 1.85,
-    "t": 0.65,
+    "gap": 1.74,
+    "t": 0.61,
     "n_yes": 191,
-    "n_no": 160,
+    "n_no": 159,
     "yes_mean": 3.35,
-    "no_mean": 1.51,
+    "no_mean": 1.62,
     "yes_beat": 51,
     "no_beat": 48
    },
    "discovery": {
-    "gap": 1.91,
-    "t": 0.55,
+    "gap": 1.73,
+    "t": 0.5,
     "n_yes": 91,
-    "n_no": 90,
+    "n_no": 89,
     "yes_mean": 1.16,
-    "no_mean": -0.74,
+    "no_mean": -0.57,
     "yes_beat": 49,
-    "no_beat": 44
+    "no_beat": 45
    },
    "confirmation": {
     "gap": 0.95,
@@ -81,38 +81,38 @@
     "no_beat": 51
    },
    "sp500_point_in_time": {
-    "gap": -4.75,
-    "t": -1.07,
+    "gap": -5.03,
+    "t": -1.13,
     "n_yes": 48,
-    "n_no": 66,
+    "n_no": 65,
     "yes_mean": -1.93,
-    "no_mean": 2.82,
+    "no_mean": 3.11,
     "yes_beat": 38,
-    "no_beat": 48
+    "no_beat": 49
    },
    "verdict": "NO EFFECT"
   },
   "heavy_volume": {
    "label": "reaction volume 4x or more (vs 2 to 4x)",
    "full": {
-    "gap": 0.49,
-    "t": 0.16,
+    "gap": 0.41,
+    "t": 0.13,
     "n_yes": 116,
-    "n_no": 235,
+    "n_no": 234,
     "yes_mean": 2.84,
-    "no_mean": 2.35,
+    "no_mean": 2.43,
     "yes_beat": 47,
     "no_beat": 51
    },
    "discovery": {
-    "gap": 0.7,
-    "t": 0.19,
+    "gap": 0.56,
+    "t": 0.15,
     "n_yes": 67,
-    "n_no": 114,
+    "n_no": 113,
     "yes_mean": 0.66,
-    "no_mean": -0.05,
+    "no_mean": 0.09,
     "yes_beat": 46,
-    "no_beat": 47
+    "no_beat": 48
    },
    "confirmation": {
     "gap": 1.21,
@@ -125,12 +125,12 @@
     "no_beat": 54
    },
    "sp500_point_in_time": {
-    "gap": -2.89,
-    "t": -0.71,
+    "gap": -3.08,
+    "t": -0.75,
     "n_yes": 25,
-    "n_no": 89,
+    "n_no": 88,
     "yes_mean": -1.43,
-    "no_mean": 1.45,
+    "no_mean": 1.65,
     "yes_beat": 40,
     "no_beat": 45
    },
@@ -139,24 +139,24 @@
   "small_cap": {
    "label": "market value under $10B at the reaction",
    "full": {
-    "gap": 4.22,
-    "t": 1.47,
+    "gap": 4.13,
+    "t": 1.44,
     "n_yes": 163,
-    "n_no": 188,
+    "n_no": 187,
     "yes_mean": 4.77,
-    "no_mean": 0.55,
+    "no_mean": 0.64,
     "yes_beat": 56,
     "no_beat": 44
    },
    "discovery": {
-    "gap": 7.46,
-    "t": 2.2,
+    "gap": 7.31,
+    "t": 2.15,
     "n_yes": 94,
-    "n_no": 87,
+    "n_no": 86,
     "yes_mean": 3.8,
-    "no_mean": -3.66,
+    "no_mean": -3.52,
     "yes_beat": 53,
-    "no_beat": 40
+    "no_beat": 41
    },
    "confirmation": {
     "gap": 1.92,
@@ -174,21 +174,21 @@
   "market_up": {
    "label": "SPY above its 200-day at entry",
    "full": {
-    "gap": -0.73,
-    "t": -0.22,
-    "n_yes": 272,
+    "gap": -0.66,
+    "t": -0.2,
+    "n_yes": 271,
     "n_no": 79,
-    "yes_mean": 2.35,
-    "no_mean": 3.08,
+    "yes_mean": 2.41,
+    "no_mean": 3.07,
     "yes_beat": 49,
     "no_beat": 51
    },
    "discovery": {
-    "gap": 1.41,
-    "t": 0.27,
-    "n_yes": 166,
+    "gap": 1.51,
+    "t": 0.29,
+    "n_yes": 165,
     "n_no": 15,
-    "yes_mean": 0.33,
+    "yes_mean": 0.43,
     "no_mean": -1.08,
     "yes_beat": 48,
     "no_beat": 40
@@ -204,11 +204,11 @@
     "no_beat": 53
    },
    "sp500_point_in_time": {
-    "gap": -0.99,
-    "t": -0.21,
-    "n_yes": 91,
+    "gap": -0.8,
+    "t": -0.17,
+    "n_yes": 90,
     "n_no": 23,
-    "yes_mean": 0.62,
+    "yes_mean": 0.8,
     "no_mean": 1.61,
     "yes_beat": 44,
     "no_beat": 43
@@ -218,24 +218,24 @@
   "ran_up_before": {
    "label": "3-month return before the print above the median event",
    "full": {
-    "gap": 2.62,
-    "t": 0.92,
+    "gap": 2.53,
+    "t": 0.88,
     "n_yes": 175,
-    "n_no": 176,
+    "n_no": 175,
     "yes_mean": 3.83,
-    "no_mean": 1.2,
+    "no_mean": 1.3,
     "yes_beat": 51,
     "no_beat": 48
    },
    "discovery": {
-    "gap": 0.18,
-    "t": 0.05,
+    "gap": -0.0,
+    "t": -0.0,
     "n_yes": 93,
-    "n_no": 88,
+    "n_no": 87,
     "yes_mean": 0.3,
-    "no_mean": 0.12,
+    "no_mean": 0.31,
     "yes_beat": 49,
-    "no_beat": 44
+    "no_beat": 45
    },
    "confirmation": {
     "gap": 5.54,
@@ -248,35 +248,35 @@
     "no_beat": 51
    },
    "sp500_point_in_time": {
-    "gap": -0.43,
-    "t": -0.1,
+    "gap": -0.7,
+    "t": -0.16,
     "n_yes": 50,
-    "n_no": 64,
+    "n_no": 63,
     "yes_mean": 0.58,
-    "no_mean": 1.01,
+    "no_mean": 1.28,
     "yes_beat": 42,
-    "no_beat": 45
+    "no_beat": 46
    },
    "verdict": "NO EFFECT"
   },
   "near_high": {
    "label": "within 10% of the 52-week high after the reaction",
    "full": {
-    "gap": 2.69,
-    "t": 0.74,
-    "n_yes": 261,
+    "gap": 2.76,
+    "t": 0.76,
+    "n_yes": 260,
     "n_no": 90,
-    "yes_mean": 3.2,
+    "yes_mean": 3.27,
     "no_mean": 0.51,
     "yes_beat": 51,
     "no_beat": 47
    },
    "discovery": {
-    "gap": 4.37,
-    "t": 0.68,
-    "n_yes": 153,
+    "gap": 4.48,
+    "t": 0.7,
+    "n_yes": 152,
     "n_no": 28,
-    "yes_mean": 0.89,
+    "yes_mean": 1.0,
     "no_mean": -3.48,
     "yes_beat": 49,
     "no_beat": 36
@@ -292,13 +292,13 @@
     "no_beat": 52
    },
    "sp500_point_in_time": {
-    "gap": -0.47,
-    "t": -0.09,
-    "n_yes": 81,
+    "gap": -0.26,
+    "t": -0.05,
+    "n_yes": 80,
     "n_no": 33,
-    "yes_mean": 0.68,
+    "yes_mean": 0.89,
     "no_mean": 1.15,
-    "yes_beat": 43,
+    "yes_beat": 44,
     "no_beat": 45
    },
    "verdict": "CONSISTENT, NOT PROVEN"
@@ -306,22 +306,22 @@
   "cheap_sales": {
    "label": "price-to-sales below the median event",
    "full": {
-    "gap": 6.47,
-    "t": 2.24,
-    "n_yes": 131,
+    "gap": 6.45,
+    "t": 2.22,
+    "n_yes": 130,
     "n_no": 220,
-    "yes_mean": 6.57,
-    "no_mean": 0.1,
+    "yes_mean": 6.62,
+    "no_mean": 0.17,
     "yes_beat": 55,
     "no_beat": 46
    },
    "discovery": {
-    "gap": 9.33,
-    "t": 2.66,
-    "n_yes": 81,
+    "gap": 9.24,
+    "t": 2.61,
+    "n_yes": 80,
     "n_no": 100,
-    "yes_mean": 5.37,
-    "no_mean": -3.96,
+    "yes_mean": 5.44,
+    "no_mean": -3.8,
     "yes_beat": 52,
     "no_beat": 43
    },
@@ -336,13 +336,13 @@
     "no_beat": 49
    },
    "sp500_point_in_time": {
-    "gap": 6.1,
-    "t": 1.42,
-    "n_yes": 39,
+    "gap": 6.02,
+    "t": 1.38,
+    "n_yes": 38,
     "n_no": 75,
-    "yes_mean": 4.83,
-    "no_mean": -1.27,
-    "yes_beat": 46,
+    "yes_mean": 4.97,
+    "no_mean": -1.06,
+    "yes_beat": 47,
     "no_beat": 43
    },
    "verdict": "CONSISTENT, NOT PROVEN"
@@ -350,21 +350,21 @@
   "accelerating": {
    "label": "revenue growth faster than the prior quarter's",
    "full": {
-    "gap": 6.12,
-    "t": 1.8,
-    "n_yes": 202,
+    "gap": 6.22,
+    "t": 1.83,
+    "n_yes": 201,
     "n_no": 78,
-    "yes_mean": 5.03,
+    "yes_mean": 5.13,
     "no_mean": -1.09,
     "yes_beat": 53,
     "no_beat": 49
    },
    "discovery": {
-    "gap": 9.7,
-    "t": 2.54,
-    "n_yes": 118,
+    "gap": 9.87,
+    "t": 2.58,
+    "n_yes": 117,
     "n_no": 48,
-    "yes_mean": 3.49,
+    "yes_mean": 3.66,
     "no_mean": -6.21,
     "yes_beat": 52,
     "no_beat": 42
@@ -374,19 +374,19 @@
     "t": 0.02,
     "n_yes": 84,
     "n_no": 30,
-    "yes_mean": 7.18,
+    "yes_mean": 7.19,
     "no_mean": 7.09,
     "yes_beat": 55,
     "no_beat": 60
    },
    "sp500_point_in_time": {
-    "gap": -0.84,
-    "t": -0.14,
-    "n_yes": 62,
+    "gap": -0.57,
+    "t": -0.09,
+    "n_yes": 61,
     "n_no": 25,
-    "yes_mean": 0.94,
+    "yes_mean": 1.21,
     "no_mean": 1.78,
-    "yes_beat": 47,
+    "yes_beat": 48,
     "no_beat": 48
    },
    "verdict": "NO EFFECT"
@@ -394,23 +394,23 @@
   "margin_up": {
    "label": "gross margin above the same quarter last year",
    "full": {
-    "gap": -3.89,
-    "t": -0.81,
-    "n_yes": 166,
+    "gap": -3.77,
+    "t": -0.78,
+    "n_yes": 165,
     "n_no": 52,
-    "yes_mean": 3.73,
+    "yes_mean": 3.85,
     "no_mean": 7.62,
     "yes_beat": 53,
     "no_beat": 58
    },
    "discovery": {
-    "gap": -2.34,
-    "t": -0.35,
-    "n_yes": 94,
+    "gap": -2.15,
+    "t": -0.32,
+    "n_yes": 93,
     "n_no": 21,
-    "yes_mean": 1.54,
+    "yes_mean": 1.73,
     "no_mean": 3.88,
-    "yes_beat": 51,
+    "yes_beat": 52,
     "no_beat": 52
    },
    "confirmation": {
@@ -424,13 +424,13 @@
     "no_beat": 61
    },
    "sp500_point_in_time": {
-    "gap": -3.78,
-    "t": -0.61,
-    "n_yes": 51,
+    "gap": -3.45,
+    "t": -0.55,
+    "n_yes": 50,
     "n_no": 21,
-    "yes_mean": 0.81,
+    "yes_mean": 1.14,
     "no_mean": 4.59,
-    "yes_beat": 47,
+    "yes_beat": 48,
     "no_beat": 48
    },
    "verdict": "NO EFFECT"
