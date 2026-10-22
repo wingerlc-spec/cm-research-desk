@@ -6,10 +6,10 @@
   "n": 440,
   "stocks": 146,
   "months": 84,
-  "edge120": 16.24,
+  "edge120": 16.3,
   "t_clustered": 5.4,
   "median": 8.23,
-  "baseline_median": -1.37,
+  "baseline_median": -1.33,
   "pct_beat_spy": 62.0,
   "baseline_pct_beat_spy": 47.0
  },
@@ -18,10 +18,10 @@
   "n": 265,
   "stocks": 119,
   "months": 62,
-  "edge120": 7.7,
+  "edge120": 7.68,
   "t_clustered": 1.9,
   "median": 3.18,
-  "baseline_median": -2.1,
+  "baseline_median": -2.05,
   "pct_beat_spy": 55.0,
   "baseline_pct_beat_spy": 45.0
  },
@@ -30,10 +30,10 @@
   "n": 295,
   "stocks": 137,
   "months": 65,
-  "edge120": 6.99,
+  "edge120": 6.97,
   "t_clustered": 1.4,
   "median": 3.01,
-  "baseline_median": -2.52,
+  "baseline_median": -2.47,
   "pct_beat_spy": 55.0,
   "baseline_pct_beat_spy": 44.0
  },
@@ -42,10 +42,10 @@
   "n": 174,
   "stocks": 91,
   "months": 52,
-  "edge120": 5.43,
+  "edge120": 5.51,
   "t_clustered": 1.8,
   "median": 0.91,
-  "baseline_median": -3.03,
+  "baseline_median": -2.97,
   "pct_beat_spy": 51.0,
   "baseline_pct_beat_spy": 43.0
  },
@@ -54,45 +54,45 @@
   "n": 606,
   "stocks": 184,
   "months": 94,
-  "edge120": 8.21,
+  "edge120": 8.18,
   "t_clustered": 3.6,
   "median": 2.56,
-  "baseline_median": -2.2,
+  "baseline_median": -2.17,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 45.0
  },
  "C_by_year": {
   "2019": {
    "n": 11,
-   "edge120": 8.44
+   "edge120": 8.31
   },
   "2020": {
    "n": 45,
-   "edge120": 10.06
+   "edge120": 10.14
   },
   "2021": {
    "n": 76,
-   "edge120": 6.17
+   "edge120": 6.09
   },
   "2022": {
    "n": 43,
-   "edge120": -4.39
+   "edge120": -4.29
   },
   "2023": {
    "n": 15,
-   "edge120": 1.6
+   "edge120": 1.65
   },
   "2024": {
    "n": 17,
-   "edge120": -5.2
+   "edge120": -5.22
   },
   "2025": {
    "n": 44,
-   "edge120": 42.8
+   "edge120": 42.79
   },
   "2026": {
    "n": 36,
-   "edge120": 35.04
+   "edge120": 35.41
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."
