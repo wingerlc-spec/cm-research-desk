@@ -6,7 +6,7 @@
   "n": 441,
   "stocks": 146,
   "months": 84,
-  "edge120": 16.24,
+  "edge120": 16.26,
   "t_clustered": 5.4,
   "median": 8.21,
   "baseline_median": -1.33,
@@ -18,7 +18,7 @@
   "n": 266,
   "stocks": 119,
   "months": 62,
-  "edge120": 7.63,
+  "edge120": 7.64,
   "t_clustered": 1.9,
   "median": 3.11,
   "baseline_median": -2.05,
@@ -30,7 +30,7 @@
   "n": 296,
   "stocks": 137,
   "months": 65,
-  "edge120": 6.93,
+  "edge120": 6.94,
   "t_clustered": 1.4,
   "median": 2.96,
   "baseline_median": -2.47,
@@ -42,7 +42,7 @@
   "n": 175,
   "stocks": 91,
   "months": 52,
-  "edge120": 5.45,
+  "edge120": 5.48,
   "t_clustered": 1.8,
   "median": 0.87,
   "baseline_median": -2.97,
@@ -54,10 +54,10 @@
   "n": 606,
   "stocks": 184,
   "months": 94,
-  "edge120": 8.17,
+  "edge120": 8.19,
   "t_clustered": 3.6,
   "median": 2.56,
-  "baseline_median": -2.17,
+  "baseline_median": -2.2,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 45.0
  },
@@ -92,7 +92,7 @@
   },
   "2026": {
    "n": 37,
-   "edge120": 34.38
+   "edge120": 33.86
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."
