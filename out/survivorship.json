@@ -6,10 +6,10 @@
   "n": 442,
   "stocks": 146,
   "months": 85,
-  "edge120": 16.21,
-  "t_clustered": 5.0,
+  "edge120": 16.3,
+  "t_clustered": 5.1,
   "median": 8.17,
-  "baseline_median": -1.37,
+  "baseline_median": -1.39,
   "pct_beat_spy": 61.0,
   "baseline_pct_beat_spy": 47.0
  },
@@ -18,10 +18,10 @@
   "n": 267,
   "stocks": 119,
   "months": 63,
-  "edge120": 7.48,
+  "edge120": 7.63,
   "t_clustered": 1.5,
   "median": 3.04,
-  "baseline_median": -2.09,
+  "baseline_median": -2.11,
   "pct_beat_spy": 55.0,
   "baseline_pct_beat_spy": 45.0
  },
@@ -30,10 +30,10 @@
   "n": 297,
   "stocks": 137,
   "months": 66,
-  "edge120": 6.79,
+  "edge120": 6.93,
   "t_clustered": 1.0,
   "median": 2.9,
-  "baseline_median": -2.51,
+  "baseline_median": -2.53,
   "pct_beat_spy": 54.0,
   "baseline_pct_beat_spy": 44.0
  },
@@ -42,10 +42,10 @@
   "n": 176,
   "stocks": 91,
   "months": 53,
-  "edge120": 5.26,
-  "t_clustered": 1.3,
+  "edge120": 5.23,
+  "t_clustered": 1.4,
   "median": 0.47,
-  "baseline_median": -3.01,
+  "baseline_median": -3.0,
   "pct_beat_spy": 51.0,
   "baseline_pct_beat_spy": 43.0
  },
@@ -54,25 +54,25 @@
   "n": 606,
   "stocks": 184,
   "months": 94,
-  "edge120": 8.08,
+  "edge120": 8.1,
   "t_clustered": 3.4,
   "median": 2.56,
-  "baseline_median": -2.18,
+  "baseline_median": -2.2,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 45.0
  },
  "C_by_year": {
   "2019": {
    "n": 11,
-   "edge120": 8.49
+   "edge120": 8.5
   },
   "2020": {
    "n": 45,
-   "edge120": 10.04
+   "edge120": 9.79
   },
   "2021": {
    "n": 76,
-   "edge120": 5.96
+   "edge120": 6.24
   },
   "2022": {
    "n": 43,
@@ -80,19 +80,19 @@
   },
   "2023": {
    "n": 15,
-   "edge120": 1.61
+   "edge120": 1.63
   },
   "2024": {
    "n": 17,
-   "edge120": -5.55
+   "edge120": -5.49
   },
   "2025": {
    "n": 44,
-   "edge120": 42.82
+   "edge120": 42.83
   },
   "2026": {
    "n": 38,
-   "edge120": 32.64
+   "edge120": 32.58
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."
