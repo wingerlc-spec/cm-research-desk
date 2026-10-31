@@ -18,7 +18,7 @@
   "n": 267,
   "stocks": 119,
   "months": 63,
-  "edge120": 7.62,
+  "edge120": 7.63,
   "t_clustered": 1.7,
   "median": 3.04,
   "baseline_median": -2.09,
@@ -92,7 +92,7 @@
   },
   "2026": {
    "n": 38,
-   "edge120": 31.9
+   "edge120": 31.91
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."

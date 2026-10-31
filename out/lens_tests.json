@@ -17,7 +17,7 @@
     "edge": 3.02,
     "t_clustered": -0.0,
     "median": 1.84,
-    "baseline_median": -4.0,
+    "baseline_median": -3.99,
     "pct_beat_spy": 53.0,
     "baseline_pct_beat_spy": 43.0
    },
@@ -26,54 +26,54 @@
   "note": "no SEC data needed; former members without Yahoo prices are missing"
  },
  "_coverage": {
-  "rev": 3579,
-  "ni": 4742,
-  "gp": 1944,
-  "oi": 3806,
-  "shares": 3302,
-  "inv": 2402,
-  "cwl": 1272,
+  "rev": 3582,
+  "ni": 4746,
+  "gp": 1945,
+  "oi": 3808,
+  "shares": 3306,
+  "inv": 2404,
+  "cwl": 1274,
   "cwln": 565,
-  "ltd": 2455,
-  "assets": 5909,
-  "ni_fy": 5777,
-  "cfo_fy": 5848
+  "ltd": 2457,
+  "assets": 5913,
+  "ni_fy": 5778,
+  "cfo_fy": 5849
  },
  "_drift_dates": "8-K Item 2.02 dates found for 956 companies",
  "_drift_stats": {
-  "qualified": 1993,
+  "qualified": 2004,
   "no_date": 69,
-  "failed_reaction": 1429,
-  "events": 479
+  "failed_reaction": 1436,
+  "events": 482
  },
  "EARNINGS_DRIFT": {
   "all": {
-   "n": 409,
-   "stocks": 242,
+   "n": 410,
+   "stocks": 243,
    "months": 81,
    "e60": {
-    "edge": 0.53,
+    "edge": 0.45,
     "t_clustered": 1.6,
-    "median": 1.61,
-    "baseline_median": 0.22,
+    "median": 1.6,
+    "baseline_median": 0.24,
     "pct_beat_spy": 55.0,
     "baseline_pct_beat_spy": 51.0
    },
    "e120": {
-    "edge": -0.62,
-    "t_clustered": 0.7,
-    "median": -0.22,
-    "baseline_median": -0.08,
+    "edge": -0.75,
+    "t_clustered": 0.6,
+    "median": -0.39,
+    "baseline_median": -0.04,
     "pct_beat_spy": 50.0,
     "baseline_pct_beat_spy": 50.0
    },
    "e120_high_accrual": {
     "n": 80,
-    "mean": 5.16
+    "mean": 5.12
    },
    "e120_clean_earnings": {
-    "n": 306,
-    "mean": -1.55
+    "n": 307,
+    "mean": -1.72
    },
    "verdict": "NOT SHOWN"
   },
