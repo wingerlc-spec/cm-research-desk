@@ -1,390 +1,390 @@
 {
  "RECOVERY_LEADER": {
-  "n": 1048,
-  "months_with_signals": 100,
+  "n": 1049,
+  "months_with_signals": 99,
   "e60": {
-   "mean_excess": 7.58,
-   "baseline": 0.25,
-   "edge": 7.33,
-   "edge_month_matched": 5.08,
-   "t_clustered": 4.0,
-   "pct_months_positive": 64.0,
+   "mean_excess": 7.55,
+   "baseline": 0.23,
+   "edge": 7.32,
+   "edge_month_matched": 5.03,
+   "t_clustered": 3.9,
+   "pct_months_positive": 65.0,
    "median": 5.66,
-   "baseline_median": -0.68,
+   "baseline_median": -0.69,
    "pct_beat_spy": 59.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 12.18,
-   "baseline": 0.39,
-   "edge": 11.79,
-   "edge_month_matched": 12.19,
-   "t_clustered": 6.2,
-   "pct_months_positive": 75.0,
-   "median": 5.11,
-   "baseline_median": -1.71,
+   "mean_excess": 12.06,
+   "baseline": 0.33,
+   "edge": 11.73,
+   "edge_month_matched": 11.93,
+   "t_clustered": 6.1,
+   "pct_months_positive": 73.0,
+   "median": 5.15,
+   "baseline_median": -1.69,
    "pct_beat_spy": 56.0,
    "baseline_pct_beat_spy": 46.0
   },
-  "edge120_first_half": 12.54,
-  "edge120_second_half": 11.25,
+  "edge120_first_half": 12.55,
+  "edge120_second_half": 11.1,
   "by_condition": {
    "spy_above_200d": {
-    "n": 817,
-    "edge120": 12.96,
-    "t_clustered": 5.6
+    "n": 818,
+    "edge120": 12.82,
+    "t_clustered": 5.3
    },
    "spy_below_200d": {
     "n": 231,
-    "edge120": 7.5,
-    "t_clustered": 2.5
+    "edge120": 7.84,
+    "t_clustered": 2.6
    },
    "sector_leading": {
-    "n": 651,
-    "edge120": 12.08,
-    "t_clustered": 4.6
+    "n": 652,
+    "edge120": 12.17,
+    "t_clustered": 4.7
    },
    "sector_lagging": {
     "n": 397,
-    "edge120": 11.21,
-    "t_clustered": 3.6
+    "edge120": 11.0,
+    "t_clustered": 3.5
    }
   },
   "verdict": "WORKS"
  },
  "EVENT_GAP_UP": {
-  "n": 5691,
-  "months_with_signals": 104,
+  "n": 5666,
+  "months_with_signals": 103,
   "e60": {
-   "mean_excess": 1.13,
-   "baseline": 0.25,
-   "edge": 0.88,
-   "edge_month_matched": 0.71,
-   "t_clustered": 2.0,
-   "pct_months_positive": 57.0,
-   "median": -0.34,
-   "baseline_median": -0.68,
+   "mean_excess": 1.14,
+   "baseline": 0.23,
+   "edge": 0.91,
+   "edge_month_matched": 0.81,
+   "t_clustered": 2.3,
+   "pct_months_positive": 59.0,
+   "median": -0.35,
+   "baseline_median": -0.69,
    "pct_beat_spy": 49.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 2.56,
-   "baseline": 0.39,
-   "edge": 2.17,
-   "edge_month_matched": 2.11,
-   "t_clustered": 4.4,
-   "pct_months_positive": 69.0,
+   "mean_excess": 2.55,
+   "baseline": 0.33,
+   "edge": 2.22,
+   "edge_month_matched": 2.24,
+   "t_clustered": 4.8,
+   "pct_months_positive": 68.0,
    "median": -1.28,
-   "baseline_median": -1.71,
+   "baseline_median": -1.69,
    "pct_beat_spy": 48.0,
    "baseline_pct_beat_spy": 46.0
   },
-  "edge120_first_half": 1.62,
-  "edge120_second_half": 2.81,
+  "edge120_first_half": 1.75,
+  "edge120_second_half": 2.78,
   "by_condition": {
    "spy_above_200d": {
-    "n": 4658,
-    "edge120": 2.02,
-    "t_clustered": 1.4
+    "n": 4633,
+    "edge120": 1.99,
+    "t_clustered": 1.2
    },
    "spy_below_200d": {
     "n": 1033,
-    "edge120": 3.02,
+    "edge120": 3.42,
     "t_clustered": 2.3
    },
    "sector_leading": {
-    "n": 2837,
-    "edge120": 1.69,
-    "t_clustered": 1.7
+    "n": 2826,
+    "edge120": 1.88,
+    "t_clustered": 2.1
    },
    "sector_lagging": {
-    "n": 2854,
-    "edge120": 2.62,
-    "t_clustered": 4.8
+    "n": 2840,
+    "edge120": 2.56,
+    "t_clustered": 4.9
    }
   },
   "verdict": "WORKS"
  },
  "BASE_COIL": {
-  "n": 18451,
-  "months_with_signals": 103,
+  "n": 18378,
+  "months_with_signals": 102,
   "e60": {
-   "mean_excess": -1.21,
-   "baseline": 0.25,
-   "edge": -1.46,
-   "edge_month_matched": -1.71,
-   "t_clustered": -4.7,
-   "pct_months_positive": 30.0,
-   "median": -1.3,
-   "baseline_median": -0.68,
+   "mean_excess": -1.2,
+   "baseline": 0.23,
+   "edge": -1.43,
+   "edge_month_matched": -1.69,
+   "t_clustered": -4.8,
+   "pct_months_positive": 32.0,
+   "median": -1.31,
+   "baseline_median": -0.69,
    "pct_beat_spy": 45.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
    "mean_excess": -1.66,
-   "baseline": 0.39,
-   "edge": -2.05,
-   "edge_month_matched": -2.48,
-   "t_clustered": -5.2,
-   "pct_months_positive": 29.0,
-   "median": -2.41,
-   "baseline_median": -1.71,
+   "baseline": 0.33,
+   "edge": -1.99,
+   "edge_month_matched": -2.5,
+   "t_clustered": -5.3,
+   "pct_months_positive": 26.0,
+   "median": -2.42,
+   "baseline_median": -1.69,
    "pct_beat_spy": 44.0,
    "baseline_pct_beat_spy": 46.0
   },
-  "edge120_first_half": -2.27,
-  "edge120_second_half": -1.99,
+  "edge120_first_half": -2.13,
+  "edge120_second_half": -2.01,
   "by_condition": {
    "spy_above_200d": {
-    "n": 16702,
-    "edge120": -1.72,
-    "t_clustered": -3.5
+    "n": 16631,
+    "edge120": -1.74,
+    "t_clustered": -3.8
    },
    "spy_below_200d": {
-    "n": 1749,
-    "edge120": -3.6,
-    "t_clustered": -3.0
+    "n": 1747,
+    "edge120": -3.17,
+    "t_clustered": -3.4
    },
    "sector_leading": {
-    "n": 9368,
-    "edge120": -2.61,
-    "t_clustered": -5.6
+    "n": 9320,
+    "edge120": -2.43,
+    "t_clustered": -5.4
    },
    "sector_lagging": {
-    "n": 9083,
-    "edge120": -1.5,
+    "n": 9058,
+    "edge120": -1.54,
     "t_clustered": -3.1
    }
   },
   "verdict": "HURTS"
  },
  "MOMENTUM": {
-  "n": 18113,
-  "months_with_signals": 104,
+  "n": 18053,
+  "months_with_signals": 103,
   "e60": {
    "mean_excess": -0.25,
-   "baseline": 0.25,
-   "edge": -0.5,
-   "edge_month_matched": -0.38,
-   "t_clustered": -1.2,
-   "pct_months_positive": 50.0,
+   "baseline": 0.23,
+   "edge": -0.48,
+   "edge_month_matched": -0.36,
+   "t_clustered": -1.1,
+   "pct_months_positive": 49.0,
    "median": -1.15,
-   "baseline_median": -0.68,
+   "baseline_median": -0.69,
    "pct_beat_spy": 46.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 0.02,
-   "baseline": 0.39,
-   "edge": -0.37,
+   "mean_excess": 0.01,
+   "baseline": 0.33,
+   "edge": -0.33,
    "edge_month_matched": -0.15,
    "t_clustered": -0.3,
    "pct_months_positive": 50.0,
-   "median": -1.87,
-   "baseline_median": -1.71,
+   "median": -1.89,
+   "baseline_median": -1.69,
    "pct_beat_spy": 45.0,
    "baseline_pct_beat_spy": 46.0
   },
-  "edge120_first_half": -1.87,
-  "edge120_second_half": 1.27,
+  "edge120_first_half": -1.73,
+  "edge120_second_half": 1.22,
   "by_condition": {
    "spy_above_200d": {
-    "n": 16988,
-    "edge120": 0.04,
-    "t_clustered": -0.4
+    "n": 16926,
+    "edge120": 0.01,
+    "t_clustered": -0.8
    },
    "spy_below_200d": {
-    "n": 1125,
-    "edge120": -3.53,
-    "t_clustered": 0.8
+    "n": 1127,
+    "edge120": -3.09,
+    "t_clustered": 0.6
    },
    "sector_leading": {
-    "n": 10314,
-    "edge120": -0.55,
-    "t_clustered": 0.0
+    "n": 10261,
+    "edge120": -0.37,
+    "t_clustered": 0.2
    },
    "sector_lagging": {
-    "n": 7799,
-    "edge120": -0.21,
-    "t_clustered": -0.3
+    "n": 7792,
+    "edge120": -0.27,
+    "t_clustered": -0.2
    }
   },
   "verdict": "NOT SHOWN"
  },
  "NARRATIVE_SCARE": {
-  "n": 2323,
-  "months_with_signals": 104,
+  "n": 2310,
+  "months_with_signals": 103,
   "e60": {
-   "mean_excess": 0.42,
-   "baseline": 0.25,
-   "edge": 0.17,
-   "edge_month_matched": 0.34,
-   "t_clustered": 0.6,
-   "pct_months_positive": 52.0,
-   "median": -1.34,
-   "baseline_median": -0.68,
+   "mean_excess": 0.39,
+   "baseline": 0.23,
+   "edge": 0.16,
+   "edge_month_matched": 0.47,
+   "t_clustered": 0.8,
+   "pct_months_positive": 56.0,
+   "median": -1.35,
+   "baseline_median": -0.69,
    "pct_beat_spy": 46.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 2.51,
-   "baseline": 0.39,
-   "edge": 2.12,
-   "edge_month_matched": 1.86,
-   "t_clustered": 2.3,
-   "pct_months_positive": 63.0,
-   "median": -1.21,
-   "baseline_median": -1.71,
+   "mean_excess": 2.47,
+   "baseline": 0.33,
+   "edge": 2.14,
+   "edge_month_matched": 1.92,
+   "t_clustered": 2.4,
+   "pct_months_positive": 61.0,
+   "median": -1.16,
+   "baseline_median": -1.69,
    "pct_beat_spy": 48.0,
    "baseline_pct_beat_spy": 46.0
   },
-  "edge120_first_half": 2.83,
-  "edge120_second_half": 1.87,
+  "edge120_first_half": 2.9,
+  "edge120_second_half": 1.82,
   "by_condition": {
    "spy_above_200d": {
-    "n": 1977,
-    "edge120": 2.46,
-    "t_clustered": 2.5
+    "n": 1964,
+    "edge120": 2.39,
+    "t_clustered": 2.3
    },
    "spy_below_200d": {
     "n": 346,
-    "edge120": 0.68,
+    "edge120": 1.09,
     "t_clustered": 0.8
    },
    "sector_leading": {
-    "n": 1181,
-    "edge120": 1.28,
-    "t_clustered": -0.5
+    "n": 1174,
+    "edge120": 1.45,
+    "t_clustered": -0.4
    },
    "sector_lagging": {
-    "n": 1142,
-    "edge120": 2.96,
-    "t_clustered": 3.1
+    "n": 1136,
+    "edge120": 2.85,
+    "t_clustered": 3.2
    }
   },
   "verdict": "WORKS"
  },
  "VALUE_DIVERGENCE": {
-  "n": 10713,
-  "months_with_signals": 104,
+  "n": 10711,
+  "months_with_signals": 103,
   "e60": {
-   "mean_excess": 1.55,
-   "baseline": 0.25,
+   "mean_excess": 1.53,
+   "baseline": 0.23,
    "edge": 1.3,
-   "edge_month_matched": 0.15,
-   "t_clustered": 0.3,
-   "pct_months_positive": 48.0,
-   "median": 0.09,
-   "baseline_median": -0.68,
+   "edge_month_matched": 0.03,
+   "t_clustered": 0.1,
+   "pct_months_positive": 49.0,
+   "median": 0.07,
+   "baseline_median": -0.69,
    "pct_beat_spy": 50.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 3.74,
-   "baseline": 0.39,
-   "edge": 3.35,
-   "edge_month_matched": 1.21,
-   "t_clustered": 2.0,
-   "pct_months_positive": 52.0,
-   "median": 0.33,
-   "baseline_median": -1.71,
+   "mean_excess": 3.7,
+   "baseline": 0.33,
+   "edge": 3.37,
+   "edge_month_matched": 1.03,
+   "t_clustered": 1.7,
+   "pct_months_positive": 56.0,
+   "median": 0.31,
+   "baseline_median": -1.69,
    "pct_beat_spy": 50.0,
    "baseline_pct_beat_spy": 46.0
   },
-  "edge120_first_half": 5.38,
-  "edge120_second_half": 2.04,
+  "edge120_first_half": 5.49,
+  "edge120_second_half": 1.97,
   "by_condition": {
    "spy_above_200d": {
-    "n": 6628,
-    "edge120": 3.3,
-    "t_clustered": 1.1
+    "n": 6630,
+    "edge120": 3.23,
+    "t_clustered": 0.3
    },
    "spy_below_200d": {
-    "n": 4085,
-    "edge120": 2.77,
+    "n": 4081,
+    "edge120": 3.18,
     "t_clustered": 1.6
    },
    "sector_leading": {
-    "n": 4490,
-    "edge120": 5.09,
+    "n": 4487,
+    "edge120": 5.22,
     "t_clustered": 3.3
    },
    "sector_lagging": {
-    "n": 6223,
-    "edge120": 2.11,
-    "t_clustered": 0.6
-   }
-  },
-  "verdict": "WORKS"
- },
- "MACRO_PUNISHED": {
-  "n": 17895,
-  "months_with_signals": 104,
-  "e60": {
-   "mean_excess": 0.37,
-   "baseline": 0.25,
-   "edge": 0.12,
-   "edge_month_matched": -0.07,
-   "t_clustered": -0.3,
-   "pct_months_positive": 51.0,
-   "median": -0.75,
-   "baseline_median": -0.68,
-   "pct_beat_spy": 48.0,
-   "baseline_pct_beat_spy": 48.0
-  },
-  "e120": {
-   "mean_excess": 0.47,
-   "baseline": 0.39,
-   "edge": 0.08,
-   "edge_month_matched": 0.0,
-   "t_clustered": 0.0,
-   "pct_months_positive": 56.0,
-   "median": -1.97,
-   "baseline_median": -1.71,
-   "pct_beat_spy": 46.0,
-   "baseline_pct_beat_spy": 46.0
-  },
-  "edge120_first_half": 0.85,
-  "edge120_second_half": -0.52,
-  "by_condition": {
-   "spy_above_200d": {
-    "n": 15445,
-    "edge120": -0.2,
-    "t_clustered": -1.5
-   },
-   "spy_below_200d": {
-    "n": 2450,
-    "edge120": 2.53,
-    "t_clustered": 0.8
-   },
-   "sector_leading": {
-    "n": 10173,
-    "edge120": 0.33,
-    "t_clustered": -0.0
-   },
-   "sector_lagging": {
-    "n": 7722,
-    "edge120": -0.32,
+    "n": 6224,
+    "edge120": 2.03,
     "t_clustered": 0.6
    }
   },
   "verdict": "NOT SHOWN"
  },
+ "MACRO_PUNISHED": {
+  "n": 17890,
+  "months_with_signals": 103,
+  "e60": {
+   "mean_excess": 0.39,
+   "baseline": 0.23,
+   "edge": 0.16,
+   "edge_month_matched": -0.0,
+   "t_clustered": -0.0,
+   "pct_months_positive": 47.0,
+   "median": -0.74,
+   "baseline_median": -0.69,
+   "pct_beat_spy": 48.0,
+   "baseline_pct_beat_spy": 48.0
+  },
+  "e120": {
+   "mean_excess": 0.49,
+   "baseline": 0.33,
+   "edge": 0.16,
+   "edge_month_matched": 0.04,
+   "t_clustered": 0.1,
+   "pct_months_positive": 58.0,
+   "median": -1.96,
+   "baseline_median": -1.69,
+   "pct_beat_spy": 46.0,
+   "baseline_pct_beat_spy": 46.0
+  },
+  "edge120_first_half": 1.0,
+  "edge120_second_half": -0.53,
+  "by_condition": {
+   "spy_above_200d": {
+    "n": 15442,
+    "edge120": -0.2,
+    "t_clustered": -1.7
+   },
+   "spy_below_200d": {
+    "n": 2448,
+    "edge120": 2.95,
+    "t_clustered": 0.5
+   },
+   "sector_leading": {
+    "n": 10156,
+    "edge120": 0.53,
+    "t_clustered": 0.3
+   },
+   "sector_lagging": {
+    "n": 7734,
+    "edge120": -0.33,
+    "t_clustered": 0.7
+   }
+  },
+  "verdict": "NOT SHOWN"
+ },
  "_baseline": {
-  "n": 184260,
-  "mean_excess_60": 0.25,
-  "mean_excess_120": 0.39,
-  "median_120": -1.71,
+  "n": 183256,
+  "mean_excess_60": 0.23,
+  "mean_excess_120": 0.33,
+  "median_120": -1.69,
   "pct_beat_spy_120": 46.0,
   "split_month": 202203,
   "trim": {
    "e60": [
-    -34.67217393897786,
-    52.14270374949582
+    -34.724433083680296,
+    51.83416196538449
    ],
    "e120": [
-    -47.028013710425675,
-    87.83435323550108
+    -46.7755748507928,
+    86.38329839102444
    ]
   }
  },
@@ -393,9 +393,11 @@
   "sectors_leading": [
    "XLB",
    "XLE",
-   "XLK",
+   "XLF",
    "XLP",
-   "XLV"
+   "XLU",
+   "XLV",
+   "XLY"
   ]
  },
  "_note": "Horizons are 60 and 120 sessions because the book holds for weeks to quarters. Excess return vs SPY after every past signal, all stocks pooled, signals at least 20 sessions apart per stock, results trimmed at the baseline's 1st/99th percentile. edge = signal mean minus ordinary-day mean. t_clustered treats each calendar month as one observation. WORKS = clustered t of 2 or more and positive in both halves. by_condition splits each archetype by whether SPY was above its 200-day and whether the stock's sector was beating SPY on the signal day: a condition is a candidate filter only if its edge and t are clearly better than the other side. Still uncorrected: survivorship (today's index members only, which flatters anything that buys a fallen stock), no stops, no costs."
