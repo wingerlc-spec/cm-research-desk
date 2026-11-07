@@ -26,25 +26,25 @@
   "note": "no SEC data needed; former members without Yahoo prices are missing"
  },
  "_coverage": {
-  "rev": 3607,
-  "ni": 4777,
-  "gp": 1957,
-  "oi": 3833,
-  "shares": 3335,
-  "inv": 2418,
-  "cwl": 1285,
-  "cwln": 571,
-  "ltd": 2474,
-  "assets": 5945,
-  "ni_fy": 5779,
-  "cfo_fy": 5850
+  "rev": 3614,
+  "ni": 4786,
+  "gp": 1959,
+  "oi": 3839,
+  "shares": 3343,
+  "inv": 2421,
+  "cwl": 1287,
+  "cwln": 572,
+  "ltd": 2478,
+  "assets": 5955,
+  "ni_fy": 5780,
+  "cfo_fy": 5851
  },
  "_drift_dates": "8-K Item 2.02 dates found for 957 companies",
  "_drift_stats": {
-  "qualified": 2040,
+  "qualified": 2043,
   "no_date": 69,
-  "failed_reaction": 1461,
-  "events": 491
+  "failed_reaction": 1467,
+  "events": 492
  },
  "EARNINGS_DRIFT": {
   "all": {
