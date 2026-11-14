@@ -7,7 +7,7 @@
    "shock": "2026-02-27",
    "curve_change": -0.176,
    "note": "Hormuz: US/Israel strikes on Iran 28 Feb 2026. Curve: Brent Dec-27 82.62 vs front 100.32 (5 Oct settles).",
-   "n_exposed": 239,
+   "n_exposed": 213,
    "names": [
     {
      "ticker": "OXY",
@@ -78,7 +78,7 @@
      "curve_driver_pct": 44.5,
      "priced": "CHEAP",
      "reading": "stock prices the driver at -2% since shock; spot +75%, curve +45%",
-     "fwd_pe": 8.52,
+     "fwd_pe": 8.49,
      "eps_next_fy": 21.79,
      "rev30_pct": 13.2,
      "rev90_pct": 20.6,
@@ -395,21 +395,6 @@
      "reading": "stock prices the driver at +8% since shock; spot +75%, curve +45%"
     },
     {
-     "ticker": "ALK",
-     "name": "Alaska Air Group",
-     "sector": "Industrials",
-     "last": 38.48,
-     "side": "gains when driver falls",
-     "beta_now": -0.488,
-     "t_now": -8.8,
-     "corr_now": -0.61,
-     "price_at_shock": 51.6,
-     "stock_since_shock_pct": -25.4,
-     "spy_since_shock_pct": 10.0,
-     "driver_since_shock_pct": 75.4,
-     "priced": "UNTESTABLE (no stable pre-shock sensitivity)"
-    },
-    {
      "ticker": "RPM",
      "name": "RPM International",
      "sector": "Materials",
@@ -458,6 +443,31 @@
      "curve_driver_pct": 44.5,
      "priced": "PRICED",
      "reading": "stock prices the driver at -27% since shock; spot +75%, curve +45%"
+    },
+    {
+     "ticker": "ECL",
+     "name": "Ecolab",
+     "sector": "Materials",
+     "last": 309.27,
+     "side": "gains when driver falls",
+     "beta_now": -0.189,
+     "t_now": -7.0,
+     "corr_now": -0.49,
+     "price_at_shock": 308.35,
+     "stock_since_shock_pct": 0.3,
+     "spy_since_shock_pct": 10.0,
+     "driver_since_shock_pct": 75.4,
+     "beta_pre": -0.101,
+     "t_pre": -2.7,
+     "implied_driver_pct": 69.3,
+     "curve_driver_pct": 44.5,
+     "priced": "FAIR",
+     "reading": "stock prices the driver at +69% since shock; spot +75%, curve +45%",
+     "fwd_pe": 32.88,
+     "eps_next_fy": 9.41,
+     "rev30_pct": 0.1,
+     "rev90_pct": -0.3,
+     "next_earnings": "2026-10-27"
     }
    ]
   },
@@ -466,7 +476,7 @@
    "shock": "2026-09-15",
    "curve_change": null,
    "note": "Fed hiked 16 Sep 2026; TLT up = yields down.",
-   "n_exposed": 274,
+   "n_exposed": 244,
    "names": [
     {
      "ticker": "TOL",
@@ -512,31 +522,6 @@
      "rev30_pct": -20.2,
      "rev90_pct": -21.0,
      "next_earnings": "2027-01-19"
-    },
-    {
-     "ticker": "KBH",
-     "name": "KB Home",
-     "sector": "Consumer Discretionary",
-     "last": 47.9,
-     "side": "gains when driver rises",
-     "beta_now": 2.023,
-     "t_now": 8.8,
-     "corr_now": 0.53,
-     "price_at_shock": 49.52,
-     "stock_since_shock_pct": -3.3,
-     "spy_since_shock_pct": -0.4,
-     "driver_since_shock_pct": -1.6,
-     "beta_pre": 1.782,
-     "t_pre": 7.7,
-     "implied_driver_pct": -1.7,
-     "curve_driver_pct": -1.6,
-     "priced": "FAIR",
-     "reading": "stock prices the driver at -2% since shock; spot -2%, curve -2%",
-     "fwd_pe": 13.36,
-     "eps_next_fy": 3.54,
-     "rev30_pct": -5.4,
-     "rev90_pct": -23.2,
-     "next_earnings": "2026-12-17"
     },
     {
      "ticker": "PHM",
@@ -679,29 +664,44 @@
      "next_earnings": "2027-01-28"
     },
     {
-     "ticker": "FND",
-     "name": "Floor & Decor",
+     "ticker": "HD",
+     "name": "Home Depot (The)",
      "sector": "Consumer Discretionary",
-     "last": 47.75,
+     "last": 348.69,
      "side": "gains when driver rises",
-     "beta_now": 1.979,
-     "t_now": 7.3,
-     "corr_now": 0.48,
-     "price_at_shock": 46.11,
-     "stock_since_shock_pct": 3.6,
+     "beta_now": 1.153,
+     "t_now": 7.2,
+     "corr_now": 0.47,
+     "price_at_shock": 305.48,
+     "stock_since_shock_pct": 14.1,
      "spy_since_shock_pct": -0.4,
      "driver_since_shock_pct": -1.6,
-     "beta_pre": 1.739,
-     "t_pre": 6.2,
-     "implied_driver_pct": 2.3,
+     "beta_pre": 0.91,
+     "t_pre": 5.8,
+     "implied_driver_pct": 15.9,
      "curve_driver_pct": -1.6,
-     "priced": "FAIR",
-     "reading": "stock prices the driver at +2% since shock; spot -2%, curve -2%",
-     "fwd_pe": 25.38,
-     "eps_next_fy": 1.88,
-     "rev30_pct": -14.6,
-     "rev90_pct": -14.6,
-     "next_earnings": "2026-10-29"
+     "priced": "PRICED",
+     "reading": "stock prices the driver at +16% since shock; spot -2%, curve -2%"
+    },
+    {
+     "ticker": "SHW",
+     "name": "Sherwin-Williams",
+     "sector": "Materials",
+     "last": 349.89,
+     "side": "gains when driver rises",
+     "beta_now": 1.177,
+     "t_now": 7.2,
+     "corr_now": 0.47,
+     "price_at_shock": 323.22,
+     "stock_since_shock_pct": 8.3,
+     "spy_since_shock_pct": -0.4,
+     "driver_since_shock_pct": -1.6,
+     "beta_pre": 1.134,
+     "t_pre": 7.2,
+     "implied_driver_pct": 7.5,
+     "curve_driver_pct": -1.6,
+     "priced": "PRICED",
+     "reading": "stock prices the driver at +7% since shock; spot -2%, curve -2%"
     },
     {
      "ticker": "MTDR",
@@ -872,7 +872,7 @@
      "curve_driver_pct": -1.6,
      "priced": "CHEAP",
      "reading": "stock prices the driver at +12% since shock; spot -2%, curve -2%",
-     "fwd_pe": 8.52,
+     "fwd_pe": 8.49,
      "eps_next_fy": 21.79,
      "rev30_pct": 13.2,
      "rev90_pct": 20.6,
@@ -960,7 +960,7 @@
    "shock": "2026-10-08",
    "curve_change": null,
    "note": "SpaceX buys Grain spectrum 9 Oct 2026; carriers -9%.",
-   "n_exposed": 196,
+   "n_exposed": 189,
    "names": [
     {
      "ticker": "CSCO",
@@ -981,7 +981,7 @@
      "curve_driver_pct": -9.3,
      "priced": "CHEAP",
      "reading": "stock prices the driver at -16% since shock; spot -9%, curve -9%",
-     "fwd_pe": 16.12,
+     "fwd_pe": 16.07,
      "eps_next_fy": 5.93,
      "rev30_pct": 5.5,
      "rev90_pct": 6.3,
@@ -1429,7 +1429,7 @@
    "shock": null,
    "curve_change": null,
    "note": "exposure only",
-   "n_exposed": 578,
+   "n_exposed": 540,
    "names": [
     {
      "ticker": "LRCX",
@@ -1638,7 +1638,7 @@
    "shock": null,
    "curve_change": null,
    "note": "exposure only",
-   "n_exposed": 22,
+   "n_exposed": 21,
    "names": [
     {
      "ticker": "NTAP",
@@ -2055,7 +2055,7 @@
    "shock": null,
    "curve_change": null,
    "note": "exposure only",
-   "n_exposed": 177,
+   "n_exposed": 158,
    "names": [
     {
      "ticker": "AGNC",
@@ -2138,16 +2138,6 @@
      "corr_now": 0.48
     },
     {
-     "ticker": "KBH",
-     "name": "KB Home",
-     "sector": "Consumer Discretionary",
-     "last": 47.9,
-     "side": "gains when driver rises",
-     "beta_now": 3.874,
-     "t_now": 5.3,
-     "corr_now": 0.41
-    },
-    {
      "ticker": "TREX",
      "name": "Trex",
      "sector": "Industrials",
@@ -2156,6 +2146,16 @@
      "beta_now": 3.549,
      "t_now": 5.3,
      "corr_now": 0.54
+    },
+    {
+     "ticker": "RYN",
+     "name": "Rayonier",
+     "sector": "Real Estate",
+     "last": 21.5,
+     "side": "gains when driver rises",
+     "beta_now": 2.597,
+     "t_now": 5.2,
+     "corr_now": 0.24
     },
     {
      "ticker": "DINO",

@@ -6,7 +6,14 @@ Pulls daily bars for a universe, computes chart statistics, sorts names into arc
   out/market_state_full.json  every name, every field (never read into context; git history = prior state)
   out/charts/<TICKER>.png     one chart per survivor
 
+  out/options.json            v16: option chain summary for the researched names
+  out/terminal/screen.json    v16: compact file for the terminal's Screen tab
+  out/mcap_cache.json         v16: last good market cap per name (fallback, 10 days)
+
 Nothing about positions, levels or P&L belongs in this repo.
+
+v16 (14 Nov 2026): no stock price cap (book rule changed 2 Nov 2026); affordability now comes from the real option
+(SLOT_USD / SLOT_STRETCH); $5B market cap floor on today's candidates; option chains for researched names; terminal files.
 
   python screen.py                      # live: yfinance, S&P 500 + lattice ETFs
   python screen.py --csv-dir data/      # offline test on Alpha Vantage style CSVs
@@ -38,7 +45,22 @@ BENCH = ["SPY", "QQQ", "IWM"] + sorted(set(SECTOR_ETF.values()) | set(THEME_PROX
 PER_ARCHETYPE = 8          # survivors charted per archetype
 RANK_POOL = 12             # candidates per archetype sent to the ranking step
 HOLD = 120                 # sessions (~6 months): time stop in every simulated trade. The book holds weeks to quarters.
-PRICE_CAP = 60             # book rule (11 Oct): a delta 0.75-0.85 call 6-15 months out costs ~30-40% of the stock; ~$1,900 per slot caps the stock near $60
+# v16 (14 Nov 2026): the $60 stock price cap is gone (book rule changed 2 Nov 2026: no stock price limit; the instrument stays a
+# deep in-the-money call). Affordability is now checked on the real contract from the option chain: the chosen call's ask x 100
+# against a slot of about 20 percent of a $10,000 options book, with a stretch limit. No chain data: no check, tier unchanged.
+SLOT_USD = 2000            # one position slot
+SLOT_STRETCH = 2700        # above this the call does not fit: shares, or a smaller position
+MIN_MCAP = 5e9             # v16 (14 Nov 2026): market cap floor for TODAY'S candidates only, no upper limit. Never applied to history.
+MCAP_CACHE_DAYS = 10       # a failed market cap pull falls back to out/mcap_cache.json values up to this many days old
+# v16 option chains (14 Nov 2026). OI_MIN is 100, not 500: the owner's recent real fills were on strikes with open interest near 90,
+# so a 500 floor would exclude what he actually trades.
+OI_MIN = 100               # open interest needed for liquidity "ok"
+SPREAD_MAX_PCT = 8         # (ask - bid) / mid in percent, needed for liquidity "ok"
+RISK_FREE = 0.04           # Black-Scholes rate; dividends ignored
+OPT_DTE_MIN, OPT_DTE_MAX, OPT_DTE_TARGET = 180, 460, 274   # expiry window 6 to 15 months; prefer the expiry nearest 9 months
+DELTA_LO, DELTA_HI = 0.75, 0.85                             # the book's deep in-the-money call
+ALT_DELTA_LO, ALT_DELTA_HI = 0.60, 0.90                     # option_alt band, used when the first choice is thin
+OPT_MAX_NAMES = 40         # chain pulls per run, to stay polite to Yahoo
 EARNINGS_WINDOW = 15       # sessions: a name reporting inside this window is researched as a post-print trigger, not an entry
 MIN_PRICE, MIN_DVOL, MIN_BARS = 5.0, 20e6, 260
 
@@ -95,6 +117,218 @@ def pull_csv(folder):
         d = pd.read_csv(f, parse_dates=["timestamp"]).sort_values("timestamp").set_index("timestamp")
         k = d["adjusted_close"] / d["close"] if "adjusted_close" in d else 1.0
         out[f.stem] = pd.DataFrame({"close": d["close"]*k, "high": d["high"]*k, "low": d["low"]*k, "volume": d["volume"]}).tail(2520)
+    return out
+
+# ----------------------------------------------------------------------------- v16 market cap (added 14 Nov 2026)
+def pull_mcap(tickers, sleep=0.5):
+    """Yahoo marketCap, once per run: bulk quote calls of 100 symbols (3 tries each), then fast_info / info one by one for
+    the gaps (at most 300). Returns ({symbol: usd}, [notes]). A name Yahoo does not answer for is left out, never guessed."""
+    import time
+    out, notes = {}, []
+    try:
+        from yfinance.data import YfData
+        yd = YfData()
+        failed = 0
+        for i in range(0, len(tickers), 100):
+            chunk = tickers[i:i+100]
+            for k in range(3):
+                try:
+                    j = yd.get_raw_json("https://query1.finance.yahoo.com/v7/finance/quote",
+                                        params={"symbols": ",".join(chunk), "formatted": "false"})
+                    for q in ((j or {}).get("quoteResponse") or {}).get("result") or []:
+                        v = q.get("marketCap")
+                        if q.get("symbol") in chunk and isinstance(v, (int, float)) and v > 0: out[q["symbol"]] = float(v)
+                    break
+                except Exception:
+                    if k == 2: failed += 1
+                    time.sleep(2*(k+1))
+            time.sleep(sleep)
+        if failed: notes.append(f"{failed} bulk market cap calls failed")
+    except Exception as e:
+        notes.append(f"bulk market cap pull failed ({type(e).__name__})")
+    gaps = [t for t in tickers if t not in out]
+    if gaps:
+        import yfinance as yf
+        got = 0
+        for t in gaps[:300]:
+            v = None
+            try: v = yf.Ticker(t).fast_info["marketCap"]
+            except Exception: pass
+            if not v:
+                try: v = yf.Ticker(t).info.get("marketCap")
+                except Exception: pass
+            if isinstance(v, (int, float)) and v > 0 and np.isfinite(v): out[t] = float(v); got += 1
+            time.sleep(0.15)
+        notes.append(f"{len(gaps)} names missing from the bulk call, {got} filled one by one")
+    return out, notes
+
+def merge_mcap(fresh, cache, today, max_age=MCAP_CACHE_DAYS):
+    """Fresh values win; a name missing today falls back to its cached value if that is at most max_age days old.
+    cache = {"values": {sym: {"usd": float, "date": "YYYY-MM-DD"}}}. Returns (values {sym: usd}, source {sym: "live"|"cache"}, new_cache)."""
+    vals, src = {}, {}
+    old = (cache or {}).get("values") or {}
+    t0 = pd.Timestamp(today)
+    for t, v in old.items():
+        try:
+            if (t0 - pd.Timestamp(v["date"])).days <= max_age and v.get("usd"): vals[t] = float(v["usd"]); src[t] = "cache"
+        except Exception: pass
+    new = {t: dict(v) for t, v in old.items()}
+    for t, v in fresh.items():
+        vals[t] = float(v); src[t] = "live"; new[t] = dict(usd=float(v), date=str(t0.date()))
+    return vals, src, {"updated": str(t0.date()), "values": new}
+
+def below_floor(t, mcap, floor=MIN_MCAP):
+    """True only when the market cap is KNOWN and under the floor. Unknown stays in the universe."""
+    v = mcap.get(t)
+    return v is not None and v < floor
+
+# ----------------------------------------------------------------------------- v16 option chains (added 14 Nov 2026)
+from math import erf, exp, log, sqrt
+
+def _ncdf(x): return 0.5*(1.0 + erf(x/sqrt(2.0)))
+
+def bs_call(S, K, T, sig, r=RISK_FREE):
+    """Black-Scholes call price, no dividends."""
+    if T <= 0 or sig <= 0: return max(S-K, 0.0)
+    d1 = (log(S/K) + (r + 0.5*sig*sig)*T)/(sig*sqrt(T)); d2 = d1 - sig*sqrt(T)
+    return S*_ncdf(d1) - K*exp(-r*T)*_ncdf(d2)
+
+def bs_put(S, K, T, sig, r=RISK_FREE):
+    return bs_call(S, K, T, sig, r) - S + K*exp(-r*T)
+
+def bs_delta(S, K, T, sig, r=RISK_FREE):
+    """Call delta N(d1), no dividends."""
+    if T <= 0 or sig <= 0: return 1.0 if S > K else 0.0
+    return _ncdf((log(S/K) + (r + 0.5*sig*sig)*T)/(sig*sqrt(T)))
+
+def implied_vol(price, S, K, T, r=RISK_FREE, put=False):
+    """Bisection on Black-Scholes. None when the price is outside what any vol from 0.01 to 5 can produce."""
+    f = bs_put if put else bs_call
+    lo, hi = 0.01, 5.0
+    if not price or price <= 0 or T <= 0: return None
+    if price < f(S, K, T, lo, r) - 1e-9 or price > f(S, K, T, hi, r) + 1e-9: return None
+    for _ in range(100):
+        mid = 0.5*(lo+hi)
+        if f(S, K, T, mid, r) > price: hi = mid
+        else: lo = mid
+        if hi - lo < 1e-6: break
+    return 0.5*(lo+hi)
+
+def _num(x):
+    try:
+        v = float(x)
+        return v if np.isfinite(v) else None
+    except Exception: return None
+
+def contract_row(c, S, expiry, dte, put=False):
+    """One chain row -> dict with mid, spread, iv (chain's when 0.05-3, else solved from the mid) and delta.
+    Both bid and ask 0: quote 'stale' (lastPrice only marks it), no spread, no iv from prices."""
+    K = _num(c.get("strike")); bid = _num(c.get("bid")) or 0.0; ask = _num(c.get("ask")) or 0.0
+    last = _num(c.get("lastPrice")) or 0.0
+    oi = int(_num(c.get("openInterest")) or 0); vol = int(_num(c.get("volume")) or 0)
+    T = dte/365.0
+    r = dict(expiry=expiry, strike=K, bid=round(bid, 2), ask=round(ask, 2), open_interest=oi, volume=vol, days_to_expiry=int(dte))
+    if bid <= 0 and ask <= 0:
+        r["quote"] = "stale" if last > 0 else "none"; r["mid"] = None; r["spread_pct"] = None
+    else:
+        r["quote"] = "ok"
+        mid = (bid+ask)/2 if bid > 0 and ask > 0 else None
+        r["mid"] = round(mid, 2) if mid else None
+        r["spread_pct"] = round((ask-bid)/mid*100, 1) if mid else None
+    iv = _num(c.get("impliedVolatility")); src = "chain"
+    if iv is None or not (0.05 <= iv <= 3):
+        iv = implied_vol(r["mid"], S, K, T, put=put) if r["mid"] and K else None; src = "solved from mid"
+    r["iv"] = round(iv, 4) if iv else None; r["iv_source"] = src if iv else None
+    r["delta"] = round(bs_delta(S, K, T, iv), 3) if iv and K and not put else None
+    return r
+
+def _finish(r, S):
+    r = dict(r)
+    r["cost_usd"] = round(r["ask"]*100, 0) if r.get("ask") else None
+    if r.get("ask"):
+        r["breakeven"] = round(r["strike"] + r["ask"], 2); r["breakeven_pct_above_last"] = round((r["breakeven"]/S-1)*100, 1)
+    ok = r["open_interest"] >= OI_MIN and r.get("spread_pct") is not None and r["spread_pct"] <= SPREAD_MAX_PCT
+    r["liquidity"] = "ok" if ok else "thin"
+    return r
+
+def choose_contract(rows, S):
+    """rows: call contract_rows across the 180-460 day window. First choice: delta 0.75-0.85 with bid > 0, the expiry nearest
+    9 months, then the strike with the highest open interest (ties: tighter spread). option_alt (only when the first choice is
+    thin): the most liquid call with delta 0.60-0.90, i.e. contracts passing the ok test first, then highest open interest,
+    then tighter spread. Returns (option, option_alt)."""
+    live = [r for r in rows if r.get("delta") is not None and r["bid"] > 0]
+    band = [r for r in live if DELTA_LO <= r["delta"] <= DELTA_HI]
+    if not band:
+        opt = dict(liquidity="none")
+        if any(r.get("quote") == "stale" for r in rows) and not live: opt["quote"] = "stale"
+        return opt, None
+    best_dte = min({r["days_to_expiry"] for r in band}, key=lambda d: (abs(d-OPT_DTE_TARGET), d))
+    pick = sorted([r for r in band if r["days_to_expiry"] == best_dte], key=lambda r: (-r["open_interest"], r["spread_pct"] if r["spread_pct"] is not None else 999))[0]
+    opt = _finish(pick, S); alt = None
+    if opt["liquidity"] == "thin":
+        wide = [_finish(r, S) for r in live if ALT_DELTA_LO <= r["delta"] <= ALT_DELTA_HI]
+        wide.sort(key=lambda r: (r["liquidity"] != "ok", -r["open_interest"], r["spread_pct"] if r["spread_pct"] is not None else 999))
+        if wide and (wide[0]["expiry"], wide[0]["strike"]) != (opt["expiry"], opt["strike"]): alt = wide[0]
+    return opt, alt
+
+def slot_fit(opt):
+    """fits_slot True / 'stretch' / False from the chosen contract's ask x 100; None when there is no contract."""
+    c = (opt or {}).get("cost_usd")
+    if not c: return None
+    return True if c <= SLOT_USD else "stretch" if c <= SLOT_STRETCH else False
+
+def third_friday(d):
+    return d.weekday() == 4 and 15 <= d.day <= 21
+
+def atm_iv(calls, puts, S, dte):
+    """At-the-money implied vol: strike nearest the spot, average of call and put iv (each from the chain when sane, else solved
+    from its mid). Also the straddle mid as a percent of spot when both sides quote."""
+    if calls is None or not len(calls): return None
+    K = float(calls.iloc[(calls["strike"]-S).abs().argsort().iloc[0]]["strike"])
+    c = contract_row(calls[calls["strike"] == K].iloc[0].to_dict(), S, None, dte)
+    p = contract_row(puts[puts["strike"] == K].iloc[0].to_dict(), S, None, dte, put=True) if puts is not None and len(puts) and (puts["strike"] == K).any() else None
+    ivs = [x["iv"] for x in (c, p) if x and x.get("iv")]
+    out = dict(strike=K, days_to_expiry=int(dte), call_iv=c.get("iv"), put_iv=(p or {}).get("iv"),
+               atm_iv=round(float(np.mean(ivs)), 4) if ivs else None)
+    if p and c.get("mid") and p.get("mid"):
+        out["straddle_mid"] = round(c["mid"] + p["mid"], 2); out["straddle_pct_of_spot"] = round((c["mid"] + p["mid"])/S*100, 1)
+    return out
+
+def chain_summary(t, S, today, sleep=0.3, extra_expiries=None):
+    """Pull calls for every expiry 180-460 days out; returns the per-name summary with the chosen contract.
+    extra_expiries: callable(list of expiry strings) -> {label: expiry} for additional at-the-money reads (terminal)."""
+    import time, yfinance as yf
+    tk = yf.Ticker(t); t0 = pd.Timestamp(today)
+    out = dict(sym=t, last=round(float(S), 2), pulled_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"))
+    exps = list(tk.options or [])
+    if not exps:
+        out.update(error="no listed options on Yahoo", option=dict(liquidity="none")); return out
+    win = [(e, (pd.Timestamp(e)-t0).days) for e in exps if OPT_DTE_MIN <= (pd.Timestamp(e)-t0).days <= OPT_DTE_MAX]
+    rows, per_exp = [], []
+    for e, d in win:
+        try:
+            ch = tk.option_chain(e); calls = ch.calls
+        except Exception as ex:
+            per_exp.append(dict(expiry=e, days_to_expiry=d, error=type(ex).__name__)); time.sleep(sleep); continue
+        rr = [contract_row(c, S, e, d) for c in (calls.to_dict("records") if calls is not None else [])]
+        rows += rr
+        per_exp.append(dict(expiry=e, days_to_expiry=d, calls=len(rr), with_bid=sum(1 for r in rr if r["bid"] > 0),
+                            stale=sum(1 for r in rr if r["quote"] == "stale"),
+                            band_60_90=[{k: r.get(k) for k in ("strike", "bid", "ask", "spread_pct", "open_interest", "volume", "iv", "delta", "quote")}
+                                        for r in rr if r.get("delta") is not None and ALT_DELTA_LO <= r["delta"] <= ALT_DELTA_HI]))
+        time.sleep(sleep)
+    opt, alt = choose_contract(rows, S)
+    out.update(expiries_in_window=per_exp, n_contracts=len(rows), option=opt)
+    if alt: out["option_alt"] = alt
+    if not win: out["note"] = "no expiry 180 to 460 days out"
+    if extra_expiries:
+        for label, e in (extra_expiries(exps) or {}).items():
+            try:
+                ch = tk.option_chain(e); d = (pd.Timestamp(e)-t0).days
+                out[label] = dict(expiry=e, **(atm_iv(ch.calls, ch.puts, S, max(d, 1)) or {}))
+            except Exception as ex:
+                out[label] = dict(expiry=e, error=type(ex).__name__)
+            time.sleep(sleep)
     return out
 
 # ----------------------------------------------------------------------------- features
@@ -416,7 +650,7 @@ def rank_all(cands, feats, bars, asof, live, bt=None):
                 r = rank_one(t, arch, f, bars[t], sec["close"] if sec is not None else None, bars["SPY"]["close"] if "SPY" in bars else None)
             except Exception as e:
                 r = dict(ticker=t, archetype=arch, tier="PASS", reason=f"rank error {type(e).__name__}")
-            r.update(name=f.get("name"), sector=f.get("sector"), index=f.get("index"), last=f["last"], screen_why=why)
+            r.update(name=f.get("name"), sector=f.get("sector"), index=f.get("index"), mcap_busd=f.get("mcap_busd"), last=f["last"], screen_why=why)
             sm3 = feats.get(etf, {}).get("m3")
             if sm3 is not None and spy3 is not None: r["sector_vs_spy_3m"] = round(sm3-spy3, 1)
             rows.append(r)
@@ -427,10 +661,9 @@ def rank_all(cands, feats, bars, asof, live, bt=None):
         tier(r, asof, bt)
         if r["tier"] != "PASS" and "stop" in r:
             r.update(entry_quality(r, feats[r["ticker"]], r.get("sessions_to_earnings")))
-    for r in rows:
-        if r.get("last") and r["last"] > PRICE_CAP and r["tier"] in ("DEEP DIVE", "AFTER PRINT", "WATCH"):
-            r.update(tier="TOO EXPENSIVE", reason=f"stock {r['last']} above the ${PRICE_CAP} cap: no deep ITM call fits a ~$1,900 slot (was {r['tier']}: {r.get('reason', '')})")
-    order = {"DEEP DIVE": 0, "AFTER PRINT": 1, "WATCH": 2, "TOO EXPENSIVE": 3, "PASS": 4}
+    # v16: the $60 price cap and its TOO EXPENSIVE tier are gone (book rule changed 2 Nov 2026). Affordability is set later by
+    # apply_options() from the real contract; the research tier is never changed by it.
+    order = {"DEEP DIVE": 0, "AFTER PRINT": 1, "WATCH": 2, "PASS": 4}
     rows.sort(key=lambda r: (order[r["tier"]], -(r.get("exp_R") or -9)))
     return rows
 
@@ -884,9 +1117,11 @@ def lens_candidates(lens, bars, feats, live, asof):
     Score = sum of the measured point-in-time 6-month edges of the ADOPTED lenses firing. PROMISING hits are listed, not scored."""
     verdicts = {k: lens_verdict(v) for k, v in lens.items() if not k.startswith("_") and isinstance(v, dict)}
     cutoff = pd.Timestamp(asof) - pd.Timedelta(days=100)
-    hits = {}
+    hits = {}; floor_out = set()
     for k, evs in LAST_EVENTS.items():
         for t, d, tag in evs:
+            if pd.Timestamp(d) >= cutoff and t in bars and t not in BENCH and (feats.get(t) or {}).get("below_mcap_floor"):
+                floor_out.add(t); continue                          # v16: today's candidates only; the lens tests themselves are untouched
             if pd.Timestamp(d) >= cutoff and t in bars and t not in BENCH:
                 hits.setdefault(t, []).append(dict(lens=k, entry=str(pd.Timestamp(d).date()), high_accrual=tag, verdict=verdicts.get(k, ("?", 0))[0]))
     uber = bars.get("UBER"); rows = []
@@ -901,7 +1136,7 @@ def lens_candidates(lens, bars, feats, live, asof):
         rows.append(dict(ticker=t, name=f.get("name"), sector=f.get("sector"), index=f.get("index"), last=round(last, 2), score=round(score, 2),
                          lenses=lenses, adopted=[l for l in lenses if verdicts.get(l, ("",))[0] == "ADOPT"],
                          promising=[l for l in lenses if verdicts.get(l, ("",))[0] == "PROMISING"], hits=hs,
-                         instrument="deep ITM call" if last <= PRICE_CAP else "shares (over the price cap)", uber_corr_120d=corr,
+                         instrument="deep ITM call", mcap_busd=f.get("mcap_busd"), uber_corr_120d=corr,
                          chart_gate=("falling hard: below the 50-day and 200-day" if f.get("vs50", 0) < 0 and f.get("vs200", 0) < -10
                                      else "spike: 20%+ over the 50-day" if f.get("vs50", 0) > 20 else "ok")))
     any_adopted = any(v[0] == "ADOPT" for v in verdicts.values())
@@ -913,7 +1148,7 @@ def lens_candidates(lens, bars, feats, live, asof):
         top.sort(key=lambda r: (-len(r["promising"]), -len(r["lenses"]), -(r.get("rev30_pct") or -99)))
     return dict(asof=asof, verdicts={k: v[0] for k, v in verdicts.items()}, weights={k: v[1] for k, v in verdicts.items()},
                 mode="ranked by adopted-lens edge" if any_adopted else "FALLBACK: no lens adopted; ranked by PROMISING-lens hits, then lens-hit count, then estimate revisions (unproven ideas)",
-                n_names=len(rows), candidates=top)
+                n_names=len(rows), removed_by_mcap_floor=len(floor_out), candidates=top)
 
 # ----------------------------------------------------------------------------- what separates good and bad earnings-drift events (added 11 Oct 2026)
 # Protocol, fixed before results: 10 yes/no conditions. DISCOVERY = events entered 2021 or earlier, CONFIRMATION = 2022 or later.
@@ -1025,7 +1260,7 @@ def theme_screen(bars, feats, meta, asof, live, top=10, window=250):
     lr = lambda c: np.log(c).diff()
     spy_c = bars["SPY"]["close"]; out = {"_note": theme_screen.__doc__.split("\n")[0], "asof": asof, "themes": {}}
     names = [t for t, f in feats.items() if t in meta and t not in BENCH and "skip" not in f and "suspect" not in f
-             and f.get("date") == asof and f["last"] >= MIN_PRICE and f["dvol20"] >= MIN_DVOL]
+             and f.get("date") == asof and f["last"] >= MIN_PRICE and f["dvol20"] >= MIN_DVOL and not f.get("below_mcap_floor")]
     fcache = {}
     for th in THEMES:
         px = bars.get(th["proxy"]) if th["proxy"] in bars else bars.get(th.get("alt") or "")
@@ -1076,6 +1311,57 @@ def theme_screen(bars, feats, meta, asof, live, top=10, window=250):
                                         note=th["note"], n_exposed=len(rows), names=res)
     return out
 
+# ----------------------------------------------------------------------------- v16 options and terminal file (added 14 Nov 2026)
+def option_targets(ranked, lc, cap=OPT_MAX_NAMES):
+    """Ranked names in DEEP DIVE / WATCH / AFTER PRINT first, then the top lens candidates, at most cap names."""
+    out = [r["ticker"] for r in ranked if r.get("tier") in ("DEEP DIVE", "AFTER PRINT", "WATCH")]
+    for c in (lc or {}).get("candidates") or []:
+        if c.get("ticker") not in out: out.append(c["ticker"])
+    seen = []
+    for t in out:
+        if t not in seen: seen.append(t)
+    return seen[:cap]
+
+def apply_options(row, summ):
+    """Put the chosen contract on a ranked row or lens candidate and set the slot check. The research tier is never changed."""
+    if summ is None or "option" not in summ:
+        row["fits_slot"] = None; return
+    opt = summ["option"]; row["option"] = opt
+    if summ.get("option_alt"): row["option_alt"] = summ["option_alt"]
+    fit = slot_fit(opt); row["fits_slot"] = fit
+    if fit is False:
+        row["instrument"] = "shares, or a smaller position"
+        msg = f"chosen call costs ${opt['cost_usd']:,.0f} per contract, above the ${SLOT_STRETCH:,} stretch limit"
+        row["reason"] = f"{row['reason']}; {msg}" if row.get("reason") else msg
+    elif fit == "stretch":
+        row["instrument"] = "deep ITM call (stretch)"
+    elif fit is True:
+        row["instrument"] = "deep ITM call"
+
+SCREEN_FIELDS = ["ticker", "name", "sector", "mcap_busd", "archetype", "tier", "reason", "screen_why", "last", "entry", "stop", "target", "rr",
+                 "next_earnings", "sessions_to_earnings", "fwd_pe", "rev30_pct", "rev90_pct", "entry_grade", "fits_slot", "option"]
+
+def terminal_screen(asof, universe_note, ranked, lc, limit_kb=150):
+    """Compact file for the terminal's Screen tab. Lens candidates: up to 15, with lens names and verdicts."""
+    tiers = {}
+    for r in ranked: tiers[r["tier"]] = tiers.get(r["tier"], 0) + 1
+    verd = (lc or {}).get("verdicts") or {}
+    lens = [dict(ticker=c["ticker"], name=c.get("name"), sector=c.get("sector"), mcap_busd=c.get("mcap_busd"), last=c.get("last"),
+                 lenses=[dict(lens=l, verdict=verd.get(l)) for l in c.get("lenses", [])], chart_gate=c.get("chart_gate"),
+                 next_earnings=c.get("next_earnings"), fits_slot=c.get("fits_slot"), option=c.get("option"))
+            for c in ((lc or {}).get("candidates") or [])[:15]]
+    doc = dict(asof=asof, generated_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"), universe_note=universe_note,
+               tiers=tiers, rows=[{k: r.get(k) for k in SCREEN_FIELDS} for r in ranked], lens_candidates=lens)
+    s = json.dumps(doc, separators=(",", ":"), default=str)
+    if len(s) > limit_kb*1000:          # drop PASS rows' option objects first, then PASS rows, to stay under the limit
+        for r in doc["rows"]:
+            if r["tier"] == "PASS": r.pop("option", None)
+        s = json.dumps(doc, separators=(",", ":"), default=str)
+    if len(s) > limit_kb*1000:
+        doc["rows"] = [r for r in doc["rows"] if r["tier"] != "PASS"]; doc["note"] = "PASS rows dropped to stay under the size limit"
+        s = json.dumps(doc, separators=(",", ":"), default=str)
+    return s
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--csv-dir"); ap.add_argument("--out", default="out"); ap.add_argument("--no-charts", action="store_true")
     a = ap.parse_args()
@@ -1087,6 +1373,19 @@ def main():
     spy = bars["SPY"]["close"] if "SPY" in bars else None
     feats = {t: features(t, x, spy) for t, x in bars.items()}
     dates = pd.Series([f["date"] for f in feats.values()]); asof = dates.mode().iloc[0]
+    # v16 market cap floor: one pull per run, cached in out/mcap_cache.json; today's candidates only
+    names = sorted(t for t in feats if t not in BENCH)
+    cpath = out/"mcap_cache.json"
+    try: cache = json.loads(cpath.read_text()) if cpath.exists() else {}
+    except Exception: cache = {}
+    fresh, mnotes = ({}, ["--csv-dir mode: no live market cap pull, cache only"]) if a.csv_dir else pull_mcap(names)
+    mcap, msrc, newcache = merge_mcap(fresh, cache, dt.date.today())
+    if fresh: cpath.write_text(json.dumps(newcache, indent=0, sort_keys=True))
+    for t in names:
+        if t in mcap: feats[t]["mcap_busd"] = round(mcap[t]/1e9, 2)
+    n_missing = sum(1 for t in names if t not in mcap); n_cache = sum(1 for t in names if msrc.get(t) == "cache")
+    UNIVERSE_NOTE.append(f"market cap floor ${MIN_MCAP/1e9:.0f}B on today's candidates: {len(names)-n_missing} of {len(names)} names had a market cap "
+                         f"({n_cache} from the cache), {n_missing} had none and were kept" + (f" [{'; '.join(mnotes)}]" if mnotes else ""))
     survivors, counts, dropped = [], {}, {}
     def drop(why): dropped[why] = dropped.get(why, 0) + 1
     cands = {k: [] for k, _ in RULES}; cands["MACRO_PUNISHED"] = []
@@ -1098,6 +1397,7 @@ def main():
         if f["last"] < MIN_PRICE or f["dvol20"] < MIN_DVOL: drop("liquidity gate"); continue
         if "suspect" in f: drop("suspect data"); continue
         if f["compression"] < 0.3: drop("deal-pinned (ATR under 0.3x of 2m ago)"); f["skip"] = "deal-pinned"; continue
+        if below_floor(t, mcap): drop("market cap under $5B"); f["below_mcap_floor"] = True; continue   # not "skip": history tests keep the name
         for k, rule in RULES:
             r = rule(f)
             if r: cands[k].append((r[0], t, r[1]))
@@ -1107,7 +1407,7 @@ def main():
     classified = {t for lst in cands.values() for _, t, _ in lst}
     cands["UNCLASSIFIED"] = []
     for t, f in feats.items():
-        if t in BENCH or t in classified or "skip" in f or "suspect" in f or f["date"] != asof or f["last"] < MIN_PRICE or f["dvol20"] < MIN_DVOL: continue
+        if t in BENCH or t in classified or "skip" in f or "suspect" in f or f.get("below_mcap_floor") or f["date"] != asof or f["last"] < MIN_PRICE or f["dvol20"] < MIN_DVOL: continue
         r = a_unclassified(f)
         if r: cands["UNCLASSIFIED"].append((r[0], t, r[1]))
     keep = ["ticker", "name", "index", "sector", "industry", "last", "best_day", "best_day_date", "d1", "w1", "m1", "m3", "m6", "vs50", "vs200", "rsi", "pos52", "dd52", "volx",
@@ -1167,6 +1467,34 @@ def main():
             print(f"   {e_['ticker']:6} {e_['side'][:22]:22} b {e_['beta_now']:+.2f} t {e_['t_now']:+5.1f} | {e_.get('priced', '-'):34} {e_.get('reading', '')} | rev30 {e_.get('rev30_pct')}")
     print("THEMES", themes.get("_error", ""))
     ranked = rank_all(cands, feats, bars, asof, live=not a.csv_dir, bt=bt)
+    # v16 option chains: researched tiers first, then the top lens candidates, 40 names at most
+    targets = option_targets(ranked, lc)
+    chains, onotes = {}, []
+    if a.csv_dir:
+        onotes.append("--csv-dir mode: no option chains pulled")
+    else:
+        for t in targets:
+            S = (feats.get(t) or {}).get("last") or (float(bars[t]["close"].iloc[-1]) if t in bars else None)
+            if not S: continue
+            try: chains[t] = chain_summary(t, S, asof)
+            except Exception as e: chains[t] = dict(sym=t, error=f"{type(e).__name__}: {str(e)[:100]}"); onotes.append(f"{t}: chain pull failed ({type(e).__name__})")
+    for r in ranked:
+        if r["tier"] != "PASS": apply_options(r, chains.get(r["ticker"]))
+        else: r["fits_slot"] = None
+    for c in (lc.get("candidates") or []) if isinstance(lc, dict) else []:
+        apply_options(c, chains.get(c["ticker"]))
+    liq = {}
+    for v in chains.values(): k = (v.get("option") or {}).get("liquidity", "error"); liq[k] = liq.get(k, 0) + 1
+    (out/"options.json").write_text(json.dumps(dict(asof=asof, generated_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"), source="Yahoo via yfinance",
+        rules=(f"Calls {OPT_DTE_MIN}-{OPT_DTE_MAX} days out. Chosen: delta {DELTA_LO}-{DELTA_HI}, bid > 0, expiry nearest {OPT_DTE_TARGET} days, then highest open interest. "
+               f"ok = open interest >= {OI_MIN} and spread <= {SPREAD_MAX_PCT}% of mid; thin = fails either; none = no qualifying contract. option_alt (when thin) = most liquid call "
+               f"with delta {ALT_DELTA_LO}-{ALT_DELTA_HI}. Delta is Black-Scholes, rate {RISK_FREE}, dividends ignored; iv from the chain when 0.05-3, else solved from the mid. "
+               "Bid and ask both 0: quote stale, lastPrice is never used for prices. fits_slot from ask x 100: up to SLOT_USD true, up to SLOT_STRETCH stretch, above it false."),
+        targets=targets, liquidity_counts=liq, notes=onotes, names=chains), indent=1, default=str))
+    (out/"lens_candidates.json").write_text(json.dumps(lc, indent=1, default=str))
+    (out/"terminal").mkdir(exist_ok=True)
+    (out/"terminal"/"screen.json").write_text(terminal_screen(asof, "; ".join(UNIVERSE_NOTE), ranked, lc))
+    print("OPTIONS", len(targets), "targets", liq, "; ".join(onotes))
     scorecard = track(out, survivors, bars, asof)
     bench = {t: {x: feats[t].get(x) for x in ("last", "d1", "w1", "m1", "m3", "vs50", "vs200", "rsi", "pos52")} for t in BENCH if t in feats and "skip" not in feats[t]}
     ok = [f for f in feats.values() if "skip" not in f]
@@ -1177,16 +1505,21 @@ def main():
     (out/"screen_output.json").write_text(json.dumps(dict(
         asof=asof, generated_utc=dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M"), universe=len(feats), candidates_per_archetype=counts,
         dropped=dropped, universe_note="; ".join(UNIVERSE_NOTE), scorecard=scorecard, backtest=bt, ranked=ranked, breadth=breadth, benchmarks=bench, survivors=survivors,
-        notes="Prices are raw split-adjusted closes (dividends not added back). ranked[] simulates each setup's own stop, target and 60-session time stop on the stock's 10-year history, against the same trade taken on any day (the drift). Estimates and earnings dates are from Yahoo when available. MACRO_PUNISHED names no driver; research must."), indent=1))
+        notes="Prices are raw split-adjusted closes (dividends not added back). ranked[] simulates each setup's own stop, target and 60-session time stop on the stock's 10-year history, against the same trade taken on any day (the drift). Estimates and earnings dates are from Yahoo when available. MACRO_PUNISHED names no driver; research must. "
+              f"v16 (14 Nov 2026): the $60 stock price cap and the TOO EXPENSIVE tier are gone (book rule changed 2 Nov 2026: no stock price limit, the instrument stays a deep in-the-money call). "
+              f"Affordability now uses the real option: the chosen call's ask x 100 against SLOT_USD ${SLOT_USD:,} and SLOT_STRETCH ${SLOT_STRETCH:,}; above the stretch the tier is kept but fits_slot is false "
+              f"and the instrument is shares or a smaller position; no chain data means fits_slot null. Market cap floor ${MIN_MCAP/1e9:.0f}B (Yahoo marketCap, cache up to {MCAP_CACHE_DAYS} days) "
+              "applies to today's candidates only; backtests, survivorship and lens tests keep their existing universes, because today's market cap applied to history would be look-ahead. "
+              f"Option deltas are Black-Scholes with a {RISK_FREE:.0%} rate and dividends ignored; see options.json for the selection rules."), indent=1))
     (out/"market_state_full.json").write_text(json.dumps(feats, indent=0, sort_keys=True))
     print(f"asof {asof} universe {len(feats)} dropped {dropped} candidates {counts} survivors {len(survivors)} breadth {breadth}")
     for a_, r_ in bt.items():
         if not a_.startswith("_"): print(f"BACKTEST {a_:17} {r_['verdict']:9} n {r_['n']:6} months {r_['months_with_signals']:4} | 120d edge {r_['e120']['edge']:+.2f} (month-matched {r_['e120']['edge_month_matched']}) t {r_['e120']['t_clustered']} | median {r_['e120']['median']:+.2f} vs {r_['e120']['baseline_median']:+.2f} | beat SPY {r_['e120']['pct_beat_spy']:.0f}% vs {r_['e120']['baseline_pct_beat_spy']:.0f}% | halves {r_['edge120_first_half']} / {r_['edge120_second_half']} | 60d edge {r_['e60']['edge']:+.2f} t {r_['e60']['t_clustered']}")
     print("BACKTEST baseline", bt.get("_baseline"), bt.get("_error", ""))
     print("NOW", bt.get("_now"))
-    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "AFTER PRINT", "WATCH", "TOO EXPENSIVE", "PASS")))
+    print(f"RANKED {len(ranked)}: " + ", ".join(f"{k} {sum(1 for r in ranked if r['tier']==k)}" for k in ("DEEP DIVE", "AFTER PRINT", "WATCH", "PASS")))
     for r in ranked:
-        if r["tier"] not in ("PASS", "TOO EXPENSIVE"): print(f"  {r['tier']:9} entry {r.get('entry_grade')}{r.get('entry_score')} {r['ticker']:6} {r['archetype'][:10]:10} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
+        if r["tier"] != "PASS": print(f"  {r['tier']:9} entry {r.get('entry_grade')}{r.get('entry_score')} {r['ticker']:6} {r['archetype'][:10]:10} slot {r.get('fits_slot')} opt {(r.get('option') or {}).get('liquidity')} expR {r.get('exp_R')} ev {r.get('ev_used')} vs drift {r.get('ev_any_day')} n {r.get('n_setups')} rr {r.get('rr')} | {r.get('reason')}")
     for s in survivors: print(f"  {s['archetype']:17} #{s['rank']}/{s['of']:<3} {s['ticker']:6} {s['why']}")
 
 if __name__ == "__main__":

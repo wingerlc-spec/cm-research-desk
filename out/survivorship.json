@@ -1,6 +1,6 @@
 {
- "former_members_in_window": 192,
- "former_members_with_prices": 76,
+ "former_members_in_window": 191,
+ "former_members_with_prices": 75,
  "A_current_members": {
   "test": "today's S&P 500 members, any date (original, biased)",
   "n": 449,
@@ -9,7 +9,7 @@
   "edge120": 15.73,
   "t_clustered": 5.2,
   "median": 7.92,
-  "baseline_median": -1.36,
+  "baseline_median": -1.37,
   "pct_beat_spy": 61.0,
   "baseline_pct_beat_spy": 47.0
  },

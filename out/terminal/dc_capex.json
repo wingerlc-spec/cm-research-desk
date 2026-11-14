@@ -1,0 +1,830 @@
+{
+ "meta": {
+  "source": "SEC XBRL companyconcept (data.sec.gov)",
+  "notes": [
+   "Cash paid for property and equipment, $ millions, single quarters. Fiscal quarters are mapped to the calendar quarter holding their midpoint. A quarter not yet filed is absent."
+  ],
+  "pulled_utc": "2026-11-14 17:15"
+ },
+ "rows": [
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2022 Q4",
+   "capex_musd": 6274.0,
+   "form": "10-Q",
+   "filed": "2023-01-24",
+   "note": "fiscal quarter 2022-10-01 to 2022-12-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2023 Q1",
+   "capex_musd": 6607.0,
+   "form": "10-Q",
+   "filed": "2023-04-25",
+   "note": "fiscal quarter 2023-01-01 to 2023-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2023 Q2",
+   "capex_musd": 8943.0,
+   "form": "10-K",
+   "filed": "2023-07-27",
+   "note": "fiscal quarter 2023-04-01 to 2023-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2023 Q3",
+   "capex_musd": 9917.0,
+   "form": "10-Q",
+   "filed": "2023-10-24",
+   "note": "fiscal quarter 2023-07-01 to 2023-09-30; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2023 Q4",
+   "capex_musd": 9735.0,
+   "form": "10-Q",
+   "filed": "2024-01-30",
+   "note": "fiscal quarter 2023-10-01 to 2023-12-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2024 Q1",
+   "capex_musd": 10952.0,
+   "form": "10-Q",
+   "filed": "2024-04-25",
+   "note": "fiscal quarter 2024-01-01 to 2024-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2024 Q2",
+   "capex_musd": 13873.0,
+   "form": "10-K",
+   "filed": "2024-07-30",
+   "note": "fiscal quarter 2024-04-01 to 2024-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2024 Q3",
+   "capex_musd": 14923.0,
+   "form": "10-Q",
+   "filed": "2024-10-30",
+   "note": "fiscal quarter 2024-07-01 to 2024-09-30; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2024 Q4",
+   "capex_musd": 15804.0,
+   "form": "10-Q",
+   "filed": "2025-01-29",
+   "note": "fiscal quarter 2024-10-01 to 2024-12-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2025 Q1",
+   "capex_musd": 16745.0,
+   "form": "10-Q",
+   "filed": "2025-04-30",
+   "note": "fiscal quarter 2025-01-01 to 2025-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2025 Q2",
+   "capex_musd": 17079.0,
+   "form": "10-K",
+   "filed": "2025-07-30",
+   "note": "fiscal quarter 2025-04-01 to 2025-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2025 Q3",
+   "capex_musd": 19394.0,
+   "form": "10-Q",
+   "filed": "2025-10-29",
+   "note": "fiscal quarter 2025-07-01 to 2025-09-30; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2025 Q4",
+   "capex_musd": 29876.0,
+   "form": "10-Q",
+   "filed": "2026-01-28",
+   "note": "fiscal quarter 2025-10-01 to 2025-12-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2026 Q1",
+   "capex_musd": 30876.0,
+   "form": "10-Q",
+   "filed": "2026-04-29",
+   "note": "fiscal quarter 2026-01-01 to 2026-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2026 Q2",
+   "capex_musd": 35802.0,
+   "form": "10-K",
+   "filed": "2026-07-29",
+   "note": "fiscal quarter 2026-04-01 to 2026-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Microsoft",
+   "sym": "MSFT",
+   "quarter": "2026 Q3",
+   "capex_musd": 39367.0,
+   "form": "10-Q",
+   "filed": "2026-10-28",
+   "note": "fiscal quarter 2026-07-01 to 2026-09-30; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2022 Q4",
+   "capex_musd": 7595.0,
+   "form": "10-K",
+   "filed": "2023-02-03",
+   "note": "fiscal quarter 2022-10-01 to 2022-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2023 Q1",
+   "capex_musd": 6289.0,
+   "form": "10-Q",
+   "filed": "2023-04-26",
+   "note": "fiscal quarter 2023-01-01 to 2023-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2023 Q2",
+   "capex_musd": 6888.0,
+   "form": "10-Q",
+   "filed": "2023-07-26",
+   "note": "fiscal quarter 2023-04-01 to 2023-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2023 Q3",
+   "capex_musd": 8055.0,
+   "form": "10-Q",
+   "filed": "2023-10-25",
+   "note": "fiscal quarter 2023-07-01 to 2023-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2023 Q4",
+   "capex_musd": 11019.0,
+   "form": "10-K",
+   "filed": "2024-01-31",
+   "note": "fiscal quarter 2023-10-01 to 2023-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2024 Q1",
+   "capex_musd": 12012.0,
+   "form": "10-Q",
+   "filed": "2024-04-26",
+   "note": "fiscal quarter 2024-01-01 to 2024-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2024 Q2",
+   "capex_musd": 13186.0,
+   "form": "10-Q",
+   "filed": "2024-07-24",
+   "note": "fiscal quarter 2024-04-01 to 2024-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2024 Q3",
+   "capex_musd": 13061.0,
+   "form": "10-Q",
+   "filed": "2024-10-30",
+   "note": "fiscal quarter 2024-07-01 to 2024-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2024 Q4",
+   "capex_musd": 14276.0,
+   "form": "10-K",
+   "filed": "2025-02-05",
+   "note": "fiscal quarter 2024-10-01 to 2024-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2025 Q1",
+   "capex_musd": 17197.0,
+   "form": "10-Q",
+   "filed": "2025-04-25",
+   "note": "fiscal quarter 2025-01-01 to 2025-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2025 Q2",
+   "capex_musd": 22446.0,
+   "form": "10-Q",
+   "filed": "2025-07-24",
+   "note": "fiscal quarter 2025-04-01 to 2025-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2025 Q3",
+   "capex_musd": 23953.0,
+   "form": "10-Q",
+   "filed": "2025-10-30",
+   "note": "fiscal quarter 2025-07-01 to 2025-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2025 Q4",
+   "capex_musd": 27851.0,
+   "form": "10-K",
+   "filed": "2026-02-05",
+   "note": "fiscal quarter 2025-10-01 to 2025-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2026 Q1",
+   "capex_musd": 35674.0,
+   "form": "10-Q",
+   "filed": "2026-04-30",
+   "note": "fiscal quarter 2026-01-01 to 2026-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2026 Q2",
+   "capex_musd": 44924.0,
+   "form": "10-Q",
+   "filed": "2026-07-23",
+   "note": "fiscal quarter 2026-04-01 to 2026-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Alphabet",
+   "sym": "GOOGL",
+   "quarter": "2026 Q3",
+   "capex_musd": 51355.0,
+   "form": "10-Q",
+   "filed": "2026-10-29",
+   "note": "fiscal quarter 2026-07-01 to 2026-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2022 Q4",
+   "capex_musd": 16592.0,
+   "form": "10-K",
+   "filed": "2023-02-03",
+   "note": "fiscal quarter 2022-10-01 to 2022-12-31; PaymentsToAcquireProductiveAssets; year to date minus prior year to date"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2023 Q1",
+   "capex_musd": 14207.0,
+   "form": "10-Q",
+   "filed": "2023-04-28",
+   "note": "fiscal quarter 2023-01-01 to 2023-03-31; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2023 Q2",
+   "capex_musd": 11455.0,
+   "form": "10-Q",
+   "filed": "2023-08-04",
+   "note": "fiscal quarter 2023-04-01 to 2023-06-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2023 Q3",
+   "capex_musd": 12479.0,
+   "form": "10-Q",
+   "filed": "2023-10-27",
+   "note": "fiscal quarter 2023-07-01 to 2023-09-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2023 Q4",
+   "capex_musd": 14588.0,
+   "form": "10-K",
+   "filed": "2024-02-02",
+   "note": "fiscal quarter 2023-10-01 to 2023-12-31; PaymentsToAcquireProductiveAssets; year to date minus prior year to date"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2024 Q1",
+   "capex_musd": 14925.0,
+   "form": "10-Q",
+   "filed": "2024-05-01",
+   "note": "fiscal quarter 2024-01-01 to 2024-03-31; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2024 Q2",
+   "capex_musd": 17620.0,
+   "form": "10-Q",
+   "filed": "2024-08-02",
+   "note": "fiscal quarter 2024-04-01 to 2024-06-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2024 Q3",
+   "capex_musd": 22620.0,
+   "form": "10-Q",
+   "filed": "2024-11-01",
+   "note": "fiscal quarter 2024-07-01 to 2024-09-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2024 Q4",
+   "capex_musd": 27834.0,
+   "form": "10-K",
+   "filed": "2025-02-07",
+   "note": "fiscal quarter 2024-10-01 to 2024-12-31; PaymentsToAcquireProductiveAssets; year to date minus prior year to date"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2025 Q1",
+   "capex_musd": 25019.0,
+   "form": "10-Q",
+   "filed": "2025-05-02",
+   "note": "fiscal quarter 2025-01-01 to 2025-03-31; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2025 Q2",
+   "capex_musd": 32183.0,
+   "form": "10-Q",
+   "filed": "2025-08-01",
+   "note": "fiscal quarter 2025-04-01 to 2025-06-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2025 Q3",
+   "capex_musd": 35095.0,
+   "form": "10-Q",
+   "filed": "2025-10-31",
+   "note": "fiscal quarter 2025-07-01 to 2025-09-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2025 Q4",
+   "capex_musd": 39522.0,
+   "form": "10-K",
+   "filed": "2026-02-06",
+   "note": "fiscal quarter 2025-10-01 to 2025-12-31; PaymentsToAcquireProductiveAssets; year to date minus prior year to date"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2026 Q1",
+   "capex_musd": 44203.0,
+   "form": "10-Q",
+   "filed": "2026-04-30",
+   "note": "fiscal quarter 2026-01-01 to 2026-03-31; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2026 Q2",
+   "capex_musd": 54208.0,
+   "form": "10-Q",
+   "filed": "2026-07-31",
+   "note": "fiscal quarter 2026-04-01 to 2026-06-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Amazon",
+   "sym": "AMZN",
+   "quarter": "2026 Q3",
+   "capex_musd": 77259.0,
+   "form": "10-Q",
+   "filed": "2026-10-30",
+   "note": "fiscal quarter 2026-07-01 to 2026-09-30; PaymentsToAcquireProductiveAssets"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2022 Q4",
+   "capex_musd": 8798.0,
+   "form": "10-K",
+   "filed": "2023-02-02",
+   "note": "fiscal quarter 2022-10-01 to 2022-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2023 Q1",
+   "capex_musd": 6823.0,
+   "form": "10-Q",
+   "filed": "2023-04-27",
+   "note": "fiscal quarter 2023-01-01 to 2023-03-31; PaymentsToAcquirePropertyPlantAndEquipment; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2023 Q2",
+   "capex_musd": 6134.0,
+   "form": "10-Q",
+   "filed": "2023-07-27",
+   "note": "fiscal quarter 2023-04-01 to 2023-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2023 Q3",
+   "capex_musd": 6496.0,
+   "form": "10-Q",
+   "filed": "2023-10-26",
+   "note": "fiscal quarter 2023-07-01 to 2023-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2023 Q4",
+   "capex_musd": 7592.0,
+   "form": "10-K",
+   "filed": "2024-02-02",
+   "note": "fiscal quarter 2023-10-01 to 2023-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2024 Q1",
+   "capex_musd": 6400.0,
+   "form": "10-Q",
+   "filed": "2024-04-25",
+   "note": "fiscal quarter 2024-01-01 to 2024-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2024 Q2",
+   "capex_musd": 8173.0,
+   "form": "10-Q",
+   "filed": "2024-08-01",
+   "note": "fiscal quarter 2024-04-01 to 2024-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2024 Q3",
+   "capex_musd": 8258.0,
+   "form": "10-Q",
+   "filed": "2024-10-31",
+   "note": "fiscal quarter 2024-07-01 to 2024-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2024 Q4",
+   "capex_musd": 14425.0,
+   "form": "10-K",
+   "filed": "2025-01-30",
+   "note": "fiscal quarter 2024-10-01 to 2024-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2025 Q1",
+   "capex_musd": 12941.0,
+   "form": "10-Q",
+   "filed": "2025-05-01",
+   "note": "fiscal quarter 2025-01-01 to 2025-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2025 Q2",
+   "capex_musd": 16538.0,
+   "form": "10-Q",
+   "filed": "2025-07-31",
+   "note": "fiscal quarter 2025-04-01 to 2025-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2025 Q3",
+   "capex_musd": 18829.0,
+   "form": "10-Q",
+   "filed": "2025-10-30",
+   "note": "fiscal quarter 2025-07-01 to 2025-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2025 Q4",
+   "capex_musd": 21383.0,
+   "form": "10-K",
+   "filed": "2026-01-29",
+   "note": "fiscal quarter 2025-10-01 to 2025-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2026 Q1",
+   "capex_musd": 18997.0,
+   "form": "10-Q",
+   "filed": "2026-04-30",
+   "note": "fiscal quarter 2026-01-01 to 2026-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2026 Q2",
+   "capex_musd": 30116.0,
+   "form": "10-Q",
+   "filed": "2026-07-30",
+   "note": "fiscal quarter 2026-04-01 to 2026-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Meta",
+   "sym": "META",
+   "quarter": "2026 Q3",
+   "capex_musd": 33942.0,
+   "form": "10-Q",
+   "filed": "2026-10-22",
+   "note": "fiscal quarter 2026-07-01 to 2026-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2022 Q4",
+   "capex_musd": 2435.0,
+   "form": "10-Q",
+   "filed": "2022-12-13",
+   "note": "fiscal quarter 2022-09-01 to 2022-11-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2023 Q1",
+   "capex_musd": 2628.0,
+   "form": "10-Q",
+   "filed": "2023-03-10",
+   "note": "fiscal quarter 2022-12-01 to 2023-02-28; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2023 Q2",
+   "capex_musd": 1913.0,
+   "form": "10-K",
+   "filed": "2023-06-20",
+   "note": "fiscal quarter 2023-03-01 to 2023-05-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2023 Q3",
+   "capex_musd": 1314.0,
+   "form": "10-Q",
+   "filed": "2023-09-12",
+   "note": "fiscal quarter 2023-06-01 to 2023-08-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2023 Q4",
+   "capex_musd": 1080.0,
+   "form": "10-Q",
+   "filed": "2023-12-12",
+   "note": "fiscal quarter 2023-09-01 to 2023-11-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2024 Q1",
+   "capex_musd": 1674.0,
+   "form": "10-Q",
+   "filed": "2024-03-12",
+   "note": "fiscal quarter 2023-12-01 to 2024-02-29; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2024 Q2",
+   "capex_musd": 2798.0,
+   "form": "10-K",
+   "filed": "2024-06-20",
+   "note": "fiscal quarter 2024-03-01 to 2024-05-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2024 Q3",
+   "capex_musd": 2303.0,
+   "form": "10-Q",
+   "filed": "2024-09-10",
+   "note": "fiscal quarter 2024-06-01 to 2024-08-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2024 Q4",
+   "capex_musd": 3970.0,
+   "form": "10-Q",
+   "filed": "2024-12-10",
+   "note": "fiscal quarter 2024-09-01 to 2024-11-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2025 Q1",
+   "capex_musd": 5862.0,
+   "form": "10-Q",
+   "filed": "2025-03-11",
+   "note": "fiscal quarter 2024-12-01 to 2025-02-28; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2025 Q2",
+   "capex_musd": 9080.0,
+   "form": "10-K",
+   "filed": "2025-06-18",
+   "note": "fiscal quarter 2025-03-01 to 2025-05-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2025 Q3",
+   "capex_musd": 8502.0,
+   "form": "10-Q",
+   "filed": "2025-09-10",
+   "note": "fiscal quarter 2025-06-01 to 2025-08-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2025 Q4",
+   "capex_musd": 12033.0,
+   "form": "10-Q",
+   "filed": "2025-12-11",
+   "note": "fiscal quarter 2025-09-01 to 2025-11-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2026 Q1",
+   "capex_musd": 18635.0,
+   "form": "10-Q",
+   "filed": "2026-03-11",
+   "note": "fiscal quarter 2025-12-01 to 2026-02-28; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2026 Q2",
+   "capex_musd": 16493.0,
+   "form": "10-K",
+   "filed": "2026-06-22",
+   "note": "fiscal quarter 2026-03-01 to 2026-05-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "Oracle",
+   "sym": "ORCL",
+   "quarter": "2026 Q3",
+   "capex_musd": 28499.0,
+   "form": "10-Q",
+   "filed": "2026-09-11",
+   "note": "fiscal quarter 2026-06-01 to 2026-08-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2024 Q1",
+   "capex_musd": 1741.9,
+   "form": "10-Q",
+   "filed": "2025-05-15",
+   "note": "fiscal quarter 2024-01-01 to 2024-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2024 Q2",
+   "capex_musd": 2247.2,
+   "form": "10-Q",
+   "filed": "2025-08-13",
+   "note": "fiscal quarter 2024-04-01 to 2024-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2024 Q3",
+   "capex_musd": 1215.2,
+   "form": "10-Q",
+   "filed": "2025-11-13",
+   "note": "fiscal quarter 2024-07-01 to 2024-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2024 Q4",
+   "capex_musd": 3497.7,
+   "form": "10-K",
+   "filed": "2026-03-02",
+   "note": "fiscal quarter 2024-10-01 to 2024-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2025 Q1",
+   "capex_musd": 1407.0,
+   "form": "10-Q",
+   "filed": "2025-05-15",
+   "note": "fiscal quarter 2025-01-01 to 2025-03-31; PaymentsToAcquirePropertyPlantAndEquipment; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2025 Q2",
+   "capex_musd": 2453.0,
+   "form": "10-Q",
+   "filed": "2025-08-13",
+   "note": "fiscal quarter 2025-04-01 to 2025-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2025 Q3",
+   "capex_musd": 2389.0,
+   "form": "10-Q",
+   "filed": "2025-11-13",
+   "note": "fiscal quarter 2025-07-01 to 2025-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date; value revised in a later filing (latest used)"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2025 Q4",
+   "capex_musd": 4060.0,
+   "form": "10-K",
+   "filed": "2026-03-02",
+   "note": "fiscal quarter 2025-10-01 to 2025-12-31; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2026 Q1",
+   "capex_musd": 7695.0,
+   "form": "10-Q",
+   "filed": "2026-05-08",
+   "note": "fiscal quarter 2026-01-01 to 2026-03-31; PaymentsToAcquirePropertyPlantAndEquipment"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2026 Q2",
+   "capex_musd": 6422.0,
+   "form": "10-Q",
+   "filed": "2026-08-12",
+   "note": "fiscal quarter 2026-04-01 to 2026-06-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  },
+  {
+   "company": "CoreWeave",
+   "sym": "CRWV",
+   "quarter": "2026 Q3",
+   "capex_musd": 9441.0,
+   "form": "10-Q",
+   "filed": "2026-11-12",
+   "note": "fiscal quarter 2026-07-01 to 2026-09-30; PaymentsToAcquirePropertyPlantAndEquipment; year to date minus prior year to date"
+  }
+ ]
+}

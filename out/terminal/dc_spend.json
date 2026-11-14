@@ -1,0 +1,625 @@
+{
+ "meta": {
+  "source": "US Census Bureau C30, private construction, data center (https://www.census.gov/construction/c30/xlsx/privsatime.xlsx)",
+  "notes": [
+   "tie-out ok within 3%: 2026-09 96,462, 2025-09 50,700",
+   "not seasonally adjusted series not available (HTTPError)",
+   "$ millions. saar_musd = seasonally adjusted annual rate; nsa_musd = monthly value, not seasonally adjusted, where published."
+  ],
+  "pulled_utc": "2026-11-14 17:15"
+ },
+ "rows": [
+  {
+   "month": "2014-01",
+   "saar_musd": 1637.0
+  },
+  {
+   "month": "2014-02",
+   "saar_musd": 1740.0
+  },
+  {
+   "month": "2014-03",
+   "saar_musd": 1680.0
+  },
+  {
+   "month": "2014-04",
+   "saar_musd": 1802.0
+  },
+  {
+   "month": "2014-05",
+   "saar_musd": 1814.0
+  },
+  {
+   "month": "2014-06",
+   "saar_musd": 1747.0
+  },
+  {
+   "month": "2014-07",
+   "saar_musd": 1786.0
+  },
+  {
+   "month": "2014-08",
+   "saar_musd": 1962.0
+  },
+  {
+   "month": "2014-09",
+   "saar_musd": 1922.0
+  },
+  {
+   "month": "2014-10",
+   "saar_musd": 1826.0
+  },
+  {
+   "month": "2014-11",
+   "saar_musd": 1952.0
+  },
+  {
+   "month": "2014-12",
+   "saar_musd": 1659.0
+  },
+  {
+   "month": "2015-01",
+   "saar_musd": 1921.0
+  },
+  {
+   "month": "2015-02",
+   "saar_musd": 1934.0
+  },
+  {
+   "month": "2015-03",
+   "saar_musd": 2136.0
+  },
+  {
+   "month": "2015-04",
+   "saar_musd": 2308.0
+  },
+  {
+   "month": "2015-05",
+   "saar_musd": 3343.0
+  },
+  {
+   "month": "2015-06",
+   "saar_musd": 3930.0
+  },
+  {
+   "month": "2015-07",
+   "saar_musd": 2684.0
+  },
+  {
+   "month": "2015-08",
+   "saar_musd": 2837.0
+  },
+  {
+   "month": "2015-09",
+   "saar_musd": 2800.0
+  },
+  {
+   "month": "2015-10",
+   "saar_musd": 2754.0
+  },
+  {
+   "month": "2015-11",
+   "saar_musd": 2975.0
+  },
+  {
+   "month": "2015-12",
+   "saar_musd": 3094.0
+  },
+  {
+   "month": "2016-01",
+   "saar_musd": 3155.0
+  },
+  {
+   "month": "2016-02",
+   "saar_musd": 3798.0
+  },
+  {
+   "month": "2016-03",
+   "saar_musd": 4118.0
+  },
+  {
+   "month": "2016-04",
+   "saar_musd": 4415.0
+  },
+  {
+   "month": "2016-05",
+   "saar_musd": 4150.0
+  },
+  {
+   "month": "2016-06",
+   "saar_musd": 4555.0
+  },
+  {
+   "month": "2016-07",
+   "saar_musd": 4247.0
+  },
+  {
+   "month": "2016-08",
+   "saar_musd": 4581.0
+  },
+  {
+   "month": "2016-09",
+   "saar_musd": 4220.0
+  },
+  {
+   "month": "2016-10",
+   "saar_musd": 3703.0
+  },
+  {
+   "month": "2016-11",
+   "saar_musd": 3956.0
+  },
+  {
+   "month": "2016-12",
+   "saar_musd": 4464.0
+  },
+  {
+   "month": "2017-01",
+   "saar_musd": 3988.0
+  },
+  {
+   "month": "2017-02",
+   "saar_musd": 4216.0
+  },
+  {
+   "month": "2017-03",
+   "saar_musd": 3990.0
+  },
+  {
+   "month": "2017-04",
+   "saar_musd": 4233.0
+  },
+  {
+   "month": "2017-05",
+   "saar_musd": 5032.0
+  },
+  {
+   "month": "2017-06",
+   "saar_musd": 4577.0
+  },
+  {
+   "month": "2017-07",
+   "saar_musd": 4665.0
+  },
+  {
+   "month": "2017-08",
+   "saar_musd": 4393.0
+  },
+  {
+   "month": "2017-09",
+   "saar_musd": 4686.0
+  },
+  {
+   "month": "2017-10",
+   "saar_musd": 4963.0
+  },
+  {
+   "month": "2017-11",
+   "saar_musd": 5460.0
+  },
+  {
+   "month": "2017-12",
+   "saar_musd": 5739.0
+  },
+  {
+   "month": "2018-01",
+   "saar_musd": 6078.0
+  },
+  {
+   "month": "2018-02",
+   "saar_musd": 6236.0
+  },
+  {
+   "month": "2018-03",
+   "saar_musd": 6469.0
+  },
+  {
+   "month": "2018-04",
+   "saar_musd": 6562.0
+  },
+  {
+   "month": "2018-05",
+   "saar_musd": 6987.0
+  },
+  {
+   "month": "2018-06",
+   "saar_musd": 7055.0
+  },
+  {
+   "month": "2018-07",
+   "saar_musd": 7452.0
+  },
+  {
+   "month": "2018-08",
+   "saar_musd": 7004.0
+  },
+  {
+   "month": "2018-09",
+   "saar_musd": 6287.0
+  },
+  {
+   "month": "2018-10",
+   "saar_musd": 7864.0
+  },
+  {
+   "month": "2018-11",
+   "saar_musd": 7103.0
+  },
+  {
+   "month": "2018-12",
+   "saar_musd": 8048.0
+  },
+  {
+   "month": "2019-01",
+   "saar_musd": 8116.0
+  },
+  {
+   "month": "2019-02",
+   "saar_musd": 8034.0
+  },
+  {
+   "month": "2019-03",
+   "saar_musd": 7640.0
+  },
+  {
+   "month": "2019-04",
+   "saar_musd": 7849.0
+  },
+  {
+   "month": "2019-05",
+   "saar_musd": 8740.0
+  },
+  {
+   "month": "2019-06",
+   "saar_musd": 8885.0
+  },
+  {
+   "month": "2019-07",
+   "saar_musd": 8826.0
+  },
+  {
+   "month": "2019-08",
+   "saar_musd": 8829.0
+  },
+  {
+   "month": "2019-09",
+   "saar_musd": 8120.0
+  },
+  {
+   "month": "2019-10",
+   "saar_musd": 9123.0
+  },
+  {
+   "month": "2019-11",
+   "saar_musd": 9609.0
+  },
+  {
+   "month": "2019-12",
+   "saar_musd": 7920.0
+  },
+  {
+   "month": "2020-01",
+   "saar_musd": 9443.0
+  },
+  {
+   "month": "2020-02",
+   "saar_musd": 9696.0
+  },
+  {
+   "month": "2020-03",
+   "saar_musd": 9445.0
+  },
+  {
+   "month": "2020-04",
+   "saar_musd": 8932.0
+  },
+  {
+   "month": "2020-05",
+   "saar_musd": 8695.0
+  },
+  {
+   "month": "2020-06",
+   "saar_musd": 8973.0
+  },
+  {
+   "month": "2020-07",
+   "saar_musd": 8750.0
+  },
+  {
+   "month": "2020-08",
+   "saar_musd": 9102.0
+  },
+  {
+   "month": "2020-09",
+   "saar_musd": 10101.0
+  },
+  {
+   "month": "2020-10",
+   "saar_musd": 9290.0
+  },
+  {
+   "month": "2020-11",
+   "saar_musd": 9229.0
+  },
+  {
+   "month": "2020-12",
+   "saar_musd": 9199.0
+  },
+  {
+   "month": "2021-01",
+   "saar_musd": 9257.0
+  },
+  {
+   "month": "2021-02",
+   "saar_musd": 9061.0
+  },
+  {
+   "month": "2021-03",
+   "saar_musd": 10274.0
+  },
+  {
+   "month": "2021-04",
+   "saar_musd": 9401.0
+  },
+  {
+   "month": "2021-05",
+   "saar_musd": 9326.0
+  },
+  {
+   "month": "2021-06",
+   "saar_musd": 9312.0
+  },
+  {
+   "month": "2021-07",
+   "saar_musd": 9752.0
+  },
+  {
+   "month": "2021-08",
+   "saar_musd": 10495.0
+  },
+  {
+   "month": "2021-09",
+   "saar_musd": 10834.0
+  },
+  {
+   "month": "2021-10",
+   "saar_musd": 9686.0
+  },
+  {
+   "month": "2021-11",
+   "saar_musd": 10578.0
+  },
+  {
+   "month": "2021-12",
+   "saar_musd": 11324.0
+  },
+  {
+   "month": "2022-01",
+   "saar_musd": 10959.0
+  },
+  {
+   "month": "2022-02",
+   "saar_musd": 10564.0
+  },
+  {
+   "month": "2022-03",
+   "saar_musd": 11307.0
+  },
+  {
+   "month": "2022-04",
+   "saar_musd": 12160.0
+  },
+  {
+   "month": "2022-05",
+   "saar_musd": 12126.0
+  },
+  {
+   "month": "2022-06",
+   "saar_musd": 12190.0
+  },
+  {
+   "month": "2022-07",
+   "saar_musd": 12751.0
+  },
+  {
+   "month": "2022-08",
+   "saar_musd": 13142.0
+  },
+  {
+   "month": "2022-09",
+   "saar_musd": 14571.0
+  },
+  {
+   "month": "2022-10",
+   "saar_musd": 12816.0
+  },
+  {
+   "month": "2022-11",
+   "saar_musd": 13855.0
+  },
+  {
+   "month": "2022-12",
+   "saar_musd": 14244.0
+  },
+  {
+   "month": "2023-01",
+   "saar_musd": 15589.0
+  },
+  {
+   "month": "2023-02",
+   "saar_musd": 17920.0
+  },
+  {
+   "month": "2023-03",
+   "saar_musd": 18015.0
+  },
+  {
+   "month": "2023-04",
+   "saar_musd": 17943.0
+  },
+  {
+   "month": "2023-05",
+   "saar_musd": 18232.0
+  },
+  {
+   "month": "2023-06",
+   "saar_musd": 18735.0
+  },
+  {
+   "month": "2023-07",
+   "saar_musd": 19641.0
+  },
+  {
+   "month": "2023-08",
+   "saar_musd": 20498.0
+  },
+  {
+   "month": "2023-09",
+   "saar_musd": 21285.0
+  },
+  {
+   "month": "2023-10",
+   "saar_musd": 23720.0
+  },
+  {
+   "month": "2023-11",
+   "saar_musd": 23864.0
+  },
+  {
+   "month": "2023-12",
+   "saar_musd": 24238.0
+  },
+  {
+   "month": "2024-01",
+   "saar_musd": 26412.0
+  },
+  {
+   "month": "2024-02",
+   "saar_musd": 28319.0
+  },
+  {
+   "month": "2024-03",
+   "saar_musd": 30172.0
+  },
+  {
+   "month": "2024-04",
+   "saar_musd": 28069.0
+  },
+  {
+   "month": "2024-05",
+   "saar_musd": 32271.0
+  },
+  {
+   "month": "2024-06",
+   "saar_musd": 35304.0
+  },
+  {
+   "month": "2024-07",
+   "saar_musd": 36124.0
+  },
+  {
+   "month": "2024-08",
+   "saar_musd": 36668.0
+  },
+  {
+   "month": "2024-09",
+   "saar_musd": 37576.0
+  },
+  {
+   "month": "2024-10",
+   "saar_musd": 40048.0
+  },
+  {
+   "month": "2024-11",
+   "saar_musd": 40951.0
+  },
+  {
+   "month": "2024-12",
+   "saar_musd": 44703.0
+  },
+  {
+   "month": "2025-01",
+   "saar_musd": 45341.0
+  },
+  {
+   "month": "2025-02",
+   "saar_musd": 46409.0
+  },
+  {
+   "month": "2025-03",
+   "saar_musd": 46593.0
+  },
+  {
+   "month": "2025-04",
+   "saar_musd": 52818.0
+  },
+  {
+   "month": "2025-05",
+   "saar_musd": 48210.0
+  },
+  {
+   "month": "2025-06",
+   "saar_musd": 46850.0
+  },
+  {
+   "month": "2025-07",
+   "saar_musd": 47810.0
+  },
+  {
+   "month": "2025-08",
+   "saar_musd": 49052.0
+  },
+  {
+   "month": "2025-09",
+   "saar_musd": 50700.0
+  },
+  {
+   "month": "2025-10",
+   "saar_musd": 54260.0
+  },
+  {
+   "month": "2025-11",
+   "saar_musd": 53043.0
+  },
+  {
+   "month": "2025-12",
+   "saar_musd": 55461.0
+  },
+  {
+   "month": "2026-01",
+   "saar_musd": 56211.0
+  },
+  {
+   "month": "2026-02",
+   "saar_musd": 57361.0
+  },
+  {
+   "month": "2026-03",
+   "saar_musd": 58121.0
+  },
+  {
+   "month": "2026-04",
+   "saar_musd": 61859.0
+  },
+  {
+   "month": "2026-05",
+   "saar_musd": 65688.0
+  },
+  {
+   "month": "2026-06",
+   "saar_musd": 72695.0
+  },
+  {
+   "month": "2026-07",
+   "saar_musd": 80718.0
+  },
+  {
+   "month": "2026-08",
+   "saar_musd": 88815.0
+  },
+  {
+   "month": "2026-09",
+   "saar_musd": 96462.0
+  }
+ ]
+}
