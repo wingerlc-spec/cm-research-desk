@@ -25,6 +25,21 @@ Nightly chart and fundamentals screener (screen.py) plus terminal data pulls (te
 `python screen.py --csv-dir /tmp/fx --out /tmp/out --no-charts` for an offline smoke run on synthetic prices.
 
 ## CHANGELOG
+### v17 (14 Nov 2026)
+- New datasets.py (own workflow step, continue-on-error, runtime budget 18 minutes, call caps at the top of the file).
+- History snapshots in out/history/ (gzip CSV per month, de-duplicated on date and ticker): estimates, iv, earnings
+  reactions, plus a chunked one-time backfill of actual earnings moves from SEC 8-K Item 2.02 dates. out/terminal/iv_rank.json
+  and out/terminal/earnings_reactions.json.
+- Pattern screens in out/terminal/screens/: buyback_low_multiple, scare_no_estimate_damage, rotation (descriptive only),
+  insider_clusters (ranked names, lens candidates and watch list only).
+- Driver dashboards in out/terminal/drivers.json (beta to the driver controlling for SPY, R squared, 20-session residual z).
+- Rule test out/rule_tests/dislocation_recovery.json ("a real dislocation closes fast on volume"), with a volume control,
+  because early recovery alone predicts a full close mechanically.
+- Regime gauges (trend, breadth, credit, volatility, AI leadership) with 250 days of overall state and a 10-year backfill
+  in out/terminal/regime.json; risk stats (betas, downside beta, correlations) in out/terminal/risk_stats.json; candidate
+  correlation matrix and clusters in out/terminal/corr_matrix.json, with `cluster` and `cluster_size` added to screen.json rows.
+- SEC and Form 4 caches in out/cache/.
+
 ### v16 (14 Nov 2026)
 - Removed the $60 stock price cap and the TOO EXPENSIVE tier; added the SLOT_USD / SLOT_STRETCH check on the chosen option.
 - Added the $5B market cap floor (Yahoo marketCap, bulk pull once per run, cached in out/mcap_cache.json) and `mcap_busd`

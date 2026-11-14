@@ -22,6 +22,12 @@ jobs:
         run: python terminal_pulls.py
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+      - name: datasets (history snapshots, pattern screens, drivers, rule test; must not fail the screen)
+        continue-on-error: true
+        timeout-minutes: 25
+        run: python datasets.py
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
       - run: |
           git config user.name "cm-screen-bot"
           git config user.email "actions@users.noreply.github.com"
