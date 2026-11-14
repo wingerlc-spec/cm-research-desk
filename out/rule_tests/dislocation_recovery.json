@@ -1,34 +1,34 @@
 {
  "meta": {
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 17:48",
+  "generated_utc": "2026-11-14 18:18",
   "events_rule": "one-day drop of 10%+ on 2.5x+ the prior 20-day volume, at least 20 sessions apart per stock, with 60 sessions after",
   "survivorship": "Universe = today's S&P 500 and 400 plus former S&P 500 members Yahoo still has prices for; a point-in-time S&P 500 line is shown. It cannot fix: former members Yahoo no longer carries (disproportionately failures, so recovery rates are flattered) and former S&P 400 members."
  },
  "all": {
-  "n": 2716,
-  "stocks": 741,
-  "median_gap_recovered_5d": 0.005,
-  "mean_gap_recovered_5d": 0.001,
-  "median_gap_recovered_10d": 0.026,
+  "n": 2710,
+  "stocks": 740,
+  "median_gap_recovered_5d": 0.006,
+  "mean_gap_recovered_5d": 0.002,
+  "median_gap_recovered_10d": 0.027,
   "mean_gap_recovered_10d": 0.025,
-  "median_gap_recovered_20d": 0.067,
+  "median_gap_recovered_20d": 0.068,
   "mean_gap_recovered_20d": 0.082,
-  "median_gap_recovered_40d": 0.083,
-  "mean_gap_recovered_40d": 0.134,
+  "median_gap_recovered_40d": 0.084,
+  "mean_gap_recovered_40d": 0.135,
   "median_gap_recovered_60d": 0.196,
-  "mean_gap_recovered_60d": 0.28,
+  "mean_gap_recovered_60d": 0.281,
   "pct_fully_closed_60d": 38.3,
   "fast": {
    "n": 644,
    "pct_closed_60d": 73.6
   },
   "not_fast": {
-   "n": 2072,
+   "n": 2066,
    "pct_closed_60d": 27.3
   },
   "fast_minus_not_pts": 46.3,
-  "t_clustered": 16.94,
+  "t_clustered": 16.9,
   "verdict": "WORKS",
   "volume_control": {
    "n": 706,
@@ -37,9 +37,9 @@
    "reads": "events that recovered a third of the gap by day 10: above-average volume vs not"
   },
   "hold_vs_sell_at_two_thirds": {
-   "n": 1436,
-   "mean_extra_pct": 4.56,
-   "median_extra_pct": 1.94,
+   "n": 1434,
+   "mean_extra_pct": 4.57,
+   "median_extra_pct": 1.96,
    "t_clustered": 1.48,
    "reads": "return from the close where two thirds of the gap is first recovered to the close 60 sessions after the drop; positive = holding paid"
   }
@@ -84,6 +84,6 @@
   }
  },
  "verdict": "WORKS",
- "summary": "2716 drops: 38.3% closed the gap within 60 sessions; fast recoveries on volume closed 73.6% vs 27.3% (difference 46.3 pts, clustered t 16.94): WORKS. Caution: an event that has already recovered a third of the gap has less distance left, so it closes more often even in a random walk (synthetic random-walk prices in the offline test gave a similar gap); the volume_control line, 1.0 pts with t 0.19, is the cleaner test of the volume part.",
+ "summary": "2710 drops: 38.3% closed the gap within 60 sessions; fast recoveries on volume closed 73.6% vs 27.3% (difference 46.3 pts, clustered t 16.9): WORKS. Caution: an event that has already recovered a third of the gap has less distance left, so it closes more often even in a random walk (synthetic random-walk prices in the offline test gave a similar gap); the volume_control line, 1.0 pts with t 0.19, is the cleaner test of the volume part.",
  "verdict_convention": "screen.py's WORKS / NOT SHOWN / HURTS (the spec's UNCLEAR = NOT SHOWN, FAILS = HURTS)"
 }

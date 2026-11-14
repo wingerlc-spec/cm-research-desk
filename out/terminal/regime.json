@@ -1,7 +1,7 @@
 {
  "meta": {
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 17:36",
+  "generated_utc": "2026-11-14 18:07",
   "thresholds": {
    "trend": "stress below the 200-day; caution below the 50-day or 7%+ off the 52-week high",
    "breadth": "caution under 50% above the 200-day, stress under 35%",
@@ -49,12 +49,12 @@
   "breadth": {
    "state": "ok",
    "value": {
-    "pct_above_200d": 58.6,
+    "pct_above_200d": 58.5,
     "pct_above_50d": 66.5,
-    "change_20d_200d_pts": 10.9,
-    "change_20d_50d_pts": 27.8
+    "change_20d_200d_pts": 10.8,
+    "change_20d_50d_pts": 27.7
    },
-   "reading": "59% of the universe above its 200-day (+11 pts in 20 sessions), 67% above its 50-day"
+   "reading": "59% of the universe above its 200-day (+11 pts in 20 sessions), 66% above its 50-day"
   },
   "credit_HYG_LQD": {
    "state": "caution",
@@ -64,7 +64,7 @@
     "vs_200d_pct": 1.24,
     "change_20d_pct": 0.68
    },
-   "reading": "HYG/LQD +1.24% vs its 200-day, +0.68% in 20 sessions"
+   "reading": "HYG/LQD -0.02% vs its 50-day, +1.24% vs its 200-day, +0.68% in 20 sessions"
   },
   "credit_HYG_IEF": {
    "state": "caution",
@@ -74,7 +74,7 @@
     "vs_200d_pct": 0.82,
     "change_20d_pct": 0.53
    },
-   "reading": "HYG/IEF +0.82% vs its 200-day, +0.53% in 20 sessions"
+   "reading": "HYG/IEF -0.26% vs its 50-day, +0.82% vs its 200-day, +0.53% in 20 sessions"
   },
   "volatility": {
    "state": "ok",
@@ -1123,7 +1123,7 @@
     "pct_drawdown_worse_than_10": 24.1
    }
   },
-  "summary": "Over 2315 sessions, red days (855 days in 71 months) were followed by a 60-session SPY return of +3.9% on average vs +1.8% after green, and an average worst drawdown of -5.9% vs -4.4%. Red has not marked meaningfully worse drawdowns than green: no edge shown. Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past.",
+  "summary": "Over 2315 sessions, red days (855 days in 71 months) were followed by a 60-session SPY return of +3.9% on average vs +1.8% after green, and an average worst drawdown of -5.9% vs -4.4%. A drawdown worse than 10% followed 24% of red days vs 7% of green days. Red covers 37% of all days, and the days overlap heavily (few independent episodes). Red has marked a fatter tail of drawdowns but not a lower average return, so it reads as a risk gauge for sizing, not a timing signal. Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past.",
   "first_date": "2017-08-30"
  }
 }

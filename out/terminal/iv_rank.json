@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "out/history/iv",
-  "pulled_utc": "2026-11-14 17:41",
+  "pulled_utc": "2026-11-14 18:12",
   "notes": [
    "iv_rank = percentile of today's 30-day at-the-money iv in the ticker's own snapshots; needs 60 observations"
   ]
@@ -892,7 +892,7 @@
   {
    "ticker": "HLI",
    "date": "2026-11-14",
-   "iv_atm_30d": 0.4806,
+   "iv_atm_30d": 0.6746,
    "n_obs": 1,
    "status": "building, 1 days"
   },

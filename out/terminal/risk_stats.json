@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "Yahoo daily closes",
-  "pulled_utc": "2026-11-14 17:36",
+  "pulled_utc": "2026-11-14 18:07",
   "notes": [
    "Betas and correlations on daily log returns. downside_beta_500 = beta on sessions where SPY fell 1% or more, last 500 sessions.",
    "spy_down_3pct_days = the stock's return on the last 3 sessions SPY fell 3% or more."

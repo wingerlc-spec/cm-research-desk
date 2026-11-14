@@ -2,15 +2,39 @@
  "meta": {
   "rule": "Market cap $5B or more; cash spent on repurchases over the last four quarters (XBRL PaymentsForRepurchaseOfCommonStock) at least 5 percent of market cap; shares outstanding (XBRL dei cover page, else us-gaap) down 4 percent or more year over year; forward P/E between 0 and 12.",
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 17:44",
+  "generated_utc": "2026-11-14 18:16",
   "caveats": [
    "SEC data is refreshed for about a fifth of the universe per night plus the ranked names, so a name can lag its latest filing by up to a week.",
    "Repurchase cash includes shares withheld for taxes at some companies.",
-   "220 of 833 $5B+ names have SEC data cached so far."
+   "440 of 833 $5B+ names have SEC data cached so far."
   ],
   "xbrl_refreshed_this_run": 220
  },
  "rows": [
+  {
+   "ticker": "CRBG",
+   "name": "Corebridge Financial",
+   "sector": "Financials",
+   "mcap_busd": 15.94,
+   "buyback_yield_pct": 17.82,
+   "share_change_yoy_pct": -15.76,
+   "fwd_pe": 6.38,
+   "last": 36.35,
+   "pct_from_52w_high": 0.0,
+   "next_earnings": null
+  },
+  {
+   "ticker": "AN",
+   "name": "AutoNation",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 5.69,
+   "buyback_yield_pct": 17.47,
+   "share_change_yoy_pct": -12.31,
+   "fwd_pe": 7.62,
+   "last": 177.75,
+   "pct_from_52w_high": -22.7,
+   "next_earnings": null
+  },
   {
    "ticker": "SYF",
    "name": "Synchrony Financial",
@@ -22,6 +46,18 @@
    "last": 72.25,
    "pct_from_52w_high": -18.3,
    "next_earnings": "2027-01-26"
+  },
+  {
+   "ticker": "CART",
+   "name": "Maplebear Inc.",
+   "sector": "Consumer Staples",
+   "mcap_busd": 13.93,
+   "buyback_yield_pct": 14.61,
+   "share_change_yoy_pct": -9.87,
+   "fwd_pe": 11.8,
+   "last": 58.87,
+   "pct_from_52w_high": -3.3,
+   "next_earnings": null
   },
   {
    "ticker": "IT",
@@ -48,6 +84,30 @@
    "next_earnings": null
   },
   {
+   "ticker": "PYPL",
+   "name": "PayPal",
+   "sector": "Financials",
+   "mcap_busd": 49.24,
+   "buyback_yield_pct": 12.29,
+   "share_change_yoy_pct": -11.22,
+   "fwd_pe": 10.04,
+   "last": 59.28,
+   "pct_from_52w_high": -9.3,
+   "next_earnings": null
+  },
+  {
+   "ticker": "BYD",
+   "name": "Boyd Gaming",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 5.46,
+   "buyback_yield_pct": 12.1,
+   "share_change_yoy_pct": -9.54,
+   "fwd_pe": 10.08,
+   "last": 77.24,
+   "pct_from_52w_high": -15.4,
+   "next_earnings": null
+  },
+  {
    "ticker": "ACGL",
    "name": "Arch Capital Group",
    "sector": "Financials",
@@ -57,6 +117,18 @@
    "fwd_pe": 10.98,
    "last": 109.61,
    "pct_from_52w_high": -1.0,
+   "next_earnings": null
+  },
+  {
+   "ticker": "RNR",
+   "name": "RenaissanceRe",
+   "sector": "Financials",
+   "mcap_busd": 14.29,
+   "buyback_yield_pct": 11.71,
+   "share_change_yoy_pct": -12.36,
+   "fwd_pe": 8.33,
+   "last": 353.62,
+   "pct_from_52w_high": -2.5,
    "next_earnings": null
   },
   {
@@ -72,6 +144,30 @@
    "next_earnings": null
   },
   {
+   "ticker": "APTV",
+   "name": "Aptiv",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 7.84,
+   "buyback_yield_pct": 10.95,
+   "share_change_yoy_pct": -6.32,
+   "fwd_pe": 6.41,
+   "last": 38.75,
+   "pct_from_52w_high": -56.3,
+   "next_earnings": null
+  },
+  {
+   "ticker": "DECK",
+   "name": "Deckers Brands",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 11.59,
+   "buyback_yield_pct": 10.77,
+   "share_change_yoy_pct": -8.42,
+   "fwd_pe": 10.63,
+   "last": 86.82,
+   "pct_from_52w_high": -28.2,
+   "next_earnings": null
+  },
+  {
    "ticker": "GM",
    "name": "General Motors",
    "sector": "Consumer Discretionary",
@@ -82,6 +178,18 @@
    "last": 86.0,
    "pct_from_52w_high": -7.0,
    "next_earnings": "2027-01-27"
+  },
+  {
+   "ticker": "EG",
+   "name": "Everest Group",
+   "sector": "Financials",
+   "mcap_busd": 15.82,
+   "buyback_yield_pct": 10.08,
+   "share_change_yoy_pct": -11.76,
+   "fwd_pe": 7.03,
+   "last": 427.19,
+   "pct_from_52w_high": 0.0,
+   "next_earnings": null
   },
   {
    "ticker": "ADBE",
@@ -114,7 +222,7 @@
    "mcap_busd": 117.35,
    "buyback_yield_pct": 9.16,
    "share_change_yoy_pct": -5.38,
-   "fwd_pe": 8.18,
+   "fwd_pe": 8.17,
    "last": 195.08,
    "pct_from_52w_high": -24.4,
    "next_earnings": "2027-01-19"
@@ -130,6 +238,18 @@
    "last": 79.84,
    "pct_from_52w_high": -17.3,
    "next_earnings": "2027-02-02"
+  },
+  {
+   "ticker": "COLB",
+   "name": "Columbia Banking System",
+   "sector": "Financials",
+   "mcap_busd": 8.65,
+   "buyback_yield_pct": 8.33,
+   "share_change_yoy_pct": -7.62,
+   "fwd_pe": 9.14,
+   "last": 30.6,
+   "pct_from_52w_high": -9.0,
+   "next_earnings": null
   },
   {
    "ticker": "GAP",
@@ -168,6 +288,30 @@
    "next_earnings": null
   },
   {
+   "ticker": "ANF",
+   "name": "Abercrombie & Fitch",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 6.32,
+   "buyback_yield_pct": 7.7,
+   "share_change_yoy_pct": -9.85,
+   "fwd_pe": 11.46,
+   "last": 148.88,
+   "pct_from_52w_high": -13.0,
+   "next_earnings": null
+  },
+  {
+   "ticker": "AMP",
+   "name": "Ameriprise Financial",
+   "sector": "Financials",
+   "mcap_busd": 45.09,
+   "buyback_yield_pct": 7.68,
+   "share_change_yoy_pct": -6.56,
+   "fwd_pe": 10.07,
+   "last": 519.43,
+   "pct_from_52w_high": -9.0,
+   "next_earnings": null
+  },
+  {
    "ticker": "GL",
    "name": "Globe Life",
    "sector": "Financials",
@@ -190,6 +334,18 @@
    "last": 51.02,
    "pct_from_52w_high": -21.3,
    "next_earnings": "2027-01-15"
+  },
+  {
+   "ticker": "TFC",
+   "name": "Truist Financial",
+   "sector": "Financials",
+   "mcap_busd": 59.89,
+   "buyback_yield_pct": 7.15,
+   "share_change_yoy_pct": -6.31,
+   "fwd_pe": 10.22,
+   "last": 49.97,
+   "pct_from_52w_high": -10.5,
+   "next_earnings": "2027-01-20"
   },
   {
    "ticker": "BWA",
@@ -276,6 +432,30 @@
    "next_earnings": "2027-01-14"
   },
   {
+   "ticker": "CHRD",
+   "name": "Chord Energy",
+   "sector": "Energy",
+   "mcap_busd": 7.97,
+   "buyback_yield_pct": 5.34,
+   "share_change_yoy_pct": -6.48,
+   "fwd_pe": 7.41,
+   "last": 149.93,
+   "pct_from_52w_high": -5.2,
+   "next_earnings": null
+  },
+  {
+   "ticker": "PRI",
+   "name": "Primerica",
+   "sector": "Financials",
+   "mcap_busd": 8.9,
+   "buyback_yield_pct": 5.24,
+   "share_change_yoy_pct": -4.92,
+   "fwd_pe": 10.78,
+   "last": 293.39,
+   "pct_from_52w_high": -10.1,
+   "next_earnings": null
+  },
+  {
    "ticker": "CF",
    "name": "CF Industries",
    "sector": "Materials",
@@ -285,6 +465,30 @@
    "fwd_pe": 10.64,
    "last": 125.09,
    "pct_from_52w_high": -10.2,
+   "next_earnings": null
+  },
+  {
+   "ticker": "ALL",
+   "name": "Allstate",
+   "sector": "Financials",
+   "mcap_busd": 66.23,
+   "buyback_yield_pct": 5.04,
+   "share_change_yoy_pct": -5.44,
+   "fwd_pe": 9.4,
+   "last": 267.64,
+   "pct_from_52w_high": -2.7,
+   "next_earnings": null
+  },
+  {
+   "ticker": "DINO",
+   "name": "HF Sinclair",
+   "sector": "Energy",
+   "mcap_busd": 17.3,
+   "buyback_yield_pct": 5.04,
+   "share_change_yoy_pct": -6.84,
+   "fwd_pe": 5.73,
+   "last": 102.18,
+   "pct_from_52w_high": -20.3,
    "next_earnings": null
   }
  ]

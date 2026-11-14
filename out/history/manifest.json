@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14 17:48",
+ "generated_utc": "2026-11-14 18:18",
  "datasets": {
   "estimates": {
    "rows": 260,
@@ -24,8 +24,8 @@
    "tickers": 1
   },
   "earnings_reactions_backfill.csv.gz": {
-   "rows": 4757,
-   "tickers": 300
+   "rows": 9477,
+   "tickers": 599
   }
  }
 }
