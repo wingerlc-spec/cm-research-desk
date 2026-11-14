@@ -1,7 +1,7 @@
 name: screen-v2
 on:
   schedule:
-    - cron: "30 22 * * 1-5"   # 5:30pm CT (CDT). After 1 Nov: "30 23 * * 1-5"
+    - cron: "30 23 * * 1-5"   # 5:30pm CT (CST, from 1 Nov). When CDT returns in March: "30 22 * * 1-5"
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,8 +13,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q yfinance pandas numpy matplotlib
+      - run: pip install -q yfinance pandas numpy matplotlib beautifulsoup4 openpyxl
       - run: rm -rf out/charts && python screen.py
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+      - name: terminal data pulls (a failure here must not fail the screen)
+        continue-on-error: true
+        run: python terminal_pulls.py
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
       - run: |
