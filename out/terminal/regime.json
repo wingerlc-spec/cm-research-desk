@@ -1,0 +1,1129 @@
+{
+ "meta": {
+  "asof": "2026-11-13",
+  "generated_utc": "2026-11-14 17:36",
+  "thresholds": {
+   "trend": "stress below the 200-day; caution below the 50-day or 7%+ off the 52-week high",
+   "breadth": "caution under 50% above the 200-day, stress under 35%",
+   "credit": "stress: ratio below its 200-day and down over 20 sessions; caution below its 50 or 200-day",
+   "volatility": "stress: VIX above VIX3M (backwardation); caution: VIX above 25",
+   "leadership": "stress: SMH below its 200-day; caution: SMH -5 pts or worse vs SPY over 60 sessions",
+   "overall": "red = 2+ gauges in stress; yellow = any stress or 3+ caution; else green",
+   "fixed": "14 Nov 2026"
+  }
+ },
+ "overall": "red",
+ "n_stress": 3,
+ "n_caution": 3,
+ "gauges": {
+  "trend_SPY": {
+   "state": "caution",
+   "value": {
+    "last": 754.37,
+    "vs_50d_pct": -1.3,
+    "vs_200d_pct": 3.1,
+    "off_52w_high_pct": -3.2
+   },
+   "reading": "SPY +3.1% vs its 200-day, -1.3% vs its 50-day, -3.2% from its 52-week high"
+  },
+  "trend_QQQ": {
+   "state": "stress",
+   "value": {
+    "last": 679.89,
+    "vs_50d_pct": -5.3,
+    "vs_200d_pct": -0.3,
+    "off_52w_high_pct": -10.5
+   },
+   "reading": "QQQ -0.3% vs its 200-day, -5.3% vs its 50-day, -10.5% from its 52-week high"
+  },
+  "trend_IWM": {
+   "state": "stress",
+   "value": {
+    "last": 277.54,
+    "vs_50d_pct": -1.1,
+    "vs_200d_pct": -0.7,
+    "off_52w_high_pct": -9.0
+   },
+   "reading": "IWM -0.7% vs its 200-day, -1.1% vs its 50-day, -9.0% from its 52-week high"
+  },
+  "breadth": {
+   "state": "ok",
+   "value": {
+    "pct_above_200d": 58.6,
+    "pct_above_50d": 66.5,
+    "change_20d_200d_pts": 10.9,
+    "change_20d_50d_pts": 27.8
+   },
+   "reading": "59% of the universe above its 200-day (+11 pts in 20 sessions), 67% above its 50-day"
+  },
+  "credit_HYG_LQD": {
+   "state": "caution",
+   "value": {
+    "ratio": 0.7484,
+    "vs_50d_pct": -0.02,
+    "vs_200d_pct": 1.24,
+    "change_20d_pct": 0.68
+   },
+   "reading": "HYG/LQD +1.24% vs its 200-day, +0.68% in 20 sessions"
+  },
+  "credit_HYG_IEF": {
+   "state": "caution",
+   "value": {
+    "ratio": 0.8545,
+    "vs_50d_pct": -0.26,
+    "vs_200d_pct": 0.82,
+    "change_20d_pct": 0.53
+   },
+   "reading": "HYG/IEF +0.82% vs its 200-day, +0.53% in 20 sessions"
+  },
+  "volatility": {
+   "state": "ok",
+   "value": {
+    "vix": 19.3,
+    "vix3m": 20.62
+   },
+   "reading": "VIX 19.3 vs VIX3M 20.6 (contango)"
+  },
+  "leadership": {
+   "state": "stress",
+   "value": {
+    "smh_vs_spy_20d_pts": -8.7,
+    "smh_vs_spy_60d_pts": -12.4,
+    "smh_vs_200d_pct": -7.1
+   },
+   "reading": "SMH -8.7 pts vs SPY over 20 sessions, -12.4 over 60; -7.1% vs its own 200-day"
+  }
+ },
+ "history_250": [
+  {
+   "date": "2025-11-17",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-18",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-19",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-20",
+   "state": "red"
+  },
+  {
+   "date": "2025-11-21",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-24",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-25",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-26",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-11-28",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-12-01",
+   "state": "red"
+  },
+  {
+   "date": "2025-12-02",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-03",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-04",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-05",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-08",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-09",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-10",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-11",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-12",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-15",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-16",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-12-17",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-12-18",
+   "state": "yellow"
+  },
+  {
+   "date": "2025-12-19",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-22",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-23",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-24",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-26",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-29",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-30",
+   "state": "green"
+  },
+  {
+   "date": "2025-12-31",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-02",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-05",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-06",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-07",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-12",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-13",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-14",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-01-15",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-16",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-20",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-21",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-22",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-23",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-26",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-27",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-28",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-29",
+   "state": "green"
+  },
+  {
+   "date": "2026-01-30",
+   "state": "green"
+  },
+  {
+   "date": "2026-02-02",
+   "state": "green"
+  },
+  {
+   "date": "2026-02-03",
+   "state": "green"
+  },
+  {
+   "date": "2026-02-04",
+   "state": "green"
+  },
+  {
+   "date": "2026-02-05",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-06",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-02-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-02-10",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-11",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-02-12",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-13",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-17",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-18",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-19",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-20",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-23",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-24",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-25",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-26",
+   "state": "red"
+  },
+  {
+   "date": "2026-02-27",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-02",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-03",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-04",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-05",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-06",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-09",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-10",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-11",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-03-12",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-13",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-03-16",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-03-17",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-03-18",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-03-19",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-20",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-23",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-24",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-25",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-26",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-27",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-30",
+   "state": "red"
+  },
+  {
+   "date": "2026-03-31",
+   "state": "red"
+  },
+  {
+   "date": "2026-04-01",
+   "state": "red"
+  },
+  {
+   "date": "2026-04-02",
+   "state": "red"
+  },
+  {
+   "date": "2026-04-06",
+   "state": "red"
+  },
+  {
+   "date": "2026-04-07",
+   "state": "red"
+  },
+  {
+   "date": "2026-04-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-10",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-13",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-14",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-15",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-16",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-17",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-20",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-21",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-22",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-23",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-24",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-27",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-28",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-29",
+   "state": "green"
+  },
+  {
+   "date": "2026-04-30",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-01",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-04",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-05",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-06",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-07",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-11",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-12",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-13",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-14",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-15",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-18",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-19",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-20",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-21",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-22",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-26",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-27",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-28",
+   "state": "green"
+  },
+  {
+   "date": "2026-05-29",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-01",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-02",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-03",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-04",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-05",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-10",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-11",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-12",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-15",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-16",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-17",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-18",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-22",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-23",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-24",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-25",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-26",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-06-29",
+   "state": "green"
+  },
+  {
+   "date": "2026-06-30",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-01",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-02",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-06",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-07",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-10",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-13",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-14",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-15",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-16",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-17",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-20",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-21",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-22",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-23",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-24",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-07-27",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-28",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-07-29",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-07-30",
+   "state": "green"
+  },
+  {
+   "date": "2026-07-31",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-03",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-04",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-05",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-06",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-07",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-10",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-11",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-12",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-13",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-14",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-17",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-18",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-19",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-20",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-21",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-24",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-25",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-26",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-27",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-28",
+   "state": "green"
+  },
+  {
+   "date": "2026-08-31",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-01",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-02",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-03",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-04",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-10",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-11",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-14",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-15",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-16",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-17",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-18",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-21",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-22",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-23",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-24",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-25",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-09-28",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-29",
+   "state": "green"
+  },
+  {
+   "date": "2026-09-30",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-01",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-02",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-05",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-06",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-07",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-08",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-09",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-12",
+   "state": "green"
+  },
+  {
+   "date": "2026-10-13",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-14",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-15",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-16",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-19",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-20",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-21",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-22",
+   "state": "red"
+  },
+  {
+   "date": "2026-10-23",
+   "state": "red"
+  },
+  {
+   "date": "2026-10-26",
+   "state": "red"
+  },
+  {
+   "date": "2026-10-27",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-28",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-29",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-10-30",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-11-02",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-03",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-04",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-05",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-06",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-09",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-10",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-11",
+   "state": "yellow"
+  },
+  {
+   "date": "2026-11-12",
+   "state": "red"
+  },
+  {
+   "date": "2026-11-13",
+   "state": "red"
+  }
+ ],
+ "backfill": {
+  "by_state": {
+   "green": {
+    "days": 782,
+    "months": 66,
+    "fwd60_spy_mean_pct": 1.76,
+    "fwd60_spy_median_pct": 3.53,
+    "worst_drawdown_60d_mean_pct": -4.36,
+    "pct_drawdown_worse_than_10": 7.0
+   },
+   "yellow": {
+    "days": 618,
+    "months": 84,
+    "fwd60_spy_mean_pct": 4.21,
+    "fwd60_spy_median_pct": 4.58,
+    "worst_drawdown_60d_mean_pct": -3.62,
+    "pct_drawdown_worse_than_10": 6.0
+   },
+   "red": {
+    "days": 855,
+    "months": 71,
+    "fwd60_spy_mean_pct": 3.89,
+    "fwd60_spy_median_pct": 4.49,
+    "worst_drawdown_60d_mean_pct": -5.86,
+    "pct_drawdown_worse_than_10": 24.1
+   }
+  },
+  "summary": "Over 2315 sessions, red days (855 days in 71 months) were followed by a 60-session SPY return of +3.9% on average vs +1.8% after green, and an average worst drawdown of -5.9% vs -4.4%. Red has not marked meaningfully worse drawdowns than green: no edge shown. Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past.",
+  "first_date": "2017-08-30"
+ }
+}

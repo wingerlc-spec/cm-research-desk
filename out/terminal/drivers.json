@@ -1,0 +1,345 @@
+{
+ "meta": {
+  "asof": "2026-11-13",
+  "generated_utc": "2026-11-14 17:47",
+  "notes": [
+   "beta = sensitivity of the stock's daily log return to the driver's daily change, controlling for SPY, fit on the 120 or 250 sessions before the last 20.",
+   "z20 = summed residual over the last 20 sessions divided by its expected spread: how far the stock has moved away from what the driver and the market imply. |z| >= 2 is flagged.",
+   "Extends screen.py's theme screen (same regression helper and proxies); it does not replace it."
+  ]
+ },
+ "drivers": [
+  {
+   "key": "OIL",
+   "driver": "BNO",
+   "label": "Brent via BNO (no clean jet fuel series on Yahoo)",
+   "change_1m": -5.86,
+   "change_3m": 17.49,
+   "change_6m": 5.84,
+   "change_units": "percent",
+   "stocks": [
+    {
+     "ticker": "DAL",
+     "w120": {
+      "beta": -0.367,
+      "r2": 0.538,
+      "z20": 1.35,
+      "resid_20d_pct": 9.28
+     },
+     "w250": {
+      "beta": -0.265,
+      "r2": 0.416,
+      "z20": 1.23,
+      "resid_20d_pct": 10.26
+     },
+     "flag": false
+    },
+    {
+     "ticker": "UAL",
+     "w120": {
+      "beta": -0.518,
+      "r2": 0.584,
+      "z20": 0.97,
+      "resid_20d_pct": 8.12
+     },
+     "w250": {
+      "beta": -0.408,
+      "r2": 0.484,
+      "z20": 1.03,
+      "resid_20d_pct": 10.0
+     },
+     "flag": false
+    },
+    {
+     "ticker": "AAL",
+     "w120": {
+      "beta": -0.543,
+      "r2": 0.559,
+      "z20": 0.61,
+      "resid_20d_pct": 5.35
+     },
+     "w250": {
+      "beta": -0.423,
+      "r2": 0.427,
+      "z20": 0.62,
+      "resid_20d_pct": 6.31
+     },
+     "flag": false
+    },
+    {
+     "ticker": "LUV",
+     "w120": {
+      "beta": -0.384,
+      "r2": 0.512,
+      "z20": 1.3,
+      "resid_20d_pct": 9.46
+     },
+     "w250": {
+      "beta": -0.364,
+      "r2": 0.361,
+      "z20": 0.81,
+      "resid_20d_pct": 8.04
+     },
+     "flag": false
+    },
+    {
+     "ticker": "JETS",
+     "w120": {
+      "beta": -0.396,
+      "r2": 0.66,
+      "z20": 1.41,
+      "resid_20d_pct": 7.51
+     },
+     "w250": {
+      "beta": -0.316,
+      "r2": 0.564,
+      "z20": 1.3,
+      "resid_20d_pct": 7.93
+     },
+     "flag": false
+    }
+   ]
+  },
+  {
+   "key": "CURVE_10S2S",
+   "driver": "T10Y2Y",
+   "label": "10-year minus 2-year Treasury yield (FRED T10Y2Y), daily change in percentage points",
+   "change_1m": 0.59,
+   "change_3m": 1.42,
+   "change_6m": 4.08,
+   "change_units": "percent",
+   "stocks": [
+    {
+     "ticker": "KRE",
+     "w120": {
+      "beta": -0.349,
+      "r2": 0.087,
+      "z20": 0.96,
+      "resid_20d_pct": 4.65
+     },
+     "w250": {
+      "beta": -0.082,
+      "r2": 0.154,
+      "z20": 0.78,
+      "resid_20d_pct": 4.14
+     },
+     "flag": false
+    },
+    {
+     "ticker": "KBE",
+     "w120": {
+      "beta": -0.366,
+      "r2": 0.118,
+      "z20": 1.14,
+      "resid_20d_pct": 5.11
+     },
+     "w250": {
+      "beta": -0.108,
+      "r2": 0.188,
+      "z20": 0.96,
+      "resid_20d_pct": 4.72
+     },
+     "flag": false
+    },
+    {
+     "ticker": "FITB",
+     "w120": {
+      "beta": -0.383,
+      "r2": 0.103,
+      "z20": 1.4,
+      "resid_20d_pct": 8.74
+     },
+     "w250": {
+      "beta": 0.013,
+      "r2": 0.138,
+      "z20": 1.2,
+      "resid_20d_pct": 7.89
+     },
+     "flag": false
+    },
+    {
+     "ticker": "HBAN",
+     "w120": {
+      "beta": -0.3,
+      "r2": 0.149,
+      "z20": 0.97,
+      "resid_20d_pct": 6.29
+     },
+     "w250": {
+      "beta": 0.037,
+      "r2": 0.148,
+      "z20": 0.8,
+      "resid_20d_pct": 5.48
+     },
+     "flag": false
+    },
+    {
+     "ticker": "MTB",
+     "w120": {
+      "beta": -0.252,
+      "r2": 0.083,
+      "z20": 0.67,
+      "resid_20d_pct": 3.64
+     },
+     "w250": {
+      "beta": 0.048,
+      "r2": 0.127,
+      "z20": 0.48,
+      "resid_20d_pct": 2.65
+     },
+     "flag": false
+    },
+    {
+     "ticker": "CFG",
+     "w120": {
+      "beta": -0.298,
+      "r2": 0.111,
+      "z20": 0.69,
+      "resid_20d_pct": 4.44
+     },
+     "w250": {
+      "beta": 0.076,
+      "r2": 0.208,
+      "z20": 0.48,
+      "resid_20d_pct": 3.07
+     },
+     "flag": false
+    },
+    {
+     "ticker": "RF",
+     "w120": {
+      "beta": -0.346,
+      "r2": 0.077,
+      "z20": 1.03,
+      "resid_20d_pct": 6.15
+     },
+     "w250": {
+      "beta": -0.023,
+      "r2": 0.145,
+      "z20": 0.88,
+      "resid_20d_pct": 5.36
+     },
+     "flag": false
+    }
+   ],
+   "note": "FRED unreachable (TimeoutError): proxy = minus the log change of TLT/SHY (curve steepening ~ long bonds lagging short ones)"
+  },
+  {
+   "key": "COPPER",
+   "driver": "CPER",
+   "label": "copper via CPER",
+   "change_1m": -7.4,
+   "change_3m": -8.97,
+   "change_6m": -4.22,
+   "change_units": "percent",
+   "stocks": [
+    {
+     "ticker": "FCX",
+     "w120": {
+      "beta": 1.191,
+      "r2": 0.625,
+      "z20": -0.72,
+      "resid_20d_pct": -5.97
+     },
+     "w250": {
+      "beta": 1.016,
+      "r2": 0.586,
+      "z20": -0.95,
+      "resid_20d_pct": -8.2
+     },
+     "flag": false
+    },
+    {
+     "ticker": "SCCO",
+     "w120": {
+      "beta": 1.203,
+      "r2": 0.634,
+      "z20": -0.96,
+      "resid_20d_pct": -8.35
+     },
+     "w250": {
+      "beta": 1.156,
+      "r2": 0.609,
+      "z20": -1.03,
+      "resid_20d_pct": -9.42
+     },
+     "flag": false
+    }
+   ]
+  },
+  {
+   "key": "GOLD",
+   "driver": "GLD",
+   "label": "gold via GLD",
+   "change_1m": -7.12,
+   "change_3m": -12.34,
+   "change_6m": -14.82,
+   "change_units": "percent",
+   "stocks": [
+    {
+     "ticker": "NEM",
+     "w120": {
+      "beta": 1.521,
+      "r2": 0.777,
+      "z20": 0.63,
+      "resid_20d_pct": 3.86
+     },
+     "w250": {
+      "beta": 1.25,
+      "r2": 0.679,
+      "z20": 0.44,
+      "resid_20d_pct": 3.5
+     },
+     "flag": false
+    },
+    {
+     "ticker": "GDX",
+     "w120": {
+      "beta": 1.713,
+      "r2": 0.833,
+      "z20": 0.68,
+      "resid_20d_pct": 3.89
+     },
+     "w250": {
+      "beta": 1.363,
+      "r2": 0.781,
+      "z20": 0.51,
+      "resid_20d_pct": 3.48
+     },
+     "flag": false
+    }
+   ]
+  },
+  {
+   "key": "NATGAS",
+   "driver": "UNG",
+   "label": "natural gas via UNG",
+   "change_1m": -8.48,
+   "change_3m": 3.26,
+   "change_6m": -10.41,
+   "change_units": "percent",
+   "stocks": [
+    {
+     "ticker": "EQT",
+     "w120": {
+      "beta": 0.31,
+      "r2": 0.184,
+      "z20": -0.05,
+      "resid_20d_pct": -0.33
+     },
+     "w250": {
+      "beta": 0.277,
+      "r2": 0.291,
+      "z20": -0.16,
+      "resid_20d_pct": -1.14
+     },
+     "flag": false
+    },
+    {
+     "ticker": "CTRA",
+     "error": "no prices"
+    }
+   ]
+  }
+ ]
+}

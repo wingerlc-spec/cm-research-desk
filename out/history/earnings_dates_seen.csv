@@ -1,0 +1,295 @@
+date,ticker,earnings_date,source
+2026-11-14,FERG,2026-11-09,yahoo info
+2026-11-14,IT,2027-02-02,yahoo info
+2026-11-14,UNM,2027-02-02,yahoo info
+2026-11-14,TRMB,2026-11-04,yahoo info
+2026-11-14,OKTA,2026-12-01,yahoo info
+2026-11-14,ELF,2027-02-03,yahoo info
+2026-11-14,HAE,2027-02-04,yahoo info
+2026-11-14,PODD,2026-11-04,yahoo info
+2026-11-14,EXLS,2026-10-27,yahoo info
+2026-11-14,GMED,2026-11-05,yahoo info
+2026-11-14,TECH,2026-11-09,yahoo info
+2026-11-14,HLI,2027-01-27,yahoo info
+2026-11-14,TSCO,2027-01-28,yahoo info
+2026-11-14,CDW,2027-02-03,yahoo info
+2026-11-14,LSCC,2026-11-02,yahoo info
+2026-11-14,AAON,2026-11-09,yahoo info
+2026-11-14,CEG,2026-11-09,yahoo info
+2026-11-14,LHX,2027-01-28,yahoo info
+2026-11-14,SAIA,2026-10-29,yahoo info
+2026-11-14,MANH,2026-10-27,yahoo info
+2026-11-14,BURL,2026-11-24,yahoo info
+2026-11-14,AVGO,2026-12-09,yahoo info
+2026-11-14,TTWO,2027-02-09,yahoo info
+2026-11-14,BMRN,2026-11-02,yahoo info
+2026-11-14,NEM,2026-10-22,yahoo info
+2026-11-14,NYT,2027-02-03,yahoo info
+2026-11-14,WMS,2027-02-04,yahoo info
+2026-11-14,DVN,2026-11-05,yahoo info
+2026-11-14,ARW,2027-02-04,yahoo info
+2026-11-14,KMI,2027-01-27,yahoo info
+2026-11-14,SLAB,2027-02-03,yahoo info
+2026-11-14,CFR,2027-01-28,yahoo info
+2026-11-14,DDOG,2026-11-04,yahoo info
+2026-11-14,MP,2026-11-05,yahoo info
+2026-11-14,MU,2026-12-23,yahoo info
+2026-11-14,GPN,2026-11-05,yahoo info
+2026-11-14,CORT,2026-11-03,yahoo info
+2026-11-14,IBM,2027-01-27,yahoo info
+2026-11-14,PCTY,2027-02-04,yahoo info
+2026-11-14,HLNE,2027-02-02,yahoo info
+2026-11-14,MTB,2027-01-19,yahoo info
+2026-11-14,BWA,2026-10-29,yahoo info
+2026-11-14,MTD,2027-02-04,yahoo info
+2026-11-14,EXPE,2026-11-04,yahoo info
+2026-11-14,LYB,2027-01-29,yahoo info
+2026-11-14,CBSH,2027-01-21,yahoo info
+2026-11-14,ARWR,2027-02-04,yahoo info
+2026-11-14,CYTK,2026-11-04,yahoo info
+2026-11-14,CDE,2026-11-04,yahoo info
+2026-11-14,NWSA,2027-02-04,yahoo info
+2026-11-14,ARE,2027-01-25,yahoo info
+2026-11-14,ALB,2026-11-04,yahoo info
+2026-11-14,HALO,2026-11-05,yahoo info
+2026-11-14,HL,2026-11-03,yahoo info
+2026-11-14,FDS,2026-12-17,yahoo info
+2026-11-14,TMO,2027-01-28,yahoo info
+2026-11-14,C,2027-01-14,yahoo info
+2026-11-14,WFC,2027-01-14,yahoo info
+2026-11-14,PAG,2026-10-28,yahoo info
+2026-11-14,CHWY,2026-12-09,yahoo info
+2026-11-14,BBY,2026-11-24,yahoo info
+2026-11-14,FIS,2026-11-04,yahoo info
+2026-11-14,SAIC,2026-12-03,yahoo info
+2026-11-14,AMD,2027-02-02,yahoo info
+2026-11-14,DT,2026-11-03,yahoo info
+2026-11-14,EXPD,2026-11-03,yahoo info
+2026-11-14,VRT,2026-10-28,yahoo info
+2026-11-14,FTV,2026-10-28,yahoo info
+2026-11-14,TTC,2026-12-17,yahoo info
+2026-11-14,ZBRA,2026-11-03,yahoo info
+2026-11-14,SMCI,2027-02-02,yahoo info
+2026-11-14,REGN,2027-01-28,yahoo info
+2026-11-14,VLO,2027-01-28,yahoo info
+2026-11-14,AEIS,2026-11-02,yahoo info
+2026-11-14,ANET,2026-11-03,yahoo info
+2026-11-14,MPC,2027-02-02,yahoo info
+2026-11-14,DELL,2026-11-24,yahoo info
+2026-11-14,MTSI,2027-02-04,yahoo info
+2026-11-14,COP,2027-02-04,yahoo info
+2026-11-14,FLEX,2027-01-27,yahoo info
+2026-11-14,FN,2027-02-01,yahoo info
+2026-11-14,PLTR,2027-02-01,yahoo info
+2026-11-14,BTSG,2026-10-30,yahoo info
+2026-11-14,APP,2026-11-04,yahoo info
+2026-11-14,NBIX,2026-11-02,yahoo info
+2026-11-14,FTNT,2026-10-28,yahoo info
+2026-11-14,MCK,2027-02-03,yahoo info
+2026-11-14,ALSN,2026-11-02,yahoo info
+2026-11-14,GS,2027-01-19,yahoo info
+2026-11-14,ELV,2027-01-28,yahoo info
+2026-11-14,JPM,2027-01-14,yahoo info
+2026-11-14,MAR,2026-11-02,yahoo info
+2026-11-14,TOST,2026-11-03,yahoo info
+2026-11-14,BNY,2027-01-15,yahoo info
+2026-11-14,DASH,2026-10-29,yahoo info
+2026-11-14,ABNB,2026-11-05,yahoo info
+2026-11-14,T,2027-01-27,yahoo info
+2026-11-14,MMM,2027-01-19,yahoo info
+2026-11-14,HPE,2026-11-23,yahoo info
+2026-11-14,TWLO,2026-10-29,yahoo info
+2026-11-14,TMUS,2026-10-28,yahoo info
+2026-11-14,MA,2027-01-28,yahoo info
+2026-11-14,MRSH,2027-01-28,yahoo info
+2026-11-14,SNPS,2026-12-08,yahoo info
+2026-11-14,DIS,2026-11-17,yahoo info
+2026-11-14,SPGI,2026-10-27,yahoo info
+2026-11-14,ADBE,2026-12-09,yahoo info
+2026-11-14,NVDA,2026-11-17,yahoo info
+2026-11-14,COF,2027-01-19,yahoo info
+2026-11-14,BKNG,2026-11-03,yahoo info
+2026-11-14,NFLX,2027-01-19,yahoo info
+2026-11-14,TEX,2026-10-28,yahoo info
+2026-11-14,CMCSA,2027-01-28,yahoo info
+2026-11-14,SCHW,2027-01-21,yahoo info
+2026-11-14,HCA,2027-01-26,yahoo info
+2026-11-14,BAC,2027-01-15,yahoo info
+2026-11-14,CAVA,2026-11-04,yahoo info
+2026-11-14,ACN,2026-12-17,yahoo info
+2026-11-14,NU,2026-11-12,yahoo info
+2026-11-14,CVS,2026-11-04,yahoo info
+2026-11-14,GM,2027-01-27,yahoo info
+2026-11-14,UBER,2027-02-03,yahoo info
+2026-11-14,DAL,2027-01-13,yahoo info
+2026-11-14,UAL,2027-01-26,yahoo info
+2026-11-14,AAL,2027-01-26,yahoo info
+2026-11-14,NOW,2027-01-27,yahoo info
+2026-11-14,CRM,2026-12-02,yahoo info
+2026-11-14,MSFT,2027-01-27,yahoo info
+2026-11-14,GOOGL,2026-10-28,yahoo info
+2026-11-14,AMZN,2026-10-29,yahoo info
+2026-11-14,META,2027-01-27,yahoo info
+2026-11-14,ORCL,2026-12-14,yahoo info
+2026-11-14,CRWV,2026-11-10,yahoo info
+2026-11-14,SYF,2027-01-26,yahoo info
+2026-11-14,A,2026-11-23,yahoo info
+2026-11-14,ACGL,2026-10-27,yahoo info
+2026-11-14,ACM,2026-11-16,yahoo info
+2026-11-14,AEE,2026-11-05,yahoo info
+2026-11-14,AGCO,2026-10-29,yahoo info
+2026-11-14,AIZ,2026-11-03,yahoo info
+2026-11-14,AM,2026-10-28,yahoo info
+2026-11-14,AMG,2026-11-09,yahoo info
+2026-11-14,AMT,2026-10-27,yahoo info
+2026-11-14,AON,2027-01-29,yahoo info
+2026-11-14,APA,2026-11-04,yahoo info
+2026-11-14,APH,2027-01-27,yahoo info
+2026-11-14,ARMK,2026-11-16,yahoo info
+2026-11-14,ASB,2027-01-21,yahoo info
+2026-11-14,ATI,2026-10-29,yahoo info
+2026-11-14,ATO,2027-02-03,yahoo info
+2026-11-14,AVAV,2026-12-02,yahoo info
+2026-11-14,AWK,2026-10-28,yahoo info
+2026-11-14,BKH,2027-02-03,yahoo info
+2026-11-14,BRK-B,2026-11-09,yahoo info
+2026-11-14,BSX,2026-10-28,yahoo info
+2026-11-14,CACI,2027-01-20,yahoo info
+2026-11-14,CELH,2026-11-05,yahoo info
+2026-11-14,CF,2026-11-05,yahoo info
+2026-11-14,CG,2027-02-04,yahoo info
+2026-11-14,CHE,2026-10-27,yahoo info
+2026-11-14,CI,2027-02-04,yahoo info
+2026-11-14,CPAY,2027-02-03,yahoo info
+2026-11-14,CR,2027-01-25,yahoo info
+2026-11-14,CRL,2026-11-04,yahoo info
+2026-11-14,CROX,2026-10-29,yahoo info
+2026-11-14,CTSH,2026-10-29,yahoo info
+2026-11-14,CVLT,2027-01-26,yahoo info
+2026-11-14,DAR,2026-10-29,yahoo info
+2026-11-14,DOC,2027-02-01,yahoo info
+2026-11-14,DOV,2027-01-28,yahoo info
+2026-11-14,DVA,2026-10-29,yahoo info
+2026-11-14,EGP,2026-10-21,yahoo info
+2026-11-14,ELAN,2026-11-06,yahoo info
+2026-11-14,ELS,2027-01-27,yahoo info
+2026-11-14,EMR,2027-02-02,yahoo info
+2026-11-14,EQIX,2026-10-28,yahoo info
+2026-11-14,EVR,2026-10-28,yahoo info
+2026-11-14,EWBC,2027-01-19,yahoo info
+2026-11-14,EXE,2026-10-27,yahoo info
+2026-11-14,EXP,2027-01-28,yahoo info
+2026-11-14,FDX,2026-10-28,yahoo info
+2026-11-14,FICO,2027-01-27,yahoo info
+2026-11-14,FOX,2026-11-02,yahoo info
+2026-11-14,GAP,2026-11-19,yahoo info
+2026-11-14,GATX,2027-01-20,yahoo info
+2026-11-14,GE,2027-01-21,yahoo info
+2026-11-14,GL,2026-10-21,yahoo info
+2026-11-14,GLW,2027-01-26,yahoo info
+2026-11-14,GRMN,2026-10-28,yahoo info
+2026-11-14,GXO,2026-11-03,yahoo info
+2026-11-14,H,2026-10-29,yahoo info
+2026-11-14,HBAN,2027-01-21,yahoo info
+2026-11-14,HLT,2026-10-27,yahoo info
+2026-11-14,HUBB,2026-10-27,yahoo info
+2026-11-14,ICE,2026-10-29,yahoo info
+2026-11-14,IDA,2026-10-29,yahoo info
+2026-11-14,IESC,2026-11-20,yahoo info
+2026-11-14,INTC,2027-01-28,yahoo info
+2026-11-14,INVH,2026-10-28,yahoo info
+2026-11-14,JBL,2026-12-16,yahoo info
+2026-11-14,KHC,2026-11-04,yahoo info
+2026-11-14,KLAC,2027-01-28,yahoo info
+2026-11-14,KRYS,2026-11-02,yahoo info
+2026-11-14,LITE,2027-02-02,yahoo info
+2026-11-14,LIVN,2026-11-04,yahoo info
+2026-11-14,LULU,2026-12-10,yahoo info
+2026-11-14,MCD,2026-11-04,yahoo info
+2026-11-14,MET,2026-11-04,yahoo info
+2026-11-14,MKC,2027-01-21,yahoo info
+2026-11-14,MOG-A,2026-11-20,yahoo info
+2026-11-14,MORN,2026-10-28,yahoo info
+2026-11-14,MTG,2026-11-04,yahoo info
+2026-11-14,NDSN,2026-12-15,yahoo info
+2026-11-14,NTAP,2026-12-01,yahoo info
+2026-11-14,NVT,2026-10-30,yahoo info
+2026-11-14,OMC,2026-10-22,yahoo info
+2026-11-14,ONTO,2026-11-09,yahoo info
+2026-11-14,OVV,2026-11-03,yahoo info
+2026-11-14,PCAR,2026-10-27,yahoo info
+2026-11-14,PEP,2026-10-08,yahoo info
+2026-11-14,PH,2027-01-28,yahoo info
+2026-11-14,PKG,2027-01-26,yahoo info
+2026-11-14,PPG,2027-01-26,yahoo info
+2026-11-14,PR,2026-11-04,yahoo info
+2026-11-14,PRI,2026-11-04,yahoo info
+2026-11-14,PTC,2026-11-04,yahoo info
+2026-11-14,PWR,2026-10-29,yahoo info
+2026-11-14,PYPL,2026-10-27,yahoo info
+2026-11-14,RCL,2027-01-26,yahoo info
+2026-11-14,RDDT,2026-10-29,yahoo info
+2026-11-14,REXR,2026-10-22,yahoo info
+2026-11-14,RLI,2027-01-20,yahoo info
+2026-11-14,RNR,2026-10-27,yahoo info
+2026-11-14,RRC,2026-10-27,yahoo info
+2026-11-14,RRX,2027-02-03,yahoo info
+2026-11-14,RYN,2026-11-04,yahoo info
+2026-11-14,SANM,2027-02-01,yahoo info
+2026-11-14,SEIC,2027-01-27,yahoo info
+2026-11-14,SHW,2027-01-26,yahoo info
+2026-11-14,SITM,2027-02-03,yahoo info
+2026-11-14,SN,2026-11-04,yahoo info
+2026-11-14,SNDK,2026-10-29,yahoo info
+2026-11-14,SUI,2026-10-26,yahoo info
+2026-11-14,SW,2026-10-28,yahoo info
+2026-11-14,SWK,2027-02-03,yahoo info
+2026-11-14,SYK,2027-01-28,yahoo info
+2026-11-14,TFC,2027-01-20,yahoo info
+2026-11-14,TPR,2027-02-04,yahoo info
+2026-11-14,TRGP,2026-11-05,yahoo info
+2026-11-14,TRU,2026-10-27,yahoo info
+2026-11-14,TSLA,2027-01-27,yahoo info
+2026-11-14,TXN,2027-01-26,yahoo info
+2026-11-14,TXNM,2026-10-30,yahoo info
+2026-11-14,TYL,2026-10-28,yahoo info
+2026-11-14,UBSI,2027-01-21,yahoo info
+2026-11-14,ULTA,2026-12-03,yahoo info
+2026-11-14,USB,2027-01-19,yahoo info
+2026-11-14,VTR,2026-10-27,yahoo info
+2026-11-14,WAT,2026-11-03,yahoo info
+2026-11-14,WEC,2026-10-29,yahoo info
+2026-11-14,FERG,2027-03-01,earnings_dates.json
+2026-11-14,TRMB,2027-02-09,earnings_dates.json
+2026-11-14,PODD,2027-02-17,earnings_dates.json
+2026-11-14,EXLS,2027-02-23,earnings_dates.json
+2026-11-14,GMED,2027-02-25,earnings_dates.json
+2026-11-14,TECH,2027-02-09,earnings_dates.json
+2026-11-14,LSCC,2027-02-08,earnings_dates.json
+2026-11-14,AAON,2027-03-01,earnings_dates.json
+2026-11-14,CEG,2027-02-24,earnings_dates.json
+2026-11-14,SAIA,2027-02-10,earnings_dates.json
+2026-11-14,MANH,2027-02-02,earnings_dates.json
+2026-11-14,BMRN,2027-02-22,earnings_dates.json
+2026-11-14,NEM,2027-02-18,earnings_dates.json
+2026-11-14,DVN,2027-02-16,earnings_dates.json
+2026-11-14,DDOG,2027-02-11,earnings_dates.json
+2026-11-14,MP,2027-02-25,earnings_dates.json
+2026-11-14,GPN,2027-02-17,earnings_dates.json
+2026-11-14,CORT,2027-02-24,earnings_dates.json
+2026-11-14,BWA,2027-02-10,earnings_dates.json
+2026-11-14,EXPE,2027-02-11,earnings_dates.json
+2026-11-14,CYTK,2027-02-24,earnings_dates.json
+2026-11-14,CDE,2027-02-17,earnings_dates.json
+2026-11-14,ALB,2027-02-10,earnings_dates.json
+2026-11-14,HALO,2027-02-16,earnings_dates.json
+2026-11-14,HL,2027-02-17,earnings_dates.json
+2026-11-14,PAG,2027-02-10,earnings_dates.json
+2026-11-14,FIS,2027-02-23,earnings_dates.json
+2026-11-14,DT,2027-02-08,earnings_dates.json
+2026-11-14,NU,2027-02-24,earnings_dates.json
+2026-11-14,CVS,2027-02-09,earnings_dates.json
+2026-11-14,GOOGL,2027-02-03,earnings_dates.json
+2026-11-14,AMZN,2027-02-04,earnings_dates.json
+2026-11-14,CRWV,2027-02-25,earnings_dates.json
+2026-11-14,VRT,2027-02-10,earnings_dates.json

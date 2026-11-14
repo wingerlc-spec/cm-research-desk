@@ -1,0 +1,2760 @@
+{
+ "FERG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 193648602.0,
+   "year_ago": 195545957.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-12-02",
+   "change_pct": -0.97
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "IT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1718446000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 63081351.0,
+   "year_ago": 72077145.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -12.48
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "UNM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1065700000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 154982030.0,
+   "year_ago": 167331269.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -7.38
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TRMB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 688900000.0,
+  "buyback_last_end": "2026-10-02",
+  "shares": {
+   "now": 229243001.0,
+   "year_ago": 237920962.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -3.65
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "OKTA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": null,
+  "shares_source": null
+ },
+ "ELF": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 99969000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 59147637.0,
+   "year_ago": 59636768.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-11-06",
+   "change_pct": -0.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HAE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 45537511.0,
+   "year_ago": 46809672.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -2.72
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PODD": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 300000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 69371043.0,
+   "year_ago": 70346898.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -1.39
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EXLS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 322021000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 150788731.0,
+   "year_ago": 158700885.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -4.99
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GMED": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 324001000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 134261914.0,
+   "year_ago": 135057247.0,
+   "end": "2026-08-04",
+   "end_year_ago": "2025-08-04",
+   "change_pct": -0.59
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TECH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 41675000.0,
+  "buyback_last_end": "2026-06-30",
+  "shares": {
+   "now": 157090727.0,
+   "year_ago": 155812701.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-10-30",
+   "change_pct": 0.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HLI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": null,
+  "shares_source": null
+ },
+ "TSCO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 459955000.0,
+  "buyback_last_end": "2026-09-26",
+  "shares": {
+   "now": 518573690.0,
+   "year_ago": 528403595.0,
+   "end": "2026-10-24",
+   "end_year_ago": "2025-10-25",
+   "change_pct": -1.86
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CDW": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 805700000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 124809323.0,
+   "year_ago": 130193660.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -4.14
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "LSCC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 29145000.0,
+  "buyback_last_end": "2026-10-03",
+  "shares": {
+   "now": 142225691.0,
+   "year_ago": 136786394.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-30",
+   "change_pct": 3.98
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AAON": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 82462535.0,
+   "year_ago": 81634058.0,
+   "end": "2026-11-05",
+   "end_year_ago": "2025-11-04",
+   "change_pct": 1.01
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CEG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 354307379.0,
+   "year_ago": 312405579.0,
+   "end": "2026-07-31",
+   "end_year_ago": "2025-07-31",
+   "change_pct": 13.41
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "LHX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 754000000.0,
+  "buyback_last_end": "2026-10-02",
+  "shares": {
+   "now": 186200733.0,
+   "year_ago": 187052847.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -0.46
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SAIA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 26680367.0,
+   "year_ago": 26642641.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-28",
+   "change_pct": 0.14
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MANH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 433904000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 58061893.0,
+   "year_ago": 60258247.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-21",
+   "change_pct": -3.64
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BURL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 345834000.0,
+  "buyback_last_end": "2026-08-01",
+  "shares": {
+   "now": 62815195.0,
+   "year_ago": 63035016.0,
+   "end": "2026-08-01",
+   "end_year_ago": "2025-08-02",
+   "change_pct": -0.35
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AVGO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 8450000000.0,
+  "buyback_last_end": "2026-08-02",
+  "shares": {
+   "now": 4773629865.0,
+   "year_ago": 4722365022.0,
+   "end": "2026-08-28",
+   "end_year_ago": "2025-08-29",
+   "change_pct": 1.09
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TTWO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 187213488.0,
+   "year_ago": 184778832.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": 1.32
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BMRN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 193694734.0,
+   "year_ago": 192114344.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-23",
+   "change_pct": 0.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NEM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 5669000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1039193185.0,
+   "year_ago": 1091262981.0,
+   "end": "2026-10-15",
+   "end_year_ago": "2025-10-16",
+   "change_pct": -4.77
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NYT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 226340000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "WMS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 464874000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 73829604.0,
+   "year_ago": 77764487.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -5.06
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DVN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 930000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1139714310.0,
+   "year_ago": 627300000.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-23",
+   "change_pct": 81.69
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ARW": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 225343000.0,
+  "buyback_last_end": "2026-10-03",
+  "shares": {
+   "now": 50557510.0,
+   "year_ago": 51511356.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -1.85
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "KMI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 2227715229.0,
+   "year_ago": 2224760390.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-23",
+   "change_pct": 0.13
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SLAB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 33384250.0,
+   "year_ago": 32852942.0,
+   "end": "2026-11-03",
+   "end_year_ago": "2025-10-28",
+   "change_pct": 1.62
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CFR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 263720000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 62180525.0,
+   "year_ago": 63941101.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -2.75
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DDOG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 0.0,
+   "year_ago": 78180606.0,
+   "end": "2019-12-31",
+   "end_year_ago": "2018-12-31",
+   "change_pct": -100.0
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "MP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 178267976.0,
+   "year_ago": 177230483.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": 0.59
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MU": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 650000000.0,
+  "buyback_last_end": "2026-09-03",
+  "shares": {
+   "now": 1131423212.0,
+   "year_ago": 1122466035.0,
+   "end": "2026-10-02",
+   "end_year_ago": "2025-09-26",
+   "change_pct": 0.8
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GPN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1239919000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 264635810.0,
+   "year_ago": 236743716.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-30",
+   "change_pct": 11.78
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CORT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 5745000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 109443109.0,
+   "year_ago": 105188217.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-23",
+   "change_pct": 4.05
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "IBM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 945120805.0,
+   "year_ago": 934735206.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 1.11
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PCTY": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 350608000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 51963311.0,
+   "year_ago": 54381607.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-29",
+   "change_pct": -4.45
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HLNE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": null,
+  "shares_source": null
+ },
+ "MTB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2519000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 143434433.0,
+   "year_ago": 153690781.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -6.67
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BWA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 723000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 200814060.0,
+   "year_ago": 213928111.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -6.13
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MTD": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 782498000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 19890405.0,
+   "year_ago": 20428445.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -2.63
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EXPE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2054000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 113122000.0,
+   "year_ago": 117514000.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -3.74
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "LYB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 0.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 323242496.0,
+   "year_ago": 321872964.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-29",
+   "change_pct": 0.43
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CBSH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 422322000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 141556665.0,
+   "year_ago": 132414687.0,
+   "end": "2026-11-03",
+   "end_year_ago": "2025-11-06",
+   "change_pct": 6.9
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ARWR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 141368004.0,
+   "year_ago": 135809558.0,
+   "end": "2026-11-05",
+   "end_year_ago": "2025-11-19",
+   "change_pct": 4.09
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CYTK": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 139303351.0,
+   "year_ago": 122264929.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-11-03",
+   "change_pct": 13.94
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CDE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 1021903475.0,
+   "year_ago": 642217872.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-10-27",
+   "change_pct": 59.12
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NWSA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 715000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "ARE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 0.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 174160645.0,
+   "year_ago": 172825059.0,
+   "end": "2026-10-15",
+   "end_year_ago": "2025-10-15",
+   "change_pct": 0.77
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ALB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 118009849.0,
+   "year_ago": 117697540.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-29",
+   "change_pct": 0.27
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HALO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 114010000.0,
+   "year_ago": 117597000.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -3.05
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 4528000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 671777326.0,
+   "year_ago": 670098670.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-11-03",
+   "change_pct": 0.25
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FDS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 643961000.0,
+  "buyback_last_end": "2026-08-31",
+  "shares": {
+   "now": 35255660.0,
+   "year_ago": 37456326.0,
+   "end": "2026-10-15",
+   "end_year_ago": "2025-10-15",
+   "change_pct": -5.88
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TMO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 4037000000.0,
+  "buyback_last_end": "2026-09-26",
+  "shares": {
+   "now": 370515868.0,
+   "year_ago": 375708059.0,
+   "end": "2026-09-26",
+   "end_year_ago": "2025-09-27",
+   "change_pct": -1.38
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "C": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 1749319009.0,
+   "year_ago": 1884479551.0,
+   "end": "2026-01-31",
+   "end_year_ago": "2025-01-31",
+   "change_pct": -7.17
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "WFC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 14515000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 3001850317.0,
+   "year_ago": 3139084542.0,
+   "end": "2026-10-19",
+   "end_year_ago": "2025-10-22",
+   "change_pct": -4.37
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PAG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 66400000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 65661728.0,
+   "year_ago": 65858552.0,
+   "end": "2026-10-19",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -0.3
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CHWY": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 509900000.0,
+  "buyback_last_end": "2026-08-02",
+  "shares": null,
+  "shares_source": null
+ },
+ "BBY": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 144000000.0,
+  "buyback_last_end": "2026-08-01",
+  "shares": {
+   "now": 209727698.0,
+   "year_ago": 210101265.0,
+   "end": "2026-09-02",
+   "end_year_ago": "2025-09-03",
+   "change_pct": -0.18
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FIS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 435000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 515470244.0,
+   "year_ago": 517850764.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -0.46
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SAIC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 479000000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 41897635.0,
+   "year_ago": 46022001.0,
+   "end": "2026-08-21",
+   "end_year_ago": "2025-08-22",
+   "change_pct": -8.96
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AMD": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 221000000.0,
+  "buyback_last_end": "2026-09-26",
+  "shares": {
+   "now": 1640087251.0,
+   "year_ago": 1628041540.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-30",
+   "change_pct": 0.74
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 286944133.0,
+   "year_ago": 301488271.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-11-03",
+   "change_pct": -4.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EXPD": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 886416000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 129110669.0,
+   "year_ago": 134020931.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-11-03",
+   "change_pct": -3.66
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "VRT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 385060421.0,
+   "year_ago": 382338313.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-20",
+   "change_pct": 0.71
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FTV": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1272300000.0,
+  "buyback_last_end": "2026-10-02",
+  "shares": {
+   "now": 297644456.0,
+   "year_ago": 317611636.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -6.29
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TTC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 358100000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 94663378.0,
+   "year_ago": 97862143.0,
+   "end": "2026-08-27",
+   "end_year_ago": "2025-08-28",
+   "change_pct": -3.27
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ZBRA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 946000000.0,
+  "buyback_last_end": "2026-10-03",
+  "shares": {
+   "now": 47087454.0,
+   "year_ago": 50660242.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-21",
+   "change_pct": -7.05
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SMCI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 659227367.0,
+   "year_ago": 596971133.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-31",
+   "change_pct": 10.43
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "REGN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3035100000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 93955110.0,
+   "year_ago": 89499900.0,
+   "end": "2012-07-13",
+   "end_year_ago": "2011-07-15",
+   "change_pct": 4.98
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "VLO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 7262000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 278884400.0,
+   "year_ago": 305009539.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-17",
+   "change_pct": -8.57
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AEIS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 7000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 40481991.0,
+   "year_ago": 37745489.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-31",
+   "change_pct": 7.25
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ANET": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 620100000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1263402335.0,
+   "year_ago": 1259285070.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-30",
+   "change_pct": 0.33
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MPC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 7289000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 272282280.0,
+   "year_ago": 300602479.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -9.42
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DELL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 8518000000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 640000000.0,
+   "year_ago": 675000000.0,
+   "end": "2026-07-31",
+   "end_year_ago": "2025-08-01",
+   "change_pct": -5.19
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "MTSI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 76787562.0,
+   "year_ago": 74932978.0,
+   "end": "2026-11-10",
+   "end_year_ago": "2025-11-11",
+   "change_pct": 2.47
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "COP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 6429000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1182335057.0,
+   "year_ago": 1235718250.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -4.32
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FLEX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 400000000.0,
+  "buyback_last_end": "2026-09-25",
+  "shares": {
+   "now": 369460804.0,
+   "year_ago": 369790328.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -0.09
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 34106000.0,
+  "buyback_last_end": "2026-09-25",
+  "shares": {
+   "now": 35717516.0,
+   "year_ago": 35827210.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -0.31
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PLTR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 2409153000.0,
+   "year_ago": 2383314000.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 1.08
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "BTSG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 198984612.0,
+   "year_ago": 180352297.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-24",
+   "change_pct": 10.33
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "APP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3228837000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 331322000.0,
+   "year_ago": 338533000.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -2.13
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "NBIX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 158100000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 101218643.0,
+   "year_ago": 99705698.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-21",
+   "change_pct": 1.52
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FTNT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1030000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 734709741.0,
+   "year_ago": 743648102.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-11-04",
+   "change_pct": -1.2
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MCK": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 6775000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 115456664.0,
+   "year_ago": 123426650.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -6.46
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ALSN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 169000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 82133940.0,
+   "year_ago": 83228716.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-16",
+   "change_pct": -1.32
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 15000000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 288434583.0,
+   "year_ago": 299928511.0,
+   "end": "2026-10-16",
+   "end_year_ago": "2025-10-17",
+   "change_pct": -3.83
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ELV": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2159000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 216055891.0,
+   "year_ago": 222238763.0,
+   "end": "2026-10-15",
+   "end_year_ago": "2025-10-14",
+   "change_pct": -2.78
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "JPM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 24486000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 2655609509.0,
+   "year_ago": 2722262295.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -2.45
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MAR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 4081000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 257504397.0,
+   "year_ago": 268351795.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -4.04
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TOST": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 539000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 0.0,
+   "year_ago": 219755430.0,
+   "end": "2021-12-31",
+   "end_year_ago": "2020-12-31",
+   "change_pct": -100.0
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "BNY": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 4068000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 672898490.0,
+   "year_ago": 697349124.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -3.51
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DASH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1049000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "ABNB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3946000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "T": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 9303000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 6736473433.0,
+   "year_ago": 7089449495.0,
+   "end": "2026-10-15",
+   "end_year_ago": "2025-10-21",
+   "change_pct": -4.98
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MMM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3777000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 516729574.0,
+   "year_ago": 531225048.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -2.73
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HPE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 547000000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 1327464779.0,
+   "year_ago": 1319450062.0,
+   "end": "2026-08-27",
+   "end_year_ago": "2025-08-28",
+   "change_pct": 0.61
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TWLO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 646763000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 154734032.0,
+   "year_ago": 151612818.0,
+   "end": "2026-10-16",
+   "end_year_ago": "2025-10-17",
+   "change_pct": 2.06
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TMUS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 12010000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1059272571.0,
+   "year_ago": 1118506626.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-17",
+   "change_pct": -5.3
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 15451000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 122530193.0,
+   "year_ago": 109773787.0,
+   "end": "2010-10-27",
+   "end_year_ago": "2009-10-28",
+   "change_pct": 11.62
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MRSH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3026000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 475514327.0,
+   "year_ago": 489909683.0,
+   "end": "2026-10-12",
+   "end_year_ago": "2025-10-13",
+   "change_pct": -2.94
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SNPS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 191636646.0,
+   "year_ago": 185748673.0,
+   "end": "2026-08-24",
+   "end_year_ago": "2025-09-05",
+   "change_pct": 3.17
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DIS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 8249000000.0,
+  "buyback_last_end": "2026-06-27",
+  "shares": {
+   "now": 1726686902.0,
+   "year_ago": 1797933833.0,
+   "end": "2026-07-29",
+   "end_year_ago": "2025-07-30",
+   "change_pct": -3.96
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SPGI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 6600000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 289900000.0,
+   "year_ago": 302800000.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -4.26
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ADBE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 9295000000.0,
+  "buyback_last_end": "2026-08-28",
+  "shares": {
+   "now": 389200000.0,
+   "year_ago": 418600000.0,
+   "end": "2026-09-18",
+   "end_year_ago": "2025-09-19",
+   "change_pct": -7.02
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NVDA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 55315000000.0,
+  "buyback_last_end": "2026-07-26",
+  "shares": {
+   "now": 24100000000.0,
+   "year_ago": 24300000000.0,
+   "end": "2026-08-21",
+   "end_year_ago": "2025-08-22",
+   "change_pct": -0.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "COF": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 10744000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 601533153.0,
+   "year_ago": 635733605.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -5.38
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BKNG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 12019000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 743701257.0,
+   "year_ago": 32233815.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-20",
+   "change_pct": 2207.21
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NFLX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 12861275000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 4106325903.0,
+   "year_ago": 423732334.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 869.08
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "TEX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 76000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 112400000.0,
+   "year_ago": 65600000.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-27",
+   "change_pct": 71.34
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CMCSA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 4054000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "SCHW": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 6642000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1726007705.0,
+   "year_ago": 1776936770.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -2.87
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HCA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 9163000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 208892500.0,
+   "year_ago": 228193900.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -8.46
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BAC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 25561000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 6900209006.0,
+   "year_ago": 7302495550.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -5.51
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CAVA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 116843466.0,
+   "year_ago": 115986120.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-28",
+   "change_pct": 0.74
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ACN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 7520965000.0,
+  "buyback_last_end": "2026-08-31",
+  "shares": null,
+  "shares_source": null
+ },
+ "CVS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 1279474188.0,
+   "year_ago": 1269432485.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-22",
+   "change_pct": 0.79
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 7801000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 843549423.0,
+   "year_ago": 932861303.0,
+   "end": "2026-10-09",
+   "end_year_ago": "2025-10-10",
+   "change_pct": -9.57
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "UBER": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 6191000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 2041898070.0,
+   "year_ago": 2077830381.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -1.73
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DAL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 657912380.0,
+   "year_ago": 652962768.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 0.76
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "UAL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 54000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 324894375.0,
+   "year_ago": 323737989.0,
+   "end": "2026-10-15",
+   "end_year_ago": "2025-10-09",
+   "change_pct": 0.36
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AAL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 662618434.0,
+   "year_ago": 660064930.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 0.39
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "NOW": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2822000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1038000000.0,
+   "year_ago": 208000000.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 399.04
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CRM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 35070000000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 823000000.0,
+   "year_ago": 952000000.0,
+   "end": "2026-08-20",
+   "end_year_ago": "2025-08-28",
+   "change_pct": -13.55
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MSFT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 21000000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 7426194552.0,
+   "year_ago": 7432377655.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -0.08
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GOOGL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 5899000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 12294000000.0,
+   "year_ago": 12077000000.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 1.8
+  },
+  "shares_source": "us-gaap:CommonStockSharesOutstanding"
+ },
+ "AMZN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 10813138306.0,
+   "year_ago": 10690216011.0,
+   "end": "2026-10-21",
+   "end_year_ago": "2025-10-22",
+   "change_pct": 1.15
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "META": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 0.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "ORCL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 95000000.0,
+  "buyback_last_end": "2026-05-31",
+  "shares": {
+   "now": 3023736000.0,
+   "year_ago": 2841714000.0,
+   "end": "2026-09-07",
+   "end_year_ago": "2025-09-05",
+   "change_pct": 6.41
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "SYF": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3840000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 311404854.0,
+   "year_ago": 360171098.0,
+   "end": "2026-10-16",
+   "end_year_ago": "2025-10-17",
+   "change_pct": -13.54
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "A": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 380000000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 281928854.0,
+   "year_ago": 283500427.0,
+   "end": "2026-08-26",
+   "end_year_ago": "2025-08-21",
+   "change_pct": -0.55
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ACGL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 4180000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 325525336.0,
+   "year_ago": 362625938.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-11-05",
+   "change_pct": -10.23
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ACM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 691918000.0,
+  "buyback_last_end": "2026-06-30",
+  "shares": {
+   "now": 128696425.0,
+   "year_ago": 132446101.0,
+   "end": "2026-08-07",
+   "end_year_ago": "2025-07-31",
+   "change_pct": -2.83
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AEE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 276843251.0,
+   "year_ago": 270409918.0,
+   "end": "2026-07-30",
+   "end_year_ago": "2025-07-31",
+   "change_pct": 2.38
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AGCO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 68950835.0,
+   "year_ago": 74623566.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -7.6
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AIZ": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 371800000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 49066851.0,
+   "year_ago": 50081110.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -2.03
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AM": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 101864000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 472346000.0,
+   "year_ago": 476275000.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -0.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AMG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1120500000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 24688879.0,
+   "year_ago": 28128908.0,
+   "end": "2026-11-05",
+   "end_year_ago": "2025-11-04",
+   "change_pct": -12.23
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AMT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 867600000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 463763555.0,
+   "year_ago": 468146623.0,
+   "end": "2026-10-20",
+   "end_year_ago": "2025-10-21",
+   "change_pct": -0.94
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AON": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 212157176.0,
+   "year_ago": 214935265.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -1.29
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "APA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 335756005.0,
+   "year_ago": 354669251.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -5.33
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "APH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 801900000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 2469261188.0,
+   "year_ago": 1224055508.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-21",
+   "change_pct": 101.73
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ARMK": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 96906000.0,
+  "buyback_last_end": "2026-07-03",
+  "shares": {
+   "now": 263625044.0,
+   "year_ago": 262850908.0,
+   "end": "2026-07-31",
+   "end_year_ago": "2025-07-25",
+   "change_pct": 0.29
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ASB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 185705763.0,
+   "year_ago": 165922444.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": 11.92
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ATI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 195000000.0,
+  "buyback_last_end": "2026-09-27",
+  "shares": {
+   "now": 135822697.0,
+   "year_ago": 135863661.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-10",
+   "change_pct": -0.03
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ATO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 168988553.0,
+   "year_ago": 160523571.0,
+   "end": "2026-07-31",
+   "end_year_ago": "2025-08-01",
+   "change_pct": 5.27
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AVAV": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 50820702.0,
+   "year_ago": 49932207.0,
+   "end": "2026-09-03",
+   "end_year_ago": "2025-09-03",
+   "change_pct": 1.78
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "AWK": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 199104661.0,
+   "year_ago": 195123565.0,
+   "end": "2026-10-19",
+   "end_year_ago": "2025-10-20",
+   "change_pct": 2.04
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BKH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 76524804.0,
+   "year_ago": 75473390.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-11-04",
+   "change_pct": 1.39
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BRK-B": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": null,
+  "shares_source": null
+ },
+ "BSX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 1449473222.0,
+   "year_ago": 1482442039.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -2.22
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CACI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 17403000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 22211835.0,
+   "year_ago": 22079710.0,
+   "end": "2026-10-16",
+   "end_year_ago": "2025-10-17",
+   "change_pct": 0.6
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CELH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 12573000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 250556309.0,
+   "year_ago": 257785297.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -2.8
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CF": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 955000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 146284911.0,
+   "year_ago": 155974644.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-11-03",
+   "change_pct": -6.21
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 923000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 353914742.0,
+   "year_ago": 360410486.0,
+   "end": "2026-11-03",
+   "end_year_ago": "2025-11-04",
+   "change_pct": -1.8
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CHE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 524598000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 13014915.0,
+   "year_ago": 14164195.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -8.11
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CI": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1532000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 263502561.0,
+   "year_ago": 267125816.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -1.36
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CPAY": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2319295000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 63971827.0,
+   "year_ago": 69958056.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-11-03",
+   "change_pct": -8.56
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 57833158.0,
+   "year_ago": 57596887.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-28",
+   "change_pct": 0.41
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CRL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 324201000.0,
+  "buyback_last_end": "2026-09-26",
+  "shares": {
+   "now": 47917467.0,
+   "year_ago": 49215471.0,
+   "end": "2026-10-24",
+   "end_year_ago": "2025-10-25",
+   "change_pct": -2.64
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CROX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 686361000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 45725039.0,
+   "year_ago": 51915657.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -11.92
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CTSH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2215000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 447030425.0,
+   "year_ago": 482646473.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -7.38
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "CVLT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 417905000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 40912591.0,
+   "year_ago": 44094362.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -7.22
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DAR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 149326000.0,
+  "buyback_last_end": "2026-10-03",
+  "shares": {
+   "now": 154935065.0,
+   "year_ago": 158186082.0,
+   "end": "2026-11-05",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -2.06
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DOC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 101747000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 689543752.0,
+   "year_ago": 694949823.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-22",
+   "change_pct": -0.78
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DOV": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 885527000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 133007687.0,
+   "year_ago": 137153223.0,
+   "end": "2026-10-16",
+   "end_year_ago": "2025-10-17",
+   "change_pct": -3.02
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "DVA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 725341000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 62900000.0,
+   "year_ago": 70600000.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-28",
+   "change_pct": -10.91
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EGP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 53774645.0,
+   "year_ago": 53348644.0,
+   "end": "2026-10-20",
+   "end_year_ago": "2025-10-22",
+   "change_pct": 0.8
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ELAN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 499827067.0,
+   "year_ago": 496863473.0,
+   "end": "2026-11-04",
+   "end_year_ago": "2025-10-31",
+   "change_pct": 0.6
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ELS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 194785616.0,
+   "year_ago": 193828480.0,
+   "end": "2026-10-21",
+   "end_year_ago": "2025-10-22",
+   "change_pct": 0.49
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EMR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1000000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 548600000.0,
+   "year_ago": 561800000.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -2.35
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EQIX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 98988318.0,
+   "year_ago": 98186078.0,
+   "end": "2026-10-27",
+   "end_year_ago": "2025-10-28",
+   "change_pct": 0.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EVR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": null,
+  "shares_source": null
+ },
+ "EWBC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 99552000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 137037321.0,
+   "year_ago": 137585604.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -0.4
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EXE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 900000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 230957348.0,
+   "year_ago": 238169697.0,
+   "end": "2026-10-20",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -3.03
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "EXP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 360069000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 30398658.0,
+   "year_ago": 32063877.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -5.19
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FDX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 796000000.0,
+  "buyback_last_end": "2026-05-31",
+  "shares": {
+   "now": 234199353.0,
+   "year_ago": 235955461.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-09-16",
+   "change_pct": -0.74
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FICO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3045991000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 21380929.0,
+   "year_ago": 23709047.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -9.82
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "FOX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1750000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "GAP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 604000000.0,
+  "buyback_last_end": "2026-08-01",
+  "shares": {
+   "now": 351270137.0,
+   "year_ago": 371047226.0,
+   "end": "2026-08-21",
+   "end_year_ago": "2025-08-22",
+   "change_pct": -5.33
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GATX": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 177300000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 34900000.0,
+   "year_ago": 35700000.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -2.24
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 8503000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1033351921.0,
+   "year_ago": 1054813911.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -2.03
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 925411000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 75439736.0,
+   "year_ago": 79605800.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -5.23
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GLW": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 861401106.0,
+   "year_ago": 857360396.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-23",
+   "change_pct": 0.47
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GRMN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 192695298.0,
+   "year_ago": 192334806.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": 0.19
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "GXO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 102000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 113029173.0,
+   "year_ago": 114489437.0,
+   "end": "2026-11-02",
+   "end_year_ago": "2025-11-03",
+   "change_pct": -1.28
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "H": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 408000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": null,
+  "shares_source": null
+ },
+ "HBAN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 2015387251.0,
+   "year_ago": 1459390757.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 38.1
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HLT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3412000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 222504355.0,
+   "year_ago": 232435166.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-17",
+   "change_pct": -4.27
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "HUBB": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 203500000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 52835035.0,
+   "year_ago": 53144752.0,
+   "end": "2026-10-22",
+   "end_year_ago": "2025-10-23",
+   "change_pct": -0.58
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ICE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2002000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 558858412.0,
+   "year_ago": 570178585.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": -1.99
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "IDA": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 58887379.0,
+   "year_ago": 54045224.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": 8.96
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "IESC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 19577000.0,
+  "buyback_last_end": "2026-06-30",
+  "shares": {
+   "now": 19924356.0,
+   "year_ago": 19854463.0,
+   "end": "2026-07-27",
+   "end_year_ago": "2025-07-31",
+   "change_pct": 0.35
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "INTC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 5315000000.0,
+   "year_ago": 4770000000.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-17",
+   "change_pct": 11.43
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "INVH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 850837000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 576154556.0,
+   "year_ago": 613020589.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-29",
+   "change_pct": -6.01
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "JBL": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1060000000.0,
+  "buyback_last_end": "2026-08-31",
+  "shares": {
+   "now": 102974470.0,
+   "year_ago": 106837337.0,
+   "end": "2026-10-20",
+   "end_year_ago": "2025-10-10",
+   "change_pct": -3.62
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "KHC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 80000000.0,
+  "buyback_last_end": "2026-09-26",
+  "shares": {
+   "now": 1183828946.0,
+   "year_ago": 1183655579.0,
+   "end": "2026-10-31",
+   "end_year_ago": "2025-10-25",
+   "change_pct": 0.01
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "KLAC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2680478000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 1302962435.0,
+   "year_ago": 131392338.0,
+   "end": "2026-10-26",
+   "end_year_ago": "2025-10-27",
+   "change_pct": 891.66
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "KRYS": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 29633472.0,
+   "year_ago": 28997519.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-29",
+   "change_pct": 2.19
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "LITE": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 90700000.0,
+   "year_ago": 70900000.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-28",
+   "change_pct": 27.93
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "LIVN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 55086809.0,
+   "year_ago": 54605527.0,
+   "end": "2026-10-28",
+   "end_year_ago": "2025-10-29",
+   "change_pct": 0.88
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "LULU": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 1157782000.0,
+  "buyback_last_end": "2026-08-02",
+  "shares": {
+   "now": 105594064.0,
+   "year_ago": 113468082.0,
+   "end": "2026-08-28",
+   "end_year_ago": "2025-08-29",
+   "change_pct": -6.94
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MCD": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2344000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 705784744.0,
+   "year_ago": 712154350.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -0.89
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MET": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 2588000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 628442143.0,
+   "year_ago": 658891656.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -4.62
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MKC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 16500000.0,
+  "buyback_last_end": "2026-08-31",
+  "shares": null,
+  "shares_source": null
+ },
+ "MOG-A": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 77572000.0,
+  "buyback_last_end": "2026-06-27",
+  "shares": null,
+  "shares_source": null
+ },
+ "MORN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 895300000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 37104311.0,
+   "year_ago": 41129198.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -9.79
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "MTG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 717944000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 198949274.0,
+   "year_ago": 223740981.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-24",
+   "change_pct": -11.08
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NDSN": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 246965000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 55699366.0,
+   "year_ago": 56186303.0,
+   "end": "2026-08-18",
+   "end_year_ago": "2025-08-18",
+   "change_pct": -0.87
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NTAP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 850000000.0,
+  "buyback_last_end": "2026-07-31",
+  "shares": {
+   "now": 196419005.0,
+   "year_ago": 199618386.0,
+   "end": "2026-08-28",
+   "end_year_ago": "2025-08-22",
+   "change_pct": -1.6
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "NVT": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 100200000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 161598060.0,
+   "year_ago": 161359550.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": 0.15
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "OMC": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 3606100000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 272847468.0,
+   "year_ago": 192983572.0,
+   "end": "2026-10-20",
+   "end_year_ago": "2025-10-16",
+   "change_pct": 41.38
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "ONTO": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 204979000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 49084327.0,
+   "year_ago": 49011162.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-15",
+   "change_pct": 0.15
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "OVV": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 815000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 268708063.0,
+   "year_ago": 253258560.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": 6.1
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PCAR": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 6500000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 526505329.0,
+   "year_ago": 525204359.0,
+   "end": "2026-10-23",
+   "end_year_ago": "2025-10-24",
+   "change_pct": 0.25
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PEP": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": null,
+  "buyback_last_end": null,
+  "shares": {
+   "now": 1362741092.0,
+   "year_ago": 1367340122.0,
+   "end": "2026-10-01",
+   "end_year_ago": "2025-10-02",
+   "change_pct": -0.34
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PH": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 858000000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 126096795.0,
+   "year_ago": 126186699.0,
+   "end": "2026-09-30",
+   "end_year_ago": "2025-09-30",
+   "change_pct": -0.07
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "PKG": {
+  "refreshed": "2026-11-14",
+  "ttm_buyback": 211800000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 89094661.0,
+   "year_ago": 89977067.0,
+   "end": "2026-10-30",
+   "end_year_ago": "2025-10-31",
+   "change_pct": -0.98
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ }
+}

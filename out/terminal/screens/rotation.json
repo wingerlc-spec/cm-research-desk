@@ -1,0 +1,529 @@
+{
+ "meta": {
+  "rule": "Groups = GICS sub-industries with 5 or more names in the universe, plus the sector ETFs. Equal-weight 1 and 2 month return vs SPY, percent of members above their 50-day now and a month ago, rank change of the 1-month relative return (month ago rank minus rank now). Top 10 most improving groups; inside each, $5B+ members within 8 percent of their 50-day.",
+  "asof": "2026-11-13",
+  "generated_utc": "2026-11-14 17:45",
+  "caveats": [
+   "Descriptive only: screen.py's own tests found chart patterns alone showed no reliable edge, so this is a place to look, not a signal."
+  ],
+  "groups_ranked": 84
+ },
+ "rows": [
+  {
+   "group": "Casinos & Gaming",
+   "members": 5,
+   "rel_1m_pct": 14.2,
+   "rel_2m_pct": 1.84,
+   "rel_1m_month_ago_pct": -11.4,
+   "pct_above_50d": 100.0,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 3,
+   "rank_month_ago": 84,
+   "rank_change": 81,
+   "breadth_change": 100.0,
+   "candidates": [
+    {
+     "ticker": "LVS",
+     "name": "Las Vegas Sands",
+     "mcap_busd": 25.32,
+     "vs_50d_pct": 3.9
+    },
+    {
+     "ticker": "MGM",
+     "name": "MGM Resorts",
+     "mcap_busd": 8.47,
+     "vs_50d_pct": 2.0
+    },
+    {
+     "ticker": "WYNN",
+     "name": "Wynn Resorts",
+     "mcap_busd": 8.76,
+     "vs_50d_pct": 6.3
+    },
+    {
+     "ticker": "BYD",
+     "name": "Boyd Gaming",
+     "mcap_busd": 5.46,
+     "vs_50d_pct": 6.0
+    }
+   ]
+  },
+  {
+   "group": "Construction Materials",
+   "members": 6,
+   "rel_1m_pct": 11.28,
+   "rel_2m_pct": 5.03,
+   "rel_1m_month_ago_pct": -5.93,
+   "pct_above_50d": 100.0,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 6,
+   "rank_month_ago": 68,
+   "rank_change": 62,
+   "breadth_change": 100.0,
+   "candidates": [
+    {
+     "ticker": "CRH",
+     "name": "CRH plc",
+     "mcap_busd": 61.97,
+     "vs_50d_pct": 6.6
+    },
+    {
+     "ticker": "MLM",
+     "name": "Martin Marietta Materials",
+     "mcap_busd": 36.53,
+     "vs_50d_pct": 2.0
+    },
+    {
+     "ticker": "VMC",
+     "name": "Vulcan Materials Company",
+     "mcap_busd": 35.76,
+     "vs_50d_pct": 7.6
+    },
+    {
+     "ticker": "EXP",
+     "name": "Eagle Materials",
+     "mcap_busd": 5.5,
+     "vs_50d_pct": 1.4
+    },
+    {
+     "ticker": "JHX",
+     "name": "James Hardie Industries",
+     "mcap_busd": 16.17,
+     "vs_50d_pct": 3.9
+    }
+   ]
+  },
+  {
+   "group": "Asset Management & Custody Banks",
+   "members": 18,
+   "rel_1m_pct": 10.59,
+   "rel_2m_pct": 3.74,
+   "rel_1m_month_ago_pct": -6.48,
+   "pct_above_50d": 83.3,
+   "pct_above_50d_month_ago": 16.7,
+   "rank_now": 12,
+   "rank_month_ago": 74,
+   "rank_change": 62,
+   "breadth_change": 66.6,
+   "candidates": [
+    {
+     "ticker": "AMP",
+     "name": "Ameriprise Financial",
+     "mcap_busd": 45.09,
+     "vs_50d_pct": 1.6
+    },
+    {
+     "ticker": "APO",
+     "name": "Apollo Global Management",
+     "mcap_busd": 72.9,
+     "vs_50d_pct": 3.3
+    },
+    {
+     "ticker": "ARES",
+     "name": "Ares Management",
+     "mcap_busd": 44.68,
+     "vs_50d_pct": 7.9
+    },
+    {
+     "ticker": "BX",
+     "name": "Blackstone Inc.",
+     "mcap_busd": 148.36,
+     "vs_50d_pct": 1.4
+    },
+    {
+     "ticker": "BNY",
+     "name": "BNY Mellon",
+     "mcap_busd": 103.23,
+     "vs_50d_pct": 2.8
+    },
+    {
+     "ticker": "IVZ",
+     "name": "Invesco",
+     "mcap_busd": 12.71,
+     "vs_50d_pct": -2.6
+    },
+    {
+     "ticker": "KKR",
+     "name": "KKR & Co.",
+     "mcap_busd": 90.02,
+     "vs_50d_pct": 3.1
+    },
+    {
+     "ticker": "NTRS",
+     "name": "Northern Trust",
+     "mcap_busd": 32.28,
+     "vs_50d_pct": 2.7
+    },
+    {
+     "ticker": "STT",
+     "name": "State Street Corporation",
+     "mcap_busd": 47.19,
+     "vs_50d_pct": -1.5
+    },
+    {
+     "ticker": "TROW",
+     "name": "T. Rowe Price",
+     "mcap_busd": 23.24,
+     "vs_50d_pct": 3.5
+    },
+    {
+     "ticker": "AMG",
+     "name": "Affiliated Managers Group",
+     "mcap_busd": 9.75,
+     "vs_50d_pct": 5.4
+    },
+    {
+     "ticker": "CG",
+     "name": "Carlyle Group (The)",
+     "mcap_busd": 14.08,
+     "vs_50d_pct": -0.4
+    },
+    {
+     "ticker": "CRBG",
+     "name": "Corebridge Financial",
+     "mcap_busd": 15.94,
+     "vs_50d_pct": 4.7
+    },
+    {
+     "ticker": "HLNE",
+     "name": "Hamilton Lane",
+     "mcap_busd": 6.34,
+     "vs_50d_pct": 6.0
+    },
+    {
+     "ticker": "SEIC",
+     "name": "SEI Investments Company",
+     "mcap_busd": 12.92,
+     "vs_50d_pct": 3.3
+    }
+   ]
+  },
+  {
+   "group": "Property & Casualty Insurance",
+   "members": 15,
+   "rel_1m_pct": 11.19,
+   "rel_2m_pct": 6.88,
+   "rel_1m_month_ago_pct": -4.21,
+   "pct_above_50d": 93.3,
+   "pct_above_50d_month_ago": 33.3,
+   "rank_now": 7,
+   "rank_month_ago": 59,
+   "rank_change": 52,
+   "breadth_change": 60.0,
+   "candidates": [
+    {
+     "ticker": "CB",
+     "name": "Chubb Limited",
+     "mcap_busd": 143.56,
+     "vs_50d_pct": 7.7
+    },
+    {
+     "ticker": "HIG",
+     "name": "Hartford (The)",
+     "mcap_busd": 36.76,
+     "vs_50d_pct": 3.7
+    },
+    {
+     "ticker": "PGR",
+     "name": "Progressive Corporation",
+     "mcap_busd": 136.6,
+     "vs_50d_pct": 7.2
+    },
+    {
+     "ticker": "TRV",
+     "name": "Travelers Companies (The)",
+     "mcap_busd": 82.64,
+     "vs_50d_pct": 5.8
+    },
+    {
+     "ticker": "WRB",
+     "name": "W. R. Berkley Corporation",
+     "mcap_busd": 28.77,
+     "vs_50d_pct": 7.5
+    },
+    {
+     "ticker": "FAF",
+     "name": "First American Financial Corporation",
+     "mcap_busd": 6.62,
+     "vs_50d_pct": -1.9
+    },
+    {
+     "ticker": "FNF",
+     "name": "Fidelity National Financial",
+     "mcap_busd": 11.64,
+     "vs_50d_pct": 4.5
+    },
+    {
+     "ticker": "ORI",
+     "name": "Old Republic International",
+     "mcap_busd": 9.52,
+     "vs_50d_pct": 1.3
+    },
+    {
+     "ticker": "THG",
+     "name": "Hanover Insurance",
+     "mcap_busd": 8.53,
+     "vs_50d_pct": 7.7
+    }
+   ]
+  },
+  {
+   "group": "Passenger Airlines",
+   "members": 5,
+   "rel_1m_pct": 10.48,
+   "rel_2m_pct": 5.77,
+   "rel_1m_month_ago_pct": -4.64,
+   "pct_above_50d": 80.0,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 15,
+   "rank_month_ago": 63,
+   "rank_change": 48,
+   "breadth_change": 80.0,
+   "candidates": [
+    {
+     "ticker": "DAL",
+     "name": "Delta Air Lines",
+     "mcap_busd": 56.74,
+     "vs_50d_pct": 5.3
+    },
+    {
+     "ticker": "LUV",
+     "name": "Southwest Airlines",
+     "mcap_busd": 22.0,
+     "vs_50d_pct": 7.3
+    },
+    {
+     "ticker": "UAL",
+     "name": "United Airlines Holdings",
+     "mcap_busd": 35.51,
+     "vs_50d_pct": 1.1
+    },
+    {
+     "ticker": "AAL",
+     "name": "American Airlines Group",
+     "mcap_busd": 8.73,
+     "vs_50d_pct": 1.8
+    }
+   ]
+  },
+  {
+   "group": "Homebuilding",
+   "members": 6,
+   "rel_1m_pct": 9.42,
+   "rel_2m_pct": 4.04,
+   "rel_1m_month_ago_pct": -5.21,
+   "pct_above_50d": 83.3,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 20,
+   "rank_month_ago": 65,
+   "rank_change": 45,
+   "breadth_change": 83.3,
+   "candidates": [
+    {
+     "ticker": "DHI",
+     "name": "D. R. Horton",
+     "mcap_busd": 39.51,
+     "vs_50d_pct": 2.7
+    },
+    {
+     "ticker": "LEN",
+     "name": "Lennar",
+     "mcap_busd": 19.89,
+     "vs_50d_pct": 2.5
+    },
+    {
+     "ticker": "NVR",
+     "name": "NVR, Inc.",
+     "mcap_busd": 15.49,
+     "vs_50d_pct": -3.6
+    },
+    {
+     "ticker": "PHM",
+     "name": "PulteGroup",
+     "mcap_busd": 23.38,
+     "vs_50d_pct": 5.8
+    },
+    {
+     "ticker": "TOL",
+     "name": "Toll Brothers",
+     "mcap_busd": 13.62,
+     "vs_50d_pct": 6.1
+    }
+   ]
+  },
+  {
+   "group": "Insurance Brokers",
+   "members": 7,
+   "rel_1m_pct": 14.91,
+   "rel_2m_pct": 12.92,
+   "rel_1m_month_ago_pct": -2.0,
+   "pct_above_50d": 100.0,
+   "pct_above_50d_month_ago": 42.9,
+   "rank_now": 2,
+   "rank_month_ago": 44,
+   "rank_change": 42,
+   "breadth_change": 57.1,
+   "candidates": [
+    {
+     "ticker": "BRO",
+     "name": "Brown & Brown",
+     "mcap_busd": 23.86,
+     "vs_50d_pct": 7.6
+    },
+    {
+     "ticker": "WTW",
+     "name": "Willis Towers Watson",
+     "mcap_busd": 30.92,
+     "vs_50d_pct": 7.2
+    }
+   ]
+  },
+  {
+   "group": "Office REITs",
+   "members": 6,
+   "rel_1m_pct": 6.6,
+   "rel_2m_pct": -2.16,
+   "rel_1m_month_ago_pct": -8.55,
+   "pct_above_50d": 66.7,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 41,
+   "rank_month_ago": 82,
+   "rank_change": 41,
+   "breadth_change": 66.7,
+   "candidates": [
+    {
+     "ticker": "ARE",
+     "name": "Alexandria Real Estate Equities",
+     "mcap_busd": 7.64,
+     "vs_50d_pct": -5.7
+    },
+    {
+     "ticker": "BXP",
+     "name": "BXP, Inc.",
+     "mcap_busd": 11.52,
+     "vs_50d_pct": 2.4
+    },
+    {
+     "ticker": "VNO",
+     "name": "Vornado Realty Trust",
+     "mcap_busd": 7.07,
+     "vs_50d_pct": 0.8
+    }
+   ]
+  },
+  {
+   "group": "Retail REITs",
+   "members": 9,
+   "rel_1m_pct": 9.27,
+   "rel_2m_pct": 4.76,
+   "rel_1m_month_ago_pct": -4.46,
+   "pct_above_50d": 88.9,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 22,
+   "rank_month_ago": 61,
+   "rank_change": 39,
+   "breadth_change": 88.9,
+   "candidates": [
+    {
+     "ticker": "FRT",
+     "name": "Federal Realty Investment Trust",
+     "mcap_busd": 9.77,
+     "vs_50d_pct": 2.5
+    },
+    {
+     "ticker": "O",
+     "name": "Realty Income",
+     "mcap_busd": 56.1,
+     "vs_50d_pct": 3.4
+    },
+    {
+     "ticker": "REG",
+     "name": "Regency Centers",
+     "mcap_busd": 14.23,
+     "vs_50d_pct": 3.2
+    },
+    {
+     "ticker": "ADC",
+     "name": "Agree Realty",
+     "mcap_busd": 9.05,
+     "vs_50d_pct": 2.1
+    },
+    {
+     "ticker": "BRX",
+     "name": "Brixmor Property Group",
+     "mcap_busd": 9.3,
+     "vs_50d_pct": 6.7
+    },
+    {
+     "ticker": "KRG",
+     "name": "Kite Realty Group Trust",
+     "mcap_busd": 5.19,
+     "vs_50d_pct": 2.2
+    },
+    {
+     "ticker": "NNN",
+     "name": "NNN Reit",
+     "mcap_busd": 7.99,
+     "vs_50d_pct": -1.0
+    }
+   ]
+  },
+  {
+   "group": "Diversified Banks",
+   "members": 7,
+   "rel_1m_pct": 6.28,
+   "rel_2m_pct": -2.17,
+   "rel_1m_month_ago_pct": -8.32,
+   "pct_above_50d": 71.4,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 43,
+   "rank_month_ago": 81,
+   "rank_change": 38,
+   "breadth_change": 71.4,
+   "candidates": [
+    {
+     "ticker": "BAC",
+     "name": "Bank of America",
+     "mcap_busd": 352.05,
+     "vs_50d_pct": -5.6
+    },
+    {
+     "ticker": "C",
+     "name": "Citigroup",
+     "mcap_busd": 205.26,
+     "vs_50d_pct": -3.0
+    },
+    {
+     "ticker": "JPM",
+     "name": "JPMorgan Chase",
+     "mcap_busd": 919.35,
+     "vs_50d_pct": 1.7
+    },
+    {
+     "ticker": "PNC",
+     "name": "PNC Financial Services",
+     "mcap_busd": 92.17,
+     "vs_50d_pct": 2.0
+    },
+    {
+     "ticker": "TFC",
+     "name": "Truist Financial",
+     "mcap_busd": 59.89,
+     "vs_50d_pct": 3.4
+    },
+    {
+     "ticker": "USB",
+     "name": "U.S. Bancorp",
+     "mcap_busd": 95.04,
+     "vs_50d_pct": 2.5
+    },
+    {
+     "ticker": "WFC",
+     "name": "Wells Fargo",
+     "mcap_busd": 258.31,
+     "vs_50d_pct": 2.2
+    }
+   ]
+  }
+ ]
+}

@@ -110,19 +110,19 @@
  },
  "SHARE_SHRINK": {
   "all": {
-   "n": 3238,
-   "stocks": 625,
+   "n": 3241,
+   "stocks": 626,
    "months": 37,
    "e60": {
-    "edge": 1.18,
+    "edge": 1.19,
     "t_clustered": 1.7,
-    "median": 0.01,
+    "median": 0.02,
     "baseline_median": -0.87,
     "pct_beat_spy": 50.0,
     "baseline_pct_beat_spy": 47.0
    },
    "e120": {
-    "edge": 0.83,
+    "edge": 0.85,
     "t_clustered": 1.4,
     "median": -0.47,
     "baseline_median": -2.12,
@@ -130,8 +130,8 @@
     "baseline_pct_beat_spy": 46.0
    },
    "e120_high_accrual": {
-    "n": 755,
-    "mean": 0.84
+    "n": 758,
+    "mean": 0.89
    },
    "e120_clean_earnings": {
     "n": 2242,

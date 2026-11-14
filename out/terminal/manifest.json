@@ -1,31 +1,125 @@
 {
- "generated_utc": "2026-11-14 17:17",
+ "generated_utc": "2026-11-14 17:48",
  "files": {
   "dc_spend.json": {
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 17:34",
    "rows": 153,
    "status": "ok"
   },
   "dc_capex.json": {
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 17:34",
    "rows": 91,
    "status": "ok"
   },
   "earnings_dates.json": {
-   "pulled_utc": "2026-11-14 17:16",
+   "pulled_utc": "2026-11-14 17:35",
    "rows": 83,
    "status": "ok"
   },
   "chains.json": {
-   "pulled_utc": "2026-11-14 17:17",
+   "pulled_utc": "2026-11-14 17:35",
    "rows": 18,
    "status": "ok"
   },
   "screen.json": {
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 17:34",
    "rows": 66,
    "status": "ok",
    "written_by": "screen.py"
+  },
+  "regime.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 8,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "overall": "red",
+   "states": {
+    "trend_SPY": "caution",
+    "trend_QQQ": "stress",
+    "trend_IWM": "stress",
+    "breadth": "ok",
+    "credit_HYG_LQD": "caution",
+    "credit_HYG_IEF": "caution",
+    "volatility": "ok",
+    "leadership": "stress"
+   }
+  },
+  "risk_stats.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 83,
+   "status": "ok",
+   "written_by": "datasets.py"
+  },
+  "corr_matrix.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 40,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "largest_cluster": [
+    "AAL",
+    "DAL",
+    "FERG",
+    "HLI",
+    "UAL",
+    "UBER"
+   ]
+  },
+  "iv_rank.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 220,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "ranked": 0
+  },
+  "earnings_reactions.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 301,
+   "status": "ok",
+   "written_by": "datasets.py"
+  },
+  "screens/buyback_low_multiple.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 23,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "cached": 220,
+   "refreshed": 220
+  },
+  "screens/scare_no_estimate_damage.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 41,
+   "status": "ok",
+   "written_by": "datasets.py"
+  },
+  "screens/rotation.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 10,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "groups": 84
+  },
+  "screens/insider_clusters.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 1,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "names": 136,
+   "docs_fetched": 500
+  },
+  "drivers.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 18,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "flagged": []
+  },
+  "../rule_tests/dislocation_recovery.json": {
+   "pulled_utc": "2026-11-14 17:48",
+   "rows": 2716,
+   "status": "ok",
+   "written_by": "datasets.py",
+   "verdict": "WORKS"
   }
- }
+ },
+ "datasets_runtime_s": 774
 }
