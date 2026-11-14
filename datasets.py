@@ -856,7 +856,7 @@ def section_E(x, status):
                                change_20d_200d_pts=round(float(a200.iloc[-1]-a200.iloc[-21]), 1), change_20d_50d_pts=round(float(a50.iloc[-1]-a50.iloc[-21]), 1)),
                                reading=f"{a200.iloc[-1]:.0f}% of the universe above its 200-day ({a200.iloc[-1]-a200.iloc[-21]:+.0f} pts in 20 sessions), {a50.iloc[-1]:.0f}% above its 50-day")
     for k in [k for k in keys if k.startswith("credit_")]:
-        v = G["_" + k]; readings[k] = dict(state=last[k], value=v, reading=f"{k[7:].replace('_', '/')} {v['vs_200d_pct']:+.2f}% vs its 200-day, {v['change_20d_pct']:+.2f}% in 20 sessions")
+        v = G["_" + k]; readings[k] = dict(state=last[k], value=v, reading=f"{k[7:].replace('_', '/')} {v['vs_50d_pct']:+.2f}% vs its 50-day, {v['vs_200d_pct']:+.2f}% vs its 200-day, {v['change_20d_pct']:+.2f}% in 20 sessions")
     if "volatility" in keys:
         vv, v3v = float(vix.iloc[-1]), (float(v3.iloc[-1]) if v3 is not None else None)
         readings["volatility"] = dict(state=last["volatility"], value=dict(vix=round(vv, 2), vix3m=round(v3v, 2) if v3v else None),
@@ -881,8 +881,13 @@ def section_E(x, status):
         edge = r_["worst_drawdown_60d_mean_pct"] - g["worst_drawdown_60d_mean_pct"]
         summ = (f"Over {state.notna().sum()} sessions, red days ({r_['days']} days in {r_['months']} months) were followed by a 60-session SPY return of {r_['fwd60_spy_mean_pct']:+.1f}% on average "
                 f"vs {g['fwd60_spy_mean_pct']:+.1f}% after green, and an average worst drawdown of {r_['worst_drawdown_60d_mean_pct']:.1f}% vs {g['worst_drawdown_60d_mean_pct']:.1f}%. ")
-        summ += ("Red has marked deeper drawdowns ahead, but the days overlap heavily (few independent episodes), so treat it as a risk gauge, not a timing signal."
-                 if edge <= -2 else "Red has not marked meaningfully worse drawdowns than green: no edge shown.")
+        tail = r_["pct_drawdown_worse_than_10"] - g["pct_drawdown_worse_than_10"]
+        summ += (f"A drawdown worse than 10% followed {r_['pct_drawdown_worse_than_10']:.0f}% of red days vs {g['pct_drawdown_worse_than_10']:.0f}% of green days. "
+                 f"Red covers {r_['days']/max(state.notna().sum(), 1)*100:.0f}% of all days, and the days overlap heavily (few independent episodes). ")
+        summ += ("Red has marked a fatter tail of drawdowns but not a lower average return, so it reads as a risk gauge for sizing, not a timing signal."
+                 if (edge <= -1 or tail >= 5) and r_["fwd60_spy_mean_pct"] >= g["fwd60_spy_mean_pct"] else
+                 "Red has marked deeper drawdowns and weaker returns ahead; with overlapping days the evidence is still thin."
+                 if edge <= -1 or tail >= 5 else "Red has not marked worse drawdowns than green: no edge shown.")
         summ += " Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past."
     else:
         summ = "Not enough red or green days in the backfill to compare: no edge shown."
