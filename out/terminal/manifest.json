@@ -1,28 +1,28 @@
 {
- "generated_utc": "2026-11-14 17:17",
+ "generated_utc": "2026-11-14 19:06",
  "files": {
   "dc_spend.json": {
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "rows": 153,
    "status": "ok"
   },
   "dc_capex.json": {
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "rows": 91,
    "status": "ok"
   },
   "earnings_dates.json": {
-   "pulled_utc": "2026-11-14 17:16",
+   "pulled_utc": "2026-11-14 19:06",
    "rows": 83,
    "status": "ok"
   },
   "chains.json": {
-   "pulled_utc": "2026-11-14 17:17",
+   "pulled_utc": "2026-11-14 19:06",
    "rows": 18,
    "status": "ok"
   },
   "screen.json": {
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "rows": 66,
    "status": "ok",
    "written_by": "screen.py"

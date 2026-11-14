@@ -1,6 +1,6 @@
 {
  "asof": "2026-11-13",
- "generated_utc": "2026-11-14 17:15",
+ "generated_utc": "2026-11-14 19:05",
  "source": "Yahoo via yfinance",
  "rules": "Calls 180-460 days out. Chosen: delta 0.75-0.85, bid > 0, expiry nearest 274 days, then highest open interest. ok = open interest >= 100 and spread <= 8% of mid; thin = fails either; none = no qualifying contract. option_alt (when thin) = most liquid call with delta 0.6-0.9. Delta is Black-Scholes, rate 0.04, dividends ignored; iv from the chain when 0.05-3, else solved from the mid. Bid and ask both 0: quote stale, lastPrice is never used for prices. fits_slot from ask x 100: up to SLOT_USD true, up to SLOT_STRETCH stretch, above it false.",
  "targets": [
@@ -55,7 +55,7 @@
   "FERG": {
    "sym": "FERG",
    "last": 256.47,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -86,7 +86,7 @@
   "IT": {
    "sym": "IT",
    "last": 192.15,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -218,7 +218,7 @@
   "UNM": {
    "sym": "UNM",
    "last": 79.84,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -423,7 +423,7 @@
   "TRMB": {
    "sym": "TRMB",
    "last": 55.64,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -503,7 +503,7 @@
   "OKTA": {
    "sym": "OKTA",
    "last": 182.87,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -617,8 +617,8 @@
      "expiry": "2027-06-17",
      "days_to_expiry": 216,
      "calls": 61,
-     "with_bid": 58,
-     "stale": 3,
+     "with_bid": 53,
+     "stale": 8,
      "band_60_90": [
       {
        "strike": 100.0,
@@ -1042,8 +1042,8 @@
      "expiry": "2027-12-17",
      "days_to_expiry": 399,
      "calls": 55,
-     "with_bid": 50,
-     "stale": 5,
+     "with_bid": 47,
+     "stale": 8,
      "band_60_90": [
       {
        "strike": 97.5,
@@ -1628,7 +1628,7 @@
   "ELF": {
    "sym": "ELF",
    "last": 117.98,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -1945,7 +1945,7 @@
   "HAE": {
    "sym": "HAE",
    "last": 122.94,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -2096,7 +2096,7 @@
   "PODD": {
    "sym": "PODD",
    "last": 152.48,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -2314,7 +2314,7 @@
   "EXLS": {
    "sym": "EXLS",
    "last": 43.25,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [],
    "n_contracts": 0,
    "option": {
@@ -2325,7 +2325,7 @@
   "GMED": {
    "sym": "GMED",
    "last": 72.14,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -2413,7 +2413,7 @@
   "TECH": {
    "sym": "TECH",
    "last": 72.8,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -2647,7 +2647,7 @@
   "HLI": {
    "sym": "HLI",
    "last": 142.84,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -2666,7 +2666,7 @@
   "TSCO": {
    "sym": "TSCO",
    "last": 36.45,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -2891,7 +2891,7 @@
   "CDW": {
    "sym": "CDW",
    "last": 171.65,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -3098,7 +3098,7 @@
   "LSCC": {
    "sym": "LSCC",
    "last": 112.35,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -3294,7 +3294,7 @@
   "AAON": {
    "sym": "AAON",
    "last": 80.25,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-10-15",
@@ -3437,7 +3437,7 @@
   "CEG": {
    "sym": "CEG",
    "last": 280.2,
-   "pulled_utc": "2026-11-14 17:14",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -3833,8 +3833,8 @@
      "expiry": "2027-12-17",
      "days_to_expiry": 399,
      "calls": 53,
-     "with_bid": 50,
-     "stale": 3,
+     "with_bid": 49,
+     "stale": 4,
      "band_60_90": [
       {
        "strike": 160.0,
@@ -4276,7 +4276,7 @@
   "LHX": {
    "sym": "LHX",
    "last": 272.35,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -4538,7 +4538,7 @@
   "SAIA": {
    "sym": "SAIA",
    "last": 342.29,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -4585,7 +4585,7 @@
   "MANH": {
    "sym": "MANH",
    "last": 257.15,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [],
    "n_contracts": 0,
    "option": {
@@ -4596,7 +4596,7 @@
   "BURL": {
    "sym": "BURL",
    "last": 242.86,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -4887,7 +4887,7 @@
   "AVGO": {
    "sym": "AVGO",
    "last": 347.01,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -5045,8 +5045,8 @@
      "expiry": "2027-06-17",
      "days_to_expiry": 216,
      "calls": 74,
-     "with_bid": 72,
-     "stale": 2,
+     "with_bid": 71,
+     "stale": 3,
      "band_60_90": [
       {
        "strike": 165.0,
@@ -5828,7 +5828,7 @@
   "TTWO": {
    "sym": "TTWO",
    "last": 227.82,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -6471,7 +6471,7 @@
   "BMRN": {
    "sym": "BMRN",
    "last": 57.23,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2028-01-21",
@@ -6562,7 +6562,7 @@
   "EXPD": {
    "sym": "EXPD",
    "last": 194.8,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -6705,7 +6705,7 @@
   "VRT": {
    "sym": "VRT",
    "last": 202.07,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -7557,7 +7557,7 @@
   "FTV": {
    "sym": "FTV",
    "last": 67.92,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -7656,7 +7656,7 @@
   "TTC": {
    "sym": "TTC",
    "last": 105.89,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -7725,7 +7725,7 @@
   "ZBRA": {
    "sym": "ZBRA",
    "last": 324.0,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -8020,7 +8020,7 @@
   "SMCI": {
    "sym": "SMCI",
    "last": 26.87,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -8573,7 +8573,7 @@
   "REGN": {
    "sym": "REGN",
    "last": 955.47,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -9033,8 +9033,8 @@
      "expiry": "2028-01-21",
      "days_to_expiry": 434,
      "calls": 70,
-     "with_bid": 59,
-     "stale": 11,
+     "with_bid": 56,
+     "stale": 14,
      "band_60_90": [
       {
        "strike": 570.0,
@@ -9280,7 +9280,7 @@
   "VLO": {
    "sym": "VLO",
    "last": 379.83,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -9623,8 +9623,8 @@
      "expiry": "2027-12-17",
      "days_to_expiry": 399,
      "calls": 66,
-     "with_bid": 60,
-     "stale": 6,
+     "with_bid": 56,
+     "stale": 10,
      "band_60_90": [
       {
        "strike": 240.0,
@@ -9819,8 +9819,8 @@
      "expiry": "2028-01-21",
      "days_to_expiry": 434,
      "calls": 64,
-     "with_bid": 64,
-     "stale": 0,
+     "with_bid": 61,
+     "stale": 3,
      "band_60_90": [
       {
        "strike": 230.0,
@@ -10066,7 +10066,7 @@
   "AEIS": {
    "sym": "AEIS",
    "last": 219.68,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:04",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -10273,7 +10273,7 @@
   "ANET": {
    "sym": "ANET",
    "last": 197.29,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -11192,7 +11192,7 @@
   "MPC": {
    "sym": "MPC",
    "last": 414.65,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -11879,7 +11879,7 @@
   "DELL": {
    "sym": "DELL",
    "last": 344.53,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
@@ -12332,8 +12332,8 @@
      "expiry": "2027-12-17",
      "days_to_expiry": 399,
      "calls": 103,
-     "with_bid": 98,
-     "stale": 5,
+     "with_bid": 95,
+     "stale": 8,
      "band_60_90": [
       {
        "strike": 175.0,
@@ -12605,8 +12605,8 @@
      "expiry": "2028-01-21",
      "days_to_expiry": 434,
      "calls": 98,
-     "with_bid": 94,
-     "stale": 4,
+     "with_bid": 92,
+     "stale": 6,
      "band_60_90": [
       {
        "strike": 175.0,
@@ -12910,7 +12910,7 @@
   "MTSI": {
    "sym": "MTSI",
    "last": 232.06,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -13183,7 +13183,7 @@
   "COP": {
    "sym": "COP",
    "last": 142.28,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "expiries_in_window": [
     {
      "expiry": "2027-05-21",
@@ -13780,7 +13780,7 @@
   "FLEX": {
    "sym": "FLEX",
    "last": 74.98,
-   "pulled_utc": "2026-11-14 17:15",
+   "pulled_utc": "2026-11-14 19:05",
    "expiries_in_window": [
     {
      "expiry": "2028-01-21",
