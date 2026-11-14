@@ -587,7 +587,7 @@
      "curve_driver_pct": -1.6,
      "priced": "FAIR",
      "reading": "stock prices the driver at +3% since shock; spot -2%, curve -2%",
-     "fwd_pe": 16.01,
+     "fwd_pe": 16.52,
      "eps_next_fy": 5.22,
      "rev30_pct": -0.9,
      "rev90_pct": -19.4,
@@ -1429,7 +1429,7 @@
    "shock": null,
    "curve_change": null,
    "note": "exposure only",
-   "n_exposed": 540,
+   "n_exposed": 539,
    "names": [
     {
      "ticker": "LRCX",

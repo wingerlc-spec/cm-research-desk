@@ -2377,6 +2377,40 @@
    "fits_slot": null
   },
   {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 162.85,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-08-28",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 3932.34,
+   "uber_corr_120d": -0.05,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 10.27,
+   "trail_pe": 20.59,
+   "analysts": 53.0,
+   "mean_target": 278.31,
+   "eps_next_fy": 15.85,
+   "rev30_pct": -0.4,
+   "rev90_pct": 23.7,
+   "next_earnings": "2026-11-17",
+   "fits_slot": null
+  },
+  {
    "ticker": "ADBE",
    "name": "Adobe Inc.",
    "sector": "Information Technology",
@@ -2414,40 +2448,6 @@
    "rev30_pct": -0.4,
    "rev90_pct": 0.2,
    "next_earnings": "2026-12-09",
-   "fits_slot": null
-  },
-  {
-   "ticker": "NVDA",
-   "name": "Nvidia",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 162.85,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-28",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 3932.34,
-   "uber_corr_120d": -0.05,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 10.27,
-   "trail_pe": 20.59,
-   "analysts": 53.0,
-   "mean_target": 283.31,
-   "eps_next_fy": 15.83,
-   "rev30_pct": -0.5,
-   "rev90_pct": 23.5,
-   "next_earnings": "2026-11-17",
    "fits_slot": null
   },
   {
