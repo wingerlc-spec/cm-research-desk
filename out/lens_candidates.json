@@ -15,7 +15,8 @@
   "INVENTORY_REVERSAL": 0.0
  },
  "mode": "FALLBACK: no lens adopted; ranked by PROMISING-lens hits, then lens-hit count, then estimate revisions (unproven ideas)",
- "n_names": 298,
+ "n_names": 270,
+ "removed_by_mcap_floor": 28,
  "candidates": [
   {
    "ticker": "EXPD",
@@ -50,7 +51,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 25.15,
    "uber_corr_120d": 0.04,
    "chart_gate": "ok",
    "fwd_pe": 22.33,
@@ -60,7 +62,47 @@
    "eps_next_fy": 8.88,
    "rev30_pct": 8.4,
    "rev90_pct": 10.1,
-   "next_earnings": "2026-11-03"
+   "next_earnings": "2026-11-03",
+   "option": {
+    "expiry": "2027-05-21",
+    "strike": 170.0,
+    "bid": 31.8,
+    "ask": 34.6,
+    "open_interest": 3,
+    "volume": 0,
+    "days_to_expiry": 189,
+    "quote": "ok",
+    "mid": 33.2,
+    "spread_pct": 8.4,
+    "iv": 0.3793,
+    "iv_source": "chain",
+    "delta": 0.762,
+    "cost_usd": 3460.0,
+    "breakeven": 204.6,
+    "breakeven_pct_above_last": 5.0,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-05-21",
+    "strike": 140.0,
+    "bid": 57.5,
+    "ask": 60.4,
+    "open_interest": 8,
+    "volume": 6,
+    "days_to_expiry": 189,
+    "quote": "ok",
+    "mid": 58.95,
+    "spread_pct": 4.9,
+    "iv": 0.496,
+    "iv_source": "chain",
+    "delta": 0.877,
+    "cost_usd": 6040.0,
+    "breakeven": 200.4,
+    "breakeven_pct_above_last": 2.9,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,460 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "VRT",
@@ -95,17 +137,58 @@
      "verdict": "NO DATA"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 77.81,
    "uber_corr_120d": -0.15,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 20.37,
-   "trail_pe": 37.77,
+   "trail_pe": 39.16,
    "analysts": 30.0,
    "mean_target": 334.29,
    "eps_next_fy": 9.92,
    "rev30_pct": 7.9,
    "rev90_pct": 9.0,
-   "next_earnings": "2026-10-28"
+   "next_earnings": "2026-10-28",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 140.0,
+    "bid": 80.5,
+    "ask": 83.1,
+    "open_interest": 53,
+    "volume": 1,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 81.8,
+    "spread_pct": 3.2,
+    "iv": 0.7223,
+    "iv_source": "chain",
+    "delta": 0.825,
+    "cost_usd": 8310.0,
+    "breakeven": 223.1,
+    "breakeven_pct_above_last": 10.4,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 200.0,
+    "bid": 57.35,
+    "ask": 60.8,
+    "open_interest": 588,
+    "volume": 8,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 59.08,
+    "spread_pct": 5.8,
+    "iv": 0.6787,
+    "iv_source": "chain",
+    "delta": 0.673,
+    "cost_usd": 6080.0,
+    "breakeven": 260.8,
+    "breakeven_pct_above_last": 29.1,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $8,310 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "HAE",
@@ -134,7 +217,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 5.6,
    "uber_corr_120d": 0.15,
    "chart_gate": "ok",
    "fwd_pe": 19.82,
@@ -144,7 +228,47 @@
    "eps_next_fy": 6.2,
    "rev30_pct": 7.3,
    "rev90_pct": 8.0,
-   "next_earnings": "2027-02-04"
+   "next_earnings": "2027-02-04",
+   "option": {
+    "expiry": "2028-01-21",
+    "strike": 100.0,
+    "bid": 36.2,
+    "ask": 39.5,
+    "open_interest": 98,
+    "volume": 7,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 37.85,
+    "spread_pct": 8.7,
+    "iv": 0.5179,
+    "iv_source": "chain",
+    "delta": 0.768,
+    "cost_usd": 3950.0,
+    "breakeven": 139.5,
+    "breakeven_pct_above_last": 13.5,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 120.0,
+    "bid": 25.3,
+    "ask": 29.0,
+    "open_interest": 154,
+    "volume": 2,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 27.15,
+    "spread_pct": 13.6,
+    "iv": 0.5276,
+    "iv_source": "chain",
+    "delta": 0.66,
+    "cost_usd": 2900.0,
+    "breakeven": 149.0,
+    "breakeven_pct_above_last": 21.2,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,950 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "FTV",
@@ -179,7 +303,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call (stretch)",
+   "mcap_busd": 20.22,
    "uber_corr_120d": 0.15,
    "chart_gate": "ok",
    "fwd_pe": 20.44,
@@ -189,7 +314,46 @@
    "eps_next_fy": 3.32,
    "rev30_pct": 2.2,
    "rev90_pct": 2.2,
-   "next_earnings": "2026-10-28"
+   "next_earnings": "2026-10-28",
+   "option": {
+    "expiry": "2027-06-17",
+    "strike": 50.0,
+    "bid": 17.9,
+    "ask": 21.5,
+    "open_interest": 3,
+    "volume": 1,
+    "days_to_expiry": 216,
+    "quote": "ok",
+    "mid": 19.7,
+    "spread_pct": 18.3,
+    "iv": 0.5676,
+    "iv_source": "chain",
+    "delta": 0.835,
+    "cost_usd": 2150.0,
+    "breakeven": 71.5,
+    "breakeven_pct_above_last": 5.3,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 65.0,
+    "bid": 6.8,
+    "ask": 9.7,
+    "open_interest": 5,
+    "volume": 0,
+    "days_to_expiry": 216,
+    "quote": "ok",
+    "mid": 8.25,
+    "spread_pct": 35.2,
+    "iv": 0.4015,
+    "iv_source": "chain",
+    "delta": 0.646,
+    "cost_usd": 970.0,
+    "breakeven": 74.7,
+    "breakeven_pct_above_last": 10.0,
+    "liquidity": "thin"
+   },
+   "fits_slot": "stretch"
   },
   {
    "ticker": "TTC",
@@ -218,7 +382,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call (stretch)",
+   "mcap_busd": 10.02,
    "uber_corr_120d": 0.18,
    "chart_gate": "ok",
    "fwd_pe": 20.76,
@@ -228,7 +393,27 @@
    "eps_next_fy": 5.1,
    "rev30_pct": 0.7,
    "rev90_pct": 0.7,
-   "next_earnings": "2026-12-17"
+   "next_earnings": "2026-12-17",
+   "option": {
+    "expiry": "2027-06-17",
+    "strike": 85.0,
+    "bid": 23.6,
+    "ask": 25.8,
+    "open_interest": 2,
+    "volume": 2,
+    "days_to_expiry": 216,
+    "quote": "ok",
+    "mid": 24.7,
+    "spread_pct": 8.9,
+    "iv": 0.4379,
+    "iv_source": "chain",
+    "delta": 0.814,
+    "cost_usd": 2580.0,
+    "breakeven": 110.8,
+    "breakeven_pct_above_last": 4.6,
+    "liquidity": "thin"
+   },
+   "fits_slot": "stretch"
   },
   {
    "ticker": "ZBRA",
@@ -257,7 +442,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 15.26,
    "uber_corr_120d": 0.24,
    "chart_gate": "ok",
    "fwd_pe": 14.55,
@@ -267,7 +453,47 @@
    "eps_next_fy": 22.27,
    "rev30_pct": -0.1,
    "rev90_pct": 0.1,
-   "next_earnings": "2026-11-03"
+   "next_earnings": "2026-11-03",
+   "option": {
+    "expiry": "2027-08-20",
+    "strike": 270.0,
+    "bid": 83.0,
+    "ask": 91.7,
+    "open_interest": 6,
+    "volume": 2,
+    "days_to_expiry": 280,
+    "quote": "ok",
+    "mid": 87.35,
+    "spread_pct": 10.0,
+    "iv": 0.5489,
+    "iv_source": "chain",
+    "delta": 0.753,
+    "cost_usd": 9170.0,
+    "breakeven": 361.7,
+    "breakeven_pct_above_last": 11.6,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-08-20",
+    "strike": 300.0,
+    "bid": 64.9,
+    "ask": 73.9,
+    "open_interest": 15,
+    "volume": 6,
+    "days_to_expiry": 280,
+    "quote": "ok",
+    "mid": 69.4,
+    "spread_pct": 13.0,
+    "iv": 0.5238,
+    "iv_source": "chain",
+    "delta": 0.679,
+    "cost_usd": 7390.0,
+    "breakeven": 373.9,
+    "breakeven_pct_above_last": 15.4,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $9,170 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "TFX",
@@ -302,7 +528,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": null,
    "uber_corr_120d": 0.32,
    "chart_gate": "ok",
    "fwd_pe": 14.17,
@@ -312,7 +539,8 @@
    "eps_next_fy": 10.94,
    "rev30_pct": -0.0,
    "rev90_pct": -0.1,
-   "next_earnings": "2026-11-05"
+   "next_earnings": "2026-11-05",
+   "fits_slot": null
   },
   {
    "ticker": "SMCI",
@@ -335,6 +563,7 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 17.71,
    "uber_corr_120d": -0.04,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 3.87,
@@ -344,7 +573,46 @@
    "eps_next_fy": 6.95,
    "rev30_pct": 30.4,
    "rev90_pct": 80.0,
-   "next_earnings": "2027-02-02"
+   "next_earnings": "2027-02-02",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 20.0,
+    "bid": 11.0,
+    "ask": 12.7,
+    "open_interest": 183,
+    "volume": 22,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 11.85,
+    "spread_pct": 14.3,
+    "iv": 0.9629,
+    "iv_source": "chain",
+    "delta": 0.792,
+    "cost_usd": 1270.0,
+    "breakeven": 32.7,
+    "breakeven_pct_above_last": 21.7,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 30.0,
+    "bid": 8.55,
+    "ask": 9.25,
+    "open_interest": 3400,
+    "volume": 530,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 8.9,
+    "spread_pct": 7.9,
+    "iv": 0.8728,
+    "iv_source": "chain",
+    "delta": 0.659,
+    "cost_usd": 925.0,
+    "breakeven": 39.25,
+    "breakeven_pct_above_last": 46.1,
+    "liquidity": "ok"
+   },
+   "fits_slot": true
   },
   {
    "ticker": "REGN",
@@ -366,7 +634,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 98.84,
    "uber_corr_120d": 0.22,
    "chart_gate": "ok",
    "fwd_pe": 13.51,
@@ -376,7 +645,47 @@
    "eps_next_fy": 62.12,
    "rev30_pct": 22.7,
    "rev90_pct": 23.3,
-   "next_earnings": "2027-01-28"
+   "next_earnings": "2027-01-28",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 760.0,
+    "bid": 256.0,
+    "ask": 265.0,
+    "open_interest": 8,
+    "volume": 2,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 260.5,
+    "spread_pct": 3.5,
+    "iv": 0.4734,
+    "iv_source": "chain",
+    "delta": 0.794,
+    "cost_usd": 26500.0,
+    "breakeven": 1025.0,
+    "breakeven_pct_above_last": 7.3,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 900.0,
+    "bid": 194.0,
+    "ask": 204.0,
+    "open_interest": 252,
+    "volume": 3,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 199.0,
+    "spread_pct": 5.0,
+    "iv": 0.4374,
+    "iv_source": "chain",
+    "delta": 0.679,
+    "cost_usd": 20400.0,
+    "breakeven": 1104.0,
+    "breakeven_pct_above_last": 15.5,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $26,500 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "VLO",
@@ -404,7 +713,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 105.93,
    "uber_corr_120d": -0.14,
    "chart_gate": "ok",
    "fwd_pe": 7.1,
@@ -414,7 +724,47 @@
    "eps_next_fy": 53.49,
    "rev30_pct": 18.2,
    "rev90_pct": 93.0,
-   "next_earnings": "2027-01-28"
+   "next_earnings": "2027-01-28",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 300.0,
+    "bid": 109.6,
+    "ask": 113.1,
+    "open_interest": 8,
+    "volume": 1,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 111.35,
+    "spread_pct": 3.1,
+    "iv": 0.5178,
+    "iv_source": "chain",
+    "delta": 0.79,
+    "cost_usd": 11310.0,
+    "breakeven": 413.1,
+    "breakeven_pct_above_last": 8.8,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 300.0,
+    "bid": 119.5,
+    "ask": 123.5,
+    "open_interest": 680,
+    "volume": 2,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 121.5,
+    "spread_pct": 3.3,
+    "iv": 0.5155,
+    "iv_source": "chain",
+    "delta": 0.784,
+    "cost_usd": 12350.0,
+    "breakeven": 423.5,
+    "breakeven_pct_above_last": 11.5,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $11,310 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "AEIS",
@@ -436,7 +786,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 8.89,
    "uber_corr_120d": -0.22,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 12.25,
@@ -446,7 +797,47 @@
    "eps_next_fy": 17.93,
    "rev30_pct": 16.9,
    "rev90_pct": 18.0,
-   "next_earnings": "2026-11-02"
+   "next_earnings": "2026-11-02",
+   "option": {
+    "expiry": "2027-12-17",
+    "strike": 165.0,
+    "bid": 85.0,
+    "ask": 89.0,
+    "open_interest": 6,
+    "volume": 0,
+    "days_to_expiry": 399,
+    "quote": "ok",
+    "mid": 87.0,
+    "spread_pct": 4.6,
+    "iv": 0.7115,
+    "iv_source": "chain",
+    "delta": 0.793,
+    "cost_usd": 8900.0,
+    "breakeven": 254.0,
+    "breakeven_pct_above_last": 15.6,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-12-17",
+    "strike": 195.0,
+    "bid": 69.5,
+    "ask": 74.0,
+    "open_interest": 14,
+    "volume": 12,
+    "days_to_expiry": 399,
+    "quote": "ok",
+    "mid": 71.75,
+    "spread_pct": 6.3,
+    "iv": 0.693,
+    "iv_source": "chain",
+    "delta": 0.721,
+    "cost_usd": 7400.0,
+    "breakeven": 269.0,
+    "breakeven_pct_above_last": 22.5,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $8,900 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "ANET",
@@ -474,7 +865,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 249.26,
    "uber_corr_120d": -0.13,
    "chart_gate": "ok",
    "fwd_pe": 32.68,
@@ -484,7 +876,28 @@
    "eps_next_fy": 6.04,
    "rev30_pct": 15.7,
    "rev90_pct": 17.0,
-   "next_earnings": "2026-11-03"
+   "next_earnings": "2026-11-03",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 150.0,
+    "bid": 67.4,
+    "ask": 70.7,
+    "open_interest": 107,
+    "volume": 1,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 69.05,
+    "spread_pct": 4.8,
+    "iv": 0.6606,
+    "iv_source": "chain",
+    "delta": 0.791,
+    "cost_usd": 7070.0,
+    "breakeven": 220.7,
+    "breakeven_pct_above_last": 11.9,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $7,070 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "MPC",
@@ -512,7 +925,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 112.9,
    "uber_corr_120d": -0.09,
    "chart_gate": "ok",
    "fwd_pe": 6.75,
@@ -522,7 +936,47 @@
    "eps_next_fy": 61.42,
    "rev30_pct": 15.7,
    "rev90_pct": 95.4,
-   "next_earnings": "2027-02-02"
+   "next_earnings": "2027-02-02",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 300.0,
+    "bid": 138.5,
+    "ask": 142.5,
+    "open_interest": 49,
+    "volume": 1,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 140.5,
+    "spread_pct": 2.8,
+    "iv": 0.5322,
+    "iv_source": "chain",
+    "delta": 0.835,
+    "cost_usd": 14250.0,
+    "breakeven": 442.5,
+    "breakeven_pct_above_last": 6.7,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 320.0,
+    "bid": 115.5,
+    "ask": 118.7,
+    "open_interest": 721,
+    "volume": 370,
+    "days_to_expiry": 216,
+    "quote": "ok",
+    "mid": 117.1,
+    "spread_pct": 2.7,
+    "iv": 0.5196,
+    "iv_source": "chain",
+    "delta": 0.818,
+    "cost_usd": 11870.0,
+    "breakeven": 438.7,
+    "breakeven_pct_above_last": 5.8,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $14,250 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "DELL",
@@ -544,17 +998,39 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 219.06,
    "uber_corr_120d": -0.1,
    "chart_gate": "ok",
-   "fwd_pe": 11.33,
+   "fwd_pe": 11.29,
    "trail_pe": 20.03,
    "analysts": 25.0,
    "mean_target": 590.0,
    "eps_next_fy": 28.48,
    "rev30_pct": 15.5,
    "rev90_pct": 46.6,
-   "next_earnings": "2026-11-24"
+   "next_earnings": "2026-11-24",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 230.0,
+    "bid": 149.0,
+    "ask": 153.35,
+    "open_interest": 1117,
+    "volume": 2,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 151.18,
+    "spread_pct": 2.9,
+    "iv": 0.8015,
+    "iv_source": "chain",
+    "delta": 0.832,
+    "cost_usd": 15335.0,
+    "breakeven": 383.35,
+    "breakeven_pct_above_last": 11.3,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $15,335 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "MTSI",
@@ -576,7 +1052,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 17.82,
    "uber_corr_120d": -0.11,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 20.02,
@@ -586,7 +1063,47 @@
    "eps_next_fy": 11.59,
    "rev30_pct": 15.3,
    "rev90_pct": 15.3,
-   "next_earnings": "2027-02-04"
+   "next_earnings": "2027-02-04",
+   "option": {
+    "expiry": "2027-05-21",
+    "strike": 180.0,
+    "bid": 75.8,
+    "ask": 79.3,
+    "open_interest": 10,
+    "volume": 0,
+    "days_to_expiry": 189,
+    "quote": "ok",
+    "mid": 77.55,
+    "spread_pct": 4.5,
+    "iv": 0.8102,
+    "iv_source": "chain",
+    "delta": 0.777,
+    "cost_usd": 7930.0,
+    "breakeven": 259.3,
+    "breakeven_pct_above_last": 11.7,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-05-21",
+    "strike": 230.0,
+    "bid": 49.8,
+    "ask": 53.4,
+    "open_interest": 27,
+    "volume": 1,
+    "days_to_expiry": 189,
+    "quote": "ok",
+    "mid": 51.6,
+    "spread_pct": 7.0,
+    "iv": 0.7721,
+    "iv_source": "chain",
+    "delta": 0.63,
+    "cost_usd": 5340.0,
+    "breakeven": 283.4,
+    "breakeven_pct_above_last": 22.1,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $7,930 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "COP",
@@ -614,7 +1131,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 168.22,
    "uber_corr_120d": -0.16,
    "chart_gate": "ok",
    "fwd_pe": 12.39,
@@ -624,7 +1142,47 @@
    "eps_next_fy": 11.48,
    "rev30_pct": 14.3,
    "rev90_pct": 24.1,
-   "next_earnings": "2027-02-04"
+   "next_earnings": "2027-02-04",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 115.0,
+    "bid": 31.5,
+    "ask": 34.15,
+    "open_interest": 7,
+    "volume": 5,
+    "days_to_expiry": 308,
+    "quote": "ok",
+    "mid": 32.83,
+    "spread_pct": 8.1,
+    "iv": 0.3672,
+    "iv_source": "chain",
+    "delta": 0.816,
+    "cost_usd": 3415.0,
+    "breakeven": 149.15,
+    "breakeven_pct_above_last": 4.8,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 140.0,
+    "bid": 14.75,
+    "ask": 15.7,
+    "open_interest": 1550,
+    "volume": 26,
+    "days_to_expiry": 216,
+    "quote": "ok",
+    "mid": 15.22,
+    "spread_pct": 6.2,
+    "iv": 0.3363,
+    "iv_source": "chain",
+    "delta": 0.612,
+    "cost_usd": 1570.0,
+    "breakeven": 155.7,
+    "breakeven_pct_above_last": 9.4,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,415 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "FLEX",
@@ -646,17 +1204,58 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 27.7,
    "uber_corr_120d": -0.14,
    "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 9.75,
+   "fwd_pe": 9.57,
    "trail_pe": 26.97,
    "analysts": 10.0,
    "mean_target": 151.4,
    "eps_next_fy": 7.84,
    "rev30_pct": 11.0,
    "rev90_pct": 10.2,
-   "next_earnings": "2027-01-27"
+   "next_earnings": "2027-01-27",
+   "option": {
+    "expiry": "2028-01-21",
+    "strike": 60.0,
+    "bid": 26.0,
+    "ask": 35.0,
+    "open_interest": 30,
+    "volume": 10,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 30.5,
+    "spread_pct": 29.5,
+    "iv": 0.7827,
+    "iv_source": "chain",
+    "delta": 0.771,
+    "cost_usd": 3500.0,
+    "breakeven": 95.0,
+    "breakeven_pct_above_last": 26.7,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 70.0,
+    "bid": 23.1,
+    "ask": 29.3,
+    "open_interest": 159,
+    "volume": 4,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 26.2,
+    "spread_pct": 23.7,
+    "iv": 0.7716,
+    "iv_source": "chain",
+    "delta": 0.712,
+    "cost_usd": 2930.0,
+    "breakeven": 99.3,
+    "breakeven_pct_above_last": 32.4,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,500 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "FN",
@@ -678,7 +1277,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 11.71,
    "uber_corr_120d": -0.13,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 13.6,
@@ -688,7 +1288,8 @@
    "eps_next_fy": 24.11,
    "rev30_pct": 10.7,
    "rev90_pct": 12.7,
-   "next_earnings": "2027-02-01"
+   "next_earnings": "2027-02-01",
+   "fits_slot": null
   },
   {
    "ticker": "ELF",
@@ -710,7 +1311,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 6.98,
    "uber_corr_120d": 0.31,
    "chart_gate": "ok",
    "fwd_pe": 28.13,
@@ -720,7 +1322,47 @@
    "eps_next_fy": 4.19,
    "rev30_pct": 8.5,
    "rev90_pct": 9.1,
-   "next_earnings": "2027-02-03"
+   "next_earnings": "2027-02-03",
+   "option": {
+    "expiry": "2027-05-21",
+    "strike": 90.0,
+    "bid": 35.2,
+    "ask": 37.7,
+    "open_interest": 40,
+    "volume": 1,
+    "days_to_expiry": 189,
+    "quote": "ok",
+    "mid": 36.45,
+    "spread_pct": 6.9,
+    "iv": 0.6572,
+    "iv_source": "chain",
+    "delta": 0.803,
+    "cost_usd": 3770.0,
+    "breakeven": 127.7,
+    "breakeven_pct_above_last": 8.2,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 100.0,
+    "bid": 38.75,
+    "ask": 41.9,
+    "open_interest": 508,
+    "volume": 4,
+    "days_to_expiry": 434,
+    "quote": "ok",
+    "mid": 40.33,
+    "spread_pct": 7.8,
+    "iv": 0.6584,
+    "iv_source": "chain",
+    "delta": 0.744,
+    "cost_usd": 4190.0,
+    "breakeven": 141.9,
+    "breakeven_pct_above_last": 20.3,
+    "liquidity": "ok"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,770 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "PLTR",
@@ -742,7 +1384,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 404.77,
    "uber_corr_120d": 0.21,
    "chart_gate": "ok",
    "fwd_pe": 66.26,
@@ -752,7 +1395,8 @@
    "eps_next_fy": 2.54,
    "rev30_pct": 8.0,
    "rev90_pct": 9.7,
-   "next_earnings": "2027-02-01"
+   "next_earnings": "2027-02-01",
+   "fits_slot": null
   },
   {
    "ticker": "BTSG",
@@ -774,7 +1418,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 14.17,
    "uber_corr_120d": -0.12,
    "chart_gate": "ok",
    "fwd_pe": 29.31,
@@ -784,7 +1429,8 @@
    "eps_next_fy": 2.43,
    "rev30_pct": 6.6,
    "rev90_pct": 6.6,
-   "next_earnings": "2026-10-30"
+   "next_earnings": "2026-10-30",
+   "fits_slot": null
   },
   {
    "ticker": "APP",
@@ -806,7 +1452,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 135.54,
    "uber_corr_120d": 0.16,
    "chart_gate": "spike: 20%+ over the 50-day",
    "fwd_pe": 19.61,
@@ -816,7 +1463,8 @@
    "eps_next_fy": 20.72,
    "rev30_pct": 4.1,
    "rev90_pct": 1.3,
-   "next_earnings": "2026-11-04"
+   "next_earnings": "2026-11-04",
+   "fits_slot": null
   },
   {
    "ticker": "NBIX",
@@ -838,7 +1486,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 16.94,
    "uber_corr_120d": 0.24,
    "chart_gate": "ok",
    "fwd_pe": 13.61,
@@ -848,7 +1497,8 @@
    "eps_next_fy": 12.3,
    "rev30_pct": 3.5,
    "rev90_pct": 1.0,
-   "next_earnings": "2026-11-02"
+   "next_earnings": "2026-11-02",
+   "fits_slot": null
   },
   {
    "ticker": "FTNT",
@@ -870,7 +1520,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 93.47,
    "uber_corr_120d": -0.03,
    "chart_gate": "ok",
    "fwd_pe": 32.61,
@@ -880,7 +1531,8 @@
    "eps_next_fy": 3.9,
    "rev30_pct": 3.3,
    "rev90_pct": 3.8,
-   "next_earnings": "2026-10-28"
+   "next_earnings": "2026-10-28",
+   "fits_slot": null
   },
   {
    "ticker": "MCK",
@@ -902,7 +1554,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 127.33,
    "uber_corr_120d": 0.14,
    "chart_gate": "ok",
    "fwd_pe": 21.13,
@@ -912,7 +1565,8 @@
    "eps_next_fy": 52.26,
    "rev30_pct": 3.1,
    "rev90_pct": 3.4,
-   "next_earnings": "2027-02-03"
+   "next_earnings": "2027-02-03",
+   "fits_slot": null
   },
   {
    "ticker": "ALSN",
@@ -934,17 +1588,19 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 10.41,
    "uber_corr_120d": 0.23,
    "chart_gate": "ok",
    "fwd_pe": 10.92,
-   "trail_pe": 18.28,
+   "trail_pe": 18.12,
    "analysts": 10.0,
    "mean_target": 142.7,
    "eps_next_fy": 11.6,
    "rev30_pct": 3.0,
    "rev90_pct": 3.2,
-   "next_earnings": "2026-11-02"
+   "next_earnings": "2026-11-02",
+   "fits_slot": null
   },
   {
    "ticker": "GS",
@@ -972,7 +1628,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 264.37,
    "uber_corr_120d": 0.03,
    "chart_gate": "ok",
    "fwd_pe": 12.34,
@@ -982,7 +1639,8 @@
    "eps_next_fy": 74.63,
    "rev30_pct": 2.5,
    "rev90_pct": 1.2,
-   "next_earnings": "2027-01-19"
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
   },
   {
    "ticker": "ELV",
@@ -1004,7 +1662,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 92.84,
    "uber_corr_120d": 0.15,
    "chart_gate": "ok",
    "fwd_pe": 14.19,
@@ -1014,7 +1673,8 @@
    "eps_next_fy": 30.29,
    "rev30_pct": 2.4,
    "rev90_pct": 2.2,
-   "next_earnings": "2027-01-28"
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
   },
   {
    "ticker": "JPM",
@@ -1042,7 +1702,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 919.35,
    "uber_corr_120d": 0.04,
    "chart_gate": "ok",
    "fwd_pe": 13.54,
@@ -1052,7 +1713,8 @@
    "eps_next_fy": 25.57,
    "rev30_pct": 2.2,
    "rev90_pct": 2.5,
-   "next_earnings": "2027-01-14"
+   "next_earnings": "2027-01-14",
+   "fits_slot": null
   },
   {
    "ticker": "MAR",
@@ -1080,7 +1742,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 108.97,
    "uber_corr_120d": 0.02,
    "chart_gate": "ok",
    "fwd_pe": 31.47,
@@ -1090,7 +1753,8 @@
    "eps_next_fy": 13.45,
    "rev30_pct": 2.2,
    "rev90_pct": 2.3,
-   "next_earnings": "2026-11-02"
+   "next_earnings": "2026-11-02",
+   "fits_slot": null
   },
   {
    "ticker": "TOST",
@@ -1119,16 +1783,18 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 20.15,
    "uber_corr_120d": 0.51,
    "chart_gate": "ok",
    "fwd_pe": 19.58,
-   "trail_pe": 38.11,
+   "trail_pe": 36.89,
    "analysts": 27.0,
    "mean_target": 38.89,
    "eps_next_fy": 1.77,
    "rev30_pct": 2.1,
    "rev90_pct": 1.9,
-   "next_earnings": "2026-11-03"
+   "next_earnings": "2026-11-03",
+   "fits_slot": null
   },
   {
    "ticker": "HALO",
@@ -1150,7 +1816,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 11.43,
    "uber_corr_120d": 0.26,
    "chart_gate": "ok",
    "fwd_pe": 9.47,
@@ -1160,7 +1827,8 @@
    "eps_next_fy": 10.59,
    "rev30_pct": 1.9,
    "rev90_pct": 1.9,
-   "next_earnings": "2026-11-05"
+   "next_earnings": "2026-11-05",
+   "fits_slot": null
   },
   {
    "ticker": "BNY",
@@ -1188,17 +1856,19 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 103.23,
    "uber_corr_120d": 0.03,
    "chart_gate": "ok",
    "fwd_pe": 14.7,
-   "trail_pe": 16.99,
+   "trail_pe": 16.91,
    "analysts": 15.0,
    "mean_target": 163.7,
    "eps_next_fy": 10.44,
    "rev30_pct": 1.9,
    "rev90_pct": 1.9,
-   "next_earnings": "2027-01-15"
+   "next_earnings": "2027-01-15",
+   "fits_slot": null
   },
   {
    "ticker": "DASH",
@@ -1220,7 +1890,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 74.77,
    "uber_corr_120d": 0.61,
    "chart_gate": "ok",
    "fwd_pe": 22.49,
@@ -1230,7 +1901,8 @@
    "eps_next_fy": 4.58,
    "rev30_pct": 1.7,
    "rev90_pct": 2.8,
-   "next_earnings": "2026-10-29"
+   "next_earnings": "2026-10-29",
+   "fits_slot": null
   },
   {
    "ticker": "ABNB",
@@ -1258,7 +1930,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 111.46,
    "uber_corr_120d": 0.57,
    "chart_gate": "ok",
    "fwd_pe": 29.58,
@@ -1268,7 +1941,8 @@
    "eps_next_fy": 6.36,
    "rev30_pct": 1.6,
    "rev90_pct": 2.9,
-   "next_earnings": "2026-11-05"
+   "next_earnings": "2026-11-05",
+   "fits_slot": null
   },
   {
    "ticker": "NEM",
@@ -1296,7 +1970,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 117.57,
    "uber_corr_120d": 0.3,
    "chart_gate": "ok",
    "fwd_pe": 11.2,
@@ -1306,7 +1981,8 @@
    "eps_next_fy": 10.1,
    "rev30_pct": 1.2,
    "rev90_pct": -3.4,
-   "next_earnings": "2026-10-22"
+   "next_earnings": "2026-10-22",
+   "fits_slot": null
   },
   {
    "ticker": "T",
@@ -1335,6 +2011,7 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 149.41,
    "uber_corr_120d": 0.18,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 8.54,
@@ -1344,7 +2021,8 @@
    "eps_next_fy": 2.6,
    "rev30_pct": 1.1,
    "rev90_pct": 1.3,
-   "next_earnings": "2027-01-27"
+   "next_earnings": "2027-01-27",
+   "fits_slot": null
   },
   {
    "ticker": "MMM",
@@ -1366,7 +2044,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 94.9,
    "uber_corr_120d": 0.17,
    "chart_gate": "ok",
    "fwd_pe": 18.51,
@@ -1376,7 +2055,8 @@
    "eps_next_fy": 9.92,
    "rev30_pct": 1.0,
    "rev90_pct": 1.5,
-   "next_earnings": "2027-01-19"
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
   },
   {
    "ticker": "HPE",
@@ -1399,6 +2079,7 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 64.1,
    "uber_corr_120d": -0.21,
    "chart_gate": "ok",
    "fwd_pe": 10.2,
@@ -1408,7 +2089,8 @@
    "eps_next_fy": 4.74,
    "rev30_pct": 0.8,
    "rev90_pct": 16.9,
-   "next_earnings": "2026-11-23"
+   "next_earnings": "2026-11-23",
+   "fits_slot": null
   },
   {
    "ticker": "TWLO",
@@ -1430,7 +2112,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 32.68,
    "uber_corr_120d": 0.23,
    "chart_gate": "ok",
    "fwd_pe": 30.82,
@@ -1440,7 +2123,8 @@
    "eps_next_fy": 6.85,
    "rev30_pct": 0.8,
    "rev90_pct": 0.7,
-   "next_earnings": "2026-10-29"
+   "next_earnings": "2026-10-29",
+   "fits_slot": null
   },
   {
    "ticker": "TMUS",
@@ -1468,7 +2152,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 180.02,
    "uber_corr_120d": 0.14,
    "chart_gate": "ok",
    "fwd_pe": 11.92,
@@ -1478,7 +2163,8 @@
    "eps_next_fy": 14.01,
    "rev30_pct": 0.7,
    "rev90_pct": 0.9,
-   "next_earnings": "2026-10-28"
+   "next_earnings": "2026-10-28",
+   "fits_slot": null
   },
   {
    "ticker": "MA",
@@ -1500,7 +2186,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 576.01,
    "uber_corr_120d": 0.37,
    "chart_gate": "ok",
    "fwd_pe": 28.54,
@@ -1510,7 +2197,8 @@
    "eps_next_fy": 23.16,
    "rev30_pct": 0.6,
    "rev90_pct": 0.7,
-   "next_earnings": "2027-01-28"
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
   },
   {
    "ticker": "MRSH",
@@ -1532,17 +2220,19 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 98.8,
    "uber_corr_120d": 0.42,
    "chart_gate": "ok",
    "fwd_pe": 18.12,
-   "trail_pe": 24.85,
+   "trail_pe": 24.59,
    "analysts": 21.0,
    "mean_target": 206.62,
    "eps_next_fy": 11.46,
    "rev30_pct": 0.4,
    "rev90_pct": 0.5,
-   "next_earnings": "2027-01-28"
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
   },
   {
    "ticker": "SNPS",
@@ -1564,7 +2254,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 87.23,
    "uber_corr_120d": 0.02,
    "chart_gate": "ok",
    "fwd_pe": 24.41,
@@ -1574,7 +2265,8 @@
    "eps_next_fy": 18.65,
    "rev30_pct": 0.3,
    "rev90_pct": 7.9,
-   "next_earnings": "2026-12-08"
+   "next_earnings": "2026-12-08",
+   "fits_slot": null
   },
   {
    "ticker": "WFC",
@@ -1602,17 +2294,19 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 258.31,
    "uber_corr_120d": 0.11,
    "chart_gate": "ok",
-   "fwd_pe": 10.75,
+   "fwd_pe": 10.76,
    "trail_pe": 12.14,
    "analysts": 24.0,
    "mean_target": 97.38,
    "eps_next_fy": 8.06,
    "rev30_pct": 0.3,
    "rev90_pct": 1.1,
-   "next_earnings": "2027-01-14"
+   "next_earnings": "2027-01-14",
+   "fits_slot": null
   },
   {
    "ticker": "DIS",
@@ -1634,7 +2328,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 205.42,
    "uber_corr_120d": 0.42,
    "chart_gate": "ok",
    "fwd_pe": 15.88,
@@ -1644,7 +2339,8 @@
    "eps_next_fy": 7.49,
    "rev30_pct": 0.3,
    "rev90_pct": 0.8,
-   "next_earnings": "2026-11-17"
+   "next_earnings": "2026-11-17",
+   "fits_slot": null
   },
   {
    "ticker": "SPGI",
@@ -1666,7 +2362,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 137.29,
    "uber_corr_120d": 0.35,
    "chart_gate": "ok",
    "fwd_pe": 23.47,
@@ -1676,7 +2373,8 @@
    "eps_next_fy": 20.18,
    "rev30_pct": -0.1,
    "rev90_pct": -0.3,
-   "next_earnings": "2026-10-27"
+   "next_earnings": "2026-10-27",
+   "fits_slot": null
   },
   {
    "ticker": "ADBE",
@@ -1704,7 +2402,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 94.61,
    "uber_corr_120d": 0.36,
    "chart_gate": "ok",
    "fwd_pe": 8.87,
@@ -1714,7 +2413,8 @@
    "eps_next_fy": 27.41,
    "rev30_pct": -0.4,
    "rev90_pct": 0.2,
-   "next_earnings": "2026-12-09"
+   "next_earnings": "2026-12-09",
+   "fits_slot": null
   },
   {
    "ticker": "NVDA",
@@ -1736,7 +2436,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 3932.34,
    "uber_corr_120d": -0.05,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 10.27,
@@ -1746,7 +2447,8 @@
    "eps_next_fy": 15.83,
    "rev30_pct": -0.5,
    "rev90_pct": 23.5,
-   "next_earnings": "2026-11-17"
+   "next_earnings": "2026-11-17",
+   "fits_slot": null
   },
   {
    "ticker": "COF",
@@ -1768,7 +2470,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 117.35,
    "uber_corr_120d": 0.24,
    "chart_gate": "ok",
    "fwd_pe": 8.17,
@@ -1778,7 +2481,8 @@
    "eps_next_fy": 23.86,
    "rev30_pct": -0.9,
    "rev90_pct": -0.8,
-   "next_earnings": "2027-01-19"
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
   },
   {
    "ticker": "BKNG",
@@ -1806,7 +2510,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 118.68,
    "uber_corr_120d": 0.58,
    "chart_gate": "ok",
    "fwd_pe": 13.02,
@@ -1816,7 +2521,8 @@
    "eps_next_fy": 12.26,
    "rev30_pct": -1.0,
    "rev90_pct": -1.0,
-   "next_earnings": "2026-11-03"
+   "next_earnings": "2026-11-03",
+   "fits_slot": null
   },
   {
    "ticker": "NFLX",
@@ -1838,7 +2544,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 255.21,
    "uber_corr_120d": 0.46,
    "chart_gate": "falling hard: below the 50-day and 200-day",
    "fwd_pe": 16.48,
@@ -1848,45 +2555,8 @@
    "eps_next_fy": 3.77,
    "rev30_pct": -1.1,
    "rev90_pct": -1.2,
-   "next_earnings": "2027-01-19"
-  },
-  {
-   "ticker": "MCO",
-   "name": "Moody's Corporation",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 508.2,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares (over the price cap)",
-   "uber_corr_120d": 0.48,
-   "chart_gate": "ok",
-   "fwd_pe": 27.31,
-   "trail_pe": 31.01,
-   "analysts": 21.0,
-   "mean_target": 552.48,
-   "eps_next_fy": 18.61,
-   "rev30_pct": -1.5,
-   "rev90_pct": -1.6,
-   "next_earnings": "2026-10-21"
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
   },
   {
    "ticker": "TEX",
@@ -1909,6 +2579,7 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 6.4,
    "uber_corr_120d": 0.06,
    "chart_gate": "ok",
    "fwd_pe": 9.76,
@@ -1918,7 +2589,48 @@
    "eps_next_fy": 5.84,
    "rev30_pct": -1.8,
    "rev90_pct": -2.2,
-   "next_earnings": "2026-10-28"
+   "next_earnings": "2026-10-28",
+   "fits_slot": null
+  },
+  {
+   "ticker": "CMCSA",
+   "name": "Comcast",
+   "sector": "Communication Services",
+   "index": "SP500",
+   "last": 25.16,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 89.34,
+   "uber_corr_120d": 0.34,
+   "chart_gate": "ok",
+   "fwd_pe": 7.14,
+   "trail_pe": 7.96,
+   "analysts": 22.0,
+   "mean_target": 27.98,
+   "eps_next_fy": 3.52,
+   "rev30_pct": -1.9,
+   "rev90_pct": -2.8,
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
   },
   {
    "ticker": "SCHW",
@@ -1946,7 +2658,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 160.48,
    "uber_corr_120d": 0.14,
    "chart_gate": "ok",
    "fwd_pe": 11.92,
@@ -1956,7 +2669,8 @@
    "eps_next_fy": 7.8,
    "rev30_pct": -2.0,
    "rev90_pct": 0.0,
-   "next_earnings": "2027-01-21"
+   "next_earnings": "2027-01-21",
+   "fits_slot": null
   },
   {
    "ticker": "HCA",
@@ -1984,7 +2698,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 104.25,
    "uber_corr_120d": 0.21,
    "chart_gate": "ok",
    "fwd_pe": 15.94,
@@ -1994,7 +2709,8 @@
    "eps_next_fy": 31.3,
    "rev30_pct": -2.2,
    "rev90_pct": -2.6,
-   "next_earnings": "2027-01-26"
+   "next_earnings": "2027-01-26",
+   "fits_slot": null
   },
   {
    "ticker": "BAC",
@@ -2023,6 +2739,7 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 352.05,
    "uber_corr_120d": 0.14,
    "chart_gate": "ok",
    "fwd_pe": 9.85,
@@ -2032,7 +2749,8 @@
    "eps_next_fy": 5.1,
    "rev30_pct": -2.7,
    "rev90_pct": -3.7,
-   "next_earnings": "2027-01-15"
+   "next_earnings": "2027-01-15",
+   "fits_slot": null
   },
   {
    "ticker": "CAVA",
@@ -2055,6 +2773,7 @@
     }
    ],
    "instrument": "deep ITM call",
+   "mcap_busd": 6.8,
    "uber_corr_120d": 0.15,
    "chart_gate": "ok",
    "fwd_pe": 82.12,
@@ -2064,7 +2783,8 @@
    "eps_next_fy": 0.71,
    "rev30_pct": -5.2,
    "rev90_pct": -5.6,
-   "next_earnings": "2026-11-04"
+   "next_earnings": "2026-11-04",
+   "fits_slot": null
   },
   {
    "ticker": "LB",
@@ -2086,7 +2806,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": null,
    "uber_corr_120d": -0.09,
    "chart_gate": "ok",
    "fwd_pe": 24.78,
@@ -2096,7 +2817,8 @@
    "eps_next_fy": 1.93,
    "rev30_pct": -9.0,
    "rev90_pct": -10.2,
-   "next_earnings": "2026-11-04"
+   "next_earnings": "2026-11-04",
+   "fits_slot": null
   },
   {
    "ticker": "ACN",
@@ -2118,7 +2840,8 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares (over the price cap)",
+   "instrument": "deep ITM call",
+   "mcap_busd": 147.97,
    "uber_corr_120d": 0.26,
    "chart_gate": "ok",
    "fwd_pe": 15.75,
@@ -2128,7 +2851,8 @@
    "eps_next_fy": 15.91,
    "rev30_pct": 0.0,
    "rev90_pct": 1.0,
-   "next_earnings": "2026-12-17"
+   "next_earnings": "2026-12-17",
+   "fits_slot": null
   }
  ]
 }
