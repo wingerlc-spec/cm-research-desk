@@ -39,11 +39,11 @@
   "ni_fy": 5783,
   "cfo_fy": 5854
  },
- "_drift_dates": "8-K Item 2.02 dates found for 956 companies",
+ "_drift_dates": "8-K Item 2.02 dates found for 957 companies",
  "_drift_stats": {
-  "qualified": 2047,
+  "qualified": 2048,
   "no_date": 69,
-  "failed_reaction": 1482,
+  "failed_reaction": 1483,
   "events": 493
  },
  "EARNINGS_DRIFT": {
@@ -110,13 +110,13 @@
  },
  "SHARE_SHRINK": {
   "all": {
-   "n": 3240,
-   "stocks": 625,
+   "n": 3241,
+   "stocks": 626,
    "months": 37,
    "e60": {
     "edge": 1.19,
     "t_clustered": 1.7,
-    "median": 0.01,
+    "median": 0.02,
     "baseline_median": -0.87,
     "pct_beat_spy": 50.0,
     "baseline_pct_beat_spy": 47.0
@@ -124,18 +124,18 @@
    "e120": {
     "edge": 0.85,
     "t_clustered": 1.4,
-    "median": -0.45,
-    "baseline_median": -2.11,
+    "median": -0.47,
+    "baseline_median": -2.12,
     "pct_beat_spy": 49.0,
     "baseline_pct_beat_spy": 46.0
    },
    "e120_high_accrual": {
-    "n": 757,
-    "mean": 0.86
+    "n": 758,
+    "mean": 0.89
    },
    "e120_clean_earnings": {
     "n": 2242,
-    "mean": 0.84
+    "mean": 0.83
    },
    "verdict": "NOT SHOWN"
   },

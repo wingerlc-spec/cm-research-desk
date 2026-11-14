@@ -1,7 +1,7 @@
 {
  "asof": "2026-11-13",
- "generated_utc": "2026-11-14 19:05",
- "universe": 925,
+ "generated_utc": "2026-11-14 18:35",
+ "universe": 926,
  "candidates_per_archetype": {
   "RECOVERY_LEADER": 1,
   "EVENT_GAP_UP": 3,
@@ -19,7 +19,7 @@
   "suspect data": 1,
   "deal-pinned (ATR under 0.3x of 2m ago)": 3
  },
- "universe_note": "S&P 500 (503) + S&P 400 (400); market cap floor $5B on today's candidates: 902 of 902 names had a market cap (0 from the cache), 0 had none and were kept [1 names missing from the bulk call, 1 filled one by one]",
+ "universe_note": "S&P 500 (503) + S&P 400 (400); market cap floor $5B on today's candidates: 903 of 903 names had a market cap (0 from the cache), 0 had none and were kept [1 names missing from the bulk call, 1 filled one by one]",
  "scorecard": {
   "calls_logged": 466,
   "by_archetype": {
@@ -89,7 +89,7 @@
    "e60": {
     "mean_excess": 7.42,
     "baseline": 0.28,
-    "edge": 7.14,
+    "edge": 7.15,
     "edge_month_matched": 4.98,
     "t_clustered": 3.9,
     "pct_months_positive": 63.0,
@@ -102,16 +102,16 @@
     "mean_excess": 11.76,
     "baseline": 0.41,
     "edge": 11.35,
-    "edge_month_matched": 11.61,
+    "edge_month_matched": 11.62,
     "t_clustered": 5.8,
     "pct_months_positive": 73.0,
     "median": 4.96,
-    "baseline_median": -1.69,
+    "baseline_median": -1.7,
     "pct_beat_spy": 56.0,
     "baseline_pct_beat_spy": 46.0
    },
    "edge120_first_half": 12.57,
-   "edge120_second_half": 10.44,
+   "edge120_second_half": 10.45,
    "by_condition": {
     "spy_above_200d": {
      "n": 820,
@@ -120,7 +120,7 @@
     },
     "spy_below_200d": {
      "n": 233,
-     "edge120": 7.49,
+     "edge120": 7.5,
      "t_clustered": 2.6
     },
     "sector_leading": {
@@ -137,7 +137,7 @@
    "verdict": "WORKS"
   },
   "EVENT_GAP_UP": {
-   "n": 5655,
+   "n": 5657,
    "months_with_signals": 103,
    "e60": {
     "mean_excess": 1.17,
@@ -152,48 +152,48 @@
     "baseline_pct_beat_spy": 48.0
    },
    "e120": {
-    "mean_excess": 2.57,
+    "mean_excess": 2.56,
     "baseline": 0.41,
     "edge": 2.16,
     "edge_month_matched": 2.21,
     "t_clustered": 4.9,
     "pct_months_positive": 72.0,
     "median": -1.28,
-    "baseline_median": -1.69,
+    "baseline_median": -1.7,
     "pct_beat_spy": 48.0,
     "baseline_pct_beat_spy": 46.0
    },
-   "edge120_first_half": 1.56,
+   "edge120_first_half": 1.55,
    "edge120_second_half": 2.84,
    "by_condition": {
     "spy_above_200d": {
-     "n": 4622,
-     "edge120": 2.01,
+     "n": 4623,
+     "edge120": 2.02,
      "t_clustered": 1.8
     },
     "spy_below_200d": {
-     "n": 1033,
-     "edge120": 2.96,
+     "n": 1034,
+     "edge120": 2.92,
      "t_clustered": 2.2
     },
     "sector_leading": {
-     "n": 2816,
-     "edge120": 1.61,
-     "t_clustered": 1.5
+     "n": 2817,
+     "edge120": 1.63,
+     "t_clustered": 1.6
     },
     "sector_lagging": {
-     "n": 2839,
-     "edge120": 2.68,
+     "n": 2840,
+     "edge120": 2.67,
      "t_clustered": 5.0
     }
    },
    "verdict": "WORKS"
   },
   "BASE_COIL": {
-   "n": 18372,
+   "n": 18394,
    "months_with_signals": 102,
    "e60": {
-    "mean_excess": -1.18,
+    "mean_excess": -1.19,
     "baseline": 0.28,
     "edge": -1.46,
     "edge_month_matched": -1.73,
@@ -205,37 +205,37 @@
     "baseline_pct_beat_spy": 48.0
    },
    "e120": {
-    "mean_excess": -1.66,
+    "mean_excess": -1.67,
     "baseline": 0.41,
     "edge": -2.07,
     "edge_month_matched": -2.51,
     "t_clustered": -5.2,
     "pct_months_positive": 29.0,
-    "median": -2.39,
-    "baseline_median": -1.69,
+    "median": -2.4,
+    "baseline_median": -1.7,
     "pct_beat_spy": 44.0,
     "baseline_pct_beat_spy": 46.0
    },
-   "edge120_first_half": -2.3,
-   "edge120_second_half": -1.99,
+   "edge120_first_half": -2.31,
+   "edge120_second_half": -1.98,
    "by_condition": {
     "spy_above_200d": {
-     "n": 16626,
+     "n": 16646,
      "edge120": -1.75,
      "t_clustered": -3.5
     },
     "spy_below_200d": {
-     "n": 1746,
+     "n": 1748,
      "edge120": -3.56,
      "t_clustered": -3.1
     },
     "sector_leading": {
-     "n": 9308,
-     "edge120": -2.59,
+     "n": 9321,
+     "edge120": -2.6,
      "t_clustered": -5.6
     },
     "sector_lagging": {
-     "n": 9064,
+     "n": 9073,
      "edge120": -1.55,
      "t_clustered": -3.2
     }
@@ -243,15 +243,15 @@
    "verdict": "HURTS"
   },
   "MOMENTUM": {
-   "n": 18111,
+   "n": 18118,
    "months_with_signals": 103,
    "e60": {
-    "mean_excess": -0.25,
+    "mean_excess": -0.26,
     "baseline": 0.28,
     "edge": -0.53,
     "edge_month_matched": -0.4,
     "t_clustered": -1.2,
-    "pct_months_positive": 49.0,
+    "pct_months_positive": 50.0,
     "median": -1.16,
     "baseline_median": -0.66,
     "pct_beat_spy": 46.0,
@@ -265,30 +265,30 @@
     "t_clustered": -0.4,
     "pct_months_positive": 50.0,
     "median": -1.89,
-    "baseline_median": -1.69,
+    "baseline_median": -1.7,
     "pct_beat_spy": 45.0,
     "baseline_pct_beat_spy": 46.0
    },
    "edge120_first_half": -1.91,
-   "edge120_second_half": 1.17,
+   "edge120_second_half": 1.18,
    "by_condition": {
     "spy_above_200d": {
-     "n": 16983,
+     "n": 16990,
      "edge120": -0.02,
      "t_clustered": -0.4
     },
     "spy_below_200d": {
      "n": 1128,
-     "edge120": -3.51,
+     "edge120": -3.5,
      "t_clustered": 0.7
     },
     "sector_leading": {
-     "n": 10213,
-     "edge120": -0.58,
-     "t_clustered": -0.0
+     "n": 10218,
+     "edge120": -0.57,
+     "t_clustered": 0.0
     },
     "sector_lagging": {
-     "n": 7898,
+     "n": 7900,
      "edge120": -0.3,
      "t_clustered": -0.3
     }
@@ -296,29 +296,29 @@
    "verdict": "NOT SHOWN"
   },
   "NARRATIVE_SCARE": {
-   "n": 2311,
+   "n": 2312,
    "months_with_signals": 103,
    "e60": {
     "mean_excess": 0.4,
     "baseline": 0.28,
-    "edge": 0.12,
-    "edge_month_matched": 0.44,
+    "edge": 0.13,
+    "edge_month_matched": 0.45,
     "t_clustered": 0.8,
     "pct_months_positive": 54.0,
-    "median": -1.38,
+    "median": -1.37,
     "baseline_median": -0.66,
     "pct_beat_spy": 46.0,
     "baseline_pct_beat_spy": 48.0
    },
    "e120": {
-    "mean_excess": 2.46,
+    "mean_excess": 2.47,
     "baseline": 0.41,
-    "edge": 2.05,
-    "edge_month_matched": 1.92,
-    "t_clustered": 2.3,
+    "edge": 2.06,
+    "edge_month_matched": 1.95,
+    "t_clustered": 2.4,
     "pct_months_positive": 65.0,
-    "median": -1.29,
-    "baseline_median": -1.69,
+    "median": -1.27,
+    "baseline_median": -1.7,
     "pct_beat_spy": 48.0,
     "baseline_pct_beat_spy": 46.0
    },
@@ -326,19 +326,19 @@
    "edge120_second_half": 1.89,
    "by_condition": {
     "spy_above_200d": {
-     "n": 1963,
+     "n": 1964,
      "edge120": 2.35,
-     "t_clustered": 2.6
+     "t_clustered": 2.7
     },
     "spy_below_200d": {
      "n": 348,
-     "edge120": 0.87,
+     "edge120": 0.88,
      "t_clustered": 0.8
     },
     "sector_leading": {
-     "n": 1172,
-     "edge120": 1.18,
-     "t_clustered": -0.6
+     "n": 1173,
+     "edge120": 1.19,
+     "t_clustered": -0.5
     },
     "sector_lagging": {
      "n": 1139,
@@ -349,14 +349,14 @@
    "verdict": "WORKS"
   },
   "VALUE_DIVERGENCE": {
-   "n": 10764,
+   "n": 10771,
    "months_with_signals": 103,
    "e60": {
     "mean_excess": 1.59,
     "baseline": 0.28,
     "edge": 1.31,
     "edge_month_matched": -0.06,
-    "t_clustered": -0.2,
+    "t_clustered": -0.1,
     "pct_months_positive": 48.0,
     "median": 0.12,
     "baseline_median": -0.66,
@@ -364,27 +364,27 @@
     "baseline_pct_beat_spy": 48.0
    },
    "e120": {
-    "mean_excess": 3.82,
+    "mean_excess": 3.83,
     "baseline": 0.41,
-    "edge": 3.41,
+    "edge": 3.42,
     "edge_month_matched": 1.03,
-    "t_clustered": 1.7,
+    "t_clustered": 1.8,
     "pct_months_positive": 51.0,
-    "median": 0.37,
-    "baseline_median": -1.69,
+    "median": 0.38,
+    "baseline_median": -1.7,
     "pct_beat_spy": 51.0,
     "baseline_pct_beat_spy": 46.0
    },
-   "edge120_first_half": 5.48,
+   "edge120_first_half": 5.5,
    "edge120_second_half": 2.07,
    "by_condition": {
     "spy_above_200d": {
-     "n": 6671,
-     "edge120": 3.39,
+     "n": 6675,
+     "edge120": 3.41,
      "t_clustered": 0.9
     },
     "spy_below_200d": {
-     "n": 4093,
+     "n": 4096,
      "edge120": 2.78,
      "t_clustered": 1.6
     },
@@ -394,37 +394,37 @@
      "t_clustered": 3.2
     },
     "sector_lagging": {
-     "n": 6256,
-     "edge120": 2.21,
+     "n": 6263,
+     "edge120": 2.23,
      "t_clustered": 0.6
     }
    },
    "verdict": "NOT SHOWN"
   },
   "MACRO_PUNISHED": {
-   "n": 17992,
+   "n": 18008,
    "months_with_signals": 103,
    "e60": {
-    "mean_excess": 0.45,
+    "mean_excess": 0.46,
     "baseline": 0.28,
     "edge": 0.18,
     "edge_month_matched": -0.04,
-    "t_clustered": -0.2,
-    "pct_months_positive": 53.0,
+    "t_clustered": -0.1,
+    "pct_months_positive": 51.0,
     "median": -0.68,
     "baseline_median": -0.66,
     "pct_beat_spy": 48.0,
     "baseline_pct_beat_spy": 48.0
    },
    "e120": {
-    "mean_excess": 0.57,
+    "mean_excess": 0.58,
     "baseline": 0.41,
-    "edge": 0.16,
+    "edge": 0.17,
     "edge_month_matched": 0.05,
     "t_clustered": 0.1,
     "pct_months_positive": 57.0,
     "median": -1.86,
-    "baseline_median": -1.69,
+    "baseline_median": -1.7,
     "pct_beat_spy": 46.0,
     "baseline_pct_beat_spy": 46.0
    },
@@ -432,43 +432,43 @@
    "edge120_second_half": -0.37,
    "by_condition": {
     "spy_above_200d": {
-     "n": 15536,
-     "edge120": -0.11,
+     "n": 15550,
+     "edge120": -0.1,
      "t_clustered": -1.3
     },
     "spy_below_200d": {
-     "n": 2456,
+     "n": 2458,
      "edge120": 2.53,
      "t_clustered": 0.7
     },
     "sector_leading": {
-     "n": 10134,
+     "n": 10141,
      "edge120": 0.4,
      "t_clustered": 0.2
     },
     "sector_lagging": {
-     "n": 7858,
-     "edge120": -0.19,
+     "n": 7867,
+     "edge120": -0.18,
      "t_clustered": 0.6
     }
    },
    "verdict": "NOT SHOWN"
   },
   "_baseline": {
-   "n": 184324,
+   "n": 184539,
    "mean_excess_60": 0.28,
    "mean_excess_120": 0.41,
-   "median_120": -1.69,
+   "median_120": -1.7,
    "pct_beat_spy_120": 46.0,
    "split_month": 202203,
    "trim": {
     "e60": [
-     -34.62392082117306,
-     52.19779910860903
+     -34.62362645016058,
+     52.181156320038525
     ],
     "e120": [
-     -46.99527011321523,
-     87.72424384889186
+     -46.98935938449925,
+     87.70154905957507
     ]
    }
   },
@@ -581,8 +581,8 @@
    "rev30_pct": 1.6,
    "rev90_pct": 0.5,
    "next_earnings": "2027-02-02",
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": 57,
    "tier": "DEEP DIVE",
    "reason": "only 2 past examples; chosen call costs $5,990 per contract, above the $2,700 stretch limit",
@@ -674,8 +674,8 @@
    "rev30_pct": -7.2,
    "rev90_pct": -7.8,
    "next_earnings": "2027-02-02",
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": 57,
    "tier": "DEEP DIVE",
    "reason": "only 3 past examples",
@@ -766,8 +766,8 @@
    "rev30_pct": -2.6,
    "rev90_pct": -1.9,
    "next_earnings": "2026-11-04",
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": -7,
    "tier": "DEEP DIVE",
    "reason": "only 1 past examples",
@@ -1120,12 +1120,12 @@
    "rev30_pct": 2.4,
    "rev90_pct": 2.4,
    "next_earnings": "2026-11-04",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": -7,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
-   "reason": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH; chosen call costs $4,930 per contract, above the $2,700 stretch limit",
+   "reason": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH; chosen call costs $4,930 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 150.27,
    "entry_score": 59,
    "entry_grade": "B",
@@ -1271,7 +1271,7 @@
    "rev30_pct": -1.1,
    "rev90_pct": 0.0,
    "next_earnings": "2026-11-05",
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": -6,
    "note": "archetype not yet shown to beat ordinary days (6-month edge +0.2, t 0.1): capped at WATCH",
@@ -1458,12 +1458,12 @@
    "rev30_pct": 1.3,
    "rev90_pct": -1.1,
    "next_earnings": "2027-01-27",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": 53,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
-   "reason": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "reason": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "limit_for_2R": 138.84,
    "entry_score": 49,
    "entry_grade": "C",
@@ -1516,10 +1516,10 @@
    "rev30_pct": 0.4,
    "rev90_pct": 0.3,
    "next_earnings": "2027-01-28",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": 54,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
    "reason": "only 1 past examples",
    "limit_for_2R": 36.09,
@@ -1703,10 +1703,10 @@
    "rev30_pct": 36.6,
    "rev90_pct": 36.8,
    "next_earnings": "2026-11-02",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": -9,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
    "reason": "no edge over the stock's normal drift; chosen call costs $4,050 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 105.34,
@@ -1797,10 +1797,10 @@
    "rev30_pct": 7.6,
    "rev90_pct": 8.8,
    "next_earnings": "2026-11-09",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": -4,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
    "reason": "pays 0.6 to 1; chosen call costs $3,100 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 67.72,
@@ -1891,10 +1891,10 @@
    "rev30_pct": 0.6,
    "rev90_pct": 0.5,
    "next_earnings": "2026-11-09",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": -4,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
    "reason": "no edge over the stock's normal drift; only 2 past examples; chosen call costs $10,400 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 266.37,
@@ -1985,10 +1985,10 @@
    "rev30_pct": 1.0,
    "rev90_pct": 1.3,
    "next_earnings": "2027-01-28",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": 54,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
    "reason": "pays 0.85 to 1; only 3 past examples; chosen call costs $4,480 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 259.54,
@@ -2079,12 +2079,12 @@
    "rev30_pct": 0.1,
    "rev90_pct": 1.1,
    "next_earnings": "2026-10-29",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": -11,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
-   "reason": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH; chosen call costs $11,290 per contract, above the $2,700 stretch limit",
+   "reason": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH; chosen call costs $11,290 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 341.34,
    "entry_score": 50,
    "entry_grade": "C",
@@ -2211,7 +2211,7 @@
    "rev30_pct": -0.4,
    "rev90_pct": -1.6,
    "next_earnings": "2026-11-24",
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": 7,
    "note": "archetype not yet shown to beat ordinary days (6-month edge +0.2, t 0.1): capped at WATCH",
@@ -2306,10 +2306,10 @@
    "rev30_pct": 0.1,
    "rev90_pct": -0.9,
    "next_earnings": "2026-12-09",
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": 18,
-   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.7): capped at WATCH",
+   "note": "archetype not yet shown to beat ordinary days (6-month edge +3.4, t 1.8): capped at WATCH",
    "tier": "WATCH",
    "reason": "pays 0.33 to 1; only 1 past examples; chosen call costs $9,710 per contract, above the $2,700 stretch limit",
    "limit_for_2R": 312.94,
@@ -2471,7 +2471,7 @@
    "rev30_pct": -10.4,
    "rev90_pct": -3.6,
    "next_earnings": "2026-11-02",
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": -9,
    "note": "archetype not yet shown to beat ordinary days (6-month edge +0.2, t 0.1): capped at WATCH",
@@ -2628,8 +2628,8 @@
    "rev30_pct": -3.1,
    "rev90_pct": -5.4,
    "next_earnings": "2027-02-04",
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": 59,
    "tier": "PASS",
    "reason": "no edge over the stock's normal drift; no past examples to test",
@@ -2875,8 +2875,8 @@
    "rev30_pct": 7.0,
    "rev90_pct": 7.2,
    "next_earnings": "2026-11-04",
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": -7,
    "tier": "PASS",
    "reason": "no edge over the stock's normal drift; only 3 past examples",
@@ -2917,7 +2917,7 @@
    "rev30_pct": -41.4,
    "rev90_pct": -46.9,
    "next_earnings": "2026-11-05",
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": -6,
    "note": "archetype not yet shown to beat ordinary days (6-month edge +0.2, t 0.1): capped at WATCH",
@@ -2953,8 +2953,8 @@
    "last": 778.31,
    "screen_why": "-17.5% on 2026-11-05 at 2.9x volume; was +5% over the 200d before it; now RSI 42",
    "sector_vs_spy_3m": -8.2,
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "pays 0.12 to 1; only 4 past examples",
@@ -3023,8 +3023,8 @@
    "last": 91.9,
    "screen_why": "-12.0% on 2026-11-12 at 2.8x volume; was +29% over the 200d before it; now RSI 52",
    "sector_vs_spy_3m": 4.3,
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "only 1 past examples",
@@ -3058,7 +3058,7 @@
    "last": 72.94,
    "screen_why": "sector ETF XLV is +7.9% over its 50d and +6.6% on the month; the stock lags it by -51pts over 3m and sits -29.7% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 15.4,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3163,8 +3163,8 @@
    "last": 93.73,
    "screen_why": "-39% off the 52w high, back over the 20d, 1m +12.2%. Needs estimates: revisions must be turning up Estimates +3.9% in 30 days.",
    "sector_vs_spy_3m": 4.3,
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "negative expectancy on its own history",
@@ -3233,7 +3233,7 @@
    "last": 50.89,
    "screen_why": "sector ETF XLY is +5.4% over its 50d and +5.8% on the month; the stock lags it by -30pts over 3m and sits -12.9% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 5.1,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3303,8 +3303,8 @@
    "last": 257.97,
    "screen_why": "-13.7% on 2026-11-05 at 3.2x volume; was +22% over the 200d before it; now RSI 42",
    "sector_vs_spy_3m": 5.1,
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "negative expectancy on its own history",
@@ -3404,7 +3404,7 @@
    "last": 47.78,
    "screen_why": "sector ETF XLV is +7.9% over its 50d and +6.6% on the month; the stock lags it by -59pts over 3m and sits -24.6% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 15.4,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3439,7 +3439,7 @@
    "last": 56.13,
    "screen_why": "sector ETF XLV is +7.9% over its 50d and +6.6% on the month; the stock lags it by -39pts over 3m and sits -12.4% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 15.4,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3474,7 +3474,7 @@
    "last": 13.98,
    "screen_why": "sector ETF XLB is +2.6% over its 50d and +3.3% on the month; the stock lags it by -28pts over 3m and sits -16.9% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 2.4,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3509,8 +3509,8 @@
    "last": 26.97,
    "screen_why": "-13.3% on 2026-11-05 at 2.8x volume; was +13% over the 200d before it; now RSI 39",
    "sector_vs_spy_3m": 0.5,
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "negative expectancy on its own history",
@@ -3544,8 +3544,8 @@
    "last": 43.84,
    "screen_why": "-27% off the 52w high, back over the 20d, 1m +3.5%. Needs estimates: revisions must be turning up Estimates +16.0% in 30 days.",
    "sector_vs_spy_3m": 1.3,
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "negative expectancy on its own history",
@@ -3579,7 +3579,7 @@
    "last": 93.53,
    "screen_why": "sector ETF XLB is +2.6% over its 50d and +3.3% on the month; the stock lags it by -30pts over 3m and sits -9.7% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 2.4,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3614,8 +3614,8 @@
    "last": 100.27,
    "screen_why": "-15.7% on 2026-11-06 at 2.9x volume; was +46% over the 200d before it; now RSI 27",
    "sector_vs_spy_3m": 15.4,
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "negative expectancy on its own history",
@@ -3649,7 +3649,7 @@
    "last": 13.1,
    "screen_why": "sector ETF XLB is +2.6% over its 50d and +3.3% on the month; the stock lags it by -30pts over 3m and sits -20.2% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 2.4,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -3859,8 +3859,8 @@
    "last": 22.52,
    "screen_why": "-36% off the 52w high, back over the 20d, 1m +5.7%. Needs estimates: revisions must be turning up Estimates +0.1% in 30 days.",
    "sector_vs_spy_3m": 5.1,
-   "pooled_edge120": 3.41,
-   "pooled_t": 1.7,
+   "pooled_edge120": 3.42,
+   "pooled_t": 1.8,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "negative expectancy on its own history",
@@ -3929,7 +3929,7 @@
    "last": 29.54,
    "screen_why": "sector ETF XLF is +4.8% over its 50d and +6.2% on the month; the stock lags it by -30pts over 3m and sits -15.6% under its own 50d. Driver to be named in research",
    "sector_vs_spy_3m": 4.3,
-   "pooled_edge120": 0.16,
+   "pooled_edge120": 0.17,
    "pooled_t": 0.1,
    "sessions_to_earnings": null,
    "tier": "PASS",
@@ -4023,8 +4023,8 @@
    "last": 44.8,
    "screen_why": "-14.7% on 2026-11-03 at 2.9x volume; was +24% over the 200d before it; now RSI 27",
    "sector_vs_spy_3m": -8.2,
-   "pooled_edge120": 2.05,
-   "pooled_t": 2.3,
+   "pooled_edge120": 2.06,
+   "pooled_t": 2.4,
    "sessions_to_earnings": null,
    "tier": "PASS",
    "reason": "no edge over the stock's normal drift",
@@ -4032,11 +4032,11 @@
   }
  ],
  "breadth": {
-  "n": 919,
+  "n": 920,
   "pct_above_50d": 65.5,
-  "pct_above_200d": 58.1,
+  "pct_above_200d": 58.2,
   "pct_rsi_under_30": 1.4,
-  "pct_within_5_of_52w_high": 23.5
+  "pct_within_5_of_52w_high": 23.6
  },
  "benchmarks": {
   "SPY": {

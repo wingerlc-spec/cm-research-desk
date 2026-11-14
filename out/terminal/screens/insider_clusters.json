@@ -1,0 +1,30 @@
+{
+ "meta": {
+  "rule": "Open-market purchases (Form 4, transaction code P) by 3 or more distinct insiders in the last 30 days totalling $500,000 or more.",
+  "asof": "2026-11-13",
+  "generated_utc": "2026-11-14 18:49",
+  "caveats": [
+   "Scope: the ranked names, lens candidates and terminal_watch.txt only, not the whole universe, to stay inside the SEC call budget.",
+   "Route: the SEC submissions API per company (one call each) plus each new Form 4 XML once; parsed filings are cached in out/cache/form4.json."
+  ],
+  "names_scanned": 136,
+  "form4_fetched_this_run": 0
+ },
+ "rows": [
+  {
+   "ticker": "MP",
+   "insiders": [
+    "Corbett Ryan",
+    "Rosenthal Michael Stuart",
+    "WEISENBURGER RANDALL J"
+   ],
+   "n_insiders": 3,
+   "total_usd": 3353606.0,
+   "first_date": "2026-11-10",
+   "last_date": "2026-11-11",
+   "avg_price": 36.26,
+   "last": 38.76,
+   "avg_price_vs_last_pct": -6.4
+  }
+ ]
+}
