@@ -1,7 +1,7 @@
 {
  "meta": {
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 18:07",
+  "generated_utc": "2026-11-14 18:38",
   "notes": [
    "corr_60 = 60-session correlation of daily log returns; corr_spy_down = correlation over the last 250 SPY down days.",
    "Clusters: names linked by corr_60 of 0.6 or more (chains count), largest cluster = 1. Several candidates in one cluster are one bet."

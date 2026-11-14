@@ -1,7 +1,7 @@
 {
  "meta": {
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 18:17",
+  "generated_utc": "2026-11-14 18:49",
   "notes": [
    "beta = sensitivity of the stock's daily log return to the driver's daily change, controlling for SPY, fit on the 120 or 250 sessions before the last 20.",
    "z20 = summed residual over the last 20 sessions divided by its expected spread: how far the stock has moved away from what the driver and the market imply. |z| >= 2 is flagged.",

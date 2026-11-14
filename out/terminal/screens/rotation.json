@@ -2,7 +2,7 @@
  "meta": {
   "rule": "Groups = GICS sub-industries with 5 or more names in the universe, plus the sector ETFs. Equal-weight 1 and 2 month return vs SPY, percent of members above their 50-day now and a month ago, rank change of the 1-month relative return (month ago rank minus rank now). Top 10 most improving groups; inside each, $5B+ members within 8 percent of their 50-day.",
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 18:16",
+  "generated_utc": "2026-11-14 18:48",
   "caveats": [
    "Descriptive only: screen.py's own tests found chart patterns alone showed no reliable edge, so this is a place to look, not a signal."
   ],

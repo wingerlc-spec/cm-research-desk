@@ -1,6 +1,6 @@
 {
- "former_members_in_window": 192,
- "former_members_with_prices": 76,
+ "former_members_in_window": 191,
+ "former_members_with_prices": 75,
  "A_current_members": {
   "test": "today's S&P 500 members, any date (original, biased)",
   "n": 449,
@@ -27,10 +27,10 @@
  },
  "C_with_dropouts": {
   "test": "B plus former members Yahoo still has",
-  "n": 305,
-  "stocks": 139,
+  "n": 303,
+  "stocks": 138,
   "months": 66,
-  "edge120": 6.42,
+  "edge120": 6.44,
   "t_clustered": 1.2,
   "median": 2.35,
   "baseline_median": -2.5,
@@ -45,42 +45,42 @@
   "edge120": 4.56,
   "t_clustered": 1.6,
   "median": -0.07,
-  "baseline_median": -2.96,
+  "baseline_median": -2.94,
   "pct_beat_spy": 50.0,
   "baseline_pct_beat_spy": 43.0
  },
  "E_sp400_today": {
   "test": "today's S&P 400 members, any date",
-  "n": 601,
-  "stocks": 183,
+  "n": 604,
+  "stocks": 184,
   "months": 93,
-  "edge120": 7.72,
+  "edge120": 7.68,
   "t_clustered": 2.9,
   "median": 2.84,
-  "baseline_median": -2.17,
+  "baseline_median": -2.19,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 46.0
  },
  "C_by_year": {
   "2019": {
    "n": 11,
-   "edge120": 8.53
+   "edge120": 8.5
   },
   "2020": {
-   "n": 46,
-   "edge120": 9.63
+   "n": 45,
+   "edge120": 9.79
   },
   "2021": {
-   "n": 77,
-   "edge120": 6.14
+   "n": 76,
+   "edge120": 6.24
   },
   "2022": {
    "n": 43,
-   "edge120": -4.28
+   "edge120": -4.29
   },
   "2023": {
    "n": 15,
-   "edge120": 1.65
+   "edge120": 1.63
   },
   "2024": {
    "n": 17,

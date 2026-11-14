@@ -2,11 +2,11 @@
  "meta": {
   "rule": "Market cap $5B or more; cash spent on repurchases over the last four quarters (XBRL PaymentsForRepurchaseOfCommonStock) at least 5 percent of market cap; shares outstanding (XBRL dei cover page, else us-gaap) down 4 percent or more year over year; forward P/E between 0 and 12.",
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 18:16",
+  "generated_utc": "2026-11-14 18:48",
   "caveats": [
    "SEC data is refreshed for about a fifth of the universe per night plus the ranked names, so a name can lag its latest filing by up to a week.",
    "Repurchase cash includes shares withheld for taxes at some companies.",
-   "440 of 833 $5B+ names have SEC data cached so far."
+   "660 of 833 $5B+ names have SEC data cached so far."
   ],
   "xbrl_refreshed_this_run": 220
  },
@@ -57,6 +57,18 @@
    "fwd_pe": 11.8,
    "last": 58.87,
    "pct_from_52w_high": -3.3,
+   "next_earnings": null
+  },
+  {
+   "ticker": "LAD",
+   "name": "Lithia Motors",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 6.41,
+   "buyback_yield_pct": 14.4,
+   "share_change_yoy_pct": -10.84,
+   "fwd_pe": 7.36,
+   "last": 296.52,
+   "pct_from_52w_high": -30.6,
    "next_earnings": null
   },
   {
@@ -138,9 +150,21 @@
    "mcap_busd": 9.75,
    "buyback_yield_pct": 11.5,
    "share_change_yoy_pct": -12.23,
-   "fwd_pe": 8.85,
+   "fwd_pe": 8.68,
    "last": 394.79,
    "pct_from_52w_high": -1.8,
+   "next_earnings": null
+  },
+  {
+   "ticker": "GDDY",
+   "name": "GoDaddy",
+   "sector": "Information Technology",
+   "mcap_busd": 13.84,
+   "buyback_yield_pct": 11.01,
+   "share_change_yoy_pct": -10.26,
+   "fwd_pe": 10.16,
+   "last": 114.12,
+   "pct_from_52w_high": -12.9,
    "next_earnings": null
   },
   {
@@ -192,6 +216,30 @@
    "next_earnings": null
   },
   {
+   "ticker": "LEA",
+   "name": "Lear",
+   "sector": "Consumer Discretionary",
+   "mcap_busd": 5.24,
+   "buyback_yield_pct": 10.02,
+   "share_change_yoy_pct": -7.09,
+   "fwd_pe": 6.5,
+   "last": 108.71,
+   "pct_from_52w_high": -26.9,
+   "next_earnings": null
+  },
+  {
+   "ticker": "ESNT",
+   "name": "Essent Group Ltd.",
+   "sector": "Financials",
+   "mcap_busd": 5.68,
+   "buyback_yield_pct": 9.92,
+   "share_change_yoy_pct": -8.99,
+   "fwd_pe": 8.25,
+   "last": 64.58,
+   "pct_from_52w_high": -7.3,
+   "next_earnings": null
+  },
+  {
    "ticker": "ADBE",
    "name": "Adobe Inc.",
    "sector": "Information Technology",
@@ -222,7 +270,7 @@
    "mcap_busd": 117.35,
    "buyback_yield_pct": 9.16,
    "share_change_yoy_pct": -5.38,
-   "fwd_pe": 8.17,
+   "fwd_pe": 8.18,
    "last": 195.08,
    "pct_from_52w_high": -24.4,
    "next_earnings": "2027-01-19"
@@ -243,7 +291,7 @@
    "ticker": "COLB",
    "name": "Columbia Banking System",
    "sector": "Financials",
-   "mcap_busd": 8.65,
+   "mcap_busd": 8.66,
    "buyback_yield_pct": 8.33,
    "share_change_yoy_pct": -7.62,
    "fwd_pe": 9.14,
@@ -348,6 +396,18 @@
    "next_earnings": "2027-01-20"
   },
   {
+   "ticker": "HWC",
+   "name": "Hancock Whitney",
+   "sector": "Financials",
+   "mcap_busd": 5.19,
+   "buyback_yield_pct": 7.13,
+   "share_change_yoy_pct": -4.92,
+   "fwd_pe": 9.17,
+   "last": 65.28,
+   "pct_from_52w_high": -18.2,
+   "next_earnings": null
+  },
+  {
    "ticker": "BWA",
    "name": "BorgWarner",
    "sector": "Consumer Discretionary",
@@ -360,6 +420,18 @@
    "next_earnings": "2027-02-10"
   },
   {
+   "ticker": "EQH",
+   "name": "Equitable Holdings",
+   "sector": "Financials",
+   "mcap_busd": 14.96,
+   "buyback_yield_pct": 6.87,
+   "share_change_yoy_pct": -6.93,
+   "fwd_pe": 6.34,
+   "last": 56.1,
+   "pct_from_52w_high": -0.0,
+   "next_earnings": null
+  },
+  {
    "ticker": "VLO",
    "name": "Valero Energy",
    "sector": "Energy",
@@ -370,6 +442,18 @@
    "last": 379.83,
    "pct_from_52w_high": -17.4,
    "next_earnings": "2027-01-28"
+  },
+  {
+   "ticker": "LDOS",
+   "name": "Leidos",
+   "sector": "Industrials",
+   "mcap_busd": 15.92,
+   "buyback_yield_pct": 6.69,
+   "share_change_yoy_pct": -4.58,
+   "fwd_pe": 11.06,
+   "last": 130.53,
+   "pct_from_52w_high": -34.2,
+   "next_earnings": null
   },
   {
    "ticker": "TMUS",
@@ -402,10 +486,22 @@
    "mcap_busd": 112.9,
    "buyback_yield_pct": 6.46,
    "share_change_yoy_pct": -9.42,
-   "fwd_pe": 6.75,
+   "fwd_pe": 6.77,
    "last": 414.65,
    "pct_from_52w_high": -14.5,
    "next_earnings": "2027-02-02"
+  },
+  {
+   "ticker": "FHN",
+   "name": "First Horizon",
+   "sector": "Financials",
+   "mcap_busd": 11.08,
+   "buyback_yield_pct": 6.27,
+   "share_change_yoy_pct": -4.37,
+   "fwd_pe": 10.11,
+   "last": 23.53,
+   "pct_from_52w_high": -10.3,
+   "next_earnings": null
   },
   {
    "ticker": "T",
@@ -418,6 +514,18 @@
    "last": 22.18,
    "pct_from_52w_high": -23.8,
    "next_earnings": "2027-01-27"
+  },
+  {
+   "ticker": "LUV",
+   "name": "Southwest Airlines",
+   "sector": "Industrials",
+   "mcap_busd": 22.0,
+   "buyback_yield_pct": 5.91,
+   "share_change_yoy_pct": -5.33,
+   "fwd_pe": 10.78,
+   "last": 44.94,
+   "pct_from_52w_high": -18.0,
+   "next_earnings": null
   },
   {
    "ticker": "WFC",
@@ -438,7 +546,7 @@
    "mcap_busd": 7.97,
    "buyback_yield_pct": 5.34,
    "share_change_yoy_pct": -6.48,
-   "fwd_pe": 7.41,
+   "fwd_pe": 7.11,
    "last": 149.93,
    "pct_from_52w_high": -5.2,
    "next_earnings": null
@@ -450,7 +558,7 @@
    "mcap_busd": 8.9,
    "buyback_yield_pct": 5.24,
    "share_change_yoy_pct": -4.92,
-   "fwd_pe": 10.78,
+   "fwd_pe": 10.75,
    "last": 293.39,
    "pct_from_52w_high": -10.1,
    "next_earnings": null

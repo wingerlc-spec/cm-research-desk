@@ -1,7 +1,7 @@
 {
  "meta": {
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 18:07",
+  "generated_utc": "2026-11-14 18:38",
   "thresholds": {
    "trend": "stress below the 200-day; caution below the 50-day or 7%+ off the 52-week high",
    "breadth": "caution under 50% above the 200-day, stress under 35%",
@@ -49,12 +49,12 @@
   "breadth": {
    "state": "ok",
    "value": {
-    "pct_above_200d": 58.5,
+    "pct_above_200d": 58.6,
     "pct_above_50d": 66.5,
-    "change_20d_200d_pts": 10.8,
-    "change_20d_50d_pts": 27.7
+    "change_20d_200d_pts": 10.9,
+    "change_20d_50d_pts": 27.8
    },
-   "reading": "59% of the universe above its 200-day (+11 pts in 20 sessions), 66% above its 50-day"
+   "reading": "59% of the universe above its 200-day (+11 pts in 20 sessions), 67% above its 50-day"
   },
   "credit_HYG_LQD": {
    "state": "caution",

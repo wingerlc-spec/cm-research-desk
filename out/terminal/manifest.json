@@ -1,34 +1,34 @@
 {
- "generated_utc": "2026-11-14 18:18",
+ "generated_utc": "2026-11-14 18:50",
  "files": {
   "dc_spend.json": {
-   "pulled_utc": "2026-11-14 18:04",
+   "pulled_utc": "2026-11-14 18:36",
    "rows": 153,
    "status": "ok"
   },
   "dc_capex.json": {
-   "pulled_utc": "2026-11-14 18:04",
+   "pulled_utc": "2026-11-14 18:36",
    "rows": 91,
    "status": "ok"
   },
   "earnings_dates.json": {
-   "pulled_utc": "2026-11-14 18:05",
+   "pulled_utc": "2026-11-14 18:36",
    "rows": 83,
    "status": "ok"
   },
   "chains.json": {
-   "pulled_utc": "2026-11-14 18:06",
+   "pulled_utc": "2026-11-14 18:37",
    "rows": 18,
    "status": "ok"
   },
   "screen.json": {
-   "pulled_utc": "2026-11-14 18:04",
+   "pulled_utc": "2026-11-14 18:35",
    "rows": 66,
    "status": "ok",
    "written_by": "screen.py"
   },
   "regime.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 8,
    "status": "ok",
    "written_by": "datasets.py",
@@ -45,13 +45,13 @@
    }
   },
   "risk_stats.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 83,
    "status": "ok",
    "written_by": "datasets.py"
   },
   "corr_matrix.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 40,
    "status": "ok",
    "written_by": "datasets.py",
@@ -65,61 +65,61 @@
    ]
   },
   "iv_rank.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 220,
    "status": "ok",
    "written_by": "datasets.py",
    "ranked": 0
   },
   "earnings_reactions.json": {
-   "pulled_utc": "2026-11-14 18:18",
-   "rows": 600,
+   "pulled_utc": "2026-11-14 18:50",
+   "rows": 833,
    "status": "ok",
    "written_by": "datasets.py"
   },
   "screens/buyback_low_multiple.json": {
-   "pulled_utc": "2026-11-14 18:18",
-   "rows": 40,
+   "pulled_utc": "2026-11-14 18:50",
+   "rows": 49,
    "status": "ok",
    "written_by": "datasets.py",
-   "cached": 440,
+   "cached": 660,
    "refreshed": 220
   },
   "screens/scare_no_estimate_damage.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 41,
    "status": "ok",
    "written_by": "datasets.py"
   },
   "screens/rotation.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 10,
    "status": "ok",
    "written_by": "datasets.py",
    "groups": 84
   },
   "screens/insider_clusters.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 1,
    "status": "ok",
    "written_by": "datasets.py",
    "names": 136,
-   "docs_fetched": 42
+   "docs_fetched": 0
   },
   "drivers.json": {
-   "pulled_utc": "2026-11-14 18:18",
+   "pulled_utc": "2026-11-14 18:50",
    "rows": 18,
    "status": "ok",
    "written_by": "datasets.py",
    "flagged": []
   },
   "../rule_tests/dislocation_recovery.json": {
-   "pulled_utc": "2026-11-14 18:18",
-   "rows": 2710,
+   "pulled_utc": "2026-11-14 18:50",
+   "rows": 2716,
    "status": "ok",
    "written_by": "datasets.py",
    "verdict": "WORKS"
   }
  },
- "datasets_runtime_s": 738
+ "datasets_runtime_s": 772
 }

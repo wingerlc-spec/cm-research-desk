@@ -2,7 +2,7 @@
  "meta": {
   "rule": "One-day drop of 10 percent or more on at least 2.5 times the prior 20-day volume in the last 15 sessions, $5B+ names, where next-year EPS estimates have fallen less than 2 percent since the day before the drop.",
   "asof": "2026-11-13",
-  "generated_utc": "2026-11-14 18:16",
+  "generated_utc": "2026-11-14 18:48",
   "caveats": [
    "Until estimate snapshots cover the drop date, the estimate change uses Yahoo's 7 or 30 day trend fields and is flagged 'estimate history building'.",
    "gap_left_pct = how far the pre-drop close is above today's price."
