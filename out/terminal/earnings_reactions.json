@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "SEC 8-K Item 2.02 dates (backfill) and Yahoo earnings dates (nightly); prices from Yahoo",
-  "pulled_utc": "2026-11-14 18:45",
+  "pulled_utc": "2026-11-17 05:42",
   "notes": [
    "Reaction day = whichever of the earnings date and the next session traded more volume (timing is not known). move_pct is close-to-close on that day; move5_pct runs from the close before it through 4 sessions after.",
    "implied_move_pct = at-the-money straddle mid of the first expiry after the print / price, from the last iv snapshot before it; backfilled rows have no implied move."

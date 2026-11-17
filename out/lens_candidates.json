@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-13",
+ "asof": "2026-11-16",
  "verdicts": {
   "DELETION_REBOUND": "DROP",
   "EARNINGS_DRIFT": "DROP",
@@ -15,29 +15,23 @@
   "INVENTORY_REVERSAL": 0.0
  },
  "mode": "FALLBACK: no lens adopted; ranked by PROMISING-lens hits, then lens-hit count, then estimate revisions (unproven ideas)",
- "n_names": 269,
+ "n_names": 265,
  "removed_by_mcap_floor": 29,
  "candidates": [
   {
-   "ticker": "EXPD",
-   "name": "Expeditors International",
-   "sector": "Industrials",
-   "index": "SP500",
-   "last": 194.8,
+   "ticker": "HAE",
+   "name": "Haemonetics",
+   "sector": "Health Care",
+   "index": "SP400",
+   "last": 121.34,
    "score": 0.0,
    "lenses": [
-    "EARNINGS_DRIFT",
+    "INVENTORY_REVERSAL",
     "SHARE_SHRINK"
    ],
    "adopted": [],
    "promising": [],
    "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-06",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
     {
      "lens": "SHARE_SHRINK",
      "entry": "2026-08-14",
@@ -45,71 +39,35 @@
      "verdict": "DROP"
     },
     {
-     "lens": "SHARE_SHRINK",
+     "lens": "INVENTORY_REVERSAL",
      "entry": "2026-11-14",
      "high_accrual": false,
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 25.15,
-   "uber_corr_120d": 0.04,
+   "instrument": "deep ITM call",
+   "mcap_busd": 5.53,
+   "uber_corr_120d": 0.15,
    "chart_gate": "ok",
-   "fwd_pe": 22.33,
-   "trail_pe": 24.75,
-   "analysts": 15.0,
-   "mean_target": 193.73,
-   "eps_next_fy": 8.88,
-   "rev30_pct": 8.4,
-   "rev90_pct": 10.1,
-   "next_earnings": "2026-11-03",
+   "fwd_pe": 19.36,
+   "trail_pe": 53.69,
+   "analysts": 11.0,
+   "mean_target": 147.18,
+   "eps_next_fy": 6.27,
+   "rev30_pct": 8.5,
+   "rev90_pct": 9.2,
+   "next_earnings": "2027-02-04",
    "option": {
-    "expiry": "2027-05-21",
-    "strike": 170.0,
-    "bid": 31.8,
-    "ask": 34.6,
-    "open_interest": 3,
-    "volume": 0,
-    "days_to_expiry": 189,
-    "quote": "ok",
-    "mid": 33.2,
-    "spread_pct": 8.4,
-    "iv": 0.3793,
-    "iv_source": "chain",
-    "delta": 0.762,
-    "cost_usd": 3460.0,
-    "breakeven": 204.6,
-    "breakeven_pct_above_last": 5.0,
-    "liquidity": "thin"
+    "liquidity": "none"
    },
-   "option_alt": {
-    "expiry": "2027-05-21",
-    "strike": 140.0,
-    "bid": 57.5,
-    "ask": 60.4,
-    "open_interest": 8,
-    "volume": 6,
-    "days_to_expiry": 189,
-    "quote": "ok",
-    "mid": 58.95,
-    "spread_pct": 4.9,
-    "iv": 0.496,
-    "iv_source": "chain",
-    "delta": 0.877,
-    "cost_usd": 6040.0,
-    "breakeven": 200.4,
-    "breakeven_pct_above_last": 2.9,
-    "liquidity": "thin"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $3,460 per contract, above the $2,700 stretch limit"
+   "fits_slot": null
   },
   {
    "ticker": "VRT",
    "name": "Vertiv",
    "sector": "Industrials",
    "index": "SP500",
-   "last": 202.07,
+   "last": 188.67,
    "score": 0.0,
    "lenses": [
     "BILLINGS_AHEAD",
@@ -138,144 +96,64 @@
     }
    ],
    "instrument": "shares, or a smaller position",
-   "mcap_busd": 77.81,
+   "mcap_busd": 72.65,
    "uber_corr_120d": -0.15,
    "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 20.37,
-   "trail_pe": 37.77,
+   "fwd_pe": 19.11,
+   "trail_pe": 37.73,
    "analysts": 30.0,
    "mean_target": 334.29,
-   "eps_next_fy": 9.92,
-   "rev30_pct": 7.9,
-   "rev90_pct": 9.0,
+   "eps_next_fy": 9.87,
+   "rev30_pct": 7.4,
+   "rev90_pct": 8.5,
    "next_earnings": "2026-10-28",
    "option": {
     "expiry": "2027-09-17",
-    "strike": 140.0,
-    "bid": 80.5,
-    "ask": 83.1,
-    "open_interest": 53,
-    "volume": 1,
-    "days_to_expiry": 308,
-    "quote": "ok",
-    "mid": 81.8,
-    "spread_pct": 3.2,
-    "iv": 0.7223,
-    "iv_source": "chain",
-    "delta": 0.825,
-    "cost_usd": 8310.0,
-    "breakeven": 223.1,
-    "breakeven_pct_above_last": 10.4,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 200.0,
-    "bid": 57.35,
-    "ask": 60.8,
-    "open_interest": 588,
-    "volume": 8,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 59.08,
-    "spread_pct": 5.8,
-    "iv": 0.6787,
-    "iv_source": "chain",
-    "delta": 0.673,
-    "cost_usd": 6080.0,
-    "breakeven": 260.8,
-    "breakeven_pct_above_last": 29.1,
-    "liquidity": "ok"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $8,310 per contract, above the $2,700 stretch limit"
-  },
-  {
-   "ticker": "HAE",
-   "name": "Haemonetics",
-   "sector": "Health Care",
-   "index": "SP400",
-   "last": 122.94,
-   "score": 0.0,
-   "lenses": [
-    "INVENTORY_REVERSAL",
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "INVENTORY_REVERSAL",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 5.6,
-   "uber_corr_120d": 0.15,
-   "chart_gate": "ok",
-   "fwd_pe": 19.82,
-   "trail_pe": 54.4,
-   "analysts": 11.0,
-   "mean_target": 144.55,
-   "eps_next_fy": 6.2,
-   "rev30_pct": 7.3,
-   "rev90_pct": 8.0,
-   "next_earnings": "2027-02-04",
-   "option": {
-    "expiry": "2028-01-21",
-    "strike": 100.0,
-    "bid": 36.2,
-    "ask": 39.5,
-    "open_interest": 98,
-    "volume": 7,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 37.85,
-    "spread_pct": 8.7,
-    "iv": 0.5179,
-    "iv_source": "chain",
-    "delta": 0.768,
-    "cost_usd": 3950.0,
-    "breakeven": 139.5,
-    "breakeven_pct_above_last": 13.5,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 120.0,
-    "bid": 25.3,
-    "ask": 29.0,
-    "open_interest": 154,
+    "strike": 135.0,
+    "bid": 76.45,
+    "ask": 80.3,
+    "open_interest": 2,
     "volume": 2,
-    "days_to_expiry": 434,
+    "days_to_expiry": 305,
     "quote": "ok",
-    "mid": 27.15,
-    "spread_pct": 13.6,
-    "iv": 0.5276,
+    "mid": 78.38,
+    "spread_pct": 4.9,
+    "iv": 0.8174,
     "iv_source": "chain",
-    "delta": 0.66,
-    "cost_usd": 2900.0,
-    "breakeven": 149.0,
-    "breakeven_pct_above_last": 21.2,
+    "delta": 0.807,
+    "cost_usd": 8030.0,
+    "breakeven": 215.3,
+    "breakeven_pct_above_last": 14.1,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 135.0,
+    "bid": 63.55,
+    "ask": 66.5,
+    "open_interest": 3,
+    "volume": 1,
+    "days_to_expiry": 213,
+    "quote": "ok",
+    "mid": 65.03,
+    "spread_pct": 4.5,
+    "iv": 0.6426,
+    "iv_source": "chain",
+    "delta": 0.835,
+    "cost_usd": 6650.0,
+    "breakeven": 201.5,
+    "breakeven_pct_above_last": 6.8,
     "liquidity": "thin"
    },
    "fits_slot": false,
-   "reason": "chosen call costs $3,950 per contract, above the $2,700 stretch limit"
+   "reason": "chosen call costs $8,030 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "FTV",
    "name": "Fortive",
    "sector": "Industrials",
    "index": "SP500",
-   "last": 67.92,
+   "last": 67.53,
    "score": 0.0,
    "lenses": [
     "INVENTORY_REVERSAL",
@@ -303,12 +181,12 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "deep ITM call (stretch)",
-   "mcap_busd": 20.22,
+   "instrument": "deep ITM call",
+   "mcap_busd": 20.1,
    "uber_corr_120d": 0.15,
    "chart_gate": "ok",
-   "fwd_pe": 20.44,
-   "trail_pe": 32.19,
+   "fwd_pe": 20.33,
+   "trail_pe": 32.16,
    "analysts": 14.0,
    "mean_target": 67.5,
    "eps_next_fy": 3.32,
@@ -316,51 +194,17 @@
    "rev90_pct": 2.2,
    "next_earnings": "2026-10-28",
    "option": {
-    "expiry": "2027-06-17",
-    "strike": 50.0,
-    "bid": 17.9,
-    "ask": 21.5,
-    "open_interest": 3,
-    "volume": 1,
-    "days_to_expiry": 216,
-    "quote": "ok",
-    "mid": 19.7,
-    "spread_pct": 18.3,
-    "iv": 0.5676,
-    "iv_source": "chain",
-    "delta": 0.835,
-    "cost_usd": 2150.0,
-    "breakeven": 71.5,
-    "breakeven_pct_above_last": 5.3,
-    "liquidity": "thin"
+    "liquidity": "none",
+    "quote": "stale"
    },
-   "option_alt": {
-    "expiry": "2027-06-17",
-    "strike": 65.0,
-    "bid": 6.8,
-    "ask": 9.7,
-    "open_interest": 5,
-    "volume": 0,
-    "days_to_expiry": 216,
-    "quote": "ok",
-    "mid": 8.25,
-    "spread_pct": 35.2,
-    "iv": 0.4015,
-    "iv_source": "chain",
-    "delta": 0.646,
-    "cost_usd": 970.0,
-    "breakeven": 74.7,
-    "breakeven_pct_above_last": 10.0,
-    "liquidity": "thin"
-   },
-   "fits_slot": "stretch"
+   "fits_slot": null
   },
   {
    "ticker": "TTC",
    "name": "Toro",
    "sector": "Industrials",
    "index": "SP400",
-   "last": 105.89,
+   "last": 105.21,
    "score": 0.0,
    "lenses": [
     "INVENTORY_REVERSAL",
@@ -382,12 +226,12 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "deep ITM call (stretch)",
-   "mcap_busd": 10.02,
+   "instrument": "deep ITM call",
+   "mcap_busd": 9.96,
    "uber_corr_120d": 0.18,
    "chart_gate": "ok",
-   "fwd_pe": 20.76,
-   "trail_pe": 28.31,
+   "fwd_pe": 20.63,
+   "trail_pe": 28.13,
    "analysts": 5.0,
    "mean_target": 111.0,
    "eps_next_fy": 5.1,
@@ -395,112 +239,17 @@
    "rev90_pct": 0.7,
    "next_earnings": "2026-12-17",
    "option": {
-    "expiry": "2027-06-17",
-    "strike": 85.0,
-    "bid": 23.6,
-    "ask": 25.8,
-    "open_interest": 2,
-    "volume": 2,
-    "days_to_expiry": 216,
-    "quote": "ok",
-    "mid": 24.7,
-    "spread_pct": 8.9,
-    "iv": 0.4379,
-    "iv_source": "chain",
-    "delta": 0.814,
-    "cost_usd": 2580.0,
-    "breakeven": 110.8,
-    "breakeven_pct_above_last": 4.6,
-    "liquidity": "thin"
+    "liquidity": "none",
+    "quote": "stale"
    },
-   "fits_slot": "stretch"
-  },
-  {
-   "ticker": "ZBRA",
-   "name": "Zebra Technologies",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 324.0,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT",
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-06",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 15.26,
-   "uber_corr_120d": 0.24,
-   "chart_gate": "ok",
-   "fwd_pe": 14.55,
-   "trail_pe": 26.19,
-   "analysts": 16.0,
-   "mean_target": 411.49,
-   "eps_next_fy": 22.27,
-   "rev30_pct": -0.1,
-   "rev90_pct": 0.1,
-   "next_earnings": "2026-11-03",
-   "option": {
-    "expiry": "2027-08-20",
-    "strike": 270.0,
-    "bid": 83.0,
-    "ask": 91.7,
-    "open_interest": 6,
-    "volume": 2,
-    "days_to_expiry": 280,
-    "quote": "ok",
-    "mid": 87.35,
-    "spread_pct": 10.0,
-    "iv": 0.5489,
-    "iv_source": "chain",
-    "delta": 0.753,
-    "cost_usd": 9170.0,
-    "breakeven": 361.7,
-    "breakeven_pct_above_last": 11.6,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2027-08-20",
-    "strike": 300.0,
-    "bid": 64.9,
-    "ask": 73.9,
-    "open_interest": 15,
-    "volume": 6,
-    "days_to_expiry": 280,
-    "quote": "ok",
-    "mid": 69.4,
-    "spread_pct": 13.0,
-    "iv": 0.5238,
-    "iv_source": "chain",
-    "delta": 0.679,
-    "cost_usd": 7390.0,
-    "breakeven": 373.9,
-    "breakeven_pct_above_last": 15.4,
-    "liquidity": "thin"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $9,170 per contract, above the $2,700 stretch limit"
+   "fits_slot": null
   },
   {
    "ticker": "TFX",
    "name": null,
    "sector": null,
    "index": null,
-   "last": 155.1,
+   "last": 157.1,
    "score": 0.0,
    "lenses": [
     "INVENTORY_REVERSAL",
@@ -532,8 +281,8 @@
    "mcap_busd": null,
    "uber_corr_120d": 0.32,
    "chart_gate": "ok",
-   "fwd_pe": 14.17,
-   "trail_pe": 76.4,
+   "fwd_pe": 14.36,
+   "trail_pe": 77.39,
    "analysts": 11.0,
    "mean_target": 168.09,
    "eps_next_fy": 10.94,
@@ -547,7 +296,7 @@
    "name": "Supermicro",
    "sector": "Information Technology",
    "index": "SP500",
-   "last": 26.87,
+   "last": 25.03,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -563,11 +312,11 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 17.71,
+   "mcap_busd": 16.5,
    "uber_corr_120d": -0.04,
    "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 3.87,
-   "trail_pe": 5.67,
+   "fwd_pe": 3.6,
+   "trail_pe": 5.66,
    "analysts": 15.0,
    "mean_target": 43.6,
    "eps_next_fy": 6.95,
@@ -575,51 +324,17 @@
    "rev90_pct": 80.0,
    "next_earnings": "2027-02-02",
    "option": {
-    "expiry": "2027-09-17",
-    "strike": 20.0,
-    "bid": 11.0,
-    "ask": 12.7,
-    "open_interest": 183,
-    "volume": 22,
-    "days_to_expiry": 308,
-    "quote": "ok",
-    "mid": 11.85,
-    "spread_pct": 14.3,
-    "iv": 0.9629,
-    "iv_source": "chain",
-    "delta": 0.792,
-    "cost_usd": 1270.0,
-    "breakeven": 32.7,
-    "breakeven_pct_above_last": 21.7,
-    "liquidity": "thin"
+    "liquidity": "none",
+    "quote": "stale"
    },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 30.0,
-    "bid": 8.55,
-    "ask": 9.25,
-    "open_interest": 3400,
-    "volume": 530,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 8.9,
-    "spread_pct": 7.9,
-    "iv": 0.8728,
-    "iv_source": "chain",
-    "delta": 0.659,
-    "cost_usd": 925.0,
-    "breakeven": 39.25,
-    "breakeven_pct_above_last": 46.1,
-    "liquidity": "ok"
-   },
-   "fits_slot": true
+   "fits_slot": null
   },
   {
    "ticker": "REGN",
    "name": "Regeneron Pharmaceuticals",
    "sector": "Health Care",
    "index": "SP500",
-   "last": 955.47,
+   "last": 952.4,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -635,216 +350,45 @@
     }
    ],
    "instrument": "shares, or a smaller position",
-   "mcap_busd": 98.84,
-   "uber_corr_120d": 0.22,
+   "mcap_busd": 98.52,
+   "uber_corr_120d": 0.23,
    "chart_gate": "ok",
-   "fwd_pe": 13.49,
-   "trail_pe": 21.12,
+   "fwd_pe": 13.44,
+   "trail_pe": 21.05,
    "analysts": 27.0,
-   "mean_target": 977.93,
+   "mean_target": 984.96,
    "eps_next_fy": 62.12,
    "rev30_pct": 22.7,
    "rev90_pct": 23.3,
    "next_earnings": "2027-01-28",
    "option": {
-    "expiry": "2027-09-17",
-    "strike": 760.0,
-    "bid": 256.0,
-    "ask": 265.0,
-    "open_interest": 8,
-    "volume": 2,
-    "days_to_expiry": 308,
-    "quote": "ok",
-    "mid": 260.5,
-    "spread_pct": 3.5,
-    "iv": 0.4734,
-    "iv_source": "chain",
-    "delta": 0.794,
-    "cost_usd": 26500.0,
-    "breakeven": 1025.0,
-    "breakeven_pct_above_last": 7.3,
-    "liquidity": "thin"
-   },
-   "option_alt": {
     "expiry": "2028-01-21",
-    "strike": 900.0,
-    "bid": 194.0,
-    "ask": 204.0,
-    "open_interest": 252,
-    "volume": 3,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 199.0,
-    "spread_pct": 5.0,
-    "iv": 0.4374,
-    "iv_source": "chain",
-    "delta": 0.679,
-    "cost_usd": 20400.0,
-    "breakeven": 1104.0,
-    "breakeven_pct_above_last": 15.5,
-    "liquidity": "ok"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $26,500 per contract, above the $2,700 stretch limit"
-  },
-  {
-   "ticker": "VLO",
-   "name": "Valero Energy",
-   "sector": "Energy",
-   "index": "SP500",
-   "last": 379.83,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 105.93,
-   "uber_corr_120d": -0.14,
-   "chart_gate": "ok",
-   "fwd_pe": 7.1,
-   "trail_pe": 8.64,
-   "analysts": 19.0,
-   "mean_target": 423.05,
-   "eps_next_fy": 53.49,
-   "rev30_pct": 18.2,
-   "rev90_pct": 93.0,
-   "next_earnings": "2027-01-28",
-   "option": {
-    "expiry": "2027-09-17",
-    "strike": 300.0,
-    "bid": 109.6,
-    "ask": 113.1,
-    "open_interest": 8,
+    "strike": 800.0,
+    "bid": 215.0,
+    "ask": 225.0,
+    "open_interest": 20,
     "volume": 1,
-    "days_to_expiry": 308,
+    "days_to_expiry": 431,
     "quote": "ok",
-    "mid": 111.35,
-    "spread_pct": 3.1,
-    "iv": 0.5178,
+    "mid": 220.0,
+    "spread_pct": 4.5,
+    "iv": 0.3594,
     "iv_source": "chain",
-    "delta": 0.79,
-    "cost_usd": 11310.0,
-    "breakeven": 413.1,
-    "breakeven_pct_above_last": 8.8,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 300.0,
-    "bid": 119.5,
-    "ask": 123.5,
-    "open_interest": 680,
-    "volume": 2,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 121.5,
-    "spread_pct": 3.3,
-    "iv": 0.5155,
-    "iv_source": "chain",
-    "delta": 0.784,
-    "cost_usd": 12350.0,
-    "breakeven": 423.5,
-    "breakeven_pct_above_last": 11.5,
-    "liquidity": "ok"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $11,310 per contract, above the $2,700 stretch limit"
-  },
-  {
-   "ticker": "AEIS",
-   "name": "Advanced Energy",
-   "sector": "Information Technology",
-   "index": "SP400",
-   "last": 219.68,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-05",
-     "high_accrual": null,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 8.89,
-   "uber_corr_120d": -0.22,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 12.25,
-   "trail_pe": 31.47,
-   "analysts": 12.0,
-   "mean_target": 388.17,
-   "eps_next_fy": 17.93,
-   "rev30_pct": 16.9,
-   "rev90_pct": 18.0,
-   "next_earnings": "2026-11-02",
-   "option": {
-    "expiry": "2027-12-17",
-    "strike": 165.0,
-    "bid": 85.0,
-    "ask": 89.0,
-    "open_interest": 6,
-    "volume": 0,
-    "days_to_expiry": 399,
-    "quote": "ok",
-    "mid": 87.0,
-    "spread_pct": 4.6,
-    "iv": 0.7115,
-    "iv_source": "chain",
-    "delta": 0.793,
-    "cost_usd": 8900.0,
-    "breakeven": 254.0,
-    "breakeven_pct_above_last": 15.6,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2027-12-17",
-    "strike": 195.0,
-    "bid": 69.5,
-    "ask": 74.0,
-    "open_interest": 14,
-    "volume": 12,
-    "days_to_expiry": 399,
-    "quote": "ok",
-    "mid": 71.75,
-    "spread_pct": 6.3,
-    "iv": 0.693,
-    "iv_source": "chain",
-    "delta": 0.721,
-    "cost_usd": 7400.0,
-    "breakeven": 269.0,
-    "breakeven_pct_above_last": 22.5,
+    "delta": 0.777,
+    "cost_usd": 22500.0,
+    "breakeven": 1025.0,
+    "breakeven_pct_above_last": 7.6,
     "liquidity": "thin"
    },
    "fits_slot": false,
-   "reason": "chosen call costs $8,900 per contract, above the $2,700 stretch limit"
+   "reason": "chosen call costs $22,500 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "ANET",
    "name": "Arista Networks",
    "sector": "Information Technology",
    "index": "SP500",
-   "last": 197.29,
+   "last": 187.02,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -852,12 +396,6 @@
    "adopted": [],
    "promising": [],
    "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-06",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
     {
      "lens": "EARNINGS_DRIFT",
      "entry": "2026-11-05",
@@ -865,12 +403,12 @@
      "verdict": "DROP"
     }
    ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 249.26,
+   "instrument": "deep ITM call",
+   "mcap_busd": 236.28,
    "uber_corr_120d": -0.13,
    "chart_gate": "ok",
-   "fwd_pe": 32.68,
-   "trail_pe": 52.89,
+   "fwd_pe": 30.98,
+   "trail_pe": 52.83,
    "analysts": 29.0,
    "mean_target": 249.65,
    "eps_next_fy": 6.04,
@@ -878,112 +416,17 @@
    "rev90_pct": 17.0,
    "next_earnings": "2026-11-03",
    "option": {
-    "expiry": "2027-09-17",
-    "strike": 150.0,
-    "bid": 67.4,
-    "ask": 70.7,
-    "open_interest": 107,
-    "volume": 1,
-    "days_to_expiry": 308,
-    "quote": "ok",
-    "mid": 69.05,
-    "spread_pct": 4.8,
-    "iv": 0.6606,
-    "iv_source": "chain",
-    "delta": 0.791,
-    "cost_usd": 7070.0,
-    "breakeven": 220.7,
-    "breakeven_pct_above_last": 11.9,
-    "liquidity": "ok"
+    "liquidity": "none",
+    "quote": "stale"
    },
-   "fits_slot": false,
-   "reason": "chosen call costs $7,070 per contract, above the $2,700 stretch limit"
-  },
-  {
-   "ticker": "MPC",
-   "name": "Marathon Petroleum",
-   "sector": "Energy",
-   "index": "SP500",
-   "last": 414.65,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 112.9,
-   "uber_corr_120d": -0.09,
-   "chart_gate": "ok",
-   "fwd_pe": 6.77,
-   "trail_pe": 8.22,
-   "analysts": 17.0,
-   "mean_target": 461.94,
-   "eps_next_fy": 61.42,
-   "rev30_pct": 15.7,
-   "rev90_pct": 95.4,
-   "next_earnings": "2027-02-02",
-   "option": {
-    "expiry": "2027-09-17",
-    "strike": 300.0,
-    "bid": 138.5,
-    "ask": 142.5,
-    "open_interest": 49,
-    "volume": 1,
-    "days_to_expiry": 308,
-    "quote": "ok",
-    "mid": 140.5,
-    "spread_pct": 2.8,
-    "iv": 0.5322,
-    "iv_source": "chain",
-    "delta": 0.835,
-    "cost_usd": 14250.0,
-    "breakeven": 442.5,
-    "breakeven_pct_above_last": 6.7,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2027-06-17",
-    "strike": 320.0,
-    "bid": 115.5,
-    "ask": 118.7,
-    "open_interest": 721,
-    "volume": 370,
-    "days_to_expiry": 216,
-    "quote": "ok",
-    "mid": 117.1,
-    "spread_pct": 2.7,
-    "iv": 0.5196,
-    "iv_source": "chain",
-    "delta": 0.818,
-    "cost_usd": 11870.0,
-    "breakeven": 438.7,
-    "breakeven_pct_above_last": 5.8,
-    "liquidity": "ok"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $14,250 per contract, above the $2,700 stretch limit"
+   "fits_slot": null
   },
   {
    "ticker": "DELL",
    "name": "Dell Technologies",
    "sector": "Information Technology",
    "index": "SP500",
-   "last": 344.53,
+   "last": 320.55,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -999,45 +442,64 @@
     }
    ],
    "instrument": "shares, or a smaller position",
-   "mcap_busd": 219.06,
+   "mcap_busd": 203.81,
    "uber_corr_120d": -0.1,
    "chart_gate": "ok",
-   "fwd_pe": 11.29,
+   "fwd_pe": 10.46,
    "trail_pe": 20.03,
    "analysts": 25.0,
-   "mean_target": 590.0,
+   "mean_target": 583.68,
    "eps_next_fy": 28.48,
    "rev30_pct": 15.5,
    "rev90_pct": 46.6,
    "next_earnings": "2026-11-24",
    "option": {
-    "expiry": "2027-09-17",
-    "strike": 230.0,
-    "bid": 149.0,
-    "ask": 153.35,
-    "open_interest": 1117,
-    "volume": 2,
-    "days_to_expiry": 308,
+    "expiry": "2027-06-17",
+    "strike": 240.0,
+    "bid": 122.45,
+    "ask": 126.0,
+    "open_interest": 29,
+    "volume": 5,
+    "days_to_expiry": 213,
     "quote": "ok",
-    "mid": 151.18,
+    "mid": 124.22,
     "spread_pct": 2.9,
-    "iv": 0.8015,
+    "iv": 0.9313,
     "iv_source": "chain",
-    "delta": 0.832,
-    "cost_usd": 15335.0,
-    "breakeven": 383.35,
-    "breakeven_pct_above_last": 11.3,
-    "liquidity": "ok"
+    "delta": 0.787,
+    "cost_usd": 12600.0,
+    "breakeven": 366.0,
+    "breakeven_pct_above_last": 14.2,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 175.0,
+    "bid": 167.5,
+    "ask": 170.9,
+    "open_interest": 60,
+    "volume": 1,
+    "days_to_expiry": 213,
+    "quote": "ok",
+    "mid": 169.2,
+    "spread_pct": 2.0,
+    "iv": 1.0508,
+    "iv_source": "chain",
+    "delta": 0.882,
+    "cost_usd": 17090.0,
+    "breakeven": 345.9,
+    "breakeven_pct_above_last": 7.9,
+    "liquidity": "thin"
    },
    "fits_slot": false,
-   "reason": "chosen call costs $15,335 per contract, above the $2,700 stretch limit"
+   "reason": "chosen call costs $12,600 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "MTSI",
    "name": "MACOM Technology Solutions",
    "sector": "Information Technology",
    "index": "SP400",
-   "last": 232.06,
+   "last": 220.44,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -1053,11 +515,11 @@
     }
    ],
    "instrument": "shares, or a smaller position",
-   "mcap_busd": 17.82,
+   "mcap_busd": 16.93,
    "uber_corr_120d": -0.11,
    "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 20.02,
-   "trail_pe": 53.84,
+   "fwd_pe": 19.02,
+   "trail_pe": 53.9,
    "analysts": 16.0,
    "mean_target": 327.0,
    "eps_next_fy": 11.59,
@@ -1066,51 +528,167 @@
    "next_earnings": "2027-02-04",
    "option": {
     "expiry": "2027-05-21",
-    "strike": 180.0,
-    "bid": 75.8,
-    "ask": 79.3,
-    "open_interest": 10,
-    "volume": 0,
-    "days_to_expiry": 189,
+    "strike": 155.0,
+    "bid": 94.2,
+    "ask": 98.8,
+    "open_interest": 1,
+    "volume": 1,
+    "days_to_expiry": 186,
     "quote": "ok",
-    "mid": 77.55,
-    "spread_pct": 4.5,
-    "iv": 0.8102,
+    "mid": 96.5,
+    "spread_pct": 4.8,
+    "iv": 1.1256,
     "iv_source": "chain",
-    "delta": 0.777,
-    "cost_usd": 7930.0,
-    "breakeven": 259.3,
-    "breakeven_pct_above_last": 11.7,
+    "delta": 0.807,
+    "cost_usd": 9880.0,
+    "breakeven": 253.8,
+    "breakeven_pct_above_last": 15.1,
     "liquidity": "thin"
    },
    "option_alt": {
     "expiry": "2027-05-21",
-    "strike": 230.0,
-    "bid": 49.8,
-    "ask": 53.4,
-    "open_interest": 27,
-    "volume": 1,
-    "days_to_expiry": 189,
+    "strike": 185.0,
+    "bid": 59.0,
+    "ask": 61.5,
+    "open_interest": 1,
+    "volume": 0,
+    "days_to_expiry": 186,
     "quote": "ok",
-    "mid": 51.6,
-    "spread_pct": 7.0,
-    "iv": 0.7721,
+    "mid": 60.25,
+    "spread_pct": 4.1,
+    "iv": 0.7029,
     "iv_source": "chain",
-    "delta": 0.63,
-    "cost_usd": 5340.0,
-    "breakeven": 283.4,
-    "breakeven_pct_above_last": 22.1,
+    "delta": 0.739,
+    "cost_usd": 6150.0,
+    "breakeven": 246.5,
+    "breakeven_pct_above_last": 11.8,
     "liquidity": "thin"
    },
    "fits_slot": false,
-   "reason": "chosen call costs $7,930 per contract, above the $2,700 stretch limit"
+   "reason": "chosen call costs $9,880 per contract, above the $2,700 stretch limit"
+  },
+  {
+   "ticker": "FN",
+   "name": "Fabrinet",
+   "sector": "Information Technology",
+   "index": "SP400",
+   "last": 311.01,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-11-04",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 11.11,
+   "uber_corr_120d": -0.13,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 12.9,
+   "trail_pe": 24.76,
+   "analysts": 9.0,
+   "mean_target": 564.44,
+   "eps_next_fy": 24.11,
+   "rev30_pct": 10.7,
+   "rev90_pct": 12.7,
+   "next_earnings": "2027-02-01",
+   "option": {
+    "expiry": "2027-10-15",
+    "strike": 210.0,
+    "bid": 145.2,
+    "ask": 160.2,
+    "open_interest": 1,
+    "volume": 1,
+    "days_to_expiry": 333,
+    "quote": "ok",
+    "mid": 152.7,
+    "spread_pct": 9.8,
+    "iv": 0.9913,
+    "iv_source": "chain",
+    "delta": 0.823,
+    "cost_usd": 16020.0,
+    "breakeven": 370.2,
+    "breakeven_pct_above_last": 19.0,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 390.0,
+    "bid": 78.0,
+    "ask": 94.0,
+    "open_interest": 5,
+    "volume": 8,
+    "days_to_expiry": 431,
+    "quote": "ok",
+    "mid": 86.0,
+    "spread_pct": 18.6,
+    "iv": 0.8297,
+    "iv_source": "chain",
+    "delta": 0.6,
+    "cost_usd": 9400.0,
+    "breakeven": 484.0,
+    "breakeven_pct_above_last": 55.6,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $16,020 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "COP",
    "name": "ConocoPhillips",
    "sector": "Energy",
    "index": "SP500",
-   "last": 142.28,
+   "last": 140.52,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 166.14,
+   "uber_corr_120d": -0.16,
+   "chart_gate": "ok",
+   "fwd_pe": 12.22,
+   "trail_pe": 14.81,
+   "analysts": 27.0,
+   "mean_target": 152.96,
+   "eps_next_fy": 11.5,
+   "rev30_pct": 9.3,
+   "rev90_pct": 24.1,
+   "next_earnings": "2027-02-04",
+   "option": {
+    "liquidity": "none"
+   },
+   "fits_slot": null
+  },
+  {
+   "ticker": "VLO",
+   "name": "Valero Energy",
+   "sector": "Energy",
+   "index": "SP500",
+   "last": 369.73,
    "score": 0.0,
    "lenses": [
     "SHARE_SHRINK"
@@ -1132,278 +710,137 @@
     }
    ],
    "instrument": "shares, or a smaller position",
-   "mcap_busd": 168.22,
-   "uber_corr_120d": -0.16,
+   "mcap_busd": 103.11,
+   "uber_corr_120d": -0.14,
    "chart_gate": "ok",
-   "fwd_pe": 12.39,
-   "trail_pe": 14.99,
-   "analysts": 27.0,
-   "mean_target": 152.96,
-   "eps_next_fy": 11.48,
-   "rev30_pct": 14.3,
-   "rev90_pct": 24.1,
-   "next_earnings": "2027-02-04",
+   "fwd_pe": 7.22,
+   "trail_pe": 8.41,
+   "analysts": 19.0,
+   "mean_target": 421.32,
+   "eps_next_fy": 51.22,
+   "rev30_pct": 8.1,
+   "rev90_pct": 70.9,
+   "next_earnings": "2027-01-28",
    "option": {
     "expiry": "2027-09-17",
-    "strike": 115.0,
-    "bid": 31.5,
-    "ask": 34.15,
-    "open_interest": 7,
-    "volume": 5,
-    "days_to_expiry": 308,
-    "quote": "ok",
-    "mid": 32.83,
-    "spread_pct": 8.1,
-    "iv": 0.3672,
-    "iv_source": "chain",
-    "delta": 0.816,
-    "cost_usd": 3415.0,
-    "breakeven": 149.15,
-    "breakeven_pct_above_last": 4.8,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2027-06-17",
-    "strike": 140.0,
-    "bid": 14.75,
-    "ask": 15.7,
-    "open_interest": 1550,
-    "volume": 26,
-    "days_to_expiry": 216,
-    "quote": "ok",
-    "mid": 15.22,
-    "spread_pct": 6.2,
-    "iv": 0.3363,
-    "iv_source": "chain",
-    "delta": 0.612,
-    "cost_usd": 1570.0,
-    "breakeven": 155.7,
-    "breakeven_pct_above_last": 9.4,
-    "liquidity": "ok"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $3,415 per contract, above the $2,700 stretch limit"
-  },
-  {
-   "ticker": "FLEX",
-   "name": "Flex Ltd.",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 74.98,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-10-30",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 27.7,
-   "uber_corr_120d": -0.14,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 9.57,
-   "trail_pe": 26.97,
-   "analysts": 10.0,
-   "mean_target": 151.4,
-   "eps_next_fy": 7.84,
-   "rev30_pct": 11.0,
-   "rev90_pct": 10.2,
-   "next_earnings": "2027-01-27",
-   "option": {
-    "expiry": "2028-01-21",
-    "strike": 60.0,
-    "bid": 26.0,
-    "ask": 35.0,
-    "open_interest": 30,
-    "volume": 10,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 30.5,
-    "spread_pct": 29.5,
-    "iv": 0.7827,
-    "iv_source": "chain",
-    "delta": 0.771,
-    "cost_usd": 3500.0,
-    "breakeven": 95.0,
-    "breakeven_pct_above_last": 26.7,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 70.0,
-    "bid": 23.1,
-    "ask": 29.3,
-    "open_interest": 159,
-    "volume": 4,
-    "days_to_expiry": 434,
-    "quote": "ok",
-    "mid": 26.2,
-    "spread_pct": 23.7,
-    "iv": 0.7716,
-    "iv_source": "chain",
-    "delta": 0.712,
-    "cost_usd": 2930.0,
-    "breakeven": 99.3,
-    "breakeven_pct_above_last": 32.4,
-    "liquidity": "thin"
-   },
-   "fits_slot": false,
-   "reason": "chosen call costs $3,500 per contract, above the $2,700 stretch limit"
-  },
-  {
-   "ticker": "FN",
-   "name": "Fabrinet",
-   "sector": "Information Technology",
-   "index": "SP400",
-   "last": 327.98,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-11-04",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 11.71,
-   "uber_corr_120d": -0.13,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 13.6,
-   "trail_pe": 24.75,
-   "analysts": 9.0,
-   "mean_target": 564.44,
-   "eps_next_fy": 24.11,
-   "rev30_pct": 10.7,
-   "rev90_pct": 12.7,
-   "next_earnings": "2027-02-01",
-   "fits_slot": null
-  },
-  {
-   "ticker": "ELF",
-   "name": "e.l.f. Beauty",
-   "sector": "Consumer Staples",
-   "index": "SP400",
-   "last": 117.98,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-07",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "shares, or a smaller position",
-   "mcap_busd": 6.98,
-   "uber_corr_120d": 0.31,
-   "chart_gate": "ok",
-   "fwd_pe": 28.13,
-   "trail_pe": 83.08,
-   "analysts": 16.0,
-   "mean_target": 131.0,
-   "eps_next_fy": 4.19,
-   "rev30_pct": 8.5,
-   "rev90_pct": 9.1,
-   "next_earnings": "2027-02-03",
-   "option": {
-    "expiry": "2027-05-21",
-    "strike": 90.0,
-    "bid": 35.2,
-    "ask": 37.7,
-    "open_interest": 40,
+    "strike": 310.0,
+    "bid": 78.8,
+    "ask": 81.9,
+    "open_interest": 5,
     "volume": 1,
-    "days_to_expiry": 189,
+    "days_to_expiry": 305,
     "quote": "ok",
-    "mid": 36.45,
-    "spread_pct": 6.9,
-    "iv": 0.6572,
+    "mid": 80.35,
+    "spread_pct": 3.9,
+    "iv": 0.3737,
     "iv_source": "chain",
-    "delta": 0.803,
-    "cost_usd": 3770.0,
-    "breakeven": 127.7,
-    "breakeven_pct_above_last": 8.2,
+    "delta": 0.784,
+    "cost_usd": 8190.0,
+    "breakeven": 391.9,
+    "breakeven_pct_above_last": 6.0,
     "liquidity": "thin"
    },
    "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 100.0,
-    "bid": 38.75,
-    "ask": 41.9,
-    "open_interest": 508,
-    "volume": 4,
-    "days_to_expiry": 434,
+    "expiry": "2027-12-17",
+    "strike": 290.0,
+    "bid": 96.5,
+    "ask": 100.5,
+    "open_interest": 50,
+    "volume": 3,
+    "days_to_expiry": 396,
     "quote": "ok",
-    "mid": 40.33,
-    "spread_pct": 7.8,
-    "iv": 0.6584,
+    "mid": 98.5,
+    "spread_pct": 4.1,
+    "iv": 0.3763,
     "iv_source": "chain",
-    "delta": 0.744,
-    "cost_usd": 4190.0,
-    "breakeven": 141.9,
-    "breakeven_pct_above_last": 20.3,
-    "liquidity": "ok"
+    "delta": 0.823,
+    "cost_usd": 10050.0,
+    "breakeven": 390.5,
+    "breakeven_pct_above_last": 5.6,
+    "liquidity": "thin"
    },
    "fits_slot": false,
-   "reason": "chosen call costs $3,770 per contract, above the $2,700 stretch limit"
+   "reason": "chosen call costs $8,190 per contract, above the $2,700 stretch limit"
   },
   {
-   "ticker": "PLTR",
-   "name": "Palantir Technologies",
-   "sector": "Information Technology",
+   "ticker": "EOG",
+   "name": "EOG Resources",
+   "sector": "Energy",
    "index": "SP500",
-   "last": 167.99,
+   "last": 155.47,
    "score": 0.0,
    "lenses": [
-    "EARNINGS_DRIFT"
+    "SHARE_SHRINK"
    ],
    "adopted": [],
    "promising": [],
    "hits": [
     {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-05",
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
      "high_accrual": false,
      "verdict": "DROP"
     }
    ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 404.77,
-   "uber_corr_120d": 0.21,
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 80.61,
+   "uber_corr_120d": -0.07,
    "chart_gate": "ok",
-   "fwd_pe": 66.17,
-   "trail_pe": 118.3,
-   "analysts": 28.0,
-   "mean_target": 222.25,
-   "eps_next_fy": 2.54,
-   "rev30_pct": 8.0,
-   "rev90_pct": 9.7,
-   "next_earnings": "2027-02-01",
-   "fits_slot": null
+   "fwd_pe": 9.15,
+   "trail_pe": 10.04,
+   "analysts": 29.0,
+   "mean_target": 168.17,
+   "eps_next_fy": 16.93,
+   "rev30_pct": 7.2,
+   "rev90_pct": 17.4,
+   "next_earnings": "2026-11-05",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 130.0,
+    "bid": 40.0,
+    "ask": 42.3,
+    "open_interest": 9,
+    "volume": 4,
+    "days_to_expiry": 305,
+    "quote": "ok",
+    "mid": 41.15,
+    "spread_pct": 5.6,
+    "iv": 0.5148,
+    "iv_source": "chain",
+    "delta": 0.754,
+    "cost_usd": 4230.0,
+    "breakeven": 172.3,
+    "breakeven_pct_above_last": 10.8,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 97.5,
+    "bid": 66.5,
+    "ask": 71.0,
+    "open_interest": 27,
+    "volume": 1,
+    "days_to_expiry": 431,
+    "quote": "ok",
+    "mid": 68.75,
+    "spread_pct": 6.5,
+    "iv": 0.5984,
+    "iv_source": "chain",
+    "delta": 0.868,
+    "cost_usd": 7100.0,
+    "breakeven": 168.5,
+    "breakeven_pct_above_last": 8.4,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $4,230 per contract, above the $2,700 stretch limit"
   },
   {
    "ticker": "BTSG",
    "name": "BrightSpring Health Services",
    "sector": "Health Care",
    "index": "SP400",
-   "last": 71.21,
+   "last": 71.37,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -1419,1151 +856,28 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 14.17,
+   "mcap_busd": 14.2,
    "uber_corr_120d": -0.12,
    "chart_gate": "ok",
-   "fwd_pe": 29.31,
-   "trail_pe": 50.5,
+   "fwd_pe": 29.38,
+   "trail_pe": 50.62,
    "analysts": 17.0,
    "mean_target": 83.21,
    "eps_next_fy": 2.43,
    "rev30_pct": 6.6,
    "rev90_pct": 6.6,
    "next_earnings": "2026-10-30",
+   "option": {
+    "liquidity": "none"
+   },
    "fits_slot": null
   },
   {
-   "ticker": "APP",
-   "name": "AppLovin",
-   "sector": "Communication Services",
-   "index": "SP500",
-   "last": 409.1,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-11-06",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 135.54,
-   "uber_corr_120d": 0.16,
-   "chart_gate": "spike: 20%+ over the 50-day",
-   "fwd_pe": 19.61,
-   "trail_pe": 27.55,
-   "analysts": 30.0,
-   "mean_target": 449.61,
-   "eps_next_fy": 20.72,
-   "rev30_pct": 4.1,
-   "rev90_pct": 1.3,
-   "next_earnings": "2026-11-04",
-   "fits_slot": null
-  },
-  {
-   "ticker": "NBIX",
-   "name": "Neurocrine Biosciences",
-   "sector": "Health Care",
-   "index": "SP400",
-   "last": 167.4,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-11-04",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 16.94,
-   "uber_corr_120d": 0.24,
-   "chart_gate": "ok",
-   "fwd_pe": 13.61,
-   "trail_pe": 24.84,
-   "analysts": 28.0,
-   "mean_target": 208.11,
-   "eps_next_fy": 12.3,
-   "rev30_pct": 3.5,
-   "rev90_pct": 1.0,
-   "next_earnings": "2026-11-02",
-   "fits_slot": null
-  },
-  {
-   "ticker": "FTNT",
-   "name": "Fortinet",
+   "ticker": "FLEX",
+   "name": "Flex Ltd.",
    "sector": "Information Technology",
    "index": "SP500",
-   "last": 127.22,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 93.47,
-   "uber_corr_120d": -0.03,
-   "chart_gate": "ok",
-   "fwd_pe": 32.61,
-   "trail_pe": 41.58,
-   "analysts": 37.0,
-   "mean_target": 145.03,
-   "eps_next_fy": 3.9,
-   "rev30_pct": 3.3,
-   "rev90_pct": 3.8,
-   "next_earnings": "2026-10-28",
-   "fits_slot": null
-  },
-  {
-   "ticker": "MCK",
-   "name": "McKesson",
-   "sector": "Health Care",
-   "index": "SP500",
-   "last": 1102.81,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 127.33,
-   "uber_corr_120d": 0.14,
-   "chart_gate": "ok",
-   "fwd_pe": 21.1,
-   "trail_pe": 28.44,
-   "analysts": 14.0,
-   "mean_target": 1144.29,
-   "eps_next_fy": 52.26,
-   "rev30_pct": 3.1,
-   "rev90_pct": 3.4,
-   "next_earnings": "2027-02-03",
-   "fits_slot": null
-  },
-  {
-   "ticker": "ALSN",
-   "name": "Allison Transmission",
-   "sector": "Industrials",
-   "index": "SP400",
-   "last": 126.69,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-11-04",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 10.41,
-   "uber_corr_120d": 0.23,
-   "chart_gate": "ok",
-   "fwd_pe": 10.92,
-   "trail_pe": 18.28,
-   "analysts": 10.0,
-   "mean_target": 142.7,
-   "eps_next_fy": 11.6,
-   "rev30_pct": 3.0,
-   "rev90_pct": 3.2,
-   "next_earnings": "2026-11-02",
-   "fits_slot": null
-  },
-  {
-   "ticker": "GS",
-   "name": "Goldman Sachs",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 916.56,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 264.37,
-   "uber_corr_120d": 0.03,
-   "chart_gate": "ok",
-   "fwd_pe": 12.34,
-   "trail_pe": 13.18,
-   "analysts": 21.0,
-   "mean_target": 1030.67,
-   "eps_next_fy": 74.63,
-   "rev30_pct": 2.5,
-   "rev90_pct": 1.2,
-   "next_earnings": "2027-01-19",
-   "fits_slot": null
-  },
-  {
-   "ticker": "ELV",
-   "name": "Elevance Health",
-   "sector": "Health Care",
-   "index": "SP500",
-   "last": 429.69,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 92.84,
-   "uber_corr_120d": 0.15,
-   "chart_gate": "ok",
-   "fwd_pe": 14.19,
-   "trail_pe": 18.25,
-   "analysts": 21.0,
-   "mean_target": 482.38,
-   "eps_next_fy": 30.29,
-   "rev30_pct": 2.4,
-   "rev90_pct": 2.2,
-   "next_earnings": "2027-01-28",
-   "fits_slot": null
-  },
-  {
-   "ticker": "JPM",
-   "name": "JPMorgan Chase",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 346.19,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 919.35,
-   "uber_corr_120d": 0.04,
-   "chart_gate": "ok",
-   "fwd_pe": 13.54,
-   "trail_pe": 14.52,
-   "analysts": 23.0,
-   "mean_target": 373.48,
-   "eps_next_fy": 25.57,
-   "rev30_pct": 2.2,
-   "rev90_pct": 2.5,
-   "next_earnings": "2027-01-14",
-   "fits_slot": null
-  },
-  {
-   "ticker": "MAR",
-   "name": "Marriott International",
-   "sector": "Consumer Discretionary",
-   "index": "SP500",
-   "last": 423.16,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 108.97,
-   "uber_corr_120d": 0.02,
-   "chart_gate": "ok",
-   "fwd_pe": 31.47,
-   "trail_pe": 42.19,
-   "analysts": 26.0,
-   "mean_target": 420.42,
-   "eps_next_fy": 13.45,
-   "rev30_pct": 2.2,
-   "rev90_pct": 2.3,
-   "next_earnings": "2026-11-02",
-   "fits_slot": null
-  },
-  {
-   "ticker": "TOST",
-   "name": "Toast, Inc.",
-   "sector": "Financials",
-   "index": "SP400",
-   "last": 34.68,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-06",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-11-05",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 20.15,
-   "uber_corr_120d": 0.51,
-   "chart_gate": "ok",
-   "fwd_pe": 19.58,
-   "trail_pe": 38.11,
-   "analysts": 27.0,
-   "mean_target": 38.89,
-   "eps_next_fy": 1.77,
-   "rev30_pct": 2.1,
-   "rev90_pct": 1.9,
-   "next_earnings": "2026-11-03",
-   "fits_slot": null
-  },
-  {
-   "ticker": "HALO",
-   "name": "Halozyme",
-   "sector": "Health Care",
-   "index": "SP400",
-   "last": 100.27,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-10",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 11.43,
-   "uber_corr_120d": 0.26,
-   "chart_gate": "ok",
-   "fwd_pe": 9.47,
-   "trail_pe": 25.07,
-   "analysts": 9.0,
-   "mean_target": 119.89,
-   "eps_next_fy": 10.59,
-   "rev30_pct": 1.9,
-   "rev90_pct": 1.9,
-   "next_earnings": "2026-11-05",
-   "fits_slot": null
-  },
-  {
-   "ticker": "BNY",
-   "name": "BNY Mellon",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 153.41,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 103.23,
-   "uber_corr_120d": 0.03,
-   "chart_gate": "ok",
-   "fwd_pe": 14.7,
-   "trail_pe": 16.99,
-   "analysts": 15.0,
-   "mean_target": 163.7,
-   "eps_next_fy": 10.44,
-   "rev30_pct": 1.9,
-   "rev90_pct": 1.9,
-   "next_earnings": "2027-01-15",
-   "fits_slot": null
-  },
-  {
-   "ticker": "DASH",
-   "name": "DoorDash",
-   "sector": "Consumer Discretionary",
-   "index": "SP500",
-   "last": 171.51,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-11-02",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 74.77,
-   "uber_corr_120d": 0.61,
-   "chart_gate": "ok",
-   "fwd_pe": 22.49,
-   "trail_pe": 71.17,
-   "analysts": 39.0,
-   "mean_target": 250.69,
-   "eps_next_fy": 4.58,
-   "rev30_pct": 1.7,
-   "rev90_pct": 2.8,
-   "next_earnings": "2026-10-29",
-   "fits_slot": null
-  },
-  {
-   "ticker": "ABNB",
-   "name": "Airbnb",
-   "sector": "Consumer Discretionary",
-   "index": "SP500",
-   "last": 186.78,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 111.46,
-   "uber_corr_120d": 0.57,
-   "chart_gate": "ok",
-   "fwd_pe": 29.58,
-   "trail_pe": 35.04,
-   "analysts": 40.0,
-   "mean_target": 203.83,
-   "eps_next_fy": 6.36,
-   "rev30_pct": 1.6,
-   "rev90_pct": 2.9,
-   "next_earnings": "2026-11-05",
-   "fits_slot": null
-  },
-  {
-   "ticker": "NEM",
-   "name": "Newmont",
-   "sector": "Materials",
-   "index": "SP500",
-   "last": 113.14,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 117.57,
-   "uber_corr_120d": 0.3,
-   "chart_gate": "ok",
-   "fwd_pe": 11.2,
-   "trail_pe": 13.13,
-   "analysts": 20.0,
-   "mean_target": 135.39,
-   "eps_next_fy": 10.1,
-   "rev30_pct": 1.2,
-   "rev90_pct": -3.4,
-   "next_earnings": "2026-10-22",
-   "fits_slot": null
-  },
-  {
-   "ticker": "T",
-   "name": "AT&T",
-   "sector": "Communication Services",
-   "index": "SP500",
-   "last": 22.18,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 149.41,
-   "uber_corr_120d": 0.18,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 8.54,
-   "trail_pe": 11.86,
-   "analysts": 23.0,
-   "mean_target": 27.59,
-   "eps_next_fy": 2.6,
-   "rev30_pct": 1.1,
-   "rev90_pct": 1.3,
-   "next_earnings": "2027-01-27",
-   "fits_slot": null
-  },
-  {
-   "ticker": "MMM",
-   "name": "3M",
-   "sector": "Industrials",
-   "index": "SP500",
-   "last": 183.66,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 94.9,
-   "uber_corr_120d": 0.17,
-   "chart_gate": "ok",
-   "fwd_pe": 18.51,
-   "trail_pe": 27.41,
-   "analysts": 17.0,
-   "mean_target": 193.43,
-   "eps_next_fy": 9.92,
-   "rev30_pct": 1.0,
-   "rev90_pct": 1.5,
-   "next_earnings": "2027-01-19",
-   "fits_slot": null
-  },
-  {
-   "ticker": "HPE",
-   "name": "Hewlett Packard Enterprise",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 48.29,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-09-04",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 64.1,
-   "uber_corr_120d": -0.21,
-   "chart_gate": "ok",
-   "fwd_pe": 10.2,
-   "trail_pe": 24.89,
-   "analysts": 21.0,
-   "mean_target": 72.2,
-   "eps_next_fy": 4.74,
-   "rev30_pct": 0.8,
-   "rev90_pct": 16.9,
-   "next_earnings": "2026-11-23",
-   "fits_slot": null
-  },
-  {
-   "ticker": "TWLO",
-   "name": "Twilio",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 211.21,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-10",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 32.68,
-   "uber_corr_120d": 0.23,
-   "chart_gate": "ok",
-   "fwd_pe": 30.82,
-   "trail_pe": 26.53,
-   "analysts": 29.0,
-   "mean_target": 268.37,
-   "eps_next_fy": 6.85,
-   "rev30_pct": 0.8,
-   "rev90_pct": 0.7,
-   "next_earnings": "2026-10-29",
-   "fits_slot": null
-  },
-  {
-   "ticker": "TMUS",
-   "name": "T-Mobile US",
-   "sector": "Communication Services",
-   "index": "SP500",
-   "last": 169.95,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 180.02,
-   "uber_corr_120d": 0.14,
-   "chart_gate": "ok",
-   "fwd_pe": 11.92,
-   "trail_pe": 16.39,
-   "analysts": 25.0,
-   "mean_target": 225.44,
-   "eps_next_fy": 14.01,
-   "rev30_pct": 0.7,
-   "rev90_pct": 0.9,
-   "next_earnings": "2026-10-28",
-   "fits_slot": null
-  },
-  {
-   "ticker": "MA",
-   "name": "Mastercard",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 661.19,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 576.01,
-   "uber_corr_120d": 0.37,
-   "chart_gate": "ok",
-   "fwd_pe": 28.54,
-   "trail_pe": 34.6,
-   "analysts": 37.0,
-   "mean_target": 720.69,
-   "eps_next_fy": 23.16,
-   "rev30_pct": 0.6,
-   "rev90_pct": 0.7,
-   "next_earnings": "2027-01-28",
-   "fits_slot": null
-  },
-  {
-   "ticker": "MRSH",
-   "name": "Marsh McLennan",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 207.78,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 98.8,
-   "uber_corr_120d": 0.42,
-   "chart_gate": "ok",
-   "fwd_pe": 18.12,
-   "trail_pe": 24.85,
-   "analysts": 21.0,
-   "mean_target": 206.62,
-   "eps_next_fy": 11.46,
-   "rev30_pct": 0.4,
-   "rev90_pct": 0.5,
-   "next_earnings": "2027-01-28",
-   "fits_slot": null
-  },
-  {
-   "ticker": "SNPS",
-   "name": "Synopsys",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 455.2,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-28",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 87.23,
-   "uber_corr_120d": 0.02,
-   "chart_gate": "ok",
-   "fwd_pe": 24.41,
-   "trail_pe": 80.42,
-   "analysts": 25.0,
-   "mean_target": 589.55,
-   "eps_next_fy": 18.65,
-   "rev30_pct": 0.3,
-   "rev90_pct": 7.9,
-   "next_earnings": "2026-12-08",
-   "fits_slot": null
-  },
-  {
-   "ticker": "WFC",
-   "name": "Wells Fargo",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 86.05,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 258.31,
-   "uber_corr_120d": 0.11,
-   "chart_gate": "ok",
-   "fwd_pe": 10.76,
-   "trail_pe": 12.14,
-   "analysts": 24.0,
-   "mean_target": 97.38,
-   "eps_next_fy": 8.06,
-   "rev30_pct": 0.3,
-   "rev90_pct": 1.1,
-   "next_earnings": "2027-01-14",
-   "fits_slot": null
-  },
-  {
-   "ticker": "DIS",
-   "name": "Walt Disney Company (The)",
-   "sector": "Communication Services",
-   "index": "SP500",
-   "last": 118.97,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 205.42,
-   "uber_corr_120d": 0.42,
-   "chart_gate": "ok",
-   "fwd_pe": 15.88,
-   "trail_pe": 24.53,
-   "analysts": 32.0,
-   "mean_target": 126.83,
-   "eps_next_fy": 7.49,
-   "rev30_pct": 0.3,
-   "rev90_pct": 0.8,
-   "next_earnings": "2026-11-17",
-   "fits_slot": null
-  },
-  {
-   "ticker": "SPGI",
-   "name": "S&P Global",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 473.59,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 137.29,
-   "uber_corr_120d": 0.35,
-   "chart_gate": "ok",
-   "fwd_pe": 23.47,
-   "trail_pe": 28.29,
-   "analysts": 20.0,
-   "mean_target": 526.7,
-   "eps_next_fy": 20.18,
-   "rev30_pct": -0.1,
-   "rev90_pct": -0.3,
-   "next_earnings": "2026-10-27",
-   "fits_slot": null
-  },
-  {
-   "ticker": "NVDA",
-   "name": "Nvidia",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 162.85,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-28",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 3932.34,
-   "uber_corr_120d": -0.05,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 10.27,
-   "trail_pe": 20.59,
-   "analysts": 53.0,
-   "mean_target": 278.31,
-   "eps_next_fy": 15.85,
-   "rev30_pct": -0.4,
-   "rev90_pct": 23.7,
-   "next_earnings": "2026-11-17",
-   "fits_slot": null
-  },
-  {
-   "ticker": "ADBE",
-   "name": "Adobe Inc.",
-   "sector": "Information Technology",
-   "index": "SP500",
-   "last": 243.08,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 94.61,
-   "uber_corr_120d": 0.36,
-   "chart_gate": "ok",
-   "fwd_pe": 8.87,
-   "trail_pe": 13.57,
-   "analysts": 33.0,
-   "mean_target": 266.91,
-   "eps_next_fy": 27.41,
-   "rev30_pct": -0.4,
-   "rev90_pct": 0.2,
-   "next_earnings": "2026-12-09",
-   "fits_slot": null
-  },
-  {
-   "ticker": "COF",
-   "name": "Capital One",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 195.08,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 117.35,
-   "uber_corr_120d": 0.24,
-   "chart_gate": "ok",
-   "fwd_pe": 8.18,
-   "trail_pe": 11.95,
-   "analysts": 21.0,
-   "mean_target": 254.48,
-   "eps_next_fy": 23.86,
-   "rev30_pct": -0.9,
-   "rev90_pct": -0.8,
-   "next_earnings": "2027-01-19",
-   "fits_slot": null
-  },
-  {
-   "ticker": "BKNG",
-   "name": "Booking Holdings",
-   "sector": "Consumer Discretionary",
-   "index": "SP500",
-   "last": 159.58,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 118.68,
-   "uber_corr_120d": 0.58,
-   "chart_gate": "ok",
-   "fwd_pe": 13.02,
-   "trail_pe": 17.31,
-   "analysts": 35.0,
-   "mean_target": 215.66,
-   "eps_next_fy": 12.26,
-   "rev30_pct": -1.0,
-   "rev90_pct": -1.0,
-   "next_earnings": "2026-11-03",
-   "fits_slot": null
-  },
-  {
-   "ticker": "NFLX",
-   "name": "Netflix",
-   "sector": "Communication Services",
-   "index": "SP500",
-   "last": 62.15,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": true,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 255.21,
-   "uber_corr_120d": 0.46,
-   "chart_gate": "falling hard: below the 50-day and 200-day",
-   "fwd_pe": 16.48,
-   "trail_pe": 17.96,
-   "analysts": 43.0,
-   "mean_target": 84.76,
-   "eps_next_fy": 3.77,
-   "rev30_pct": -1.1,
-   "rev90_pct": -1.2,
-   "next_earnings": "2027-01-19",
-   "fits_slot": null
-  },
-  {
-   "ticker": "TEX",
-   "name": "Terex",
-   "sector": "Industrials",
-   "index": "SP400",
-   "last": 56.94,
+   "last": 74.8,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -2579,11 +893,1491 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 6.4,
-   "uber_corr_120d": 0.06,
+   "mcap_busd": 27.64,
+   "uber_corr_120d": -0.15,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 9.54,
+   "trail_pe": 26.91,
+   "analysts": 10.0,
+   "mean_target": 154.4,
+   "eps_next_fy": 7.84,
+   "rev30_pct": 4.6,
+   "rev90_pct": 10.3,
+   "next_earnings": "2027-01-27",
+   "option": {
+    "liquidity": "none"
+   },
+   "fits_slot": null
+  },
+  {
+   "ticker": "MPC",
+   "name": "Marathon Petroleum",
+   "sector": "Energy",
+   "index": "SP500",
+   "last": 402.19,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 109.51,
+   "uber_corr_120d": -0.09,
    "chart_gate": "ok",
-   "fwd_pe": 9.76,
-   "trail_pe": 26.36,
+   "fwd_pe": 6.69,
+   "trail_pe": 8.22,
+   "analysts": 17.0,
+   "mean_target": 458.24,
+   "eps_next_fy": 60.14,
+   "rev30_pct": 4.3,
+   "rev90_pct": 84.4,
+   "next_earnings": "2027-02-02",
+   "option": {
+    "liquidity": "none"
+   },
+   "fits_slot": null
+  },
+  {
+   "ticker": "APP",
+   "name": "AppLovin",
+   "sector": "Communication Services",
+   "index": "SP500",
+   "last": 415.22,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-11-06",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 137.57,
+   "uber_corr_120d": 0.16,
+   "chart_gate": "spike: 20%+ over the 50-day",
+   "fwd_pe": 19.9,
+   "trail_pe": 27.55,
+   "analysts": 30.0,
+   "mean_target": 455.61,
+   "eps_next_fy": 20.72,
+   "rev30_pct": 4.1,
+   "rev90_pct": 1.1,
+   "next_earnings": "2026-11-04",
+   "option": {
+    "liquidity": "none"
+   },
+   "fits_slot": null
+  },
+  {
+   "ticker": "NBIX",
+   "name": "Neurocrine Biosciences",
+   "sector": "Health Care",
+   "index": "SP400",
+   "last": 165.31,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-11-04",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 16.73,
+   "uber_corr_120d": 0.24,
+   "chart_gate": "ok",
+   "fwd_pe": 13.44,
+   "trail_pe": 24.82,
+   "analysts": 28.0,
+   "mean_target": 208.54,
+   "eps_next_fy": 12.3,
+   "rev30_pct": 3.5,
+   "rev90_pct": 1.0,
+   "next_earnings": "2026-11-02",
+   "option": {
+    "expiry": "2027-12-17",
+    "strike": 135.0,
+    "bid": 35.0,
+    "ask": 40.0,
+    "open_interest": 2,
+    "volume": 2,
+    "days_to_expiry": 396,
+    "quote": "ok",
+    "mid": 37.5,
+    "spread_pct": 13.3,
+    "iv": 0.3481,
+    "iv_source": "chain",
+    "delta": 0.805,
+    "cost_usd": 4000.0,
+    "breakeven": 175.0,
+    "breakeven_pct_above_last": 5.9,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-12-17",
+    "strike": 165.0,
+    "bid": 27.0,
+    "ask": 31.5,
+    "open_interest": 14,
+    "volume": 1,
+    "days_to_expiry": 396,
+    "quote": "ok",
+    "mid": 29.25,
+    "spread_pct": 15.4,
+    "iv": 0.461,
+    "iv_source": "chain",
+    "delta": 0.631,
+    "cost_usd": 3150.0,
+    "breakeven": 196.5,
+    "breakeven_pct_above_last": 18.9,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $4,000 per contract, above the $2,700 stretch limit"
+  },
+  {
+   "ticker": "FTNT",
+   "name": "Fortinet",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 123.27,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 90.57,
+   "uber_corr_120d": -0.03,
+   "chart_gate": "ok",
+   "fwd_pe": 31.6,
+   "trail_pe": 40.28,
+   "analysts": 37.0,
+   "mean_target": 145.03,
+   "eps_next_fy": 3.9,
+   "rev30_pct": 3.3,
+   "rev90_pct": 3.8,
+   "next_earnings": "2026-10-28",
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 95.0,
+    "bid": 36.1,
+    "ask": 39.55,
+    "open_interest": 10,
+    "volume": 2,
+    "days_to_expiry": 305,
+    "quote": "ok",
+    "mid": 37.83,
+    "spread_pct": 9.1,
+    "iv": 0.5277,
+    "iv_source": "chain",
+    "delta": 0.802,
+    "cost_usd": 3955.0,
+    "breakeven": 134.55,
+    "breakeven_pct_above_last": 9.2,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-09-17",
+    "strike": 70.0,
+    "bid": 89.0,
+    "ask": 93.5,
+    "open_interest": 15,
+    "volume": 2,
+    "days_to_expiry": 305,
+    "quote": "ok",
+    "mid": 91.25,
+    "spread_pct": 4.9,
+    "iv": 2.033,
+    "iv_source": "chain",
+    "delta": 0.895,
+    "cost_usd": 9350.0,
+    "breakeven": 163.5,
+    "breakeven_pct_above_last": 32.6,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,955 per contract, above the $2,700 stretch limit"
+  },
+  {
+   "ticker": "JCI",
+   "name": "Johnson Controls",
+   "sector": "Industrials",
+   "index": "SP500",
+   "last": 136.88,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": null,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "shares, or a smaller position",
+   "mcap_busd": 82.16,
+   "uber_corr_120d": -0.17,
+   "chart_gate": "ok",
+   "fwd_pe": 18.47,
+   "trail_pe": 29.0,
+   "analysts": 21.0,
+   "mean_target": 174.43,
+   "eps_next_fy": 7.41,
+   "rev30_pct": 3.2,
+   "rev90_pct": 5.4,
+   "next_earnings": "2026-10-27",
+   "option": {
+    "expiry": "2028-01-21",
+    "strike": 115.0,
+    "bid": 33.9,
+    "ask": 36.7,
+    "open_interest": 29,
+    "volume": 2,
+    "days_to_expiry": 431,
+    "quote": "ok",
+    "mid": 35.3,
+    "spread_pct": 7.9,
+    "iv": 0.4487,
+    "iv_source": "chain",
+    "delta": 0.757,
+    "cost_usd": 3670.0,
+    "breakeven": 151.7,
+    "breakeven_pct_above_last": 10.8,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 120.0,
+    "bid": 30.9,
+    "ask": 33.7,
+    "open_interest": 30,
+    "volume": 2,
+    "days_to_expiry": 431,
+    "quote": "ok",
+    "mid": 32.3,
+    "spread_pct": 8.7,
+    "iv": 0.4417,
+    "iv_source": "chain",
+    "delta": 0.73,
+    "cost_usd": 3370.0,
+    "breakeven": 153.7,
+    "breakeven_pct_above_last": 12.3,
+    "liquidity": "thin"
+   },
+   "fits_slot": false,
+   "reason": "chosen call costs $3,670 per contract, above the $2,700 stretch limit"
+  },
+  {
+   "ticker": "MCK",
+   "name": "McKesson",
+   "sector": "Health Care",
+   "index": "SP500",
+   "last": 1105.04,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 127.58,
+   "uber_corr_120d": 0.14,
+   "chart_gate": "ok",
+   "fwd_pe": 21.14,
+   "trail_pe": 28.5,
+   "analysts": 14.0,
+   "mean_target": 1144.29,
+   "eps_next_fy": 52.26,
+   "rev30_pct": 3.1,
+   "rev90_pct": 3.4,
+   "next_earnings": "2027-02-03",
+   "fits_slot": null
+  },
+  {
+   "ticker": "ALSN",
+   "name": "Allison Transmission",
+   "sector": "Industrials",
+   "index": "SP400",
+   "last": 124.53,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-11-04",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 10.23,
+   "uber_corr_120d": 0.23,
+   "chart_gate": "ok",
+   "fwd_pe": 10.74,
+   "trail_pe": 18.29,
+   "analysts": 10.0,
+   "mean_target": 142.7,
+   "eps_next_fy": 11.6,
+   "rev30_pct": 3.0,
+   "rev90_pct": 3.2,
+   "next_earnings": "2026-11-02",
+   "fits_slot": null
+  },
+  {
+   "ticker": "TRV",
+   "name": "Travelers Companies (The)",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 403.06,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 82.61,
+   "uber_corr_120d": 0.08,
+   "chart_gate": "ok",
+   "fwd_pe": 12.96,
+   "trail_pe": 10.6,
+   "analysts": 24.0,
+   "mean_target": 376.54,
+   "eps_next_fy": 31.11,
+   "rev30_pct": 2.7,
+   "rev90_pct": 3.1,
+   "next_earnings": "2027-01-20",
+   "fits_slot": null
+  },
+  {
+   "ticker": "GS",
+   "name": "Goldman Sachs",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 891.54,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 257.15,
+   "uber_corr_120d": 0.03,
+   "chart_gate": "ok",
+   "fwd_pe": 12.01,
+   "trail_pe": 13.18,
+   "analysts": 21.0,
+   "mean_target": 1030.67,
+   "eps_next_fy": 74.63,
+   "rev30_pct": 2.5,
+   "rev90_pct": 1.2,
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
+  },
+  {
+   "ticker": "ELV",
+   "name": "Elevance Health",
+   "sector": "Health Care",
+   "index": "SP500",
+   "last": 446.28,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 96.42,
+   "uber_corr_120d": 0.15,
+   "chart_gate": "ok",
+   "fwd_pe": 14.74,
+   "trail_pe": 18.95,
+   "analysts": 21.0,
+   "mean_target": 482.38,
+   "eps_next_fy": 30.29,
+   "rev30_pct": 2.4,
+   "rev90_pct": 2.2,
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
+  },
+  {
+   "ticker": "MAR",
+   "name": "Marriott International",
+   "sector": "Consumer Discretionary",
+   "index": "SP500",
+   "last": 425.7,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 109.62,
+   "uber_corr_120d": 0.01,
+   "chart_gate": "ok",
+   "fwd_pe": 31.65,
+   "trail_pe": 42.44,
+   "analysts": 26.0,
+   "mean_target": 421.73,
+   "eps_next_fy": 13.45,
+   "rev30_pct": 2.3,
+   "rev90_pct": 2.2,
+   "next_earnings": "2026-11-02",
+   "fits_slot": null
+  },
+  {
+   "ticker": "JPM",
+   "name": "JPMorgan Chase",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 338.21,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 898.15,
+   "uber_corr_120d": 0.04,
+   "chart_gate": "ok",
+   "fwd_pe": 13.23,
+   "trail_pe": 14.52,
+   "analysts": 23.0,
+   "mean_target": 373.48,
+   "eps_next_fy": 25.57,
+   "rev30_pct": 2.2,
+   "rev90_pct": 2.5,
+   "next_earnings": "2027-01-14",
+   "fits_slot": null
+  },
+  {
+   "ticker": "TOST",
+   "name": "Toast, Inc.",
+   "sector": "Financials",
+   "index": "SP400",
+   "last": 35.0,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-11-05",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 20.33,
+   "uber_corr_120d": 0.51,
+   "chart_gate": "ok",
+   "fwd_pe": 19.76,
+   "trail_pe": 38.04,
+   "analysts": 27.0,
+   "mean_target": 38.89,
+   "eps_next_fy": 1.77,
+   "rev30_pct": 2.1,
+   "rev90_pct": 1.9,
+   "next_earnings": "2026-11-03",
+   "fits_slot": null
+  },
+  {
+   "ticker": "ABNB",
+   "name": "Airbnb",
+   "sector": "Consumer Discretionary",
+   "index": "SP500",
+   "last": 186.19,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 111.11,
+   "uber_corr_120d": 0.57,
+   "chart_gate": "ok",
+   "fwd_pe": 29.28,
+   "trail_pe": 35.06,
+   "analysts": 39.0,
+   "mean_target": 205.44,
+   "eps_next_fy": 6.39,
+   "rev30_pct": 2.1,
+   "rev90_pct": 3.4,
+   "next_earnings": "2026-11-05",
+   "fits_slot": null
+  },
+  {
+   "ticker": "HALO",
+   "name": "Halozyme",
+   "sector": "Health Care",
+   "index": "SP400",
+   "last": 96.5,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-08-10",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 11.0,
+   "uber_corr_120d": 0.26,
+   "chart_gate": "ok",
+   "fwd_pe": 9.11,
+   "trail_pe": 25.06,
+   "analysts": 9.0,
+   "mean_target": 119.89,
+   "eps_next_fy": 10.59,
+   "rev30_pct": 1.9,
+   "rev90_pct": 1.9,
+   "next_earnings": "2026-11-05",
+   "fits_slot": null
+  },
+  {
+   "ticker": "BNY",
+   "name": "BNY Mellon",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 151.69,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 102.07,
+   "uber_corr_120d": 0.03,
+   "chart_gate": "ok",
+   "fwd_pe": 14.53,
+   "trail_pe": 16.99,
+   "analysts": 15.0,
+   "mean_target": 163.7,
+   "eps_next_fy": 10.44,
+   "rev30_pct": 1.9,
+   "rev90_pct": 1.9,
+   "next_earnings": "2027-01-15",
+   "fits_slot": null
+  },
+  {
+   "ticker": "DASH",
+   "name": "DoorDash",
+   "sector": "Consumer Discretionary",
+   "index": "SP500",
+   "last": 169.78,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-11-02",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 74.02,
+   "uber_corr_120d": 0.61,
+   "chart_gate": "ok",
+   "fwd_pe": 22.26,
+   "trail_pe": 71.04,
+   "analysts": 38.0,
+   "mean_target": 250.39,
+   "eps_next_fy": 4.58,
+   "rev30_pct": 1.7,
+   "rev90_pct": 2.8,
+   "next_earnings": "2026-10-29",
+   "fits_slot": null
+  },
+  {
+   "ticker": "NEM",
+   "name": "Newmont",
+   "sector": "Materials",
+   "index": "SP500",
+   "last": 110.31,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 114.63,
+   "uber_corr_120d": 0.3,
+   "chart_gate": "ok",
+   "fwd_pe": 10.92,
+   "trail_pe": 12.8,
+   "analysts": 20.0,
+   "mean_target": 135.39,
+   "eps_next_fy": 10.1,
+   "rev30_pct": 1.2,
+   "rev90_pct": -3.4,
+   "next_earnings": "2026-10-22",
+   "fits_slot": null
+  },
+  {
+   "ticker": "T",
+   "name": "AT&T",
+   "sector": "Communication Services",
+   "index": "SP500",
+   "last": 22.36,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 150.63,
+   "uber_corr_120d": 0.18,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 8.61,
+   "trail_pe": 11.83,
+   "analysts": 23.0,
+   "mean_target": 27.59,
+   "eps_next_fy": 2.6,
+   "rev30_pct": 1.1,
+   "rev90_pct": 1.3,
+   "next_earnings": "2027-01-27",
+   "fits_slot": null
+  },
+  {
+   "ticker": "MMM",
+   "name": "3M",
+   "sector": "Industrials",
+   "index": "SP500",
+   "last": 181.68,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 93.88,
+   "uber_corr_120d": 0.16,
+   "chart_gate": "ok",
+   "fwd_pe": 18.31,
+   "trail_pe": 27.4,
+   "analysts": 17.0,
+   "mean_target": 193.43,
+   "eps_next_fy": 9.92,
+   "rev30_pct": 1.0,
+   "rev90_pct": 1.5,
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
+  },
+  {
+   "ticker": "TWLO",
+   "name": "Twilio",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 199.42,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-08-10",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 30.86,
+   "uber_corr_120d": 0.23,
+   "chart_gate": "ok",
+   "fwd_pe": 29.1,
+   "trail_pe": 26.52,
+   "analysts": 29.0,
+   "mean_target": 268.37,
+   "eps_next_fy": 6.85,
+   "rev30_pct": 0.8,
+   "rev90_pct": 0.7,
+   "next_earnings": "2026-10-29",
+   "fits_slot": null
+  },
+  {
+   "ticker": "TMUS",
+   "name": "T-Mobile US",
+   "sector": "Communication Services",
+   "index": "SP500",
+   "last": 170.01,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 180.09,
+   "uber_corr_120d": 0.14,
+   "chart_gate": "ok",
+   "fwd_pe": 11.93,
+   "trail_pe": 16.39,
+   "analysts": 25.0,
+   "mean_target": 225.44,
+   "eps_next_fy": 14.01,
+   "rev30_pct": 0.7,
+   "rev90_pct": 0.9,
+   "next_earnings": "2026-10-28",
+   "fits_slot": null
+  },
+  {
+   "ticker": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 46.57,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-09-04",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 61.82,
+   "uber_corr_120d": -0.21,
+   "chart_gate": "ok",
+   "fwd_pe": 9.84,
+   "trail_pe": 24.9,
+   "analysts": 21.0,
+   "mean_target": 71.25,
+   "eps_next_fy": 4.74,
+   "rev30_pct": 0.6,
+   "rev90_pct": 16.2,
+   "next_earnings": "2026-11-23",
+   "fits_slot": null
+  },
+  {
+   "ticker": "MA",
+   "name": "Mastercard",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 661.71,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 576.47,
+   "uber_corr_120d": 0.37,
+   "chart_gate": "ok",
+   "fwd_pe": 28.57,
+   "trail_pe": 34.63,
+   "analysts": 37.0,
+   "mean_target": 720.69,
+   "eps_next_fy": 23.16,
+   "rev30_pct": 0.6,
+   "rev90_pct": 0.7,
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
+  },
+  {
+   "ticker": "HLT",
+   "name": "Hilton Worldwide",
+   "sector": "Consumer Discretionary",
+   "index": "SP500",
+   "last": 373.83,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 83.18,
+   "uber_corr_120d": 0.04,
+   "chart_gate": "ok",
+   "fwd_pe": 35.74,
+   "trail_pe": 50.38,
+   "analysts": 27.0,
+   "mean_target": 374.19,
+   "eps_next_fy": 10.46,
+   "rev30_pct": 0.4,
+   "rev90_pct": 0.0,
+   "next_earnings": "2026-10-27",
+   "fits_slot": null
+  },
+  {
+   "ticker": "SNPS",
+   "name": "Synopsys",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 441.33,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-08-28",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 84.57,
+   "uber_corr_120d": 0.02,
+   "chart_gate": "ok",
+   "fwd_pe": 23.67,
+   "trail_pe": 77.97,
+   "analysts": 25.0,
+   "mean_target": 589.55,
+   "eps_next_fy": 18.65,
+   "rev30_pct": 0.3,
+   "rev90_pct": 7.9,
+   "next_earnings": "2026-12-08",
+   "fits_slot": null
+  },
+  {
+   "ticker": "WFC",
+   "name": "Wells Fargo",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 84.84,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 254.68,
+   "uber_corr_120d": 0.12,
+   "chart_gate": "ok",
+   "fwd_pe": 10.61,
+   "trail_pe": 11.97,
+   "analysts": 24.0,
+   "mean_target": 97.38,
+   "eps_next_fy": 8.06,
+   "rev30_pct": 0.3,
+   "rev90_pct": 1.1,
+   "next_earnings": "2027-01-14",
+   "fits_slot": null
+  },
+  {
+   "ticker": "MRSH",
+   "name": "Marsh McLennan",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 209.88,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 99.8,
+   "uber_corr_120d": 0.42,
+   "chart_gate": "ok",
+   "fwd_pe": 18.31,
+   "trail_pe": 24.87,
+   "analysts": 21.0,
+   "mean_target": 208.67,
+   "eps_next_fy": 11.46,
+   "rev30_pct": 0.1,
+   "rev90_pct": 0.5,
+   "next_earnings": "2027-01-28",
+   "fits_slot": null
+  },
+  {
+   "ticker": "DIS",
+   "name": "Walt Disney Company (The)",
+   "sector": "Communication Services",
+   "index": "SP500",
+   "last": 118.7,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 204.96,
+   "uber_corr_120d": 0.42,
+   "chart_gate": "ok",
+   "fwd_pe": 15.87,
+   "trail_pe": 24.47,
+   "analysts": 31.0,
+   "mean_target": 127.54,
+   "eps_next_fy": 7.48,
+   "rev30_pct": -0.1,
+   "rev90_pct": 0.6,
+   "next_earnings": "2026-11-17",
+   "fits_slot": null
+  },
+  {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 156.14,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-08-28",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 3770.31,
+   "uber_corr_120d": -0.05,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 9.86,
+   "trail_pe": 20.6,
+   "analysts": 54.0,
+   "mean_target": 267.65,
+   "eps_next_fy": 15.84,
+   "rev30_pct": -0.4,
+   "rev90_pct": 23.2,
+   "next_earnings": "2026-11-17",
+   "fits_slot": null
+  },
+  {
+   "ticker": "ADBE",
+   "name": "Adobe Inc.",
+   "sector": "Information Technology",
+   "index": "SP500",
+   "last": 246.0,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 95.74,
+   "uber_corr_120d": 0.36,
+   "chart_gate": "ok",
+   "fwd_pe": 8.98,
+   "trail_pe": 13.74,
+   "analysts": 33.0,
+   "mean_target": 266.91,
+   "eps_next_fy": 27.41,
+   "rev30_pct": -0.4,
+   "rev90_pct": 0.2,
+   "next_earnings": "2026-12-09",
+   "fits_slot": null
+  },
+  {
+   "ticker": "SCHW",
+   "name": "Charles Schwab Corporation",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 92.94,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 160.42,
+   "uber_corr_120d": 0.16,
+   "chart_gate": "ok",
+   "fwd_pe": 11.91,
+   "trail_pe": 15.89,
+   "analysts": 22.0,
+   "mean_target": 116.64,
+   "eps_next_fy": 7.8,
+   "rev30_pct": -0.6,
+   "rev90_pct": 0.0,
+   "next_earnings": "2027-01-21",
+   "fits_slot": null
+  },
+  {
+   "ticker": "COF",
+   "name": "Capital One",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 193.22,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 116.23,
+   "uber_corr_120d": 0.23,
+   "chart_gate": "ok",
+   "fwd_pe": 8.1,
+   "trail_pe": 11.96,
+   "analysts": 21.0,
+   "mean_target": 254.48,
+   "eps_next_fy": 23.86,
+   "rev30_pct": -0.9,
+   "rev90_pct": -0.8,
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
+  },
+  {
+   "ticker": "NFLX",
+   "name": "Netflix",
+   "sector": "Communication Services",
+   "index": "SP500",
+   "last": 60.75,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": true,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 249.46,
+   "uber_corr_120d": 0.45,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 16.11,
+   "trail_pe": 17.97,
+   "analysts": 43.0,
+   "mean_target": 84.76,
+   "eps_next_fy": 3.77,
+   "rev30_pct": -1.1,
+   "rev90_pct": -1.2,
+   "next_earnings": "2027-01-19",
+   "fits_slot": null
+  },
+  {
+   "ticker": "BKNG",
+   "name": "Booking Holdings",
+   "sector": "Consumer Discretionary",
+   "index": "SP500",
+   "last": 157.53,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 117.16,
+   "uber_corr_120d": 0.58,
+   "chart_gate": "ok",
+   "fwd_pe": 12.88,
+   "trail_pe": 17.31,
+   "analysts": 34.0,
+   "mean_target": 215.53,
+   "eps_next_fy": 12.23,
+   "rev30_pct": -1.2,
+   "rev90_pct": -1.1,
+   "next_earnings": "2026-11-03",
+   "fits_slot": null
+  },
+  {
+   "ticker": "MCO",
+   "name": "Moody's Corporation",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 506.28,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 87.29,
+   "uber_corr_120d": 0.48,
+   "chart_gate": "ok",
+   "fwd_pe": 27.22,
+   "trail_pe": 30.89,
+   "analysts": 21.0,
+   "mean_target": 553.67,
+   "eps_next_fy": 18.6,
+   "rev30_pct": -1.5,
+   "rev90_pct": -1.7,
+   "next_earnings": "2026-10-21",
+   "fits_slot": null
+  },
+  {
+   "ticker": "TEX",
+   "name": "Terex",
+   "sector": "Industrials",
+   "index": "SP400",
+   "last": 54.54,
+   "score": 0.0,
+   "lenses": [
+    "EARNINGS_DRIFT"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "EARNINGS_DRIFT",
+     "entry": "2026-10-30",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 6.13,
+   "uber_corr_120d": 0.06,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 9.35,
+   "trail_pe": 25.25,
    "analysts": 13.0,
    "mean_target": 74.35,
    "eps_next_fy": 5.84,
@@ -2597,7 +2391,7 @@
    "name": "Comcast",
    "sector": "Communication Services",
    "index": "SP500",
-   "last": 25.16,
+   "last": 25.6,
    "score": 0.0,
    "lenses": [
     "SHARE_SHRINK"
@@ -2619,11 +2413,11 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 89.34,
+   "mcap_busd": 90.91,
    "uber_corr_120d": 0.34,
    "chart_gate": "ok",
-   "fwd_pe": 7.14,
-   "trail_pe": 7.96,
+   "fwd_pe": 7.27,
+   "trail_pe": 7.95,
    "analysts": 22.0,
    "mean_target": 27.98,
    "eps_next_fy": 3.52,
@@ -2633,51 +2427,11 @@
    "fits_slot": null
   },
   {
-   "ticker": "SCHW",
-   "name": "Charles Schwab Corporation",
-   "sector": "Financials",
-   "index": "SP500",
-   "last": 92.98,
-   "score": 0.0,
-   "lenses": [
-    "SHARE_SHRINK"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-08-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    },
-    {
-     "lens": "SHARE_SHRINK",
-     "entry": "2026-11-14",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": 160.48,
-   "uber_corr_120d": 0.14,
-   "chart_gate": "ok",
-   "fwd_pe": 11.92,
-   "trail_pe": 15.89,
-   "analysts": 22.0,
-   "mean_target": 116.86,
-   "eps_next_fy": 7.8,
-   "rev30_pct": -2.0,
-   "rev90_pct": 0.0,
-   "next_earnings": "2027-01-21",
-   "fits_slot": null
-  },
-  {
    "ticker": "HCA",
    "name": "HCA Healthcare",
    "sector": "Health Care",
    "index": "SP500",
-   "last": 499.05,
+   "last": 511.78,
    "score": 0.0,
    "lenses": [
     "SHARE_SHRINK"
@@ -2699,10 +2453,10 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 104.25,
+   "mcap_busd": 106.91,
    "uber_corr_120d": 0.21,
    "chart_gate": "ok",
-   "fwd_pe": 15.94,
+   "fwd_pe": 16.35,
    "trail_pe": 16.55,
    "analysts": 22.0,
    "mean_target": 483.41,
@@ -2713,11 +2467,51 @@
    "fits_slot": null
   },
   {
+   "ticker": "GM",
+   "name": "General Motors",
+   "sector": "Consumer Discretionary",
+   "index": "SP500",
+   "last": 83.67,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-08-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    },
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 70.58,
+   "uber_corr_120d": 0.33,
+   "chart_gate": "ok",
+   "fwd_pe": 5.69,
+   "trail_pe": 18.8,
+   "analysts": 23.0,
+   "mean_target": 101.17,
+   "eps_next_fy": 14.71,
+   "rev30_pct": -2.6,
+   "rev90_pct": 0.0,
+   "next_earnings": "2027-01-27",
+   "fits_slot": null
+  },
+  {
    "ticker": "BAC",
    "name": "Bank of America",
    "sector": "Financials",
    "index": "SP500",
-   "last": 51.02,
+   "last": 50.08,
    "score": 0.0,
    "lenses": [
     "SHARE_SHRINK"
@@ -2739,11 +2533,11 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 352.05,
-   "uber_corr_120d": 0.14,
+   "mcap_busd": 345.56,
+   "uber_corr_120d": 0.15,
    "chart_gate": "ok",
-   "fwd_pe": 9.85,
-   "trail_pe": 12.18,
+   "fwd_pe": 9.67,
+   "trail_pe": 11.95,
    "analysts": 22.0,
    "mean_target": 62.48,
    "eps_next_fy": 5.1,
@@ -2757,7 +2551,7 @@
    "name": "Cava Group",
    "sector": "Consumer Discretionary",
    "index": "SP400",
-   "last": 58.23,
+   "last": 55.15,
    "score": 0.0,
    "lenses": [
     "EARNINGS_DRIFT"
@@ -2773,11 +2567,11 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 6.8,
+   "mcap_busd": 6.44,
    "uber_corr_120d": 0.15,
-   "chart_gate": "ok",
-   "fwd_pe": 82.12,
-   "trail_pe": 105.87,
+   "chart_gate": "falling hard: below the 50-day and 200-day",
+   "fwd_pe": 77.77,
+   "trail_pe": 106.06,
    "analysts": 24.0,
    "mean_target": 75.42,
    "eps_next_fy": 0.71,
@@ -2787,45 +2581,11 @@
    "fits_slot": null
   },
   {
-   "ticker": "LB",
-   "name": null,
-   "sector": null,
-   "index": null,
-   "last": 73.15,
-   "score": 0.0,
-   "lenses": [
-    "EARNINGS_DRIFT"
-   ],
-   "adopted": [],
-   "promising": [],
-   "hits": [
-    {
-     "lens": "EARNINGS_DRIFT",
-     "entry": "2026-08-07",
-     "high_accrual": false,
-     "verdict": "DROP"
-    }
-   ],
-   "instrument": "deep ITM call",
-   "mcap_busd": null,
-   "uber_corr_120d": -0.09,
-   "chart_gate": "ok",
-   "fwd_pe": 24.78,
-   "trail_pe": 55.84,
-   "analysts": 7.0,
-   "mean_target": 89.57,
-   "eps_next_fy": 1.93,
-   "rev30_pct": -9.0,
-   "rev90_pct": -10.2,
-   "next_earnings": "2026-11-04",
-   "fits_slot": null
-  },
-  {
    "ticker": "ACN",
    "name": "Accenture",
    "sector": "Information Technology",
    "index": "SP500",
-   "last": 250.49,
+   "last": 247.7,
    "score": 0.0,
    "lenses": [
     "SHARE_SHRINK"
@@ -2841,17 +2601,51 @@
     }
    ],
    "instrument": "deep ITM call",
-   "mcap_busd": 147.97,
+   "mcap_busd": 146.33,
    "uber_corr_120d": 0.26,
    "chart_gate": "ok",
-   "fwd_pe": 15.75,
-   "trail_pe": 18.47,
+   "fwd_pe": 15.57,
+   "trail_pe": 18.27,
    "analysts": 24.0,
-   "mean_target": 233.21,
+   "mean_target": 233.84,
    "eps_next_fy": 15.91,
    "rev30_pct": 0.0,
    "rev90_pct": 1.0,
    "next_earnings": "2026-12-17",
+   "fits_slot": null
+  },
+  {
+   "ticker": "SPGI",
+   "name": "S&P Global",
+   "sector": "Financials",
+   "index": "SP500",
+   "last": 471.59,
+   "score": 0.0,
+   "lenses": [
+    "SHARE_SHRINK"
+   ],
+   "adopted": [],
+   "promising": [],
+   "hits": [
+    {
+     "lens": "SHARE_SHRINK",
+     "entry": "2026-11-14",
+     "high_accrual": false,
+     "verdict": "DROP"
+    }
+   ],
+   "instrument": "deep ITM call",
+   "mcap_busd": 136.71,
+   "uber_corr_120d": 0.35,
+   "chart_gate": "ok",
+   "fwd_pe": 23.38,
+   "trail_pe": 28.17,
+   "analysts": 20.0,
+   "mean_target": 526.7,
+   "eps_next_fy": 20.18,
+   "rev30_pct": 0.0,
+   "rev90_pct": -0.3,
+   "next_earnings": "2026-10-27",
    "fits_slot": null
   }
  ]
