@@ -1,0 +1,52 @@
+year_end,sector,usd_bn,source_url
+2023,Total marketable Treasury liabilities,26226.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Total marketable Treasury liabilities,28139.5,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Total marketable Treasury liabilities,30069.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Treasury bills,5674.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Treasury bills,6186.2,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Treasury bills,6546.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Notes bonds TIPS,20551.7,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Notes bonds TIPS,21953.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Notes bonds TIPS,23523.1,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Households,2515.4,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Households,2626.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Households,2944.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Mutual funds,1373.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Mutual funds,1503.7,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Mutual funds,1675.1,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Money market funds,2269.5,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Money market funds,2994.9,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Money market funds,3517.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Exchange-traded funds,502.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Exchange-traded funds,555.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Exchange-traded funds,706.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,US-chartered depository institutions,1329.2,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,US-chartered depository institutions,1536.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,US-chartered depository institutions,1744.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Private pension funds,484.8,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Private pension funds,523.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Private pension funds,605.5,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,State and local govt pension funds,402.7,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,State and local govt pension funds,468.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,State and local govt pension funds,529.9,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Property-casualty insurers,263.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Property-casualty insurers,362.5,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Property-casualty insurers,432.1,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Life insurers,182.0,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Life insurers,187.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Life insurers,207.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,State and local governments,1406.9,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,State and local governments,1475.1,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,State and local governments,1553.3,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Monetary authority,4403.1,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Monetary authority,3819.9,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Monetary authority,3859.2,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Rest of world,7940.0,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Rest of world,8558.4,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Rest of world,9224.4,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Brokers and dealers,328.7,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Brokers and dealers,454.2,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Brokers and dealers,542.5,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2023,Government-sponsored enterprises,163.6,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2024,Government-sponsored enterprises,224.0,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm
+2025,Government-sponsored enterprises,246.5,https://www.federalreserve.gov/RELEASES/z1/20260319/html/l210.htm

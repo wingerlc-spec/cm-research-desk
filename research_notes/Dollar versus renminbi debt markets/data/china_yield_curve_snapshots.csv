@@ -1,0 +1,13 @@
+date,maturity,value,source
+2026-11-16,2Y,1.229,ADB AsianBondsOnline
+2026-11-16,5Y,1.353,ADB AsianBondsOnline
+2026-11-16,10Y,1.620,ADB AsianBondsOnline
+2026-11-17,1Y,1.22,Trading Economics
+2026-11-17,2Y,1.28,Trading Economics
+2026-11-17,3Y,1.30,Trading Economics
+2026-11-17,5Y,1.44,Trading Economics
+2026-11-17,7Y,1.49,Trading Economics
+2026-11-17,10Y,1.62,Trading Economics
+2026-11-17,20Y,2.08,Trading Economics
+2026-11-17,30Y,2.07,Trading Economics
+2026-08-18,30Y,2.15,Whalesbook (approx)

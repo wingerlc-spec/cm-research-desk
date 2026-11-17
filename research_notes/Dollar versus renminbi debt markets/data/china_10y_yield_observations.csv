@@ -1,0 +1,15 @@
+date,value,basis,source
+2021-01-01,3.24,monthly average (approx),Sohu macro report
+2023-10-01,2.6751,monthly (value one year before 2024-10),GuruFocus / CCDC
+2023-12-01,2.56,monthly,TheGlobalEconomy
+2024-10-01,2.1518,monthly,GuruFocus / CCDC
+2025-01-01,1.64,monthly average (approx),Sohu macro report
+2025-12-04,1.87,intraday touch,Caixin
+2025-12-31,1.843,DERIVED = 1.620 + 22.3bp YTD change,ADB AsianBondsOnline
+2026-06-17,1.75,spot,Reuters via Financial Express
+2026-09-30,1.683,daily close,Investing.com
+2026-10-08,1.685,daily close,Investing.com
+2026-10-23,1.615,daily close,Investing.com
+2026-11-06,1.59,spot (described as all-time low),Trading Economics
+2026-11-16,1.620,daily close,ADB AsianBondsOnline
+2026-11-17,1.6186,spot,Trading Economics

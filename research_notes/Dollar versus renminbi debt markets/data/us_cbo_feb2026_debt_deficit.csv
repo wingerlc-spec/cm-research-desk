@@ -1,0 +1,13 @@
+fiscal_year,debt_held_by_public_pct_gdp,deficit_usd_bn,deficit_pct_gdp,cbo_10y_treasury_yield_assumption_pct,status,source_url
+2025,99,1775,5.8,4.3,actual,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2026,101,1853,5.8,4.1,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2027,102,1887,5.7,4.3,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2028,104,2080,6.0,4.3,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2029,106,2020,5.6,4.3,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2030,108,2201,5.9,4.3,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2031,110,2286,5.9,4.4,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2032,112,2439,6.1,4.4,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2033,114,2781,6.7,4.4,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2034,116,2819,6.5,4.4,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2035,118,2779,6.2,4.4,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf
+2036,120,3115,6.7,4.4,projection,https://www.crfb.org/sites/default/files/media/documents/CRFB_CBO_February_2026_Budget_And_Economic_Outlook_4.pdf

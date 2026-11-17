@@ -1,0 +1,13 @@
+country,end_2021,end_2023,end_2024,end_2025,latest,latest_date,note
+US,1.47,4.02,4.39,4.14,5.1250,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+Japan,0.070,0.620,1.090,2.060,2.8770,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+Germany,-0.384285714285714,2.102105263157890,2.178888888888890,2.814210526315790,3.3850,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+France,0.0493,2.6549,3.0164,3.5542,4.9520,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+United Kingdom,0.8375,3.8622,4.4345,4.4826,5.3515,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+Canada,1.450000000000000,3.234210526315790,3.161500000000000,3.387619047619050,3.8190,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+Australia,1.609,4.187,4.313,4.719,5.1380,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+India,6.44032,7.22400,6.77750,6.63250,7.2800,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+South Korea,2.187,3.415,2.771,3.366,4.454,2026-09 monthly,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+Switzerland,-0.127,0.656,0.317,0.330,0.5694,2026-11-17,Dec monthly values (FRED/OECD; US = Alpha Vantage monthly); latest = Trading Economics spot unless noted
+Brazil,not found,not found,not found,not found,15.5650,2026-11-17,latest = Trading Economics spot; history not found
+China,not found,2.56,not found,1.843,1.6186,2026-11-17,end-2023 = Dec 2023 monthly (TheGlobalEconomy); end-2025 DERIVED from ADB YTD change; latest = Trading Economics spot

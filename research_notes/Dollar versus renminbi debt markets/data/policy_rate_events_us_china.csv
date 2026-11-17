@@ -1,0 +1,10 @@
+date,country,rate,value,source_note
+2024-09-27,China,7-day reverse repo rate,1.50,derived: 1.40 was 'down 10bp from previous rate of 27-Sep-2024' (ADB)
+2025-05-07,China,7-day reverse repo rate,1.40,ADB AsianBondsOnline
+2026-11-02,China,overnight reverse repo rate (new main policy rate),1.25,Caixin
+2026-10-20,China,1-year loan prime rate,3.0,TrendForce (unchanged 17 months)
+2026-10-20,China,5-year loan prime rate,3.5,TrendForce (unchanged 17 months)
+2026-09-16,US,fed funds target range lower bound,3.75,Saxo / Al Jazeera
+2026-09-16,US,fed funds target range upper bound,4.00,Saxo / Al Jazeera
+2026-10-28,US,fed funds target range lower bound,3.75,StockAnalysis (held 10-2)
+2026-10-28,US,fed funds target range upper bound,4.00,StockAnalysis (held 10-2)
