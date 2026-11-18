@@ -1,31 +1,31 @@
 {
- "generated_utc": "2026-11-17 05:48",
+ "generated_utc": "2026-11-18 05:05",
  "datasets": {
   "estimates": {
-   "rows": 520,
+   "rows": 777,
    "first_date": "2026-11-14",
-   "last_date": "2026-11-17",
-   "tickers": 402,
+   "last_date": "2026-11-18",
+   "tickers": 536,
    "files": 1
   },
   "iv": {
-   "rows": 243,
+   "rows": 463,
    "first_date": "2026-11-14",
-   "last_date": "2026-11-17",
-   "tickers": 234,
+   "last_date": "2026-11-18",
+   "tickers": 349,
    "files": 1
   },
   "earnings_dates_seen.csv": {
-   "rows": 445,
-   "tickers": 402
+   "rows": 585,
+   "tickers": 536
   },
   "earnings_reactions.csv": {
-   "rows": 1,
-   "tickers": 1
+   "rows": 2,
+   "tickers": 2
   },
   "earnings_reactions_backfill.csv.gz": {
-   "rows": 13060,
-   "tickers": 832
+   "rows": 13076,
+   "tickers": 833
   }
  }
 }

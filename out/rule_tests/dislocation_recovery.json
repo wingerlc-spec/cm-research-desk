@@ -1,7 +1,7 @@
 {
  "meta": {
-  "asof": "2026-11-16",
-  "generated_utc": "2026-11-17 05:48",
+  "asof": "2026-11-17",
+  "generated_utc": "2026-11-18 05:05",
   "events_rule": "one-day drop of 10%+ on 2.5x+ the prior 20-day volume, at least 20 sessions apart per stock, with 60 sessions after",
   "survivorship": "Universe = today's S&P 500 and 400 plus former S&P 500 members Yahoo still has prices for; a point-in-time S&P 500 line is shown. It cannot fix: former members Yahoo no longer carries (disproportionately failures, so recovery rates are flattered) and former S&P 400 members."
  },

@@ -10473,5 +10473,18 @@
    "change_pct": -3.38
   },
   "shares_source": "dei:EntityCommonStockSharesOutstanding"
+ },
+ "BILL": {
+  "refreshed": "2026-11-18",
+  "ttm_buyback": 789503000.0,
+  "buyback_last_end": "2026-09-30",
+  "shares": {
+   "now": 85883042.0,
+   "year_ago": 100156683.0,
+   "end": "2026-10-29",
+   "end_year_ago": "2025-10-30",
+   "change_pct": -14.25
+  },
+  "shares_source": "dei:EntityCommonStockSharesOutstanding"
  }
 }
