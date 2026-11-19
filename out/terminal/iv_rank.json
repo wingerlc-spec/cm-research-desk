@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "out/history/iv",
-  "pulled_utc": "2026-11-18 05:02",
+  "pulled_utc": "2026-11-19 04:46",
   "notes": [
    "iv_rank = percentile of today's 30-day at-the-money iv in the ticker's own snapshots; needs 60 observations"
   ]
@@ -9,24 +9,31 @@
  "rows": [
   {
    "ticker": "A",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.4174,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4696,
+   "n_obs": 2,
+   "status": "building, 2 days"
+  },
+  {
+   "ticker": "AA",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5069,
    "n_obs": 1,
    "status": "building, 1 days"
   },
   {
    "ticker": "AAL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5141,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5181,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "AAON",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7227,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7207,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "AAPL",
@@ -36,11 +43,18 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "ABBV",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2767,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "ABNB",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.399,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3643,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ACGL",
@@ -51,29 +65,43 @@
   },
   {
    "ticker": "ACM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4874,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4617,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ACN",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5424,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5373,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ADBE",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.564,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5589,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ADC",
    "date": "2026-11-18",
    "iv_atm_30d": 0.2263,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ADI",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5499,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ADM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3165,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -134,9 +162,23 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "AKAM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6011,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "ALB",
    "date": "2026-11-14",
    "iv_atm_30d": 0.5166,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ALGM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7949,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -163,10 +205,17 @@
   },
   {
    "ticker": "ALSN",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4173,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4622,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "ALV",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3983,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "AM",
@@ -177,10 +226,10 @@
   },
   {
    "ticker": "AMD",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7814,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7198,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "AMG",
@@ -190,9 +239,23 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "AMH",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4502,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "AMKR",
    "date": "2026-11-18",
    "iv_atm_30d": 0.795,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "AMP",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3362,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -205,17 +268,17 @@
   },
   {
    "ticker": "AMZN",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3845,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3649,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ANET",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6424,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5961,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ANF",
@@ -254,17 +317,31 @@
   },
   {
    "ticker": "APP",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6263,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6047,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "APPF",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5297,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "AR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4204,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "ARE",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.4712,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4483,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "ARMK",
@@ -282,10 +359,10 @@
   },
   {
    "ticker": "ARWR",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.657,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5892,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ASB",
@@ -309,6 +386,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "ATR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3423,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "AVAV",
    "date": "2026-11-14",
    "iv_atm_30d": 0.8541,
@@ -317,10 +401,10 @@
   },
   {
    "ticker": "AVGO",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6503,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6204,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "AVT",
@@ -344,6 +428,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "AXP",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2734,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "AYI",
    "date": "2026-11-18",
    "iv_atm_30d": 0.3881,
@@ -352,10 +443,10 @@
   },
   {
    "ticker": "BAC",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2965,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2866,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "BAH",
@@ -393,11 +484,25 @@
    "status": "building, 1 days"
   },
   {
-   "ticker": "BILL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5588,
+   "ticker": "BG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.376,
    "n_obs": 1,
    "status": "building, 1 days"
+  },
+  {
+   "ticker": "BIIB",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5582,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "BILL",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5886,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "BJ",
@@ -415,15 +520,22 @@
   },
   {
    "ticker": "BKNG",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5358,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4725,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "BKR",
    "date": "2026-11-18",
    "iv_atm_30d": 0.4085,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "BLK",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3159,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -436,10 +548,10 @@
   },
   {
    "ticker": "BNY",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2928,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2591,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "BRK-B",
@@ -450,10 +562,10 @@
   },
   {
    "ticker": "BRKR",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5682,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5604,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "BRO",
@@ -478,36 +590,71 @@
   },
   {
    "ticker": "BTSG",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6098,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5824,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "BURL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6067,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6058,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "BWA",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.425,
    "n_obs": 2,
    "status": "building, 2 days"
   },
   {
-   "ticker": "BWA",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.4015,
+   "ticker": "BWXT",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5039,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "BX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4147,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "BYD",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.434,
    "n_obs": 1,
    "status": "building, 1 days"
   },
   {
    "ticker": "C",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.2866,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3487,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "CACI",
    "date": "2026-11-14",
    "iv_atm_30d": 0.4118,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CAH",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CARR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3837,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -520,10 +667,17 @@
   },
   {
    "ticker": "CAVA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5879,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5574,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "CBOE",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3974,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "CBSH",
@@ -547,18 +701,25 @@
    "status": "building, 1 days"
   },
   {
-   "ticker": "CDW",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.5114,
+   "ticker": "CDNS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.51,
    "n_obs": 1,
    "status": "building, 1 days"
   },
   {
-   "ticker": "CEG",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5178,
+   "ticker": "CDW",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5236,
    "n_obs": 2,
    "status": "building, 2 days"
+  },
+  {
+   "ticker": "CEG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5177,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "CELH",
@@ -596,6 +757,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "CGNX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6084,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "CHE",
    "date": "2026-11-14",
    "iv_atm_30d": 0.3597,
@@ -610,6 +778,20 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "CHRW",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4451,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CHTR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5876,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "CHWY",
    "date": "2026-11-18",
    "iv_atm_30d": 0.665,
@@ -617,9 +799,23 @@
    "status": "building, 2 days"
   },
   {
+   "ticker": "CHYM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5469,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "CI",
    "date": "2026-11-14",
    "iv_atm_30d": 0.3048,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CL",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2518,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -632,17 +828,31 @@
   },
   {
    "ticker": "CMCSA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.374,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3484,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "CME",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2933,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CMS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2469,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "CNH",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5449,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6806,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "CNO",
@@ -652,11 +862,18 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "CNX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5398,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "COF",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3735,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3503,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "COIN",
@@ -673,6 +890,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "COLB",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3056,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "COO",
    "date": "2026-11-18",
    "iv_atm_30d": 0.58,
@@ -681,10 +905,10 @@
   },
   {
    "ticker": "COP",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3447,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3666,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "COR",
@@ -699,6 +923,13 @@
    "iv_atm_30d": 1.0076,
    "n_obs": 2,
    "status": "building, 2 days"
+  },
+  {
+   "ticker": "COST",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2769,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "CPAY",
@@ -744,10 +975,10 @@
   },
   {
    "ticker": "CRM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.604,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6017,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "CROX",
@@ -757,11 +988,39 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "CRS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5441,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CRUS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.461,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CRWD",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.8056,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "CRWV",
-   "date": "2026-11-18",
-   "iv_atm_30d": 1.1048,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 1.0283,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "CSGP",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5405,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "CSX",
@@ -771,9 +1030,23 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "CTAS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4045,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "CTSH",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.4479,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5908,
+   "n_obs": 2,
+   "status": "building, 2 days"
+  },
+  {
+   "ticker": "CTVA",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5664,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -793,10 +1066,24 @@
   },
   {
    "ticker": "CVS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3334,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3759,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "CVX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2872,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "CW",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4834,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "CYTK",
@@ -814,24 +1101,31 @@
   },
   {
    "ticker": "DAL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4439,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4404,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "DAR",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4695,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.476,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "DASH",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5168,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5413,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "DCI",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.505,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "DD",
@@ -848,11 +1142,32 @@
    "status": "building, 2 days"
   },
   {
+   "ticker": "DE",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4822,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "DECK",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4215,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "DELL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 1.0017,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.9427,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "DG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5127,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "DHI",
@@ -863,10 +1178,10 @@
   },
   {
    "ticker": "DIS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2821,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2656,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "DLB",
@@ -890,6 +1205,20 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "DOCN",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.9085,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "DOCS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.488,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "DOV",
    "date": "2026-11-14",
    "iv_atm_30d": 0.2834,
@@ -900,6 +1229,13 @@
    "ticker": "DT",
    "date": "2026-11-14",
    "iv_atm_30d": 0.4869,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "DTE",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.243,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -933,8 +1269,15 @@
   },
   {
    "ticker": "DVN",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.3952,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4244,
+   "n_obs": 2,
+   "status": "building, 2 days"
+  },
+  {
+   "ticker": "DXCM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5813,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -942,6 +1285,20 @@
    "ticker": "EAT",
    "date": "2026-11-18",
    "iv_atm_30d": 0.539,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "EBAY",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3908,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ECHO",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5681,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -967,6 +1324,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "EIX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4662,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "ELAN",
    "date": "2026-11-14",
    "iv_atm_30d": 0.4284,
@@ -975,10 +1339,10 @@
   },
   {
    "ticker": "ELF",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.5739,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5199,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "ELS",
@@ -989,10 +1353,17 @@
   },
   {
    "ticker": "ELV",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4032,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4446,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "EME",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5113,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "EMR",
@@ -1002,9 +1373,23 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "ENTG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7807,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "EOG",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3553,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3531,
+   "n_obs": 2,
+   "status": "building, 2 days"
+  },
+  {
+   "ticker": "EQH",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5176,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1012,6 +1397,34 @@
    "ticker": "EQIX",
    "date": "2026-11-14",
    "iv_atm_30d": 0.3498,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ES",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2611,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ESNT",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5198,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ESS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2475,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "ETN",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4848,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1052,10 +1465,10 @@
   },
   {
    "ticker": "EXLS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5215,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6321,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "EXP",
@@ -1073,10 +1486,10 @@
   },
   {
    "ticker": "EXPE",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5201,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5192,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "F",
@@ -1089,6 +1502,27 @@
    "ticker": "FANG",
    "date": "2026-11-18",
    "iv_atm_30d": 0.4135,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "FAST",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4279,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "FBIN",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.8194,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "FCFS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4836,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1157,17 +1591,31 @@
   },
   {
    "ticker": "FLEX",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7868,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7923,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "FLR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5204,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "FN",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.8257,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.8222,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "FNF",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3479,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "FOX",
@@ -1177,18 +1625,39 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "FR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2381,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "FRT",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.224,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "FTNT",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5234,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5192,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "FTV",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3897,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4626,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "G",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.627,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "GAP",
@@ -1212,6 +1681,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "GDDY",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5091,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "GE",
    "date": "2026-11-14",
    "iv_atm_30d": 0.3668,
@@ -1222,6 +1698,20 @@
    "ticker": "GEHC",
    "date": "2026-11-18",
    "iv_atm_30d": 0.3235,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "GIS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3872,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "GKOS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5413,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1241,15 +1731,22 @@
   },
   {
    "ticker": "GM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3901,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3849,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "GMED",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5474,
    "n_obs": 2,
    "status": "building, 2 days"
   },
   {
-   "ticker": "GMED",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.4591,
+   "ticker": "GNRC",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5893,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1262,17 +1759,17 @@
   },
   {
    "ticker": "GOOGL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3956,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3642,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "GPN",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4294,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4248,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "GRMN",
@@ -1283,10 +1780,10 @@
   },
   {
    "ticker": "GS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4073,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3594,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "GXO",
@@ -1304,10 +1801,10 @@
   },
   {
    "ticker": "HAE",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4279,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4335,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "HAL",
@@ -1318,10 +1815,17 @@
   },
   {
    "ticker": "HALO",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4765,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.499,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "HAS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3608,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "HBAN",
@@ -1332,10 +1836,24 @@
   },
   {
    "ticker": "HCA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3523,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3409,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "HD",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3101,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "HIG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2472,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "HL",
@@ -1346,10 +1864,10 @@
   },
   {
    "ticker": "HLI",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.4806,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4728,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "HLNE",
@@ -1360,10 +1878,24 @@
   },
   {
    "ticker": "HLT",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.309,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3225,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "HON",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.349,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "HONA",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5098,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "HOOD",
@@ -1374,10 +1906,17 @@
   },
   {
    "ticker": "HPE",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.8616,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.8138,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "HR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4619,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "HRB",
@@ -1402,10 +1941,10 @@
   },
   {
    "ticker": "HUM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.514,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5555,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "HWC",
@@ -1430,10 +1969,10 @@
   },
   {
    "ticker": "IBM",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.3426,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3637,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "ICE",
@@ -1467,6 +2006,13 @@
    "ticker": "IFF",
    "date": "2026-11-18",
    "iv_atm_30d": 0.4067,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "INGR",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4126,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1506,6 +2052,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "ISRG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3619,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "IT",
    "date": "2026-11-14",
    "iv_atm_30d": 0.4649,
@@ -1527,6 +2080,20 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "J",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4766,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "JBHT",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4054,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "JBL",
    "date": "2026-11-14",
    "iv_atm_30d": 0.5379,
@@ -1535,10 +2102,10 @@
   },
   {
    "ticker": "JCI",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4334,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4224,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "JHX",
@@ -1563,10 +2130,24 @@
   },
   {
    "ticker": "JPM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2686,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2626,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "KDP",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3125,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "KEX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4403,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "KEY",
@@ -1604,9 +2185,23 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "KNX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.419,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "KR",
    "date": "2026-11-18",
    "iv_atm_30d": 0.3677,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "KRG",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6318,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1633,8 +2228,22 @@
   },
   {
    "ticker": "LAD",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4567,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4556,
+   "n_obs": 2,
+   "status": "building, 2 days"
+  },
+  {
+   "ticker": "LEA",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4023,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "LECO",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3599,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1667,6 +2276,20 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "LLY",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3459,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "LNTH",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3481,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "LOW",
    "date": "2026-11-18",
    "iv_atm_30d": 0.4024,
@@ -1674,11 +2297,18 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "LPX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5369,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "LSCC",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7744,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7493,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "LULU",
@@ -1703,17 +2333,17 @@
   },
   {
    "ticker": "LYB",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.409,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4566,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "MA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2646,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.255,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MAA",
@@ -1724,17 +2354,24 @@
   },
   {
    "ticker": "MANH",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4665,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4583,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MAR",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2911,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2873,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "MAS",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4746,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "MCD",
@@ -1745,15 +2382,22 @@
   },
   {
    "ticker": "MCK",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.302,
-   "n_obs": 3,
-   "status": "building, 3 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2954,
+   "n_obs": 4,
+   "status": "building, 4 days"
   },
   {
    "ticker": "MCO",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3483,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3593,
+   "n_obs": 2,
+   "status": "building, 2 days"
+  },
+  {
+   "ticker": "MDLZ",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3917,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -1766,10 +2410,10 @@
   },
   {
    "ticker": "META",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4488,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4131,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MIDD",
@@ -1780,10 +2424,10 @@
   },
   {
    "ticker": "MKC",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4022,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3642,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MKSI",
@@ -1794,10 +2438,10 @@
   },
   {
    "ticker": "MMM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2748,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2827,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MNST",
@@ -1829,17 +2473,17 @@
   },
   {
    "ticker": "MPC",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.517,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5175,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MRSH",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2544,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2692,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MSA",
@@ -1850,10 +2494,17 @@
   },
   {
    "ticker": "MSFT",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.353,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3314,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "MSM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3736,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "MTB",
@@ -1864,10 +2515,10 @@
   },
   {
    "ticker": "MTD",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3252,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.333,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MTDR",
@@ -1892,24 +2543,24 @@
   },
   {
    "ticker": "MTSI",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.8096,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7944,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "MU",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.8024,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7469,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NBIX",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4287,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4325,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NDSN",
@@ -1920,17 +2571,17 @@
   },
   {
    "ticker": "NEM",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4671,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4675,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NFLX",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3648,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3627,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NLY",
@@ -1948,10 +2599,10 @@
   },
   {
    "ticker": "NOW",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5462,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5375,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NTAP",
@@ -1962,17 +2613,17 @@
   },
   {
    "ticker": "NU",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.479,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4682,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NVDA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6512,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5164,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "NVT",
@@ -1983,10 +2634,10 @@
   },
   {
    "ticker": "NWSA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5234,
-   "n_obs": 3,
-   "status": "building, 3 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5889,
+   "n_obs": 4,
+   "status": "building, 4 days"
   },
   {
    "ticker": "NXT",
@@ -2011,10 +2662,10 @@
   },
   {
    "ticker": "OKTA",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.9286,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.9305,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "OMC",
@@ -2031,11 +2682,18 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "ORA",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4158,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "ORCL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7898,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7706,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "OVV",
@@ -2053,17 +2711,17 @@
   },
   {
    "ticker": "PAG",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.1017,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.1066,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "PANW",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7424,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7237,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "PCAR",
@@ -2074,10 +2732,10 @@
   },
   {
    "ticker": "PCG",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5254,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4937,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "PCTY",
@@ -2109,24 +2767,31 @@
   },
   {
    "ticker": "REGN",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3863,
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3725,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "RF",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2969,
    "n_obs": 2,
    "status": "building, 2 days"
   },
   {
-   "ticker": "RF",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3137,
+   "ticker": "RGLD",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4842,
    "n_obs": 1,
    "status": "building, 1 days"
   },
   {
    "ticker": "ROK",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3667,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3553,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "SAIA",
@@ -2137,31 +2802,31 @@
   },
   {
    "ticker": "SAIC",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.5696,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5071,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "SCHW",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3047,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2973,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "SLAB",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.1201,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.1207,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "SMCI",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.94,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.9019,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "SN",
@@ -2172,17 +2837,17 @@
   },
   {
    "ticker": "SNPS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5535,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5502,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "SPGI",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3218,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3119,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "SSB",
@@ -2193,36 +2858,43 @@
   },
   {
    "ticker": "SYF",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3851,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3681,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "T",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2959,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3023,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "TECH",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.0747,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.0733,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "TEX",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5242,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.566,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "THC",
    "date": "2026-11-18",
    "iv_atm_30d": 0.4219,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
+   "ticker": "TJX",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2901,
    "n_obs": 1,
    "status": "building, 1 days"
   },
@@ -2235,17 +2907,17 @@
   },
   {
    "ticker": "TMUS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3821,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3529,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "TOST",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4451,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4917,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "TRMB",
@@ -2256,10 +2928,10 @@
   },
   {
    "ticker": "TRV",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.2613,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.2794,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "TSCO",
@@ -2270,38 +2942,45 @@
   },
   {
    "ticker": "TTC",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.39,
-   "n_obs": 3,
-   "status": "building, 3 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4002,
+   "n_obs": 4,
+   "status": "building, 4 days"
   },
   {
-   "ticker": "TTWO",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.5927,
+   "ticker": "TTEK",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3957,
    "n_obs": 1,
    "status": "building, 1 days"
   },
   {
-   "ticker": "TWLO",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6196,
+   "ticker": "TTWO",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.6294,
    "n_obs": 2,
    "status": "building, 2 days"
+  },
+  {
+   "ticker": "TWLO",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5908,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "UAL",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.5636,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.503,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "UBER",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.3691,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3564,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "ULS",
@@ -2326,31 +3005,45 @@
   },
   {
    "ticker": "VLO",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.512,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5196,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "VLY",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.3408,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "VRT",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.7379,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.7044,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "WFC",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.315,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.31,
+   "n_obs": 3,
+   "status": "building, 3 days"
   },
   {
    "ticker": "WMS",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.4236,
-   "n_obs": 2,
-   "status": "building, 2 days"
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.4383,
+   "n_obs": 3,
+   "status": "building, 3 days"
+  },
+  {
+   "ticker": "WSM",
+   "date": "2026-11-19",
+   "iv_atm_30d": 0.5208,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "ZBRA",

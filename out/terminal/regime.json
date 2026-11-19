@@ -1,7 +1,7 @@
 {
  "meta": {
-  "asof": "2026-11-17",
-  "generated_utc": "2026-11-18 04:56",
+  "asof": "2026-11-18",
+  "generated_utc": "2026-11-19 04:41",
   "thresholds": {
    "trend": "stress below the 200-day; caution below the 50-day or 7%+ off the 52-week high",
    "breadth": "caution under 50% above the 200-day, stress under 35%",
@@ -13,92 +13,88 @@
   }
  },
  "overall": "red",
- "n_stress": 4,
- "n_caution": 3,
+ "n_stress": 6,
+ "n_caution": 1,
  "gauges": {
   "trend_SPY": {
-   "state": "caution",
+   "state": "stress",
    "value": {
-    "last": 732.44,
-    "vs_50d_pct": -4.0,
-    "vs_200d_pct": 0.0,
-    "off_52w_high_pct": -6.0
+    "last": 730.2,
+    "vs_50d_pct": -4.2,
+    "vs_200d_pct": -0.3,
+    "off_52w_high_pct": -6.3
    },
-   "reading": "SPY +0.0% vs its 200-day, -4.0% vs its 50-day, -6.0% from its 52-week high"
+   "reading": "SPY -0.3% vs its 200-day, -4.2% vs its 50-day, -6.3% from its 52-week high"
   },
   "trend_QQQ": {
    "state": "stress",
    "value": {
-    "last": 656.95,
-    "vs_50d_pct": -8.2,
-    "vs_200d_pct": -3.8,
-    "off_52w_high_pct": -13.5
+    "last": 659.51,
+    "vs_50d_pct": -7.7,
+    "vs_200d_pct": -3.4,
+    "off_52w_high_pct": -13.2
    },
-   "reading": "QQQ -3.8% vs its 200-day, -8.2% vs its 50-day, -13.5% from its 52-week high"
+   "reading": "QQQ -3.4% vs its 200-day, -7.7% vs its 50-day, -13.2% from its 52-week high"
   },
   "trend_IWM": {
    "state": "stress",
    "value": {
-    "last": 269.05,
-    "vs_50d_pct": -3.8,
-    "vs_200d_pct": -3.7,
-    "off_52w_high_pct": -11.8
+    "last": 270.12,
+    "vs_50d_pct": -3.3,
+    "vs_200d_pct": -3.4,
+    "off_52w_high_pct": -11.5
    },
-   "reading": "IWM -3.7% vs its 200-day, -3.8% vs its 50-day, -11.8% from its 52-week high"
+   "reading": "IWM -3.4% vs its 200-day, -3.3% vs its 50-day, -11.5% from its 52-week high"
   },
   "breadth": {
    "state": "ok",
    "value": {
-    "pct_above_200d": 51.7,
-    "pct_above_50d": 54.2,
-    "change_20d_200d_pts": 2.5,
-    "change_20d_50d_pts": 7.8
+    "pct_above_200d": 52.1,
+    "pct_above_50d": 53.9,
+    "change_20d_200d_pts": 1.6,
+    "change_20d_50d_pts": 5.1
    },
    "reading": "52% of the universe above its 200-day (+2 pts in 20 sessions), 54% above its 50-day"
   },
   "credit_HYG_LQD": {
    "state": "caution",
    "value": {
-    "ratio": 0.7459,
-    "vs_50d_pct": -0.33,
-    "vs_200d_pct": 0.88,
-    "change_20d_pct": 0.21
+    "ratio": 0.7431,
+    "vs_50d_pct": -0.69,
+    "vs_200d_pct": 0.5,
+    "change_20d_pct": -0.37
    },
-   "reading": "HYG/LQD -0.33% vs its 50-day, +0.88% vs its 200-day, +0.21% in 20 sessions"
+   "reading": "HYG/LQD -0.69% vs its 50-day, +0.50% vs its 200-day, -0.37% in 20 sessions"
   },
   "credit_HYG_IEF": {
-   "state": "caution",
+   "state": "stress",
    "value": {
-    "ratio": 0.8476,
-    "vs_50d_pct": -1.02,
-    "vs_200d_pct": 0.0,
-    "change_20d_pct": -0.44
+    "ratio": 0.8454,
+    "vs_50d_pct": -1.25,
+    "vs_200d_pct": -0.26,
+    "change_20d_pct": -0.91
    },
-   "reading": "HYG/IEF -1.02% vs its 50-day, +0.00% vs its 200-day, -0.44% in 20 sessions"
+   "reading": "HYG/IEF -1.25% vs its 50-day, -0.26% vs its 200-day, -0.91% in 20 sessions"
   },
   "volatility": {
    "state": "stress",
    "value": {
-    "vix": 25.46,
-    "vix3m": 24.98
+    "vix": 24.56,
+    "vix3m": 24.29
    },
-   "reading": "VIX 25.5 vs VIX3M 25.0 (backwardation)"
+   "reading": "VIX 24.6 vs VIX3M 24.3 (backwardation)"
   },
   "leadership": {
    "state": "stress",
    "value": {
-    "smh_vs_spy_20d_pts": -11.0,
-    "smh_vs_spy_60d_pts": -11.8,
-    "smh_vs_200d_pct": -12.3
+    "smh_vs_spy_20d_pts": -11.9,
+    "smh_vs_spy_60d_pts": -12.7,
+    "smh_vs_200d_pct": -12.4
    },
-   "reading": "SMH -11.0 pts vs SPY over 20 sessions, -11.8 over 60; -12.3% vs its own 200-day"
+   "reading": "SMH -11.9 pts vs SPY over 20 sessions, -12.7 over 60; -12.4% vs its own 200-day"
   }
  },
  "history_250": [
-  {
-   "date": "2025-11-19",
-   "state": "yellow"
-  },
   {
    "date": "2025-11-20",
    "state": "red"
@@ -1094,15 +1090,19 @@
   {
    "date": "2026-11-17",
    "state": "red"
+  },
+  {
+   "date": "2026-11-18",
+   "state": "red"
   }
  ],
  "backfill": {
   "by_state": {
    "green": {
-    "days": 784,
+    "days": 785,
     "months": 66,
-    "fwd60_spy_mean_pct": 1.75,
-    "fwd60_spy_median_pct": 3.52,
+    "fwd60_spy_mean_pct": 1.74,
+    "fwd60_spy_median_pct": 3.51,
     "worst_drawdown_60d_mean_pct": -4.36,
     "pct_drawdown_worse_than_10": 7.0
    },
@@ -1115,15 +1115,15 @@
     "pct_drawdown_worse_than_10": 6.0
    },
    "red": {
-    "days": 851,
+    "days": 850,
     "months": 70,
     "fwd60_spy_mean_pct": 3.88,
-    "fwd60_spy_median_pct": 4.48,
+    "fwd60_spy_median_pct": 4.47,
     "worst_drawdown_60d_mean_pct": -5.89,
     "pct_drawdown_worse_than_10": 24.2
    }
   },
-  "summary": "Over 2313 sessions, red days (851 days in 70 months) were followed by a 60-session SPY return of +3.9% on average vs +1.8% after green, and an average worst drawdown of -5.9% vs -4.4%. A drawdown worse than 10% followed 24% of red days vs 7% of green days. Red covers 37% of all days, and the days overlap heavily (few independent episodes). Red has marked a fatter tail of drawdowns but not a lower average return, so it reads as a risk gauge for sizing, not a timing signal. Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past.",
-  "first_date": "2017-09-06"
+  "summary": "Over 2313 sessions, red days (850 days in 70 months) were followed by a 60-session SPY return of +3.9% on average vs +1.7% after green, and an average worst drawdown of -5.9% vs -4.4%. A drawdown worse than 10% followed 24% of red days vs 7% of green days. Red covers 37% of all days, and the days overlap heavily (few independent episodes). Red has marked a fatter tail of drawdowns but not a lower average return, so it reads as a risk gauge for sizing, not a timing signal. Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past.",
+  "first_date": "2017-09-07"
  }
 }

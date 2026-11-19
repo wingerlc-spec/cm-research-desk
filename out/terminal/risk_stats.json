@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "Yahoo daily closes",
-  "pulled_utc": "2026-11-18 04:56",
+  "pulled_utc": "2026-11-19 04:41",
   "notes": [
    "Betas and correlations on daily log returns. downside_beta_500 = beta on sessions where SPY fell 1% or more, last 500 sessions.",
    "spy_down_3pct_days = the stock's return on the last 3 sessions SPY fell 3% or more."
@@ -9,51 +9,17 @@
  },
  "rows": [
   {
-   "ticker": "UNM",
-   "sector_etf": "XLF",
-   "beta_60": 0.03,
-   "beta_250": 0.271,
-   "downside_beta_500": 1.241,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.04,
-   "corr_SPY_60": 0.01,
-   "corr_SPY_250": 0.12,
-   "corr_QQQ_60": 0.06,
-   "corr_QQQ_250": 0.1,
-   "corr_SMH_60": 0.18,
-   "corr_SMH_250": 0.08,
-   "corr_XLF_60": -0.12,
-   "corr_XLF_250": 0.22,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -10.18
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -3.99
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -1.12
-    }
-   ]
-  },
-  {
    "ticker": "ROK",
    "sector_etf": "XLI",
-   "beta_60": 1.952,
-   "beta_250": 1.577,
+   "beta_60": 1.95,
+   "beta_250": 1.572,
    "downside_beta_500": 1.524,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.56,
    "corr_SPY_60": 0.75,
    "corr_SPY_250": 0.62,
    "corr_QQQ_60": 0.75,
-   "corr_QQQ_250": 0.59,
+   "corr_QQQ_250": 0.58,
    "corr_SMH_60": 0.76,
    "corr_SMH_250": 0.6,
    "corr_XLI_60": 0.74,
@@ -77,88 +43,122 @@
    ]
   },
   {
-   "ticker": "MU",
+   "ticker": "CRWD",
    "sector_etf": "XLK",
-   "beta_60": 3.18,
-   "beta_250": 3.415,
-   "downside_beta_500": 3.002,
+   "beta_60": 1.977,
+   "beta_250": 1.582,
+   "downside_beta_500": 1.312,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -4.55,
-   "corr_SPY_60": 0.68,
-   "corr_SPY_250": 0.56,
-   "corr_QQQ_60": 0.81,
-   "corr_QQQ_250": 0.73,
-   "corr_SMH_60": 0.87,
-   "corr_SMH_250": 0.82,
-   "corr_XLK_60": 0.83,
-   "corr_XLK_250": 0.77,
+   "avg_return_spy_down_1pct": -2.9,
+   "corr_SPY_60": 0.42,
+   "corr_SPY_250": 0.38,
+   "corr_QQQ_60": 0.5,
+   "corr_QQQ_250": 0.44,
+   "corr_SMH_60": 0.42,
+   "corr_SMH_250": 0.29,
+   "corr_XLK_60": 0.56,
+   "corr_XLK_250": 0.48,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -12.94
+     "stock_pct": -7.42
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -10.04
+     "stock_pct": -2.49
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -17.46
+     "stock_pct": -9.88
     }
    ]
   },
   {
-   "ticker": "OKTA",
-   "sector_etf": "XLK",
-   "beta_60": 2.476,
-   "beta_250": 1.553,
-   "downside_beta_500": 1.391,
+   "ticker": "ELF",
+   "sector_etf": "XLP",
+   "beta_60": 0.948,
+   "beta_250": 1.244,
+   "downside_beta_500": 0.502,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.3,
-   "corr_SPY_60": 0.46,
-   "corr_SPY_250": 0.32,
-   "corr_QQQ_60": 0.53,
-   "corr_QQQ_250": 0.35,
-   "corr_SMH_60": 0.47,
-   "corr_SMH_250": 0.22,
-   "corr_XLK_60": 0.6,
-   "corr_XLK_250": 0.41,
+   "avg_return_spy_down_1pct": -3.72,
+   "corr_SPY_60": 0.37,
+   "corr_SPY_250": 0.31,
+   "corr_QQQ_60": 0.35,
+   "corr_QQQ_250": 0.25,
+   "corr_SMH_60": 0.28,
+   "corr_SMH_250": 0.16,
+   "corr_XLP_60": 0.14,
+   "corr_XLP_250": 0.18,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -8.32
+     "stock_pct": -0.16
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -0.1
+     "stock_pct": -3.5
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -10.41
+     "stock_pct": -3.33
+    }
+   ]
+  },
+  {
+   "ticker": "WSM",
+   "sector_etf": "XLY",
+   "beta_60": 0.981,
+   "beta_250": 1.138,
+   "downside_beta_500": 1.19,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -2.27,
+   "corr_SPY_60": 0.45,
+   "corr_SPY_250": 0.46,
+   "corr_QQQ_60": 0.32,
+   "corr_QQQ_250": 0.33,
+   "corr_SMH_60": 0.17,
+   "corr_SMH_250": 0.26,
+   "corr_XLY_60": 0.65,
+   "corr_XLY_250": 0.56,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": 2.03
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -6.55
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -4.25
     }
    ]
   },
   {
    "ticker": "HAE",
    "sector_etf": "XLV",
-   "beta_60": 0.278,
-   "beta_250": 0.262,
+   "beta_60": 0.274,
+   "beta_250": 0.258,
    "downside_beta_500": 0.905,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -0.42,
    "corr_SPY_60": 0.1,
    "corr_SPY_250": 0.09,
-   "corr_QQQ_60": 0.0,
+   "corr_QQQ_60": 0.01,
    "corr_QQQ_250": 0.01,
    "corr_SMH_60": -0.09,
    "corr_SMH_250": -0.1,
-   "corr_XLV_60": 0.15,
+   "corr_XLV_60": 0.13,
    "corr_XLV_250": 0.25,
    "spy_down_3pct_days": [
     {
@@ -179,54 +179,54 @@
    ]
   },
   {
-   "ticker": "EXLS",
-   "sector_etf": "XLI",
-   "beta_60": -0.101,
-   "beta_250": -0.067,
-   "downside_beta_500": 0.937,
+   "ticker": "PANW",
+   "sector_etf": "XLK",
+   "beta_60": 1.588,
+   "beta_250": 1.387,
+   "downside_beta_500": 1.268,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -0.68,
-   "corr_SPY_60": -0.05,
-   "corr_SPY_250": -0.02,
-   "corr_QQQ_60": -0.24,
-   "corr_QQQ_250": -0.15,
-   "corr_SMH_60": -0.37,
-   "corr_SMH_250": -0.31,
-   "corr_XLI_60": 0.01,
-   "corr_XLI_250": -0.14,
+   "avg_return_spy_down_1pct": -2.23,
+   "corr_SPY_60": 0.36,
+   "corr_SPY_250": 0.37,
+   "corr_QQQ_60": 0.46,
+   "corr_QQQ_250": 0.41,
+   "corr_SMH_60": 0.36,
+   "corr_SMH_250": 0.25,
+   "corr_XLK_60": 0.5,
+   "corr_XLK_250": 0.43,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -6.99
+     "stock_pct": -7.02
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -2.11
+     "stock_pct": -2.75
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": 1.14
+     "stock_pct": -9.59
     }
    ]
   },
   {
    "ticker": "MCK",
    "sector_etf": "XLV",
-   "beta_60": 0.188,
-   "beta_250": -0.149,
+   "beta_60": 0.17,
+   "beta_250": -0.146,
    "downside_beta_500": 0.241,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": 0.39,
-   "corr_SPY_60": 0.11,
-   "corr_SPY_250": -0.07,
-   "corr_QQQ_60": -0.1,
+   "corr_SPY_60": 0.1,
+   "corr_SPY_250": -0.06,
+   "corr_QQQ_60": -0.12,
    "corr_QQQ_250": -0.21,
-   "corr_SMH_60": -0.27,
+   "corr_SMH_60": -0.3,
    "corr_SMH_250": -0.26,
-   "corr_XLV_60": 0.47,
+   "corr_XLV_60": 0.48,
    "corr_XLV_250": 0.34,
    "spy_down_3pct_days": [
     {
@@ -247,89 +247,89 @@
    ]
   },
   {
-   "ticker": "HOOD",
-   "sector_etf": "XLF",
-   "beta_60": 2.992,
-   "beta_250": 2.923,
-   "downside_beta_500": 1.582,
+   "ticker": "BRKR",
+   "sector_etf": "XLV",
+   "beta_60": 2.424,
+   "beta_250": 1.689,
+   "downside_beta_500": 1.401,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -5.41,
-   "corr_SPY_60": 0.69,
-   "corr_SPY_250": 0.57,
-   "corr_QQQ_60": 0.67,
-   "corr_QQQ_250": 0.54,
-   "corr_SMH_60": 0.59,
-   "corr_SMH_250": 0.42,
-   "corr_XLF_60": 0.42,
-   "corr_XLF_250": 0.37,
+   "avg_return_spy_down_1pct": -2.28,
+   "corr_SPY_60": 0.59,
+   "corr_SPY_250": 0.38,
+   "corr_QQQ_60": 0.59,
+   "corr_QQQ_250": 0.35,
+   "corr_SMH_60": 0.51,
+   "corr_SMH_250": 0.31,
+   "corr_XLV_60": 0.28,
+   "corr_XLV_250": 0.27,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -9.8
+     "stock_pct": -3.19
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -4.03
+     "stock_pct": -7.57
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -10.32
+     "stock_pct": -8.98
     }
    ]
   },
   {
-   "ticker": "CEG",
-   "sector_etf": "XLU",
-   "beta_60": 1.384,
-   "beta_250": 1.288,
-   "downside_beta_500": 1.289,
+   "ticker": "TJX",
+   "sector_etf": "XLY",
+   "beta_60": 0.687,
+   "beta_250": 0.255,
+   "downside_beta_500": 0.357,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -3.3,
-   "corr_SPY_60": 0.39,
-   "corr_SPY_250": 0.36,
-   "corr_QQQ_60": 0.45,
-   "corr_QQQ_250": 0.38,
-   "corr_SMH_60": 0.52,
-   "corr_SMH_250": 0.42,
-   "corr_XLU_60": 0.43,
-   "corr_XLU_250": 0.48,
+   "avg_return_spy_down_1pct": -0.49,
+   "corr_SPY_60": 0.35,
+   "corr_SPY_250": 0.15,
+   "corr_QQQ_60": 0.23,
+   "corr_QQQ_250": 0.01,
+   "corr_SMH_60": 0.05,
+   "corr_SMH_250": -0.07,
+   "corr_XLY_60": 0.59,
+   "corr_XLY_250": 0.35,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -10.13
+     "stock_pct": -2.61
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -5.09
+     "stock_pct": 1.13
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -2.47
+     "stock_pct": -4.26
     }
    ]
   },
   {
    "ticker": "DAR",
    "sector_etf": "XLP",
-   "beta_60": 0.414,
-   "beta_250": 0.343,
+   "beta_60": 0.416,
+   "beta_250": 0.351,
    "downside_beta_500": 1.278,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.4,
    "corr_SPY_60": 0.18,
    "corr_SPY_250": 0.14,
-   "corr_QQQ_60": 0.19,
+   "corr_QQQ_60": 0.18,
    "corr_QQQ_250": 0.14,
-   "corr_SMH_60": 0.23,
-   "corr_SMH_250": 0.17,
-   "corr_XLP_60": -0.09,
-   "corr_XLP_250": -0.02,
+   "corr_SMH_60": 0.22,
+   "corr_SMH_250": 0.18,
+   "corr_XLP_60": -0.08,
+   "corr_XLP_250": -0.03,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -349,20 +349,54 @@
    ]
   },
   {
+   "ticker": "EXPE",
+   "sector_etf": "XLY",
+   "beta_60": 1.565,
+   "beta_250": 1.157,
+   "downside_beta_500": 1.891,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -2.15,
+   "corr_SPY_60": 0.42,
+   "corr_SPY_250": 0.31,
+   "corr_QQQ_60": 0.21,
+   "corr_QQQ_250": 0.17,
+   "corr_SMH_60": 0.01,
+   "corr_SMH_250": 0.01,
+   "corr_XLY_60": 0.66,
+   "corr_XLY_250": 0.49,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -6.9
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -7.52
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -13.74
+    }
+   ]
+  },
+  {
    "ticker": "TECH",
    "sector_etf": "XLV",
-   "beta_60": 0.045,
-   "beta_250": 0.602,
+   "beta_60": 0.046,
+   "beta_250": 0.603,
    "downside_beta_500": 0.979,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.86,
    "corr_SPY_60": 0.37,
    "corr_SPY_250": 0.2,
-   "corr_QQQ_60": 0.31,
+   "corr_QQQ_60": 0.32,
    "corr_QQQ_250": 0.15,
-   "corr_SMH_60": 0.2,
+   "corr_SMH_60": 0.21,
    "corr_SMH_250": 0.09,
-   "corr_XLV_60": 0.4,
+   "corr_XLV_60": 0.34,
    "corr_XLV_250": 0.27,
    "spy_down_3pct_days": [
     {
@@ -383,10 +417,112 @@
    ]
   },
   {
+   "ticker": "AVGO",
+   "sector_etf": "XLK",
+   "beta_60": 2.197,
+   "beta_250": 2.195,
+   "downside_beta_500": 1.487,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -3.73,
+   "corr_SPY_60": 0.67,
+   "corr_SPY_250": 0.62,
+   "corr_QQQ_60": 0.79,
+   "corr_QQQ_250": 0.71,
+   "corr_SMH_60": 0.81,
+   "corr_SMH_250": 0.71,
+   "corr_XLK_60": 0.79,
+   "corr_XLK_250": 0.74,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -5.01
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -6.94
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -10.43
+    }
+   ]
+  },
+  {
+   "ticker": "BURL",
+   "sector_etf": "XLY",
+   "beta_60": 0.937,
+   "beta_250": 0.815,
+   "downside_beta_500": 0.604,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.81,
+   "corr_SPY_60": 0.31,
+   "corr_SPY_250": 0.27,
+   "corr_QQQ_60": 0.24,
+   "corr_QQQ_250": 0.2,
+   "corr_SMH_60": 0.16,
+   "corr_SMH_250": 0.17,
+   "corr_XLY_60": 0.46,
+   "corr_XLY_250": 0.33,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -1.77
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -1.39
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -2.95
+    }
+   ]
+  },
+  {
+   "ticker": "CDW",
+   "sector_etf": "XLK",
+   "beta_60": 1.862,
+   "beta_250": 0.93,
+   "downside_beta_500": 1.374,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -2.01,
+   "corr_SPY_60": 0.56,
+   "corr_SPY_250": 0.26,
+   "corr_QQQ_60": 0.43,
+   "corr_QQQ_250": 0.18,
+   "corr_SMH_60": 0.27,
+   "corr_SMH_250": 0.05,
+   "corr_XLK_60": 0.42,
+   "corr_XLK_250": 0.18,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -4.67
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -8.01
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -6.14
+    }
+   ]
+  },
+  {
    "ticker": "AAON",
    "sector_etf": "XLI",
-   "beta_60": 1.667,
-   "beta_250": 1.999,
+   "beta_60": 1.664,
+   "beta_250": 1.994,
    "downside_beta_500": 0.484,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -3.93,
@@ -395,7 +531,7 @@
    "corr_QQQ_60": 0.45,
    "corr_QQQ_250": 0.48,
    "corr_SMH_60": 0.56,
-   "corr_SMH_250": 0.55,
+   "corr_SMH_250": 0.54,
    "corr_XLI_60": 0.55,
    "corr_XLI_250": 0.51,
    "spy_down_3pct_days": [
@@ -417,44 +553,10 @@
    ]
   },
   {
-   "ticker": "DDOG",
-   "sector_etf": "XLK",
-   "beta_60": 1.901,
-   "beta_250": 1.449,
-   "downside_beta_500": 1.388,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.57,
-   "corr_SPY_60": 0.41,
-   "corr_SPY_250": 0.29,
-   "corr_QQQ_60": 0.57,
-   "corr_QQQ_250": 0.35,
-   "corr_SMH_60": 0.6,
-   "corr_SMH_250": 0.23,
-   "corr_XLK_60": 0.64,
-   "corr_XLK_250": 0.4,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -6.92
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -4.37
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -7.48
-    }
-   ]
-  },
-  {
    "ticker": "MANH",
    "sector_etf": "XLK",
-   "beta_60": 0.293,
-   "beta_250": 0.252,
+   "beta_60": 0.297,
+   "beta_250": 0.254,
    "downside_beta_500": 1.252,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.44,
@@ -485,145 +587,315 @@
    ]
   },
   {
-   "ticker": "AVGO",
-   "sector_etf": "XLK",
-   "beta_60": 2.204,
-   "beta_250": 2.209,
-   "downside_beta_500": 1.487,
+   "ticker": "BG",
+   "sector_etf": "XLP",
+   "beta_60": -0.103,
+   "beta_250": -0.032,
+   "downside_beta_500": 0.473,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -3.73,
-   "corr_SPY_60": 0.68,
-   "corr_SPY_250": 0.62,
-   "corr_QQQ_60": 0.79,
+   "avg_return_spy_down_1pct": -0.35,
+   "corr_SPY_60": -0.05,
+   "corr_SPY_250": -0.01,
+   "corr_QQQ_60": -0.13,
+   "corr_QQQ_250": -0.06,
+   "corr_SMH_60": -0.18,
+   "corr_SMH_250": -0.01,
+   "corr_XLP_60": 0.2,
+   "corr_XLP_250": 0.18,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -6.39
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -1.43
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": 1.58
+    }
+   ]
+  },
+  {
+   "ticker": "ADI",
+   "sector_etf": "XLK",
+   "beta_60": 2.199,
+   "beta_250": 1.864,
+   "downside_beta_500": 1.998,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -2.86,
+   "corr_SPY_60": 0.75,
+   "corr_SPY_250": 0.65,
+   "corr_QQQ_60": 0.81,
    "corr_QQQ_250": 0.71,
-   "corr_SMH_60": 0.81,
-   "corr_SMH_250": 0.72,
-   "corr_XLK_60": 0.79,
+   "corr_SMH_60": 0.89,
+   "corr_SMH_250": 0.77,
+   "corr_XLK_60": 0.84,
+   "corr_XLK_250": 0.68,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -9.0
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -9.29
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -11.13
+    }
+   ]
+  },
+  {
+   "ticker": "CEG",
+   "sector_etf": "XLU",
+   "beta_60": 1.381,
+   "beta_250": 1.282,
+   "downside_beta_500": 1.289,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -3.3,
+   "corr_SPY_60": 0.39,
+   "corr_SPY_250": 0.36,
+   "corr_QQQ_60": 0.44,
+   "corr_QQQ_250": 0.38,
+   "corr_SMH_60": 0.51,
+   "corr_SMH_250": 0.42,
+   "corr_XLU_60": 0.43,
+   "corr_XLU_250": 0.49,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -10.13
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -5.09
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -2.47
+    }
+   ]
+  },
+  {
+   "ticker": "TTWO",
+   "sector_etf": "XLC",
+   "beta_60": 0.293,
+   "beta_250": 0.58,
+   "downside_beta_500": 0.351,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.5,
+   "corr_SPY_60": 0.1,
+   "corr_SPY_250": 0.22,
+   "corr_QQQ_60": 0.03,
+   "corr_QQQ_250": 0.17,
+   "corr_SMH_60": -0.13,
+   "corr_SMH_250": 0.01,
+   "corr_XLC_60": 0.44,
+   "corr_XLC_250": 0.37,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -6.87
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -1.79
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": 2.13
+    }
+   ]
+  },
+  {
+   "ticker": "AKAM",
+   "sector_etf": "XLK",
+   "beta_60": 1.99,
+   "beta_250": 1.425,
+   "downside_beta_500": 1.342,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -2.24,
+   "corr_SPY_60": 0.5,
+   "corr_SPY_250": 0.32,
+   "corr_QQQ_60": 0.58,
+   "corr_QQQ_250": 0.37,
+   "corr_SMH_60": 0.58,
+   "corr_SMH_250": 0.37,
+   "corr_XLK_60": 0.62,
+   "corr_XLK_250": 0.42,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -6.46
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -4.96
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -9.41
+    }
+   ]
+  },
+  {
+   "ticker": "OKTA",
+   "sector_etf": "XLK",
+   "beta_60": 2.441,
+   "beta_250": 1.536,
+   "downside_beta_500": 1.391,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -2.3,
+   "corr_SPY_60": 0.43,
+   "corr_SPY_250": 0.31,
+   "corr_QQQ_60": 0.53,
+   "corr_QQQ_250": 0.35,
+   "corr_SMH_60": 0.46,
+   "corr_SMH_250": 0.22,
+   "corr_XLK_60": 0.59,
+   "corr_XLK_250": 0.41,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -8.32
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -0.1
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -10.41
+    }
+   ]
+  },
+  {
+   "ticker": "ORA",
+   "sector_etf": "XLU",
+   "beta_60": 0.788,
+   "beta_250": 0.852,
+   "downside_beta_500": 0.217,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.3,
+   "corr_SPY_60": 0.3,
+   "corr_SPY_250": 0.31,
+   "corr_QQQ_60": 0.3,
+   "corr_QQQ_250": 0.31,
+   "corr_SMH_60": 0.31,
+   "corr_SMH_250": 0.33,
+   "corr_XLU_60": 0.45,
+   "corr_XLU_250": 0.24,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -3.5
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -1.32
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -1.38
+    }
+   ]
+  },
+  {
+   "ticker": "MU",
+   "sector_etf": "XLK",
+   "beta_60": 3.168,
+   "beta_250": 3.421,
+   "downside_beta_500": 3.002,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -4.55,
+   "corr_SPY_60": 0.68,
+   "corr_SPY_250": 0.56,
+   "corr_QQQ_60": 0.81,
+   "corr_QQQ_250": 0.73,
+   "corr_SMH_60": 0.87,
+   "corr_SMH_250": 0.83,
+   "corr_XLK_60": 0.83,
+   "corr_XLK_250": 0.77,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -12.94
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -10.04
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -17.46
+    }
+   ]
+  },
+  {
+   "ticker": "LSCC",
+   "sector_etf": "XLK",
+   "beta_60": 3.014,
+   "beta_250": 3.015,
+   "downside_beta_500": 2.113,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -4.29,
+   "corr_SPY_60": 0.65,
+   "corr_SPY_250": 0.64,
+   "corr_QQQ_60": 0.76,
+   "corr_QQQ_250": 0.74,
+   "corr_SMH_60": 0.84,
+   "corr_SMH_250": 0.81,
+   "corr_XLK_60": 0.78,
    "corr_XLK_250": 0.74,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -5.01
+     "stock_pct": -9.36
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -6.94
+     "stock_pct": -9.17
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -10.43
-    }
-   ]
-  },
-  {
-   "ticker": "SN",
-   "sector_etf": "XLY",
-   "beta_60": 0.685,
-   "beta_250": 1.306,
-   "downside_beta_500": 1.349,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.81,
-   "corr_SPY_60": 0.27,
-   "corr_SPY_250": 0.43,
-   "corr_QQQ_60": 0.2,
-   "corr_QQQ_250": 0.32,
-   "corr_SMH_60": 0.09,
-   "corr_SMH_250": 0.27,
-   "corr_XLY_60": 0.42,
-   "corr_XLY_250": 0.5,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": 0.86
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -7.54
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -0.97
-    }
-   ]
-  },
-  {
-   "ticker": "BURL",
-   "sector_etf": "XLY",
-   "beta_60": 0.93,
-   "beta_250": 0.827,
-   "downside_beta_500": 0.604,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.81,
-   "corr_SPY_60": 0.31,
-   "corr_SPY_250": 0.27,
-   "corr_QQQ_60": 0.22,
-   "corr_QQQ_250": 0.2,
-   "corr_SMH_60": 0.15,
-   "corr_SMH_250": 0.18,
-   "corr_XLY_60": 0.43,
-   "corr_XLY_250": 0.33,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -1.77
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -1.39
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -2.95
-    }
-   ]
-  },
-  {
-   "ticker": "PCG",
-   "sector_etf": "XLU",
-   "beta_60": 0.316,
-   "beta_250": 0.124,
-   "downside_beta_500": 0.538,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -0.73,
-   "corr_SPY_60": 0.08,
-   "corr_SPY_250": 0.05,
-   "corr_QQQ_60": 0.03,
-   "corr_QQQ_250": -0.04,
-   "corr_SMH_60": 0.01,
-   "corr_SMH_250": -0.05,
-   "corr_XLU_60": 0.43,
-   "corr_XLU_250": 0.5,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -4.7
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -2.02
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -1.27
+     "stock_pct": -8.6
     }
    ]
   },
   {
    "ticker": "TWLO",
    "sector_etf": "XLK",
-   "beta_60": 2.148,
+   "beta_60": 2.141,
    "beta_250": 1.438,
    "downside_beta_500": 1.502,
    "down_days_500": 57,
@@ -655,44 +927,10 @@
    ]
   },
   {
-   "ticker": "THC",
-   "sector_etf": "XLV",
-   "beta_60": 0.574,
-   "beta_250": 0.582,
-   "downside_beta_500": 1.212,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.3,
-   "corr_SPY_60": 0.27,
-   "corr_SPY_250": 0.19,
-   "corr_QQQ_60": 0.13,
-   "corr_QQQ_250": 0.07,
-   "corr_SMH_60": -0.05,
-   "corr_SMH_250": -0.01,
-   "corr_XLV_60": 0.54,
-   "corr_XLV_250": 0.34,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -9.42
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -2.71
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -1.98
-    }
-   ]
-  },
-  {
    "ticker": "WMS",
    "sector_etf": "XLI",
-   "beta_60": 2.114,
-   "beta_250": 1.709,
+   "beta_60": 2.111,
+   "beta_250": 1.707,
    "downside_beta_500": 1.438,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.99,
@@ -702,7 +940,7 @@
    "corr_QQQ_250": 0.47,
    "corr_SMH_60": 0.49,
    "corr_SMH_250": 0.42,
-   "corr_XLI_60": 0.68,
+   "corr_XLI_60": 0.69,
    "corr_XLI_250": 0.69,
    "spy_down_3pct_days": [
     {
@@ -723,84 +961,152 @@
    ]
   },
   {
-   "ticker": "NEM",
-   "sector_etf": "XLB",
-   "beta_60": 1.119,
-   "beta_250": 1.602,
-   "downside_beta_500": 0.43,
+   "ticker": "A",
+   "sector_etf": "XLV",
+   "beta_60": 0.966,
+   "beta_250": 0.872,
+   "downside_beta_500": 1.201,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.35,
-   "corr_SPY_60": 0.42,
-   "corr_SPY_250": 0.45,
-   "corr_QQQ_60": 0.32,
-   "corr_QQQ_250": 0.42,
-   "corr_SMH_60": 0.21,
-   "corr_SMH_250": 0.39,
-   "corr_XLB_60": 0.5,
-   "corr_XLB_250": 0.6,
+   "avg_return_spy_down_1pct": -1.63,
+   "corr_SPY_60": 0.51,
+   "corr_SPY_250": 0.37,
+   "corr_QQQ_60": 0.54,
+   "corr_QQQ_250": 0.32,
+   "corr_SMH_60": 0.51,
+   "corr_SMH_250": 0.25,
+   "corr_XLV_60": 0.32,
+   "corr_XLV_250": 0.43,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -8.59
+     "stock_pct": -6.08
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": 4.49
+     "stock_pct": -6.63
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": 1.35
+     "stock_pct": -3.04
     }
    ]
   },
   {
-   "ticker": "FHN",
-   "sector_etf": "XLF",
-   "beta_60": 0.52,
-   "beta_250": 0.615,
-   "downside_beta_500": 1.608,
+   "ticker": "RGLD",
+   "sector_etf": "XLB",
+   "beta_60": 0.733,
+   "beta_250": 1.224,
+   "downside_beta_500": -0.153,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.77,
-   "corr_SPY_60": 0.44,
-   "corr_SPY_250": 0.38,
-   "corr_QQQ_60": 0.24,
-   "corr_QQQ_250": 0.23,
-   "corr_SMH_60": 0.13,
-   "corr_SMH_250": 0.19,
-   "corr_XLF_60": 0.79,
-   "corr_XLF_250": 0.63,
+   "avg_return_spy_down_1pct": -1.08,
+   "corr_SPY_60": 0.28,
+   "corr_SPY_250": 0.4,
+   "corr_QQQ_60": 0.2,
+   "corr_QQQ_250": 0.35,
+   "corr_SMH_60": 0.12,
+   "corr_SMH_250": 0.31,
+   "corr_XLB_60": 0.43,
+   "corr_XLB_250": 0.58,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -5.81
+     "stock_pct": -6.98
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -6.25
+     "stock_pct": 3.91
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -2.61
+     "stock_pct": 6.18
+    }
+   ]
+  },
+  {
+   "ticker": "LECO",
+   "sector_etf": "XLI",
+   "beta_60": 0.99,
+   "beta_250": 1.074,
+   "downside_beta_500": 0.915,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.91,
+   "corr_SPY_60": 0.43,
+   "corr_SPY_250": 0.48,
+   "corr_QQQ_60": 0.44,
+   "corr_QQQ_250": 0.39,
+   "corr_SMH_60": 0.5,
+   "corr_SMH_250": 0.42,
+   "corr_XLI_60": 0.64,
+   "corr_XLI_250": 0.68,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -4.13
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -4.16
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -2.58
+    }
+   ]
+  },
+  {
+   "ticker": "VLY",
+   "sector_etf": "XLF",
+   "beta_60": 0.441,
+   "beta_250": 0.629,
+   "downside_beta_500": 1.112,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.59,
+   "corr_SPY_60": 0.28,
+   "corr_SPY_250": 0.35,
+   "corr_QQQ_60": 0.11,
+   "corr_QQQ_250": 0.21,
+   "corr_SMH_60": 0.04,
+   "corr_SMH_250": 0.16,
+   "corr_XLF_60": 0.63,
+   "corr_XLF_250": 0.56,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -0.62
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -6.18
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -2.97
     }
    ]
   },
   {
    "ticker": "RF",
    "sector_etf": "XLF",
-   "beta_60": 0.547,
-   "beta_250": 0.641,
+   "beta_60": 0.549,
+   "beta_250": 0.642,
    "downside_beta_500": 1.316,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.57,
    "corr_SPY_60": 0.43,
    "corr_SPY_250": 0.38,
-   "corr_QQQ_60": 0.21,
+   "corr_QQQ_60": 0.2,
    "corr_QQQ_250": 0.19,
    "corr_SMH_60": 0.08,
    "corr_SMH_250": 0.11,
@@ -825,36 +1131,36 @@
    ]
   },
   {
-   "ticker": "CNH",
+   "ticker": "UAL",
    "sector_etf": "XLI",
-   "beta_60": 0.938,
-   "beta_250": 1.111,
-   "downside_beta_500": 0.993,
+   "beta_60": 1.668,
+   "beta_250": 2.053,
+   "downside_beta_500": 1.491,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.07,
-   "corr_SPY_60": 0.29,
-   "corr_SPY_250": 0.35,
-   "corr_QQQ_60": 0.21,
-   "corr_QQQ_250": 0.26,
-   "corr_SMH_60": 0.2,
-   "corr_SMH_250": 0.28,
-   "corr_XLI_60": 0.34,
-   "corr_XLI_250": 0.53,
+   "avg_return_spy_down_1pct": -3.21,
+   "corr_SPY_60": 0.57,
+   "corr_SPY_250": 0.58,
+   "corr_QQQ_60": 0.48,
+   "corr_QQQ_250": 0.49,
+   "corr_SMH_60": 0.35,
+   "corr_SMH_250": 0.42,
+   "corr_XLI_60": 0.51,
+   "corr_XLI_250": 0.58,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -4.88
+     "stock_pct": -4.25
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -3.62
+     "stock_pct": -11.41
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -3.93
+     "stock_pct": -4.55
     }
    ]
   },
@@ -862,7 +1168,7 @@
    "ticker": "SLAB",
    "sector_etf": "XLK",
    "beta_60": 0.074,
-   "beta_250": 0.234,
+   "beta_250": 0.233,
    "downside_beta_500": 2.084,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.93,
@@ -870,10 +1176,10 @@
    "corr_SPY_250": 0.07,
    "corr_QQQ_60": 0.38,
    "corr_QQQ_250": 0.02,
-   "corr_SMH_60": 0.48,
-   "corr_SMH_250": 0.03,
+   "corr_SMH_60": 0.47,
+   "corr_SMH_250": 0.02,
    "corr_XLK_60": 0.42,
-   "corr_XLK_250": 0.0,
+   "corr_XLK_250": -0.0,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -893,463 +1199,123 @@
    ]
   },
   {
-   "ticker": "ZION",
-   "sector_etf": "XLF",
-   "beta_60": 0.613,
-   "beta_250": 0.694,
-   "downside_beta_500": 1.65,
+   "ticker": "TMUS",
+   "sector_etf": "XLC",
+   "beta_60": -0.288,
+   "beta_250": -0.33,
+   "downside_beta_500": 0.38,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.91,
-   "corr_SPY_60": 0.47,
-   "corr_SPY_250": 0.39,
-   "corr_QQQ_60": 0.26,
-   "corr_QQQ_250": 0.21,
-   "corr_SMH_60": 0.12,
-   "corr_SMH_250": 0.14,
-   "corr_XLF_60": 0.79,
-   "corr_XLF_250": 0.68,
+   "avg_return_spy_down_1pct": -0.16,
+   "corr_SPY_60": -0.1,
+   "corr_SPY_250": -0.13,
+   "corr_QQQ_60": -0.22,
+   "corr_QQQ_250": -0.22,
+   "corr_SMH_60": -0.27,
+   "corr_SMH_250": -0.28,
+   "corr_XLC_60": 0.27,
+   "corr_XLC_250": 0.28,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -5.52
+     "stock_pct": -7.38
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -7.13
+     "stock_pct": 0.48
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -2.55
+     "stock_pct": 0.89
     }
    ]
   },
   {
-   "ticker": "USB",
-   "sector_etf": "XLF",
-   "beta_60": 0.576,
-   "beta_250": 0.636,
-   "downside_beta_500": 1.32,
+   "ticker": "DIS",
+   "sector_etf": "XLC",
+   "beta_60": 0.322,
+   "beta_250": 0.53,
+   "downside_beta_500": 1.24,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.46,
-   "corr_SPY_60": 0.43,
-   "corr_SPY_250": 0.39,
-   "corr_QQQ_60": 0.19,
-   "corr_QQQ_250": 0.19,
-   "corr_SMH_60": 0.07,
-   "corr_SMH_250": 0.11,
-   "corr_XLF_60": 0.81,
-   "corr_XLF_250": 0.75,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -5.05
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -5.22
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -2.1
-    }
-   ]
-  },
-  {
-   "ticker": "LSCC",
-   "sector_etf": "XLK",
-   "beta_60": 3.028,
-   "beta_250": 3.019,
-   "downside_beta_500": 2.113,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -4.29,
-   "corr_SPY_60": 0.65,
-   "corr_SPY_250": 0.65,
-   "corr_QQQ_60": 0.76,
-   "corr_QQQ_250": 0.74,
-   "corr_SMH_60": 0.84,
-   "corr_SMH_250": 0.81,
-   "corr_XLK_60": 0.78,
-   "corr_XLK_250": 0.74,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -9.36
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -9.17
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -8.6
-    }
-   ]
-  },
-  {
-   "ticker": "TRMB",
-   "sector_etf": "XLK",
-   "beta_60": 0.103,
-   "beta_250": 0.737,
-   "downside_beta_500": 1.19,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.24,
-   "corr_SPY_60": 0.03,
+   "avg_return_spy_down_1pct": -1.55,
+   "corr_SPY_60": 0.21,
    "corr_SPY_250": 0.28,
-   "corr_QQQ_60": 0.1,
-   "corr_QQQ_250": 0.19,
-   "corr_SMH_60": 0.21,
-   "corr_SMH_250": 0.11,
-   "corr_XLK_60": 0.16,
-   "corr_XLK_250": 0.19,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -6.25
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -5.61
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -1.12
-    }
-   ]
-  },
-  {
-   "ticker": "KEY",
-   "sector_etf": "XLF",
-   "beta_60": 0.743,
-   "beta_250": 0.751,
-   "downside_beta_500": 1.409,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.79,
-   "corr_SPY_60": 0.51,
-   "corr_SPY_250": 0.45,
-   "corr_QQQ_60": 0.31,
-   "corr_QQQ_250": 0.28,
-   "corr_SMH_60": 0.19,
-   "corr_SMH_250": 0.22,
-   "corr_XLF_60": 0.77,
-   "corr_XLF_250": 0.72,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -4.6
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -5.37
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -2.74
-    }
-   ]
-  },
-  {
-   "ticker": "BKNG",
-   "sector_etf": "XLY",
-   "beta_60": 0.584,
-   "beta_250": 0.817,
-   "downside_beta_500": 0.567,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.73,
-   "corr_SPY_60": 0.23,
-   "corr_SPY_250": 0.29,
-   "corr_QQQ_60": 0.01,
-   "corr_QQQ_250": 0.14,
-   "corr_SMH_60": -0.2,
-   "corr_SMH_250": -0.04,
-   "corr_XLY_60": 0.55,
-   "corr_XLY_250": 0.53,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -3.74
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -2.64
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -1.32
-    }
-   ]
-  },
-  {
-   "ticker": "PCTY",
-   "sector_etf": "XLI",
-   "beta_60": 0.063,
-   "beta_250": -0.167,
-   "downside_beta_500": 0.657,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.03,
-   "corr_SPY_60": 0.03,
-   "corr_SPY_250": -0.06,
-   "corr_QQQ_60": -0.09,
-   "corr_QQQ_250": -0.15,
-   "corr_SMH_60": -0.23,
-   "corr_SMH_250": -0.34,
-   "corr_XLI_60": -0.0,
-   "corr_XLI_250": -0.25,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -4.31
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -2.11
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -0.81
-    }
-   ]
-  },
-  {
-   "ticker": "NLY",
-   "sector_etf": "XLF",
-   "beta_60": 0.375,
-   "beta_250": 0.554,
-   "downside_beta_500": 0.829,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.19,
-   "corr_SPY_60": 0.22,
-   "corr_SPY_250": 0.34,
    "corr_QQQ_60": 0.05,
-   "corr_QQQ_250": 0.2,
-   "corr_SMH_60": -0.06,
-   "corr_SMH_250": 0.12,
-   "corr_XLF_60": 0.53,
-   "corr_XLF_250": 0.4,
+   "corr_QQQ_250": 0.12,
+   "corr_SMH_60": -0.17,
+   "corr_SMH_250": -0.02,
+   "corr_XLC_60": 0.59,
+   "corr_XLC_250": 0.51,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -4.08
+     "stock_pct": -5.98
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -8.08
+     "stock_pct": -6.79
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -0.42
+     "stock_pct": -1.45
     }
    ]
   },
   {
-   "ticker": "ANF",
-   "sector_etf": "XLY",
-   "beta_60": 1.431,
-   "beta_250": 1.188,
-   "downside_beta_500": 1.138,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.47,
-   "corr_SPY_60": 0.28,
-   "corr_SPY_250": 0.24,
-   "corr_QQQ_60": 0.21,
-   "corr_QQQ_250": 0.14,
-   "corr_SMH_60": 0.13,
-   "corr_SMH_250": 0.06,
-   "corr_XLY_60": 0.31,
-   "corr_XLY_250": 0.36,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": 4.37
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -5.49
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -7.89
-    }
-   ]
-  },
-  {
-   "ticker": "HWC",
-   "sector_etf": "XLF",
-   "beta_60": 0.5,
-   "beta_250": 0.568,
-   "downside_beta_500": 1.28,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.51,
-   "corr_SPY_60": 0.27,
-   "corr_SPY_250": 0.32,
-   "corr_QQQ_60": 0.13,
-   "corr_QQQ_250": 0.15,
-   "corr_SMH_60": 0.07,
-   "corr_SMH_250": 0.12,
-   "corr_XLF_60": 0.51,
-   "corr_XLF_250": 0.57,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -3.11
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -6.74
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -2.53
-    }
-   ]
-  },
-  {
-   "ticker": "ULS",
+   "ticker": "GNRC",
    "sector_etf": "XLI",
-   "beta_60": 1.031,
-   "beta_250": 0.749,
-   "downside_beta_500": 0.785,
+   "beta_60": 2.162,
+   "beta_250": 2.043,
+   "downside_beta_500": 0.865,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.0,
-   "corr_SPY_60": 0.46,
-   "corr_SPY_250": 0.24,
-   "corr_QQQ_60": 0.42,
-   "corr_QQQ_250": 0.19,
-   "corr_SMH_60": 0.39,
-   "corr_SMH_250": 0.16,
-   "corr_XLI_60": 0.52,
-   "corr_XLI_250": 0.26,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -5.16
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -0.44
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -4.49
-    }
-   ]
-  },
-  {
-   "ticker": "CORT",
-   "sector_etf": "XLV",
-   "beta_60": 1.925,
-   "beta_250": 1.927,
-   "downside_beta_500": 1.528,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.64,
-   "corr_SPY_60": 0.47,
-   "corr_SPY_250": 0.28,
-   "corr_QQQ_60": 0.47,
-   "corr_QQQ_250": 0.26,
-   "corr_SMH_60": 0.43,
-   "corr_SMH_250": 0.23,
-   "corr_XLV_60": 0.23,
-   "corr_XLV_250": 0.17,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -6.2
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -7.18
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -9.58
-    }
-   ]
-  },
-  {
-   "ticker": "CFG",
-   "sector_etf": "XLF",
-   "beta_60": 0.854,
-   "beta_250": 0.89,
-   "downside_beta_500": 1.675,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.9,
-   "corr_SPY_60": 0.58,
+   "avg_return_spy_down_1pct": -3.27,
+   "corr_SPY_60": 0.48,
    "corr_SPY_250": 0.48,
-   "corr_QQQ_60": 0.39,
-   "corr_QQQ_250": 0.31,
-   "corr_SMH_60": 0.25,
-   "corr_SMH_250": 0.26,
-   "corr_XLF_60": 0.8,
-   "corr_XLF_250": 0.69,
+   "corr_QQQ_60": 0.57,
+   "corr_QQQ_250": 0.54,
+   "corr_SMH_60": 0.65,
+   "corr_SMH_250": 0.62,
+   "corr_XLI_60": 0.62,
+   "corr_XLI_250": 0.58,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -5.38
+     "stock_pct": -3.27
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -7.15
+     "stock_pct": -5.44
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -3.14
+     "stock_pct": -8.97
     }
    ]
   },
   {
    "ticker": "MTD",
    "sector_etf": "XLV",
-   "beta_60": 0.735,
-   "beta_250": 0.789,
+   "beta_60": 0.733,
+   "beta_250": 0.785,
    "downside_beta_500": 1.235,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.63,
-   "corr_SPY_60": 0.45,
+   "corr_SPY_60": 0.44,
    "corr_SPY_250": 0.34,
    "corr_QQQ_60": 0.44,
    "corr_QQQ_250": 0.22,
    "corr_SMH_60": 0.38,
    "corr_SMH_250": 0.16,
-   "corr_XLV_60": 0.38,
-   "corr_XLV_250": 0.42,
+   "corr_XLV_60": 0.35,
+   "corr_XLV_250": 0.41,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -1369,20 +1335,156 @@
    ]
   },
   {
+   "ticker": "MSM",
+   "sector_etf": "XLI",
+   "beta_60": 1.121,
+   "beta_250": 0.841,
+   "downside_beta_500": 0.676,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.55,
+   "corr_SPY_60": 0.38,
+   "corr_SPY_250": 0.35,
+   "corr_QQQ_60": 0.46,
+   "corr_QQQ_250": 0.33,
+   "corr_SMH_60": 0.55,
+   "corr_SMH_250": 0.35,
+   "corr_XLI_60": 0.47,
+   "corr_XLI_250": 0.49,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -5.24
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": 0.72
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -4.4
+    }
+   ]
+  },
+  {
+   "ticker": "TTEK",
+   "sector_etf": "XLI",
+   "beta_60": 0.029,
+   "beta_250": 0.391,
+   "downside_beta_500": 0.474,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -0.62,
+   "corr_SPY_60": 0.01,
+   "corr_SPY_250": 0.15,
+   "corr_QQQ_60": -0.17,
+   "corr_QQQ_250": 0.0,
+   "corr_SMH_60": -0.28,
+   "corr_SMH_250": -0.12,
+   "corr_XLI_60": 0.08,
+   "corr_XLI_250": 0.21,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -3.03
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -2.04
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -0.93
+    }
+   ]
+  },
+  {
+   "ticker": "BKNG",
+   "sector_etf": "XLY",
+   "beta_60": 0.581,
+   "beta_250": 0.822,
+   "downside_beta_500": 0.567,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -1.73,
+   "corr_SPY_60": 0.23,
+   "corr_SPY_250": 0.29,
+   "corr_QQQ_60": 0.0,
+   "corr_QQQ_250": 0.14,
+   "corr_SMH_60": -0.21,
+   "corr_SMH_250": -0.04,
+   "corr_XLY_60": 0.54,
+   "corr_XLY_250": 0.52,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -3.74
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -2.64
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -1.32
+    }
+   ]
+  },
+  {
+   "ticker": "ADM",
+   "sector_etf": "XLP",
+   "beta_60": 0.009,
+   "beta_250": 0.07,
+   "downside_beta_500": 0.813,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -0.29,
+   "corr_SPY_60": 0.0,
+   "corr_SPY_250": 0.03,
+   "corr_QQQ_60": -0.1,
+   "corr_QQQ_250": -0.01,
+   "corr_SMH_60": -0.15,
+   "corr_SMH_250": 0.01,
+   "corr_XLP_60": 0.32,
+   "corr_XLP_250": 0.2,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -8.93
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": 0.23
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -0.52
+    }
+   ]
+  },
+  {
    "ticker": "MKC",
    "sector_etf": "XLP",
-   "beta_60": -0.032,
-   "beta_250": -0.23,
+   "beta_60": -0.028,
+   "beta_250": -0.241,
    "downside_beta_500": 0.376,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -0.3,
    "corr_SPY_60": -0.01,
    "corr_SPY_250": -0.1,
-   "corr_QQQ_60": -0.22,
+   "corr_QQQ_60": -0.2,
    "corr_QQQ_250": -0.23,
-   "corr_SMH_60": -0.34,
-   "corr_SMH_250": -0.28,
-   "corr_XLP_60": 0.73,
+   "corr_SMH_60": -0.32,
+   "corr_SMH_250": -0.29,
+   "corr_XLP_60": 0.69,
    "corr_XLP_250": 0.59,
    "spy_down_3pct_days": [
     {
@@ -1403,179 +1505,111 @@
    ]
   },
   {
-   "ticker": "ARWR",
-   "sector_etf": "XLV",
-   "beta_60": 1.006,
-   "beta_250": 1.423,
-   "downside_beta_500": 1.59,
+   "ticker": "PCG",
+   "sector_etf": "XLU",
+   "beta_60": 0.297,
+   "beta_250": 0.127,
+   "downside_beta_500": 0.538,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.8,
-   "corr_SPY_60": 0.26,
-   "corr_SPY_250": 0.31,
-   "corr_QQQ_60": 0.22,
-   "corr_QQQ_250": 0.27,
-   "corr_SMH_60": 0.18,
-   "corr_SMH_250": 0.27,
-   "corr_XLV_60": 0.21,
-   "corr_XLV_250": 0.2,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -11.44
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -5.85
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -6.8
-    }
-   ]
-  },
-  {
-   "ticker": "SSB",
-   "sector_etf": "XLF",
-   "beta_60": 0.306,
-   "beta_250": 0.509,
-   "downside_beta_500": 1.284,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.46,
-   "corr_SPY_60": 0.29,
-   "corr_SPY_250": 0.32,
-   "corr_QQQ_60": 0.09,
-   "corr_QQQ_250": 0.13,
+   "avg_return_spy_down_1pct": -0.73,
+   "corr_SPY_60": 0.08,
+   "corr_SPY_250": 0.05,
+   "corr_QQQ_60": 0.03,
+   "corr_QQQ_250": -0.04,
    "corr_SMH_60": 0.01,
-   "corr_SMH_250": 0.05,
-   "corr_XLF_60": 0.68,
-   "corr_XLF_250": 0.65,
+   "corr_SMH_250": -0.05,
+   "corr_XLU_60": 0.43,
+   "corr_XLU_250": 0.5,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -3.72
+     "stock_pct": -4.7
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -6.61
+     "stock_pct": -2.02
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -1.81
+     "stock_pct": -1.27
     }
    ]
   },
   {
-   "ticker": "EXPE",
+   "ticker": "LAD",
    "sector_etf": "XLY",
-   "beta_60": 1.57,
-   "beta_250": 1.159,
-   "downside_beta_500": 1.891,
+   "beta_60": -0.014,
+   "beta_250": 0.435,
+   "downside_beta_500": 0.43,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -2.15,
-   "corr_SPY_60": 0.42,
-   "corr_SPY_250": 0.31,
-   "corr_QQQ_60": 0.21,
-   "corr_QQQ_250": 0.17,
-   "corr_SMH_60": 0.01,
-   "corr_SMH_250": 0.01,
-   "corr_XLY_60": 0.66,
-   "corr_XLY_250": 0.49,
+   "avg_return_spy_down_1pct": -1.47,
+   "corr_SPY_60": -0.0,
+   "corr_SPY_250": 0.15,
+   "corr_QQQ_60": -0.14,
+   "corr_QQQ_250": 0.02,
+   "corr_SMH_60": -0.23,
+   "corr_SMH_250": -0.03,
+   "corr_XLY_60": 0.25,
+   "corr_XLY_250": 0.3,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -6.9
+     "stock_pct": -0.09
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -7.52
+     "stock_pct": -3.7
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -13.74
+     "stock_pct": 0.28
     }
    ]
   },
   {
-   "ticker": "CYTK",
-   "sector_etf": "XLV",
-   "beta_60": 1.604,
-   "beta_250": 1.073,
-   "downside_beta_500": 0.989,
+   "ticker": "BWA",
+   "sector_etf": "XLY",
+   "beta_60": 1.4,
+   "beta_250": 1.396,
+   "downside_beta_500": 1.142,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.43,
-   "corr_SPY_60": 0.55,
-   "corr_SPY_250": 0.34,
-   "corr_QQQ_60": 0.47,
-   "corr_QQQ_250": 0.29,
-   "corr_SMH_60": 0.44,
-   "corr_SMH_250": 0.25,
-   "corr_XLV_60": 0.43,
-   "corr_XLV_250": 0.3,
+   "avg_return_spy_down_1pct": -1.65,
+   "corr_SPY_60": 0.61,
+   "corr_SPY_250": 0.46,
+   "corr_QQQ_60": 0.63,
+   "corr_QQQ_250": 0.47,
+   "corr_SMH_60": 0.63,
+   "corr_SMH_250": 0.53,
+   "corr_XLY_60": 0.4,
+   "corr_XLY_250": 0.31,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -7.8
+     "stock_pct": -4.85
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": 1.42
+     "stock_pct": -4.54
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -12.66
-    }
-   ]
-  },
-  {
-   "ticker": "AGNC",
-   "sector_etf": "XLF",
-   "beta_60": 0.501,
-   "beta_250": 0.714,
-   "downside_beta_500": 0.746,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.37,
-   "corr_SPY_60": 0.29,
-   "corr_SPY_250": 0.42,
-   "corr_QQQ_60": 0.14,
-   "corr_QQQ_250": 0.28,
-   "corr_SMH_60": 0.04,
-   "corr_SMH_250": 0.2,
-   "corr_XLF_60": 0.52,
-   "corr_XLF_250": 0.41,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -3.85
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -8.87
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -0.56
+     "stock_pct": -5.69
     }
    ]
   },
   {
    "ticker": "HALO",
    "sector_etf": "XLV",
-   "beta_60": 0.54,
+   "beta_60": 0.535,
    "beta_250": 0.608,
    "downside_beta_500": 1.036,
    "down_days_500": 57,
@@ -1586,8 +1620,8 @@
    "corr_QQQ_250": 0.13,
    "corr_SMH_60": 0.02,
    "corr_SMH_250": 0.1,
-   "corr_XLV_60": 0.39,
-   "corr_XLV_250": 0.43,
+   "corr_XLV_60": 0.38,
+   "corr_XLV_250": 0.42,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -1607,44 +1641,10 @@
    ]
   },
   {
-   "ticker": "HUM",
-   "sector_etf": "XLV",
-   "beta_60": 0.501,
-   "beta_250": 0.516,
-   "downside_beta_500": 0.237,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -0.84,
-   "corr_SPY_60": 0.2,
-   "corr_SPY_250": 0.15,
-   "corr_QQQ_60": 0.15,
-   "corr_QQQ_250": 0.1,
-   "corr_SMH_60": 0.1,
-   "corr_SMH_250": 0.08,
-   "corr_XLV_60": 0.29,
-   "corr_XLV_250": 0.24,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -4.41
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": 1.65
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -1.35
-    }
-   ]
-  },
-  {
    "ticker": "NWSA",
    "sector_etf": "XLC",
    "beta_60": 1.391,
-   "beta_250": 0.512,
+   "beta_250": 0.516,
    "downside_beta_500": 1.352,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.19,
@@ -1654,7 +1654,7 @@
    "corr_QQQ_250": 0.1,
    "corr_SMH_60": 0.26,
    "corr_SMH_250": -0.07,
-   "corr_XLC_60": 0.32,
+   "corr_XLC_60": 0.31,
    "corr_XLC_250": 0.42,
    "spy_down_3pct_days": [
     {
@@ -1675,21 +1675,55 @@
    ]
   },
   {
+   "ticker": "INGR",
+   "sector_etf": "XLP",
+   "beta_60": -0.029,
+   "beta_250": 0.042,
+   "downside_beta_500": 0.081,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -0.51,
+   "corr_SPY_60": -0.02,
+   "corr_SPY_250": 0.03,
+   "corr_QQQ_60": -0.23,
+   "corr_QQQ_250": -0.12,
+   "corr_SMH_60": -0.29,
+   "corr_SMH_250": -0.2,
+   "corr_XLP_60": 0.59,
+   "corr_XLP_250": 0.54,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -4.05
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -0.46
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": 0.06
+    }
+   ]
+  },
+  {
    "ticker": "ACM",
    "sector_etf": "XLI",
-   "beta_60": 0.479,
-   "beta_250": 0.745,
+   "beta_60": 0.499,
+   "beta_250": 0.762,
    "downside_beta_500": 0.662,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.23,
-   "corr_SPY_60": 0.19,
-   "corr_SPY_250": 0.25,
-   "corr_QQQ_60": 0.11,
-   "corr_QQQ_250": 0.17,
-   "corr_SMH_60": 0.02,
-   "corr_SMH_250": 0.09,
-   "corr_XLI_60": 0.35,
-   "corr_XLI_250": 0.29,
+   "corr_SPY_60": 0.21,
+   "corr_SPY_250": 0.27,
+   "corr_QQQ_60": 0.13,
+   "corr_QQQ_250": 0.19,
+   "corr_SMH_60": 0.03,
+   "corr_SMH_250": 0.11,
+   "corr_XLI_60": 0.36,
+   "corr_XLI_250": 0.31,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -1709,104 +1743,138 @@
    ]
   },
   {
-   "ticker": "DLB",
+   "ticker": "CTSH",
    "sector_etf": "XLK",
-   "beta_60": 0.39,
-   "beta_250": 0.529,
-   "downside_beta_500": 0.829,
+   "beta_60": -0.153,
+   "beta_250": 0.031,
+   "downside_beta_500": 0.86,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.26,
-   "corr_SPY_60": 0.23,
-   "corr_SPY_250": 0.24,
-   "corr_QQQ_60": 0.12,
-   "corr_QQQ_250": 0.17,
-   "corr_SMH_60": 0.1,
-   "corr_SMH_250": 0.09,
-   "corr_XLK_60": 0.08,
-   "corr_XLK_250": 0.13,
+   "avg_return_spy_down_1pct": -0.96,
+   "corr_SPY_60": -0.05,
+   "corr_SPY_250": 0.01,
+   "corr_QQQ_60": -0.22,
+   "corr_QQQ_250": -0.15,
+   "corr_SMH_60": -0.39,
+   "corr_SMH_250": -0.34,
+   "corr_XLK_60": -0.26,
+   "corr_XLK_250": -0.17,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -6.63
+     "stock_pct": -6.18
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -2.42
+     "stock_pct": -4.65
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -0.31
+     "stock_pct": 1.16
     }
    ]
   },
   {
-   "ticker": "COIN",
+   "ticker": "WFC",
    "sector_etf": "XLF",
-   "beta_60": 2.907,
-   "beta_250": 2.757,
-   "downside_beta_500": 0.816,
+   "beta_60": 0.619,
+   "beta_250": 0.688,
+   "downside_beta_500": 1.37,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -5.5,
-   "corr_SPY_60": 0.61,
-   "corr_SPY_250": 0.53,
-   "corr_QQQ_60": 0.6,
-   "corr_QQQ_250": 0.5,
-   "corr_SMH_60": 0.48,
-   "corr_SMH_250": 0.37,
-   "corr_XLF_60": 0.36,
-   "corr_XLF_250": 0.37,
+   "avg_return_spy_down_1pct": -1.66,
+   "corr_SPY_60": 0.38,
+   "corr_SPY_250": 0.36,
+   "corr_QQQ_60": 0.17,
+   "corr_QQQ_250": 0.18,
+   "corr_SMH_60": 0.09,
+   "corr_SMH_250": 0.11,
+   "corr_XLF_60": 0.77,
+   "corr_XLF_250": 0.72,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -5.98
+     "stock_pct": -7.14
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -4.22
+     "stock_pct": -4.85
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -9.69
+     "stock_pct": -3.01
     }
    ]
   },
   {
-   "ticker": "PAG",
-   "sector_etf": "XLY",
-   "beta_60": 0.11,
-   "beta_250": 0.453,
-   "downside_beta_500": 0.209,
+   "ticker": "HUM",
+   "sector_etf": "XLV",
+   "beta_60": 0.555,
+   "beta_250": 0.546,
+   "downside_beta_500": 0.237,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.01,
-   "corr_SPY_60": 0.08,
-   "corr_SPY_250": 0.23,
-   "corr_QQQ_60": -0.01,
-   "corr_QQQ_250": 0.13,
-   "corr_SMH_60": -0.04,
-   "corr_SMH_250": 0.12,
-   "corr_XLY_60": 0.21,
-   "corr_XLY_250": 0.29,
+   "avg_return_spy_down_1pct": -0.84,
+   "corr_SPY_60": 0.18,
+   "corr_SPY_250": 0.15,
+   "corr_QQQ_60": 0.09,
+   "corr_QQQ_250": 0.1,
+   "corr_SMH_60": 0.07,
+   "corr_SMH_250": 0.08,
+   "corr_XLV_60": 0.38,
+   "corr_XLV_250": 0.27,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": 0.47
+     "stock_pct": -4.41
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -2.69
+     "stock_pct": 1.65
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -0.05
+     "stock_pct": -1.35
+    }
+   ]
+  },
+  {
+   "ticker": "DASH",
+   "sector_etf": "XLY",
+   "beta_60": 1.424,
+   "beta_250": 1.37,
+   "downside_beta_500": 1.017,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -3.03,
+   "corr_SPY_60": 0.44,
+   "corr_SPY_250": 0.4,
+   "corr_QQQ_60": 0.28,
+   "corr_QQQ_250": 0.29,
+   "corr_SMH_60": 0.09,
+   "corr_SMH_250": 0.08,
+   "corr_XLY_60": 0.71,
+   "corr_XLY_250": 0.51,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -6.22
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -5.33
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -9.4
     }
    ]
   },
@@ -1845,88 +1913,54 @@
    ]
   },
   {
-   "ticker": "ALLE",
-   "sector_etf": "XLI",
-   "beta_60": 0.365,
-   "beta_250": 0.477,
-   "downside_beta_500": 0.708,
+   "ticker": "PAG",
+   "sector_etf": "XLY",
+   "beta_60": 0.104,
+   "beta_250": 0.452,
+   "downside_beta_500": 0.209,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -0.7,
-   "corr_SPY_60": 0.18,
-   "corr_SPY_250": 0.22,
-   "corr_QQQ_60": 0.01,
-   "corr_QQQ_250": 0.09,
+   "avg_return_spy_down_1pct": -1.01,
+   "corr_SPY_60": 0.07,
+   "corr_SPY_250": 0.23,
+   "corr_QQQ_60": -0.02,
+   "corr_QQQ_250": 0.13,
    "corr_SMH_60": -0.05,
-   "corr_SMH_250": 0.08,
-   "corr_XLI_60": 0.37,
-   "corr_XLI_250": 0.45,
+   "corr_SMH_250": 0.12,
+   "corr_XLY_60": 0.22,
+   "corr_XLY_250": 0.29,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -2.81
+     "stock_pct": 0.47
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -2.06
+     "stock_pct": -2.69
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -2.88
-    }
-   ]
-  },
-  {
-   "ticker": "WFC",
-   "sector_etf": "XLF",
-   "beta_60": 0.61,
-   "beta_250": 0.684,
-   "downside_beta_500": 1.37,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -1.66,
-   "corr_SPY_60": 0.38,
-   "corr_SPY_250": 0.36,
-   "corr_QQQ_60": 0.18,
-   "corr_QQQ_250": 0.18,
-   "corr_SMH_60": 0.1,
-   "corr_SMH_250": 0.11,
-   "corr_XLF_60": 0.77,
-   "corr_XLF_250": 0.72,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -7.14
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -4.85
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -3.01
+     "stock_pct": -0.05
     }
    ]
   },
   {
    "ticker": "BDX",
    "sector_etf": "XLV",
-   "beta_60": 0.141,
-   "beta_250": 0.26,
+   "beta_60": 0.146,
+   "beta_250": 0.261,
    "downside_beta_500": 0.714,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -0.65,
-   "corr_SPY_60": 0.09,
+   "corr_SPY_60": 0.1,
    "corr_SPY_250": 0.14,
-   "corr_QQQ_60": -0.12,
+   "corr_QQQ_60": -0.11,
    "corr_QQQ_250": -0.07,
    "corr_SMH_60": -0.33,
    "corr_SMH_250": -0.19,
-   "corr_XLV_60": 0.59,
+   "corr_XLV_60": 0.57,
    "corr_XLV_250": 0.57,
    "spy_down_3pct_days": [
     {
@@ -1947,54 +1981,54 @@
    ]
   },
   {
-   "ticker": "FIS",
-   "sector_etf": "XLF",
-   "beta_60": -0.606,
-   "beta_250": 0.068,
-   "downside_beta_500": 0.865,
+   "ticker": "CAVA",
+   "sector_etf": "XLY",
+   "beta_60": 1.019,
+   "beta_250": 1.199,
+   "downside_beta_500": 1.078,
    "down_days_500": 57,
-   "avg_return_spy_down_1pct": -0.7,
-   "corr_SPY_60": -0.14,
-   "corr_SPY_250": 0.02,
-   "corr_QQQ_60": -0.14,
-   "corr_QQQ_250": -0.08,
-   "corr_SMH_60": -0.04,
-   "corr_SMH_250": -0.16,
-   "corr_XLF_60": -0.08,
-   "corr_XLF_250": 0.26,
+   "avg_return_spy_down_1pct": -3.22,
+   "corr_SPY_60": 0.29,
+   "corr_SPY_250": 0.28,
+   "corr_QQQ_60": 0.18,
+   "corr_QQQ_250": 0.2,
+   "corr_SMH_60": 0.12,
+   "corr_SMH_250": 0.16,
+   "corr_XLY_60": 0.55,
+   "corr_XLY_250": 0.34,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
      "spy_pct": -5.85,
-     "stock_pct": -6.19
+     "stock_pct": -10.68
     },
     {
      "date": "2025-04-10",
      "spy_pct": -4.38,
-     "stock_pct": -4.0
+     "stock_pct": -3.46
     },
     {
      "date": "2026-11-05",
      "spy_pct": -4.41,
-     "stock_pct": -1.24
+     "stock_pct": -3.18
     }
    ]
   },
   {
    "ticker": "BILL",
    "sector_etf": "XLK",
-   "beta_60": 0.19,
-   "beta_250": 1.058,
+   "beta_60": 0.195,
+   "beta_250": 1.055,
    "downside_beta_500": 1.207,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.47,
    "corr_SPY_60": 0.06,
    "corr_SPY_250": 0.24,
-   "corr_QQQ_60": 0.0,
+   "corr_QQQ_60": 0.01,
    "corr_QQQ_250": 0.15,
-   "corr_SMH_60": -0.13,
+   "corr_SMH_60": -0.12,
    "corr_SMH_250": -0.02,
-   "corr_XLK_60": -0.07,
+   "corr_XLK_60": -0.06,
    "corr_XLK_250": 0.15,
    "spy_down_3pct_days": [
     {
@@ -2015,20 +2049,54 @@
    ]
   },
   {
+   "ticker": "SAIC",
+   "sector_etf": "XLI",
+   "beta_60": 0.344,
+   "beta_250": 0.214,
+   "downside_beta_500": 0.56,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -0.24,
+   "corr_SPY_60": 0.2,
+   "corr_SPY_250": 0.07,
+   "corr_QQQ_60": 0.1,
+   "corr_QQQ_250": -0.01,
+   "corr_SMH_60": 0.06,
+   "corr_SMH_250": -0.08,
+   "corr_XLI_60": 0.3,
+   "corr_XLI_250": 0.09,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -2.24
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": 0.04
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -2.39
+    }
+   ]
+  },
+  {
    "ticker": "AMD",
    "sector_etf": "XLK",
-   "beta_60": 4.038,
-   "beta_250": 3.414,
+   "beta_60": 3.992,
+   "beta_250": 3.411,
    "downside_beta_500": 1.894,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -4.39,
-   "corr_SPY_60": 0.76,
+   "corr_SPY_60": 0.75,
    "corr_SPY_250": 0.64,
    "corr_QQQ_60": 0.88,
    "corr_QQQ_250": 0.78,
-   "corr_SMH_60": 0.9,
+   "corr_SMH_60": 0.89,
    "corr_SMH_250": 0.83,
-   "corr_XLK_60": 0.89,
+   "corr_XLK_60": 0.88,
    "corr_XLK_250": 0.8,
    "spy_down_3pct_days": [
     {
@@ -2049,20 +2117,54 @@
    ]
   },
   {
+   "ticker": "ENTG",
+   "sector_etf": "XLK",
+   "beta_60": 2.911,
+   "beta_250": 3.218,
+   "downside_beta_500": 2.495,
+   "down_days_500": 57,
+   "avg_return_spy_down_1pct": -4.71,
+   "corr_SPY_60": 0.61,
+   "corr_SPY_250": 0.62,
+   "corr_QQQ_60": 0.76,
+   "corr_QQQ_250": 0.73,
+   "corr_SMH_60": 0.89,
+   "corr_SMH_250": 0.84,
+   "corr_XLK_60": 0.81,
+   "corr_XLK_250": 0.76,
+   "spy_down_3pct_days": [
+    {
+     "date": "2025-04-04",
+     "spy_pct": -5.85,
+     "stock_pct": -9.1
+    },
+    {
+     "date": "2025-04-10",
+     "spy_pct": -4.38,
+     "stock_pct": -12.21
+    },
+    {
+     "date": "2026-11-05",
+     "spy_pct": -4.41,
+     "stock_pct": -12.68
+    }
+   ]
+  },
+  {
    "ticker": "NVDA",
    "sector_etf": "XLK",
-   "beta_60": 1.624,
+   "beta_60": 1.618,
    "beta_250": 1.771,
    "downside_beta_500": 1.251,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -3.77,
    "corr_SPY_60": 0.57,
    "corr_SPY_250": 0.63,
-   "corr_QQQ_60": 0.66,
+   "corr_QQQ_60": 0.65,
    "corr_QQQ_250": 0.67,
-   "corr_SMH_60": 0.75,
+   "corr_SMH_60": 0.74,
    "corr_SMH_250": 0.7,
-   "corr_XLK_60": 0.73,
+   "corr_XLK_60": 0.72,
    "corr_XLK_250": 0.71,
    "spy_down_3pct_days": [
     {
@@ -2085,14 +2187,14 @@
   {
    "ticker": "NU",
    "sector_etf": null,
-   "beta_60": 1.215,
+   "beta_60": 1.204,
    "beta_250": 1.364,
    "downside_beta_500": 0.926,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.76,
    "corr_SPY_60": 0.28,
    "corr_SPY_250": 0.39,
-   "corr_QQQ_60": 0.23,
+   "corr_QQQ_60": 0.22,
    "corr_QQQ_250": 0.32,
    "corr_SMH_60": 0.13,
    "corr_SMH_250": 0.23,
@@ -2117,19 +2219,19 @@
   {
    "ticker": "CVS",
    "sector_etf": "XLV",
-   "beta_60": -0.466,
-   "beta_250": -0.013,
+   "beta_60": -0.438,
+   "beta_250": 0.001,
    "downside_beta_500": 0.371,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -0.27,
-   "corr_SPY_60": -0.19,
-   "corr_SPY_250": -0.0,
-   "corr_QQQ_60": -0.15,
+   "corr_SPY_60": -0.17,
+   "corr_SPY_250": 0.0,
+   "corr_QQQ_60": -0.16,
    "corr_QQQ_250": -0.04,
    "corr_SMH_60": -0.04,
    "corr_SMH_250": 0.01,
-   "corr_XLV_60": -0.02,
-   "corr_XLV_250": 0.17,
+   "corr_XLV_60": 0.05,
+   "corr_XLV_250": 0.19,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -2151,8 +2253,8 @@
   {
    "ticker": "GM",
    "sector_etf": "XLY",
-   "beta_60": 0.852,
-   "beta_250": 1.111,
+   "beta_60": 0.872,
+   "beta_250": 1.114,
    "downside_beta_500": 0.551,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.67,
@@ -2160,10 +2262,10 @@
    "corr_SPY_250": 0.45,
    "corr_QQQ_60": 0.18,
    "corr_QQQ_250": 0.33,
-   "corr_SMH_60": 0.05,
+   "corr_SMH_60": 0.06,
    "corr_SMH_250": 0.23,
-   "corr_XLY_60": 0.48,
-   "corr_XLY_250": 0.55,
+   "corr_XLY_60": 0.45,
+   "corr_XLY_250": 0.54,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -2185,16 +2287,16 @@
   {
    "ticker": "UBER",
    "sector_etf": "XLI",
-   "beta_60": 0.593,
-   "beta_250": 0.759,
+   "beta_60": 0.583,
+   "beta_250": 0.761,
    "downside_beta_500": 0.891,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.76,
    "corr_SPY_60": 0.32,
    "corr_SPY_250": 0.3,
-   "corr_QQQ_60": 0.13,
+   "corr_QQQ_60": 0.12,
    "corr_QQQ_250": 0.2,
-   "corr_SMH_60": -0.08,
+   "corr_SMH_60": -0.09,
    "corr_SMH_250": 0.07,
    "corr_XLI_60": 0.29,
    "corr_XLI_250": 0.2,
@@ -2219,12 +2321,12 @@
   {
    "ticker": "DAL",
    "sector_etf": "XLI",
-   "beta_60": 1.4,
+   "beta_60": 1.39,
    "beta_250": 1.64,
    "downside_beta_500": 1.3,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.64,
-   "corr_SPY_60": 0.59,
+   "corr_SPY_60": 0.58,
    "corr_SPY_250": 0.58,
    "corr_QQQ_60": 0.47,
    "corr_QQQ_250": 0.47,
@@ -2251,52 +2353,18 @@
    ]
   },
   {
-   "ticker": "UAL",
-   "sector_etf": "XLI",
-   "beta_60": 1.694,
-   "beta_250": 2.054,
-   "downside_beta_500": 1.491,
-   "down_days_500": 57,
-   "avg_return_spy_down_1pct": -3.21,
-   "corr_SPY_60": 0.57,
-   "corr_SPY_250": 0.58,
-   "corr_QQQ_60": 0.48,
-   "corr_QQQ_250": 0.49,
-   "corr_SMH_60": 0.36,
-   "corr_SMH_250": 0.42,
-   "corr_XLI_60": 0.5,
-   "corr_XLI_250": 0.58,
-   "spy_down_3pct_days": [
-    {
-     "date": "2025-04-04",
-     "spy_pct": -5.85,
-     "stock_pct": -4.25
-    },
-    {
-     "date": "2025-04-10",
-     "spy_pct": -4.38,
-     "stock_pct": -11.41
-    },
-    {
-     "date": "2026-11-05",
-     "spy_pct": -4.41,
-     "stock_pct": -4.55
-    }
-   ]
-  },
-  {
    "ticker": "AAL",
    "sector_etf": "XLI",
-   "beta_60": 1.543,
-   "beta_250": 1.843,
+   "beta_60": 1.526,
+   "beta_250": 1.842,
    "downside_beta_500": 1.057,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.87,
-   "corr_SPY_60": 0.58,
+   "corr_SPY_60": 0.57,
    "corr_SPY_250": 0.54,
-   "corr_QQQ_60": 0.47,
+   "corr_QQQ_60": 0.46,
    "corr_QQQ_250": 0.44,
-   "corr_SMH_60": 0.33,
+   "corr_SMH_60": 0.32,
    "corr_SMH_250": 0.34,
    "corr_XLI_60": 0.51,
    "corr_XLI_250": 0.49,
@@ -2321,8 +2389,8 @@
   {
    "ticker": "NOW",
    "sector_etf": "XLK",
-   "beta_60": 1.472,
-   "beta_250": 0.82,
+   "beta_60": 1.484,
+   "beta_250": 0.825,
    "downside_beta_500": 1.356,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.2,
@@ -2355,16 +2423,16 @@
   {
    "ticker": "CRM",
    "sector_etf": "XLK",
-   "beta_60": 0.783,
-   "beta_250": 0.421,
+   "beta_60": 0.804,
+   "beta_250": 0.429,
    "downside_beta_500": 0.824,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.76,
-   "corr_SPY_60": 0.21,
+   "corr_SPY_60": 0.22,
    "corr_SPY_250": 0.12,
    "corr_QQQ_60": 0.14,
    "corr_QQQ_250": 0.04,
-   "corr_SMH_60": 0.02,
+   "corr_SMH_60": 0.03,
    "corr_SMH_250": -0.16,
    "corr_XLK_60": 0.18,
    "corr_XLK_250": 0.07,
@@ -2389,17 +2457,17 @@
   {
    "ticker": "MSFT",
    "sector_etf": "XLK",
-   "beta_60": 1.181,
-   "beta_250": 0.996,
+   "beta_60": 1.176,
+   "beta_250": 0.997,
    "downside_beta_500": 0.482,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.74,
-   "corr_SPY_60": 0.66,
+   "corr_SPY_60": 0.65,
    "corr_SPY_250": 0.41,
    "corr_QQQ_60": 0.55,
    "corr_QQQ_250": 0.35,
    "corr_SMH_60": 0.29,
-   "corr_SMH_250": 0.11,
+   "corr_SMH_250": 0.12,
    "corr_XLK_60": 0.49,
    "corr_XLK_250": 0.35,
    "spy_down_3pct_days": [
@@ -2423,8 +2491,8 @@
   {
    "ticker": "GOOGL",
    "sector_etf": "XLC",
-   "beta_60": 1.051,
-   "beta_250": 1.309,
+   "beta_60": 1.047,
+   "beta_250": 1.302,
    "downside_beta_500": 0.567,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -1.88,
@@ -2434,7 +2502,7 @@
    "corr_QQQ_250": 0.48,
    "corr_SMH_60": 0.26,
    "corr_SMH_250": 0.28,
-   "corr_XLC_60": 0.56,
+   "corr_XLC_60": 0.57,
    "corr_XLC_250": 0.64,
    "spy_down_3pct_days": [
     {
@@ -2457,18 +2525,18 @@
   {
    "ticker": "AMZN",
    "sector_etf": "XLY",
-   "beta_60": 1.171,
-   "beta_250": 1.295,
+   "beta_60": 1.16,
+   "beta_250": 1.288,
    "downside_beta_500": 0.882,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.68,
-   "corr_SPY_60": 0.57,
-   "corr_SPY_250": 0.54,
-   "corr_QQQ_60": 0.53,
+   "corr_SPY_60": 0.55,
+   "corr_SPY_250": 0.53,
+   "corr_QQQ_60": 0.52,
    "corr_QQQ_250": 0.48,
    "corr_SMH_60": 0.32,
-   "corr_SMH_250": 0.28,
-   "corr_XLY_60": 0.7,
+   "corr_SMH_250": 0.27,
+   "corr_XLY_60": 0.71,
    "corr_XLY_250": 0.72,
    "spy_down_3pct_days": [
     {
@@ -2491,19 +2559,19 @@
   {
    "ticker": "META",
    "sector_etf": "XLC",
-   "beta_60": 1.299,
-   "beta_250": 1.366,
+   "beta_60": 1.291,
+   "beta_250": 1.369,
    "downside_beta_500": 0.99,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.88,
    "corr_SPY_60": 0.45,
    "corr_SPY_250": 0.45,
-   "corr_QQQ_60": 0.46,
+   "corr_QQQ_60": 0.45,
    "corr_QQQ_250": 0.4,
-   "corr_SMH_60": 0.36,
+   "corr_SMH_60": 0.35,
    "corr_SMH_250": 0.25,
    "corr_XLC_60": 0.63,
-   "corr_XLC_250": 0.67,
+   "corr_XLC_250": 0.66,
    "spy_down_3pct_days": [
     {
      "date": "2025-04-04",
@@ -2525,17 +2593,17 @@
   {
    "ticker": "ORCL",
    "sector_etf": "XLK",
-   "beta_60": 2.468,
-   "beta_250": 2.238,
+   "beta_60": 2.461,
+   "beta_250": 2.234,
    "downside_beta_500": 0.66,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -3.91,
    "corr_SPY_60": 0.61,
-   "corr_SPY_250": 0.52,
-   "corr_QQQ_60": 0.68,
+   "corr_SPY_250": 0.51,
+   "corr_QQQ_60": 0.67,
    "corr_QQQ_250": 0.55,
    "corr_SMH_60": 0.68,
-   "corr_SMH_250": 0.47,
+   "corr_SMH_250": 0.46,
    "corr_XLK_60": 0.71,
    "corr_XLK_250": 0.61,
    "spy_down_3pct_days": [
@@ -2559,16 +2627,16 @@
   {
    "ticker": "CRWV",
    "sector_etf": null,
-   "beta_60": 3.295,
-   "beta_250": 3.454,
+   "beta_60": 3.293,
+   "beta_250": 3.461,
    "downside_beta_500": 1.546,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -5.93,
    "corr_SPY_60": 0.51,
    "corr_SPY_250": 0.48,
-   "corr_QQQ_60": 0.66,
+   "corr_QQQ_60": 0.65,
    "corr_QQQ_250": 0.55,
-   "corr_SMH_60": 0.74,
+   "corr_SMH_60": 0.73,
    "corr_SMH_250": 0.58,
    "spy_down_3pct_days": [
     {
@@ -2591,8 +2659,8 @@
   {
    "ticker": "VRT",
    "sector_etf": "XLI",
-   "beta_60": 2.886,
-   "beta_250": 2.834,
+   "beta_60": 2.875,
+   "beta_250": 2.824,
    "downside_beta_500": 1.83,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -5.34,
@@ -2625,16 +2693,16 @@
   {
    "ticker": "SYF",
    "sector_etf": "XLF",
-   "beta_60": 0.46,
-   "beta_250": 0.986,
+   "beta_60": 0.453,
+   "beta_250": 0.983,
    "downside_beta_500": 1.604,
    "down_days_500": 57,
    "avg_return_spy_down_1pct": -2.43,
-   "corr_SPY_60": 0.31,
+   "corr_SPY_60": 0.3,
    "corr_SPY_250": 0.43,
    "corr_QQQ_60": 0.17,
    "corr_QQQ_250": 0.29,
-   "corr_SMH_60": 0.15,
+   "corr_SMH_60": 0.14,
    "corr_SMH_250": 0.2,
    "corr_XLF_60": 0.56,
    "corr_XLF_250": 0.66,

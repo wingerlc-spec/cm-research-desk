@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "SEC 8-K Item 2.02 dates (backfill) and Yahoo earnings dates (nightly); prices from Yahoo",
-  "pulled_utc": "2026-11-18 05:02",
+  "pulled_utc": "2026-11-19 04:46",
   "notes": [
    "Reaction day = whichever of the earnings date and the next session traded more volume (timing is not known). move_pct is close-to-close on that day; move5_pct runs from the close before it through 4 sessions after.",
    "implied_move_pct = at-the-money straddle mid of the first expiry after the print / price, from the last iv snapshot before it; backfilled rows have no implied move."
@@ -15957,6 +15957,61 @@
    "n": 12
   },
   {
+   "ticker": "CHYM",
+   "moves": [
+    {
+     "earnings_date": "2025-08-07",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-08-08",
+     "move_pct": -14.68,
+     "move5_pct": -13.61,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-11-05",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-11-06",
+     "move_pct": -5.39,
+     "move5_pct": 5.65,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-02-25",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-02-26",
+     "move_pct": 13.55,
+     "move5_pct": 6.68,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-05-06",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-05-07",
+     "move_pct": -12.52,
+     "move5_pct": -19.97,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-08-05",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-08-06",
+     "move_pct": 20.56,
+     "move5_pct": 21.91,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-04",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-11-05",
+     "move_pct": 1.04,
+     "move5_pct": 10.75,
+     "implied_move_pct": null
+    }
+   ],
+   "median_abs_move_pct": 13.04,
+   "n": 6
+  },
+  {
    "ticker": "CI",
    "moves": [
     {
@@ -23376,14 +23431,6 @@
    "ticker": "DIS",
    "moves": [
     {
-     "earnings_date": "2023-11-08",
-     "source": "8-K Item 2.02 backfill",
-     "reaction_date": "2023-11-09",
-     "move_pct": 6.91,
-     "move5_pct": 11.16,
-     "implied_move_pct": null
-    },
-    {
      "earnings_date": "2024-02-07",
      "source": "8-K Item 2.02 backfill",
      "reaction_date": "2024-02-08",
@@ -23470,10 +23517,25 @@
      "move_pct": 3.65,
      "move5_pct": 5.45,
      "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-17",
+     "source": "nightly",
+     "reaction_date": "2026-11-17",
+     "move_pct": -1.48,
+     "move5_pct": null,
+     "implied_move_pct": 6.0
     }
    ],
-   "median_abs_move_pct": 7.16,
-   "n": 12
+   "median_abs_move_pct": 6.82,
+   "n": 12,
+   "implied_vs_actual": [
+    {
+     "earnings_date": "2026-11-17",
+     "implied": 6.0,
+     "actual_abs": 1.48
+    }
+   ]
   },
   {
    "ticker": "DKS",
@@ -32570,6 +32632,109 @@
    "n": 12
   },
   {
+   "ticker": "FND",
+   "moves": [
+    {
+     "earnings_date": "2024-02-22",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-02-23",
+     "move_pct": 3.15,
+     "move5_pct": 6.69,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2024-05-02",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-05-03",
+     "move_pct": 0.25,
+     "move5_pct": 6.43,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2024-08-01",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-08-02",
+     "move_pct": 3.98,
+     "move5_pct": 5.0,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2024-10-30",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-10-30",
+     "move_pct": 0.76,
+     "move5_pct": 8.59,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-02-20",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-02-21",
+     "move_pct": 1.54,
+     "move5_pct": 4.29,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-05-01",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-05-02",
+     "move_pct": 2.51,
+     "move5_pct": 4.07,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-07-31",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-08-01",
+     "move_pct": 2.18,
+     "move5_pct": 3.95,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-10-30",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-10-31",
+     "move_pct": -3.89,
+     "move5_pct": -9.46,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-02-19",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-02-20",
+     "move_pct": 4.34,
+     "move5_pct": 6.08,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-04-30",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-05-01",
+     "move_pct": 4.48,
+     "move5_pct": 6.45,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-07-30",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-07-31",
+     "move_pct": 4.1,
+     "move5_pct": 8.48,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-10-29",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-10-30",
+     "move_pct": -5.46,
+     "move5_pct": 2.24,
+     "implied_move_pct": null
+    }
+   ],
+   "median_abs_move_pct": 3.52,
+   "n": 12
+  },
+  {
    "ticker": "FNF",
    "moves": [
     {
@@ -37469,14 +37634,6 @@
    "ticker": "HD",
    "moves": [
     {
-     "earnings_date": "2023-11-14",
-     "source": "8-K Item 2.02 backfill",
-     "reaction_date": "2023-11-14",
-     "move_pct": 5.4,
-     "move5_pct": 6.98,
-     "implied_move_pct": null
-    },
-    {
      "earnings_date": "2024-02-20",
      "source": "8-K Item 2.02 backfill",
      "reaction_date": "2024-02-20",
@@ -37562,6 +37719,14 @@
      "reaction_date": "2026-08-18",
      "move_pct": -0.12,
      "move5_pct": -0.13,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-17",
+     "source": "nightly",
+     "reaction_date": "2026-11-17",
+     "move_pct": -2.45,
+     "move5_pct": null,
      "implied_move_pct": null
     }
    ],
@@ -40061,6 +40226,109 @@
     }
    ],
    "median_abs_move_pct": 4.56,
+   "n": 12
+  },
+  {
+   "ticker": "HZN",
+   "moves": [
+    {
+     "earnings_date": "2024-02-07",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-02-08",
+     "move_pct": 3.28,
+     "move5_pct": 3.63,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2024-05-08",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-05-09",
+     "move_pct": 2.16,
+     "move5_pct": 0.9,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2024-07-31",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-07-31",
+     "move_pct": 0.17,
+     "move5_pct": -2.97,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2024-11-06",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2024-11-06",
+     "move_pct": 2.64,
+     "move5_pct": 5.03,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-02-05",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-02-06",
+     "move_pct": -0.28,
+     "move5_pct": 0.05,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-05-08",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-05-08",
+     "move_pct": -4.66,
+     "move5_pct": -7.22,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-07-30",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-07-30",
+     "move_pct": 1.03,
+     "move5_pct": 4.37,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2025-11-05",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2025-11-06",
+     "move_pct": 4.63,
+     "move5_pct": 11.46,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-02-04",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-02-04",
+     "move_pct": -0.41,
+     "move5_pct": -2.22,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-05-06",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-05-06",
+     "move_pct": 0.11,
+     "move5_pct": 0.62,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-08-05",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-08-06",
+     "move_pct": 1.44,
+     "move5_pct": 2.01,
+     "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-04",
+     "source": "8-K Item 2.02 backfill",
+     "reaction_date": "2026-11-04",
+     "move_pct": 2.42,
+     "move5_pct": 5.89,
+     "implied_move_pct": null
+    }
+   ],
+   "median_abs_move_pct": 1.8,
    "n": 12
   },
   {
@@ -55880,14 +56148,6 @@
    "ticker": "NVDA",
    "moves": [
     {
-     "earnings_date": "2023-11-21",
-     "source": "8-K Item 2.02 backfill",
-     "reaction_date": "2023-11-22",
-     "move_pct": -2.46,
-     "move5_pct": -3.61,
-     "implied_move_pct": null
-    },
-    {
      "earnings_date": "2024-02-21",
      "source": "8-K Item 2.02 backfill",
      "reaction_date": "2024-02-22",
@@ -55974,10 +56234,25 @@
      "move_pct": 8.74,
      "move5_pct": 7.04,
      "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-17",
+     "source": "nightly",
+     "reaction_date": "2026-11-17",
+     "move_pct": -0.44,
+     "move5_pct": null,
+     "implied_move_pct": 8.6
     }
    ],
    "median_abs_move_pct": 4.36,
-   "n": 12
+   "n": 12,
+   "implied_vs_actual": [
+    {
+     "earnings_date": "2026-11-17",
+     "implied": 8.6,
+     "actual_abs": 0.44
+    }
+   ]
   },
   {
    "ticker": "NVR",
