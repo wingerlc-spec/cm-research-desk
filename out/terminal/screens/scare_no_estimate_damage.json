@@ -1,14 +1,27 @@
 {
  "meta": {
   "rule": "One-day drop of 10 percent or more on at least 2.5 times the prior 20-day volume in the last 15 sessions, $5B+ names, where next-year EPS estimates have fallen less than 2 percent since the day before the drop.",
-  "asof": "2026-11-18",
-  "generated_utc": "2026-11-19 04:49",
+  "asof": "2026-11-19",
+  "generated_utc": "2026-11-20 04:34",
   "caveats": [
    "Until estimate snapshots cover the drop date, the estimate change uses Yahoo's 7 or 30 day trend fields and is flagged 'estimate history building'.",
    "gap_left_pct = how far the pre-drop close is above today's price."
   ]
  },
  "rows": [
+  {
+   "ticker": "SNDK",
+   "name": "Sandisk",
+   "drop_date": "2026-11-05",
+   "drop_pct": -22.3,
+   "volume_multiple": 3.4,
+   "est_change_pct": 8.55,
+   "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
+   "last": 94.39,
+   "pre_drop_close": 129.68,
+   "gap_left_pct": 37.4,
+   "next_earnings": null
+  },
   {
    "ticker": "STRL",
    "name": "Sterling Infrastructure",
@@ -17,22 +30,9 @@
    "volume_multiple": 3.7,
    "est_change_pct": 9.83,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 276.36,
+   "last": 273.25,
    "pre_drop_close": 361.15,
-   "gap_left_pct": 30.7,
-   "next_earnings": null
-  },
-  {
-   "ticker": "FTNT",
-   "name": "Fortinet",
-   "drop_date": "2026-10-29",
-   "drop_pct": -20.1,
-   "volume_multiple": 4.3,
-   "est_change_pct": 3.28,
-   "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 131.81,
-   "pre_drop_close": 174.08,
-   "gap_left_pct": 32.1,
+   "gap_left_pct": 32.2,
    "next_earnings": null
   },
   {
@@ -69,10 +69,10 @@
    "volume_multiple": 2.9,
    "est_change_pct": 0.42,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 705.27,
+   "last": 690.44,
    "pre_drop_close": 795.23,
-   "gap_left_pct": 12.8,
-   "next_earnings": "2026-12-23"
+   "gap_left_pct": 15.2,
+   "next_earnings": "2026-12-17"
   },
   {
    "ticker": "AMD",
@@ -82,9 +82,9 @@
    "volume_multiple": 3.0,
    "est_change_pct": 11.29,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 530.14,
+   "last": 489.19,
    "pre_drop_close": 488.78,
-   "gap_left_pct": -7.8,
+   "gap_left_pct": -0.1,
    "next_earnings": "2027-02-02"
   },
   {
@@ -95,9 +95,9 @@
    "volume_multiple": 2.7,
    "est_change_pct": 3.32,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 211.67,
+   "last": 203.68,
    "pre_drop_close": 221.43,
-   "gap_left_pct": 4.6,
+   "gap_left_pct": 8.7,
    "next_earnings": "2027-01-27"
   },
   {
@@ -106,12 +106,12 @@
    "drop_date": "2026-11-05",
    "drop_pct": -16.4,
    "volume_multiple": 2.6,
-   "est_change_pct": 1.03,
+   "est_change_pct": 0.57,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 145.54,
+   "last": 138.47,
    "pre_drop_close": 159.8,
-   "gap_left_pct": 9.8,
-   "next_earnings": null
+   "gap_left_pct": 15.4,
+   "next_earnings": "2026-12-01"
   },
   {
    "ticker": "AAON",
@@ -121,9 +121,9 @@
    "volume_multiple": 4.0,
    "est_change_pct": 7.61,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 79.8,
+   "last": 77.08,
    "pre_drop_close": 69.08,
-   "gap_left_pct": -13.4,
+   "gap_left_pct": -10.4,
    "next_earnings": "2027-03-01"
   },
   {
@@ -132,11 +132,11 @@
    "drop_date": "2026-11-06",
    "drop_pct": -15.7,
    "volume_multiple": 2.8,
-   "est_change_pct": 1.91,
+   "est_change_pct": -0.93,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 95.8,
+   "last": 93.04,
    "pre_drop_close": 122.96,
-   "gap_left_pct": 28.4,
+   "gap_left_pct": 32.2,
    "next_earnings": "2027-02-16"
   },
   {
@@ -145,11 +145,11 @@
    "drop_date": "2026-11-09",
    "drop_pct": -15.3,
    "volume_multiple": 5.0,
-   "est_change_pct": 15.28,
+   "est_change_pct": 29.07,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 43.11,
+   "last": 43.65,
    "pre_drop_close": 58.16,
-   "gap_left_pct": 34.9,
+   "gap_left_pct": 33.2,
    "next_earnings": "2027-02-04"
   },
   {
@@ -160,10 +160,23 @@
    "volume_multiple": 2.9,
    "est_change_pct": 5.92,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 235.21,
+   "last": 227.43,
    "pre_drop_close": 250.99,
-   "gap_left_pct": 6.7,
+   "gap_left_pct": 10.4,
    "next_earnings": "2027-01-27"
+  },
+  {
+   "ticker": "WSM",
+   "name": "Williams-Sonoma, Inc.",
+   "drop_date": "2026-11-19",
+   "drop_pct": -15.2,
+   "volume_multiple": 4.5,
+   "est_change_pct": 0.22,
+   "est_basis": "Yahoo trend vs 7daysAgo; estimate history building",
+   "last": 220.66,
+   "pre_drop_close": 260.09,
+   "gap_left_pct": 17.9,
+   "next_earnings": null
   },
   {
    "ticker": "DDOG",
@@ -184,11 +197,11 @@
    "drop_date": "2026-11-05",
    "drop_pct": -14.2,
    "volume_multiple": 3.1,
-   "est_change_pct": 0.03,
+   "est_change_pct": 0.47,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 395.86,
+   "last": 383.1,
    "pre_drop_close": 443.88,
-   "gap_left_pct": 12.1,
+   "gap_left_pct": 15.9,
    "next_earnings": "2027-02-04"
   },
   {
@@ -210,7 +223,7 @@
    "drop_date": "2026-11-04",
    "drop_pct": -13.8,
    "volume_multiple": 3.2,
-   "est_change_pct": 0.5,
+   "est_change_pct": -1.85,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
    "last": 125.58,
    "pre_drop_close": 139.59,
@@ -223,11 +236,11 @@
    "drop_date": "2026-11-05",
    "drop_pct": -13.7,
    "volume_multiple": 3.2,
-   "est_change_pct": 1.48,
+   "est_change_pct": 1.42,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 245.79,
+   "last": 239.19,
    "pre_drop_close": 315.88,
-   "gap_left_pct": 28.5,
+   "gap_left_pct": 32.1,
    "next_earnings": "2027-02-11"
   },
   {
@@ -251,9 +264,9 @@
    "volume_multiple": 3.9,
    "est_change_pct": -1.1,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 285.9,
+   "last": 277.72,
    "pre_drop_close": 332.0,
-   "gap_left_pct": 16.1,
+   "gap_left_pct": 19.5,
    "next_earnings": null
   },
   {
@@ -264,9 +277,9 @@
    "volume_multiple": 2.7,
    "est_change_pct": 5.41,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 144.88,
+   "last": 141.48,
    "pre_drop_close": 149.79,
-   "gap_left_pct": 3.4,
+   "gap_left_pct": 5.9,
    "next_earnings": "2027-01-28"
   },
   {
@@ -277,9 +290,9 @@
    "volume_multiple": 3.2,
    "est_change_pct": 1.58,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 178.84,
+   "last": 172.3,
    "pre_drop_close": 235.26,
-   "gap_left_pct": 31.5,
+   "gap_left_pct": 36.5,
    "next_earnings": "2027-02-02"
   },
   {
@@ -288,11 +301,11 @@
    "drop_date": "2026-11-18",
    "drop_pct": -13.0,
    "volume_multiple": 2.7,
-   "est_change_pct": 0.0,
+   "est_change_pct": 0.9,
    "est_basis": "estimate snapshots",
-   "last": 385.78,
+   "last": 380.0,
    "pre_drop_close": 443.34,
-   "gap_left_pct": 14.9,
+   "gap_left_pct": 16.7,
    "next_earnings": "2027-02-10"
   },
   {
@@ -316,23 +329,10 @@
    "volume_multiple": 2.9,
    "est_change_pct": 12.35,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 143.78,
+   "last": 138.14,
    "pre_drop_close": 142.87,
-   "gap_left_pct": -0.6,
+   "gap_left_pct": 3.4,
    "next_earnings": "2027-02-04"
-  },
-  {
-   "ticker": "GOOGL",
-   "name": "Alphabet Inc. (Class A)",
-   "drop_date": "2026-10-29",
-   "drop_pct": -12.6,
-   "volume_multiple": 5.5,
-   "est_change_pct": -1.12,
-   "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 282.44,
-   "pre_drop_close": 324.89,
-   "gap_left_pct": 15.0,
-   "next_earnings": "2027-02-03"
   },
   {
    "ticker": "CVS",
@@ -340,11 +340,11 @@
    "drop_date": "2026-11-04",
    "drop_pct": -12.5,
    "volume_multiple": 4.0,
-   "est_change_pct": 1.97,
+   "est_change_pct": 1.99,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 81.35,
+   "last": 80.04,
    "pre_drop_close": 91.41,
-   "gap_left_pct": 12.4,
+   "gap_left_pct": 14.2,
    "next_earnings": "2027-02-09"
   },
   {
@@ -353,7 +353,7 @@
    "drop_date": "2026-10-29",
    "drop_pct": -12.3,
    "volume_multiple": 5.6,
-   "est_change_pct": 0.24,
+   "est_change_pct": 1.14,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
    "last": 279.2,
    "pre_drop_close": 321.89,
@@ -368,9 +368,9 @@
    "volume_multiple": 3.5,
    "est_change_pct": 9.41,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 602.6,
+   "last": 587.43,
    "pre_drop_close": 580.44,
-   "gap_left_pct": -3.7,
+   "gap_left_pct": -1.2,
    "next_earnings": null
   },
   {
@@ -379,11 +379,11 @@
    "drop_date": "2026-11-12",
    "drop_pct": -12.0,
    "volume_multiple": 2.8,
-   "est_change_pct": 0.48,
+   "est_change_pct": 0.11,
    "est_basis": "Yahoo trend vs 7daysAgo; estimate history building",
-   "last": 85.62,
+   "last": 83.52,
    "pre_drop_close": 100.23,
-   "gap_left_pct": 17.1,
+   "gap_left_pct": 20.0,
    "next_earnings": "2027-02-17"
   },
   {
@@ -407,9 +407,9 @@
    "volume_multiple": 2.7,
    "est_change_pct": 11.74,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 1140.59,
+   "last": 1114.02,
    "pre_drop_close": 1091.31,
-   "gap_left_pct": -4.3,
+   "gap_left_pct": -2.0,
    "next_earnings": null
   },
   {
@@ -420,9 +420,9 @@
    "volume_multiple": 2.5,
    "est_change_pct": 4.57,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 67.23,
+   "last": 65.72,
    "pre_drop_close": 71.24,
-   "gap_left_pct": 6.0,
+   "gap_left_pct": 8.4,
    "next_earnings": null
   },
   {
@@ -433,9 +433,9 @@
    "volume_multiple": 2.6,
    "est_change_pct": 2.71,
    "est_basis": "Yahoo trend vs 7daysAgo; estimate history building",
-   "last": 24.37,
+   "last": 23.84,
    "pre_drop_close": 30.43,
-   "gap_left_pct": 24.9,
+   "gap_left_pct": 27.6,
    "next_earnings": "2027-02-02"
   },
   {
@@ -444,11 +444,11 @@
    "drop_date": "2026-11-05",
    "drop_pct": -11.1,
    "volume_multiple": 3.2,
-   "est_change_pct": 0.3,
+   "est_change_pct": 0.47,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 381.98,
+   "last": 377.44,
    "pre_drop_close": 406.24,
-   "gap_left_pct": 6.4,
+   "gap_left_pct": 7.6,
    "next_earnings": "2026-11-24"
   },
   {
@@ -459,9 +459,9 @@
    "volume_multiple": 3.3,
    "est_change_pct": -0.4,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 111.78,
+   "last": 108.78,
    "pre_drop_close": 118.66,
-   "gap_left_pct": 6.2,
+   "gap_left_pct": 9.1,
    "next_earnings": null
   },
   {
@@ -485,9 +485,9 @@
    "volume_multiple": 2.9,
    "est_change_pct": -0.52,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 49.13,
+   "last": 47.66,
    "pre_drop_close": 53.06,
-   "gap_left_pct": 8.0,
+   "gap_left_pct": 11.3,
    "next_earnings": null
   },
   {
@@ -498,9 +498,9 @@
    "volume_multiple": 2.5,
    "est_change_pct": 19.25,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 29.8,
+   "last": 29.37,
    "pre_drop_close": 29.38,
-   "gap_left_pct": -1.4,
+   "gap_left_pct": 0.0,
    "next_earnings": null
   },
   {
@@ -511,9 +511,9 @@
    "volume_multiple": 2.8,
    "est_change_pct": 33.37,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
-   "last": 1310.91,
+   "last": 1295.86,
    "pre_drop_close": 1261.08,
-   "gap_left_pct": -3.8,
+   "gap_left_pct": -2.7,
    "next_earnings": null
   },
   {
@@ -522,12 +522,12 @@
    "drop_date": "2026-11-18",
    "drop_pct": -10.2,
    "volume_multiple": 3.5,
-   "est_change_pct": 0.19,
+   "est_change_pct": 0.58,
    "est_basis": "Yahoo trend vs 7daysAgo; estimate history building",
-   "last": 349.91,
+   "last": 330.48,
    "pre_drop_close": 389.68,
-   "gap_left_pct": 11.4,
-   "next_earnings": null
+   "gap_left_pct": 17.9,
+   "next_earnings": "2027-01-12"
   }
  ]
 }

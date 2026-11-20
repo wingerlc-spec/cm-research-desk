@@ -2,30 +2,14 @@
  "meta": {
   "source": "Yahoo via yfinance",
   "notes": [
-   "78 of 80 names have a next date; ranked names from screen_output.json plus terminal_watch.txt"
+   "68 of 70 names have a next date; ranked names from screen_output.json plus terminal_watch.txt"
   ],
-  "pulled_utc": "2026-11-19 04:39"
+  "pulled_utc": "2026-11-20 04:25"
  },
  "rows": [
   {
-   "sym": "ROK",
-   "next_earnings": "2027-02-04",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "CRWD",
-   "next_earnings": "2026-12-01",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "ELF",
-   "next_earnings": "2027-02-03",
-   "source": "yahoo calendar"
-  },
-  {
    "sym": "WSM",
-   "next_earnings": "2026-11-19",
-   "source": "yahoo calendar"
+   "note": "Yahoo shows only a past date (2026-11-19)"
   },
   {
    "sym": "HAE",
@@ -33,31 +17,38 @@
    "source": "yahoo calendar"
   },
   {
-   "sym": "PANW",
-   "note": "Yahoo shows only a past date (2026-11-18)"
+   "sym": "TGT",
+   "next_earnings": "2027-03-03",
+   "source": "yahoo earnings dates"
   },
   {
-   "sym": "MCK",
-   "next_earnings": "2027-02-03",
+   "sym": "WWD",
+   "next_earnings": "2027-02-01",
    "source": "yahoo calendar"
   },
   {
-   "sym": "BRKR",
-   "next_earnings": "2027-02-11",
+   "sym": "MSI",
+   "next_earnings": "2027-02-09",
    "source": "yahoo earnings dates"
   },
   {
    "sym": "TJX",
-   "note": "Yahoo shows only a past date (2026-11-18)"
+   "next_earnings": "2027-02-24",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "LH",
+   "next_earnings": "2027-02-23",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "MNST",
+   "next_earnings": "2027-02-25",
+   "source": "yahoo earnings dates"
   },
   {
    "sym": "DAR",
    "next_earnings": "2027-02-18",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "EXPE",
-   "next_earnings": "2027-02-11",
    "source": "yahoo earnings dates"
   },
   {
@@ -66,58 +57,18 @@
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "AVGO",
-   "next_earnings": "2026-12-09",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "BURL",
-   "next_earnings": "2026-11-24",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "CDW",
-   "next_earnings": "2027-02-03",
-   "source": "yahoo calendar"
-  },
-  {
    "sym": "AAON",
    "next_earnings": "2027-03-01",
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "MANH",
-   "next_earnings": "2027-02-02",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "BG",
-   "next_earnings": "2027-02-03",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "ADI",
-   "next_earnings": "2026-11-24",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "CEG",
+   "sym": "NRG",
    "next_earnings": "2027-02-24",
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "TTWO",
-   "next_earnings": "2027-02-09",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "AKAM",
-   "next_earnings": "2027-02-18",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "OKTA",
-   "next_earnings": "2026-12-01",
+   "sym": "SYY",
+   "next_earnings": "2027-02-02",
    "source": "yahoo calendar"
   },
   {
@@ -126,9 +77,14 @@
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "MU",
-   "next_earnings": "2026-12-23",
-   "source": "yahoo calendar"
+   "sym": "BG",
+   "next_earnings": "2027-02-03",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "AKAM",
+   "next_earnings": "2027-02-18",
+   "source": "yahoo earnings dates"
   },
   {
    "sym": "LSCC",
@@ -136,48 +92,8 @@
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "TWLO",
-   "next_earnings": "2027-02-11",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "WMS",
-   "next_earnings": "2027-02-04",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "A",
-   "next_earnings": "2026-11-23",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "RGLD",
-   "next_earnings": "2027-02-17",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "LECO",
-   "next_earnings": "2027-02-11",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "VLY",
-   "next_earnings": "2027-01-28",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "RF",
-   "next_earnings": "2027-01-22",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "UAL",
-   "next_earnings": "2027-01-26",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "SLAB",
-   "next_earnings": "2027-02-03",
+   "sym": "AVGO",
+   "next_earnings": "2026-12-09",
    "source": "yahoo calendar"
   },
   {
@@ -186,8 +102,62 @@
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "DIS",
-   "next_earnings": "2027-02-01",
+   "sym": "GAP",
+   "note": "Yahoo shows only a past date (2026-11-19)"
+  },
+  {
+   "sym": "ADI",
+   "next_earnings": "2026-11-24",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "NTRS",
+   "next_earnings": "2027-01-21",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "HWM",
+   "next_earnings": "2027-02-18",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "A",
+   "next_earnings": "2026-11-23",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "STT",
+   "next_earnings": "2027-01-15",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "VLY",
+   "next_earnings": "2027-01-28",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "SLAB",
+   "next_earnings": "2027-02-03",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "UHS",
+   "next_earnings": "2027-02-24",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "DGX",
+   "next_earnings": "2027-02-09",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "ADP",
+   "next_earnings": "2027-01-27",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "UNH",
+   "next_earnings": "2027-01-12",
    "source": "yahoo calendar"
   },
   {
@@ -196,28 +166,33 @@
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "MTD",
-   "next_earnings": "2027-02-04",
+   "sym": "ANF",
+   "next_earnings": "2026-11-24",
    "source": "yahoo calendar"
   },
   {
-   "sym": "MSM",
-   "next_earnings": "2027-01-06",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "TTEK",
-   "next_earnings": "2027-01-27",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "BKNG",
-   "next_earnings": "2027-02-24",
+   "sym": "HALO",
+   "next_earnings": "2027-02-16",
    "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "BIIB",
+   "next_earnings": "2027-02-05",
+   "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "CHTR",
+   "next_earnings": "2027-01-29",
+   "source": "yahoo calendar"
   },
   {
    "sym": "ADM",
    "next_earnings": "2027-02-02",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "MTD",
+   "next_earnings": "2027-02-04",
    "source": "yahoo calendar"
   },
   {
@@ -226,33 +201,13 @@
    "source": "yahoo calendar"
   },
   {
-   "sym": "PCG",
-   "next_earnings": "2027-02-11",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "LAD",
-   "next_earnings": "2027-02-10",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "BWA",
-   "next_earnings": "2027-02-10",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "HALO",
-   "next_earnings": "2027-02-16",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "NWSA",
-   "next_earnings": "2027-02-04",
+   "sym": "INGR",
+   "next_earnings": "2027-02-02",
    "source": "yahoo calendar"
   },
   {
-   "sym": "INGR",
-   "next_earnings": "2027-02-02",
+   "sym": "WY",
+   "next_earnings": "2027-01-28",
    "source": "yahoo calendar"
   },
   {
@@ -261,24 +216,14 @@
    "source": "yahoo calendar"
   },
   {
-   "sym": "CTSH",
-   "next_earnings": "2027-02-03",
-   "source": "yahoo earnings dates"
-  },
-  {
-   "sym": "WFC",
-   "next_earnings": "2027-01-14",
-   "source": "yahoo calendar"
-  },
-  {
    "sym": "HUM",
    "next_earnings": "2027-02-10",
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "DASH",
-   "next_earnings": "2027-02-17",
-   "source": "yahoo earnings dates"
+   "sym": "UGI",
+   "next_earnings": "2027-02-03",
+   "source": "yahoo calendar"
   },
   {
    "sym": "GPN",
@@ -286,9 +231,19 @@
    "source": "yahoo earnings dates"
   },
   {
+   "sym": "ARE",
+   "next_earnings": "2027-01-25",
+   "source": "yahoo calendar"
+  },
+  {
    "sym": "PAG",
    "next_earnings": "2027-02-10",
    "source": "yahoo earnings dates"
+  },
+  {
+   "sym": "TTEK",
+   "next_earnings": "2027-01-27",
+   "source": "yahoo calendar"
   },
   {
    "sym": "BDX",
@@ -296,28 +251,18 @@
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "CAVA",
-   "next_earnings": "2027-02-23",
+   "sym": "CCI",
+   "next_earnings": "2027-02-03",
    "source": "yahoo earnings dates"
   },
   {
-   "sym": "BILL",
-   "next_earnings": "2027-02-04",
+   "sym": "SJM",
+   "next_earnings": "2026-11-24",
    "source": "yahoo calendar"
   },
   {
-   "sym": "SAIC",
-   "next_earnings": "2026-12-03",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "AMD",
-   "next_earnings": "2027-02-02",
-   "source": "yahoo calendar"
-  },
-  {
-   "sym": "ENTG",
-   "next_earnings": "2027-02-04",
+   "sym": "PPC",
+   "next_earnings": "2027-02-10",
    "source": "yahoo earnings dates"
   },
   {
@@ -348,6 +293,11 @@
   {
    "sym": "DAL",
    "next_earnings": "2027-01-13",
+   "source": "yahoo calendar"
+  },
+  {
+   "sym": "UAL",
+   "next_earnings": "2027-01-26",
    "source": "yahoo calendar"
   },
   {
