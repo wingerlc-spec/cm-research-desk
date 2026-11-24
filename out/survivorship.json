@@ -1,15 +1,15 @@
 {
  "former_members_in_window": 191,
- "former_members_with_prices": 75,
+ "former_members_with_prices": 76,
  "A_current_members": {
   "test": "today's S&P 500 members, any date (original, biased)",
   "n": 450,
   "stocks": 147,
   "months": 85,
-  "edge120": 15.49,
+  "edge120": 15.67,
   "t_clustered": 5.2,
   "median": 7.9,
-  "baseline_median": -1.26,
+  "baseline_median": -1.35,
   "pct_beat_spy": 61.0,
   "baseline_pct_beat_spy": 47.0
  },
@@ -18,10 +18,10 @@
   "n": 274,
   "stocks": 120,
   "months": 63,
-  "edge120": 6.81,
-  "t_clustered": 1.7,
+  "edge120": 7.05,
+  "t_clustered": 1.8,
   "median": 2.89,
-  "baseline_median": -1.96,
+  "baseline_median": -2.08,
   "pct_beat_spy": 54.0,
   "baseline_pct_beat_spy": 45.0
  },
@@ -30,10 +30,10 @@
   "n": 304,
   "stocks": 138,
   "months": 66,
-  "edge120": 6.2,
+  "edge120": 6.41,
   "t_clustered": 1.2,
   "median": 2.16,
-  "baseline_median": -2.39,
+  "baseline_median": -2.5,
   "pct_beat_spy": 54.0,
   "baseline_pct_beat_spy": 44.0
  },
@@ -42,57 +42,57 @@
   "n": 183,
   "stocks": 92,
   "months": 53,
-  "edge120": 4.42,
+  "edge120": 4.52,
   "t_clustered": 1.6,
   "median": -0.22,
-  "baseline_median": -2.88,
+  "baseline_median": -3.04,
   "pct_beat_spy": 50.0,
   "baseline_pct_beat_spy": 43.0
  },
  "E_sp400_today": {
   "test": "today's S&P 400 members, any date",
-  "n": 603,
+  "n": 602,
   "stocks": 184,
-  "months": 93,
-  "edge120": 7.44,
-  "t_clustered": 2.9,
-  "median": 2.84,
-  "baseline_median": -2.12,
+  "months": 92,
+  "edge120": 7.36,
+  "t_clustered": 2.7,
+  "median": 2.56,
+  "baseline_median": -2.14,
   "pct_beat_spy": 53.0,
   "baseline_pct_beat_spy": 46.0
  },
  "C_by_year": {
   "2019": {
    "n": 11,
-   "edge120": 8.31
+   "edge120": 8.52
   },
   "2020": {
    "n": 45,
-   "edge120": 10.15
+   "edge120": 9.81
   },
   "2021": {
    "n": 76,
-   "edge120": 6.09
+   "edge120": 5.92
   },
   "2022": {
    "n": 43,
-   "edge120": -4.29
+   "edge120": -4.32
   },
   "2023": {
    "n": 15,
-   "edge120": 1.65
+   "edge120": 1.64
   },
   "2024": {
    "n": 17,
-   "edge120": -5.21
+   "edge120": -5.69
   },
   "2025": {
    "n": 44,
-   "edge120": 42.75
+   "edge120": 42.96
   },
   "2026": {
    "n": 45,
-   "edge120": 22.63
+   "edge120": 23.64
   }
  },
  "_read": "If the edge in B and C is close to A, survivorship was not driving it. If it shrinks toward zero in B or C, it was. C is still incomplete: former members Yahoo no longer carries are missing, and those are disproportionately the failures."

@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "SEC 8-K Item 2.02 dates (backfill) and Yahoo earnings dates (nightly); prices from Yahoo",
-  "pulled_utc": "2026-11-21 04:32",
+  "pulled_utc": "2026-11-24 07:22",
   "notes": [
    "Reaction day = whichever of the earnings date and the next session traded more volume (timing is not known). move_pct is close-to-close on that day; move5_pct runs from the close before it through 4 sessions after.",
    "implied_move_pct = at-the-money straddle mid of the first expiry after the print / price, from the last iv snapshot before it; backfilled rows have no implied move."
@@ -1134,7 +1134,7 @@
      "source": "nightly",
      "reaction_date": "2026-11-17",
      "move_pct": 11.08,
-     "move5_pct": null,
+     "move5_pct": 11.38,
      "implied_move_pct": 7.6
     }
    ],
@@ -56254,7 +56254,7 @@
      "source": "nightly",
      "reaction_date": "2026-11-17",
      "move_pct": -0.44,
-     "move5_pct": null,
+     "move5_pct": 5.71,
      "implied_move_pct": 8.6
     }
    ],
@@ -66341,14 +66341,6 @@
    "ticker": "ROST",
    "moves": [
     {
-     "earnings_date": "2023-11-16",
-     "source": "8-K Item 2.02 backfill",
-     "reaction_date": "2023-11-17",
-     "move_pct": 7.22,
-     "move5_pct": 9.11,
-     "implied_move_pct": null
-    },
-    {
      "earnings_date": "2024-03-05",
      "source": "8-K Item 2.02 backfill",
      "reaction_date": "2024-03-06",
@@ -66435,9 +66427,17 @@
      "move_pct": 4.39,
      "move5_pct": 0.38,
      "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-19",
+     "source": "nightly",
+     "reaction_date": "2026-11-20",
+     "move_pct": -2.92,
+     "move5_pct": null,
+     "implied_move_pct": null
     }
    ],
-   "median_abs_move_pct": 5.8,
+   "median_abs_move_pct": 3.65,
    "n": 12
   },
   {

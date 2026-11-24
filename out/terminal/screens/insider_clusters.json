@@ -1,14 +1,14 @@
 {
  "meta": {
   "rule": "Open-market purchases (Form 4, transaction code P) by 3 or more distinct insiders in the last 30 days totalling $500,000 or more.",
-  "asof": "2026-11-20",
-  "generated_utc": "2026-11-21 04:35",
+  "asof": "2026-11-23",
+  "generated_utc": "2026-11-24 07:26",
   "caveats": [
    "Scope: the ranked names, lens candidates and terminal_watch.txt only, not the whole universe, to stay inside the SEC call budget.",
    "Route: the SEC submissions API per company (one call each) plus each new Form 4 XML once; parsed filings are cached in out/cache/form4.json."
   ],
-  "names_scanned": 111,
-  "form4_fetched_this_run": 74
+  "names_scanned": 126,
+  "form4_fetched_this_run": 110
  },
  "rows": []
 }

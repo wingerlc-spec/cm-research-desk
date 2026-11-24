@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "out/history/iv",
-  "pulled_utc": "2026-11-21 04:32",
+  "pulled_utc": "2026-11-24 07:22",
   "notes": [
    "iv_rank = percentile of today's 30-day at-the-money iv in the ticker's own snapshots; needs 60 observations"
   ]
@@ -1450,6 +1450,13 @@
    "status": "building, 1 days"
   },
   {
+   "ticker": "DLR",
+   "date": "2026-11-24",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "DLTR",
    "date": "2026-11-18",
    "iv_atm_30d": 0.5471,
@@ -1702,6 +1709,13 @@
    "status": "building, 2 days"
   },
   {
+   "ticker": "ERIE",
+   "date": "2026-11-24",
+   "iv_atm_30d": 1.8847,
+   "n_obs": 1,
+   "status": "building, 1 days"
+  },
+  {
    "ticker": "ES",
    "date": "2026-11-19",
    "iv_atm_30d": 0.2611,
@@ -1773,10 +1787,10 @@
   },
   {
    "ticker": "EXLS",
-   "date": "2026-11-19",
-   "iv_atm_30d": 0.6321,
-   "n_obs": 3,
-   "status": "building, 3 days"
+   "date": "2026-11-24",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 4,
+   "status": "building, 4 days"
   },
   {
    "ticker": "EXP",
@@ -2270,10 +2284,10 @@
   },
   {
    "ticker": "HLNE",
-   "date": "2026-11-14",
-   "iv_atm_30d": 0.6978,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-24",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "HLT",
@@ -2281,6 +2295,13 @@
    "iv_atm_30d": 0.3316,
    "n_obs": 5,
    "status": "building, 5 days"
+  },
+  {
+   "ticker": "HOMB",
+   "date": "2026-11-24",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "HON",
@@ -2389,10 +2410,10 @@
   },
   {
    "ticker": "HXL",
-   "date": "2026-11-17",
-   "iv_atm_30d": 3.3924,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-24",
+   "iv_atm_30d": 4.0031,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "IBKR",
@@ -3068,10 +3089,10 @@
   },
   {
    "ticker": "MSA",
-   "date": "2026-11-17",
-   "iv_atm_30d": 0.7844,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-24",
+   "iv_atm_30d": 0.8075,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "MSFT",
@@ -3142,6 +3163,13 @@
    "iv_atm_30d": 0.7866,
    "n_obs": 4,
    "status": "building, 4 days"
+  },
+  {
+   "ticker": "MUSA",
+   "date": "2026-11-24",
+   "iv_atm_30d": 2.1464,
+   "n_obs": 1,
+   "status": "building, 1 days"
   },
   {
    "ticker": "NBIX",
@@ -3684,10 +3712,10 @@
   },
   {
    "ticker": "SYF",
-   "date": "2026-11-21",
-   "iv_atm_30d": 0.7008,
-   "n_obs": 5,
-   "status": "building, 5 days"
+   "date": "2026-11-24",
+   "iv_atm_30d": 1.0664,
+   "n_obs": 6,
+   "status": "building, 6 days"
   },
   {
    "ticker": "SYY",
@@ -3789,10 +3817,10 @@
   },
   {
    "ticker": "TTEK",
-   "date": "2026-11-21",
-   "iv_atm_30d": 0.5842,
-   "n_obs": 3,
-   "status": "building, 3 days"
+   "date": "2026-11-24",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 4,
+   "status": "building, 4 days"
   },
   {
    "ticker": "TTWO",
