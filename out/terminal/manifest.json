@@ -1,34 +1,34 @@
 {
- "generated_utc": "2026-11-24 07:27",
+ "generated_utc": "2026-11-25 06:03",
  "files": {
   "dc_spend.json": {
-   "pulled_utc": "2026-11-24 07:14",
+   "pulled_utc": "2026-11-25 05:51",
    "rows": 153,
    "status": "ok"
   },
   "dc_capex.json": {
-   "pulled_utc": "2026-11-24 07:14",
+   "pulled_utc": "2026-11-25 05:51",
    "rows": 91,
    "status": "ok"
   },
   "earnings_dates.json": {
-   "pulled_utc": "2026-11-24 07:15",
-   "rows": 74,
+   "pulled_utc": "2026-11-25 05:51",
+   "rows": 66,
    "status": "ok"
   },
   "chains.json": {
-   "pulled_utc": "2026-11-24 07:16",
+   "pulled_utc": "2026-11-25 05:52",
    "rows": 18,
    "status": "ok"
   },
   "screen.json": {
-   "pulled_utc": "2026-11-24 07:14",
-   "rows": 57,
+   "pulled_utc": "2026-11-25 05:50",
+   "rows": 49,
    "status": "ok",
    "written_by": "screen.py"
   },
   "regime.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 8,
    "status": "ok",
    "written_by": "datasets.py",
@@ -45,83 +45,83 @@
    }
   },
   "risk_stats.json": {
-   "pulled_utc": "2026-11-24 07:27",
-   "rows": 74,
+   "pulled_utc": "2026-11-25 06:03",
+   "rows": 66,
    "status": "ok",
    "written_by": "datasets.py"
   },
   "corr_matrix.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 39,
    "status": "ok",
    "written_by": "datasets.py",
    "largest_cluster": [
-    "AAON",
-    "COHR",
-    "CRWV",
-    "HPE",
-    "NVDA",
-    "ORCL",
-    "RBC",
-    "VRT"
+    "ANF",
+    "BURL",
+    "DKS",
+    "DLTR",
+    "GAP",
+    "TJX"
    ]
   },
   "iv_rank.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 569,
    "status": "ok",
    "written_by": "datasets.py",
    "ranked": 0
   },
   "earnings_reactions.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 837,
    "status": "ok",
    "written_by": "datasets.py"
   },
   "screens/buyback_low_multiple.json": {
-   "pulled_utc": "2026-11-24 07:27",
-   "rows": 57,
+   "pulled_utc": "2026-11-25 06:03",
+   "rows": 52,
    "status": "ok",
    "written_by": "datasets.py",
-   "cached": 836,
-   "refreshed": 220
+   "cached": 837,
+   "refreshed": 147
   },
   "screens/scare_no_estimate_damage.json": {
-   "pulled_utc": "2026-11-24 07:27",
-   "rows": 37,
+   "pulled_utc": "2026-11-25 06:03",
+   "rows": 38,
    "status": "ok",
    "written_by": "datasets.py"
   },
   "screens/rotation.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 10,
    "status": "ok",
    "written_by": "datasets.py",
    "groups": 84
   },
   "screens/insider_clusters.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 0,
    "status": "ok",
    "written_by": "datasets.py",
-   "names": 126,
-   "docs_fetched": 110
+   "names": 117,
+   "docs_fetched": 74
   },
   "drivers.json": {
-   "pulled_utc": "2026-11-24 07:27",
+   "pulled_utc": "2026-11-25 06:03",
    "rows": 18,
    "status": "ok",
    "written_by": "datasets.py",
-   "flagged": []
+   "flagged": [
+    "NATGAS:EQT"
+   ]
   },
   "../rule_tests/dislocation_recovery.json": {
-   "pulled_utc": "2026-11-24 07:27",
-   "rows": 2716,
+   "pulled_utc": "2026-11-25 06:03",
+   "rows": 2718,
    "status": "ok",
    "written_by": "datasets.py",
    "verdict": "WORKS"
   }
  },
- "datasets_runtime_s": 672
+ "datasets_runtime_s": 641
 }

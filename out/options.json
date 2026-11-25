@@ -1,30 +1,29 @@
 {
- "asof": "2026-11-23",
- "generated_utc": "2026-11-24 07:14",
+ "asof": "2026-11-24",
+ "generated_utc": "2026-11-25 05:50",
  "source": "Yahoo via yfinance",
  "rules": "Calls 180-460 days out. Chosen: delta 0.75-0.85, bid > 0, expiry nearest 274 days, then highest open interest. ok = open interest >= 100 and spread <= 8% of mid; thin = fails either; none = no qualifying contract. option_alt (when thin) = most liquid call with delta 0.6-0.9. Delta is Black-Scholes, rate 0.04, dividends ignored; iv from the chain when 0.05-3, else solved from the mid. Bid and ask both 0: quote stale, lastPrice is never used for prices. fits_slot from ask x 100: up to SLOT_USD true, up to SLOT_STRETCH stretch, above it false.",
  "targets": [
   "GAP",
   "WSM",
-  "RBC",
-  "TSCO",
-  "HPE",
-  "NVDA",
+  "ANF",
+  "DKS",
+  "DLTR",
   "HAE",
+  "MCK",
   "PANW",
   "EXLS",
+  "A",
   "TJX",
-  "LH",
   "DAR",
-  "TECH",
   "EXPE",
-  "HWM",
-  "CDW",
+  "TECH",
   "AAON",
-  "SN",
-  "BG",
-  "COHR",
+  "MANH",
   "BURL",
+  "BG",
+  "TTWO",
+  "ADP",
   "CELH",
   "VRT",
   "TFX",
@@ -32,41 +31,42 @@
   "REGN",
   "ANET",
   "DELL",
+  "HPE",
   "FN",
   "URI",
+  "FLEX",
   "EOG",
   "BTSG",
   "COP",
-  "FLEX",
   "APP",
-  "MCK",
+  "NVDA",
   "NBIX",
   "ALSN",
-  "AFL",
-  "MAR"
+  "MAR",
+  "AFL"
  ],
  "liquidity_counts": {
-  "none": 22,
-  "thin": 17
+  "none": 23,
+  "thin": 16
  },
  "notes": [],
  "names": {
   "GAP": {
    "sym": "GAP",
-   "last": 21.75,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 22.64,
+   "pulled_utc": "2026-11-25 05:49",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 18,
+     "days_to_expiry": 205,
+     "calls": 19,
      "with_bid": 1,
-     "stale": 17,
+     "stale": 18,
      "band_60_90": []
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 9,
      "with_bid": 0,
      "stale": 9,
@@ -74,7 +74,7 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 8,
      "with_bid": 0,
      "stale": 8,
@@ -82,63 +82,31 @@
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 13,
      "with_bid": 0,
      "stale": 13,
      "band_60_90": []
     }
    ],
-   "n_contracts": 48,
+   "n_contracts": 49,
    "option": {
-    "liquidity": "none"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "WSM": {
    "sym": "WSM",
-   "last": 212.13,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 213.87,
+   "pulled_utc": "2026-11-25 05:49",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 23,
-     "with_bid": 6,
-     "stale": 17,
+     "with_bid": 3,
+     "stale": 20,
      "band_60_90": [
-      {
-       "strike": 110.0,
-       "bid": 114.5,
-       "ask": 118.9,
-       "spread_pct": 3.8,
-       "open_interest": 6,
-       "volume": 0,
-       "iv": 1.0999,
-       "delta": 0.892,
-       "quote": "ok"
-      },
-      {
-       "strike": 120.0,
-       "bid": 105.5,
-       "ask": 110.0,
-       "spread_pct": 4.2,
-       "open_interest": 10,
-       "volume": 10,
-       "iv": 1.022,
-       "delta": 0.876,
-       "quote": "ok"
-      },
-      {
-       "strike": 145.0,
-       "bid": 85.0,
-       "ask": 88.9,
-       "spread_pct": 4.5,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 0.8811,
-       "delta": 0.826,
-       "quote": "ok"
-      },
       {
        "strike": 155.0,
        "bid": 74.5,
@@ -146,8 +114,8 @@
        "spread_pct": 6.2,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.7872,
-       "delta": 0.806,
+       "iv": 0.7581,
+       "delta": 0.813,
        "quote": "ok"
       },
       {
@@ -157,18 +125,18 @@
        "spread_pct": 3.9,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.9067,
-       "delta": 0.626,
+       "iv": 0.8915,
+       "delta": 0.628,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 14,
+     "days_to_expiry": 297,
+     "calls": 15,
      "with_bid": 1,
-     "stale": 13,
+     "stale": 14,
      "band_60_90": [
       {
        "strike": 150.0,
@@ -177,26 +145,26 @@
        "spread_pct": 4.0,
        "open_interest": 2,
        "volume": 1,
-       "iv": 1.2504,
-       "delta": 0.816,
+       "iv": 1.2257,
+       "delta": 0.817,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 5,
+     "days_to_expiry": 388,
+     "calls": 6,
      "with_bid": 0,
-     "stale": 5,
+     "stale": 6,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 39,
-     "with_bid": 13,
-     "stale": 26,
+     "with_bid": 12,
+     "stale": 27,
      "band_60_90": [
       {
        "strike": 105.0,
@@ -205,8 +173,8 @@
        "spread_pct": 2.5,
        "open_interest": 6,
        "volume": 22,
-       "iv": 1.5155,
-       "delta": 0.899,
+       "iv": 1.4804,
+       "delta": 0.898,
        "quote": "ok"
       },
       {
@@ -216,7 +184,7 @@
        "spread_pct": 3.1,
        "open_interest": 0,
        "volume": 2,
-       "iv": 1.4005,
+       "iv": 1.3695,
        "delta": 0.883,
        "quote": "ok"
       },
@@ -227,8 +195,8 @@
        "spread_pct": 2.8,
        "open_interest": 1,
        "volume": 1,
-       "iv": 1.36,
-       "delta": 0.876,
+       "iv": 1.3306,
+       "delta": 0.875,
        "quote": "ok"
       },
       {
@@ -238,8 +206,8 @@
        "spread_pct": 5.0,
        "open_interest": 4,
        "volume": 0,
-       "iv": 0.5469,
-       "delta": 0.886,
+       "iv": 0.5154,
+       "delta": 0.896,
        "quote": "ok"
       },
       {
@@ -249,7 +217,7 @@
        "spread_pct": 3.5,
        "open_interest": 2,
        "volume": 2,
-       "iv": 1.2125,
+       "iv": 1.1876,
        "delta": 0.85,
        "quote": "ok"
       },
@@ -260,7 +228,7 @@
        "spread_pct": 3.7,
        "open_interest": 1,
        "volume": 2,
-       "iv": 1.1752,
+       "iv": 1.1515,
        "delta": 0.841,
        "quote": "ok"
       },
@@ -271,25 +239,14 @@
        "spread_pct": 3.5,
        "open_interest": 4,
        "volume": 1,
-       "iv": 1.1007,
-       "delta": 0.822,
-       "quote": "ok"
-      },
-      {
-       "strike": 230.0,
-       "bid": 58.2,
-       "ask": 62.5,
-       "spread_pct": 7.1,
-       "open_interest": 16,
-       "volume": 2,
-       "iv": 0.7449,
-       "delta": 0.64,
+       "iv": 1.0791,
+       "delta": 0.823,
        "quote": "ok"
       }
      ]
     }
    ],
-   "n_contracts": 81,
+   "n_contracts": 83,
    "option": {
     "expiry": "2027-09-17",
     "strike": 150.0,
@@ -297,205 +254,144 @@
     "ask": 114.0,
     "open_interest": 2,
     "volume": 1,
-    "days_to_expiry": 298,
+    "days_to_expiry": 297,
     "quote": "ok",
     "mid": 111.75,
     "spread_pct": 4.0,
-    "iv": 1.2504,
+    "iv": 1.2257,
     "iv_source": "chain",
-    "delta": 0.816,
+    "delta": 0.817,
     "cost_usd": 11400.0,
     "breakeven": 264.0,
-    "breakeven_pct_above_last": 24.5,
+    "breakeven_pct_above_last": 23.4,
     "liquidity": "thin"
    },
    "option_alt": {
     "expiry": "2028-01-21",
-    "strike": 230.0,
-    "bid": 58.2,
-    "ask": 62.5,
-    "open_interest": 16,
-    "volume": 2,
-    "days_to_expiry": 424,
+    "strike": 105.0,
+    "bid": 151.0,
+    "ask": 154.8,
+    "open_interest": 6,
+    "volume": 22,
+    "days_to_expiry": 423,
     "quote": "ok",
-    "mid": 60.35,
-    "spread_pct": 7.1,
-    "iv": 0.7449,
+    "mid": 152.9,
+    "spread_pct": 2.5,
+    "iv": 1.4804,
     "iv_source": "chain",
-    "delta": 0.64,
-    "cost_usd": 6250.0,
-    "breakeven": 292.5,
-    "breakeven_pct_above_last": 37.9,
+    "delta": 0.898,
+    "cost_usd": 15480.0,
+    "breakeven": 259.8,
+    "breakeven_pct_above_last": 21.5,
     "liquidity": "thin"
    }
   },
-  "RBC": {
-   "sym": "RBC",
-   "last": 482.84,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 3,
-     "with_bid": 0,
-     "stale": 3,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 3,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
-   }
-  },
-  "TSCO": {
-   "sym": "TSCO",
-   "last": 37.57,
-   "pulled_utc": "2026-11-24 07:13",
+  "ANF": {
+   "sym": "ANF",
+   "last": 168.1,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 10,
-     "with_bid": 2,
-     "stale": 8,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 8,
-     "with_bid": 0,
-     "stale": 8,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 4,
-     "with_bid": 0,
-     "stale": 4,
+     "days_to_expiry": 205,
+     "calls": 21,
+     "with_bid": 1,
+     "stale": 20,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 18,
-     "with_bid": 0,
-     "stale": 18,
+     "days_to_expiry": 423,
+     "calls": 39,
+     "with_bid": 7,
+     "stale": 32,
+     "band_60_90": [
+      {
+       "strike": 130.0,
+       "bid": 48.5,
+       "ask": 52.5,
+       "spread_pct": 7.9,
+       "open_interest": 32,
+       "volume": 1,
+       "iv": 0.4703,
+       "delta": 0.803,
+       "quote": "ok"
+      }
+     ]
+    }
+   ],
+   "n_contracts": 60,
+   "option": {
+    "expiry": "2028-01-21",
+    "strike": 130.0,
+    "bid": 48.5,
+    "ask": 52.5,
+    "open_interest": 32,
+    "volume": 1,
+    "days_to_expiry": 423,
+    "quote": "ok",
+    "mid": 50.5,
+    "spread_pct": 7.9,
+    "iv": 0.4703,
+    "iv_source": "chain",
+    "delta": 0.803,
+    "cost_usd": 5250.0,
+    "breakeven": 182.5,
+    "breakeven_pct_above_last": 8.6,
+    "liquidity": "thin"
+   }
+  },
+  "DKS": {
+   "sym": "DKS",
+   "last": 153.17,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
+     "calls": 42,
+     "with_bid": 4,
+     "stale": 38,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 43,
+     "with_bid": 1,
+     "stale": 42,
      "band_60_90": []
     }
    ],
-   "n_contracts": 40,
+   "n_contracts": 85,
    "option": {
     "liquidity": "none"
    }
   },
-  "HPE": {
-   "sym": "HPE",
-   "last": 48.02,
-   "pulled_utc": "2026-11-24 07:13",
+  "DLTR": {
+   "sym": "DLTR",
+   "last": 154.65,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 21,
-     "with_bid": 0,
-     "stale": 21,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 16,
-     "with_bid": 0,
-     "stale": 16,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 12,
-     "with_bid": 0,
-     "stale": 12,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 205,
      "calls": 26,
-     "with_bid": 0,
-     "stale": 26,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 75,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
-   }
-  },
-  "NVDA": {
-   "sym": "NVDA",
-   "last": 165.05,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 96,
-     "with_bid": 0,
-     "stale": 96,
+     "with_bid": 3,
+     "stale": 23,
      "band_60_90": []
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 77,
-     "with_bid": 0,
-     "stale": 77,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-11-19",
-     "days_to_expiry": 361,
-     "calls": 47,
-     "with_bid": 0,
-     "stale": 47,
+     "days_to_expiry": 297,
+     "calls": 20,
+     "with_bid": 3,
+     "stale": 17,
      "band_60_90": []
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 78,
-     "with_bid": 0,
-     "stale": 78,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 79,
-     "with_bid": 1,
-     "stale": 78,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 377,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
-   }
-  },
-  "HAE": {
-   "sym": "HAE",
-   "last": 121.42,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 388,
      "calls": 5,
      "with_bid": 0,
      "stale": 5,
@@ -503,7 +399,35 @@
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
+     "calls": 33,
+     "with_bid": 1,
+     "stale": 32,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 84,
+   "option": {
+    "liquidity": "none",
+    "quote": "stale"
+   }
+  },
+  "HAE": {
+   "sym": "HAE",
+   "last": 120.4,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
+     "calls": 5,
+     "with_bid": 0,
+     "stale": 5,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
      "calls": 27,
      "with_bid": 8,
      "stale": 19,
@@ -515,8 +439,8 @@
        "spread_pct": 13.7,
        "open_interest": 15,
        "volume": 2,
-       "iv": 0.4937,
-       "delta": 0.617,
+       "iv": 0.5059,
+       "delta": 0.614,
        "quote": "ok"
       }
      ]
@@ -527,14 +451,150 @@
     "liquidity": "none"
    }
   },
-  "PANW": {
-   "sym": "PANW",
-   "last": 353.43,
-   "pulled_utc": "2026-11-24 07:13",
+  "MCK": {
+   "sym": "MCK",
+   "last": 1078.09,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
+     "calls": 48,
+     "with_bid": 9,
+     "stale": 39,
+     "band_60_90": [
+      {
+       "strike": 800.0,
+       "bid": 290.5,
+       "ask": 299.0,
+       "spread_pct": 2.9,
+       "open_interest": 2,
+       "volume": 1,
+       "iv": 0.3856,
+       "delta": 0.895,
+       "quote": "ok"
+      },
+      {
+       "strike": 880.0,
+       "bid": 226.2,
+       "ask": 233.6,
+       "spread_pct": 3.2,
+       "open_interest": 3,
+       "volume": 2,
+       "iv": 0.3661,
+       "delta": 0.831,
+       "quote": "ok"
+      },
+      {
+       "strike": 1000.0,
+       "bid": 143.4,
+       "ask": 150.0,
+       "spread_pct": 4.5,
+       "open_interest": 26,
+       "volume": 1,
+       "iv": 0.3436,
+       "delta": 0.694,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 29,
+     "with_bid": 2,
+     "stale": 27,
+     "band_60_90": [
+      {
+       "strike": 920.0,
+       "bid": 216.0,
+       "ask": 225.0,
+       "spread_pct": 4.1,
+       "open_interest": 1,
+       "volume": 1,
+       "iv": 0.3668,
+       "delta": 0.771,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 19,
+     "with_bid": 0,
+     "stale": 19,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 77,
+     "with_bid": 21,
+     "stale": 56,
+     "band_60_90": [
+      {
+       "strike": 840.0,
+       "bid": 298.0,
+       "ask": 307.0,
+       "spread_pct": 3.0,
+       "open_interest": 39,
+       "volume": 2,
+       "iv": 0.3949,
+       "delta": 0.818,
+       "quote": "ok"
+      }
+     ]
+    }
+   ],
+   "n_contracts": 173,
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 920.0,
+    "bid": 216.0,
+    "ask": 225.0,
+    "open_interest": 1,
+    "volume": 1,
+    "days_to_expiry": 297,
+    "quote": "ok",
+    "mid": 220.5,
+    "spread_pct": 4.1,
+    "iv": 0.3668,
+    "iv_source": "chain",
+    "delta": 0.771,
+    "cost_usd": 22500.0,
+    "breakeven": 1145.0,
+    "breakeven_pct_above_last": 6.2,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 840.0,
+    "bid": 298.0,
+    "ask": 307.0,
+    "open_interest": 39,
+    "volume": 2,
+    "days_to_expiry": 423,
+    "quote": "ok",
+    "mid": 302.5,
+    "spread_pct": 3.0,
+    "iv": 0.3949,
+    "iv_source": "chain",
+    "delta": 0.818,
+    "cost_usd": 30700.0,
+    "breakeven": 1147.0,
+    "breakeven_pct_above_last": 6.4,
+    "liquidity": "thin"
+   }
+  },
+  "PANW": {
+   "sym": "PANW",
+   "last": 352.99,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
      "calls": 96,
      "with_bid": 17,
      "stale": 79,
@@ -546,7 +606,7 @@
        "spread_pct": 3.4,
        "open_interest": 268,
        "volume": 1,
-       "iv": 1.4456,
+       "iv": 1.4572,
        "delta": 0.897,
        "quote": "ok"
       }
@@ -554,7 +614,7 @@
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 66,
      "with_bid": 0,
      "stale": 66,
@@ -562,18 +622,18 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 87,
-     "with_bid": 14,
-     "stale": 73,
+     "with_bid": 13,
+     "stale": 74,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 92,
-     "with_bid": 13,
-     "stale": 79,
+     "with_bid": 12,
+     "stale": 80,
      "band_60_90": []
     }
    ],
@@ -584,26 +644,182 @@
   },
   "EXLS": {
    "sym": "EXLS",
-   "last": 43.08,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [],
-   "n_contracts": 0,
+   "last": 43.84,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 1,
+     "with_bid": 0,
+     "stale": 1,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 1,
    "option": {
-    "liquidity": "none"
-   },
-   "note": "no expiry 180 to 460 days out"
+    "liquidity": "none",
+    "quote": "stale"
+   }
   },
-  "TJX": {
-   "sym": "TJX",
-   "last": 139.25,
-   "pulled_utc": "2026-11-24 07:13",
+  "A": {
+   "sym": "A",
+   "last": 183.52,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 27,
+     "days_to_expiry": 205,
+     "calls": 21,
+     "with_bid": 4,
+     "stale": 17,
+     "band_60_90": [
+      {
+       "strike": 155.0,
+       "bid": 30.6,
+       "ask": 33.6,
+       "spread_pct": 9.3,
+       "open_interest": 70,
+       "volume": 9,
+       "iv": 0.3034,
+       "delta": 0.83,
+       "quote": "ok"
+      },
+      {
+       "strike": 170.0,
+       "bid": 23.4,
+       "ask": 26.5,
+       "spread_pct": 12.4,
+       "open_interest": 76,
+       "volume": 1,
+       "iv": 0.3603,
+       "delta": 0.692,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 20,
+     "with_bid": 5,
+     "stale": 15,
+     "band_60_90": [
+      {
+       "strike": 155.0,
+       "bid": 36.3,
+       "ask": 40.0,
+       "spread_pct": 9.7,
+       "open_interest": 1,
+       "volume": 1,
+       "iv": 0.3799,
+       "delta": 0.776,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 4,
+     "with_bid": 0,
+     "stale": 4,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 18,
+     "with_bid": 6,
+     "stale": 12,
+     "band_60_90": [
+      {
+       "strike": 140.0,
+       "bid": 48.0,
+       "ask": 52.5,
+       "spread_pct": 9.0,
+       "open_interest": 6,
+       "volume": 1,
+       "iv": 0.3631,
+       "delta": 0.843,
+       "quote": "ok"
+      },
+      {
+       "strike": 165.0,
+       "bid": 33.5,
+       "ask": 38.0,
+       "spread_pct": 12.6,
+       "open_interest": 10,
+       "volume": 0,
+       "iv": 0.3737,
+       "delta": 0.719,
+       "quote": "ok"
+      },
+      {
+       "strike": 175.0,
+       "bid": 30.5,
+       "ask": 33.5,
+       "spread_pct": 9.4,
+       "open_interest": 5,
+       "volume": 0,
+       "iv": 0.3798,
+       "delta": 0.668,
+       "quote": "ok"
+      }
+     ]
+    }
+   ],
+   "n_contracts": 63,
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 155.0,
+    "bid": 36.3,
+    "ask": 40.0,
+    "open_interest": 1,
+    "volume": 1,
+    "days_to_expiry": 297,
+    "quote": "ok",
+    "mid": 38.15,
+    "spread_pct": 9.7,
+    "iv": 0.3799,
+    "iv_source": "chain",
+    "delta": 0.776,
+    "cost_usd": 4000.0,
+    "breakeven": 195.0,
+    "breakeven_pct_above_last": 6.3,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 170.0,
+    "bid": 23.4,
+    "ask": 26.5,
+    "open_interest": 76,
+    "volume": 1,
+    "days_to_expiry": 205,
+    "quote": "ok",
+    "mid": 24.95,
+    "spread_pct": 12.4,
+    "iv": 0.3603,
+    "iv_source": "chain",
+    "delta": 0.692,
+    "cost_usd": 2650.0,
+    "breakeven": 196.5,
+    "breakeven_pct_above_last": 7.1,
+    "liquidity": "thin"
+   }
+  },
+  "TJX": {
+   "sym": "TJX",
+   "last": 143.86,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
+     "calls": 28,
      "with_bid": 1,
-     "stale": 24,
+     "stale": 25,
      "band_60_90": [
       {
        "strike": 105.0,
@@ -612,15 +828,23 @@
        "spread_pct": 5.9,
        "open_interest": 3,
        "volume": 2,
-       "iv": 0.626,
-       "delta": 0.811,
+       "iv": 0.5399,
+       "delta": 0.85,
        "quote": "ok"
       }
      ]
     },
     {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 1,
+     "with_bid": 0,
+     "stale": 1,
+     "band_60_90": []
+    },
+    {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 25,
      "with_bid": 0,
      "stale": 25,
@@ -628,22 +852,22 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 7,
+     "days_to_expiry": 388,
+     "calls": 9,
      "with_bid": 0,
-     "stale": 7,
+     "stale": 9,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 32,
      "with_bid": 1,
      "stale": 31,
      "band_60_90": []
     }
    ],
-   "n_contracts": 91,
+   "n_contracts": 95,
    "option": {
     "expiry": "2027-06-17",
     "strike": 105.0,
@@ -651,55 +875,35 @@
     "ask": 45.0,
     "open_interest": 3,
     "volume": 2,
-    "days_to_expiry": 206,
+    "days_to_expiry": 205,
     "quote": "ok",
     "mid": 43.7,
     "spread_pct": 5.9,
-    "iv": 0.626,
+    "iv": 0.5399,
     "iv_source": "chain",
-    "delta": 0.811,
+    "delta": 0.85,
     "cost_usd": 4500.0,
     "breakeven": 150.0,
-    "breakeven_pct_above_last": 7.7,
+    "breakeven_pct_above_last": 4.3,
     "liquidity": "thin"
-   }
-  },
-  "LH": {
-   "sym": "LH",
-   "last": 372.56,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-08-20",
-     "days_to_expiry": 270,
-     "calls": 3,
-     "with_bid": 0,
-     "stale": 3,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-11-19",
-     "days_to_expiry": 361,
-     "calls": 9,
-     "with_bid": 0,
-     "stale": 9,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 12,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
    }
   },
   "DAR": {
    "sym": "DAR",
-   "last": 50.54,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 47.06,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 4,
+     "with_bid": 0,
+     "stale": 4,
+     "band_60_90": []
+    },
+    {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 29,
      "with_bid": 7,
      "stale": 22,
@@ -710,9 +914,9 @@
        "ask": 37.1,
        "spread_pct": 9.3,
        "open_interest": 266,
-       "volume": 58,
-       "iv": 1.5741,
-       "delta": 0.882,
+       "volume": 78,
+       "iv": 1.874,
+       "delta": 0.895,
        "quote": "ok"
       },
       {
@@ -722,26 +926,269 @@
        "spread_pct": 15.6,
        "open_interest": 106,
        "volume": 2,
-       "iv": 0.7546,
-       "delta": 0.728,
+       "iv": 0.8904,
+       "delta": 0.717,
        "quote": "ok"
       }
      ]
     }
    ],
-   "n_contracts": 29,
+   "n_contracts": 33,
    "option": {
     "liquidity": "none"
    }
   },
-  "TECH": {
-   "sym": "TECH",
-   "last": 72.8,
-   "pulled_utc": "2026-11-24 07:13",
+  "EXPE": {
+   "sym": "EXPE",
+   "last": 239.26,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
+     "calls": 40,
+     "with_bid": 5,
+     "stale": 35,
+     "band_60_90": [
+      {
+       "strike": 155.0,
+       "bid": 109.7,
+       "ask": 113.4,
+       "spread_pct": 3.3,
+       "open_interest": 1,
+       "volume": 0,
+       "iv": 1.0664,
+       "delta": 0.834,
+       "quote": "ok"
+      },
+      {
+       "strike": 165.0,
+       "bid": 180.0,
+       "ask": 184.0,
+       "spread_pct": 2.2,
+       "open_interest": 1,
+       "volume": 0,
+       "iv": 2.8201,
+       "delta": 0.893,
+       "quote": "ok"
+      },
+      {
+       "strike": 195.0,
+       "bid": 78.0,
+       "ask": 81.4,
+       "spread_pct": 4.3,
+       "open_interest": 26,
+       "volume": 25,
+       "iv": 0.8609,
+       "delta": 0.75,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 2,
+     "with_bid": 0,
+     "stale": 2,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 27,
+     "with_bid": 2,
+     "stale": 25,
+     "band_60_90": [
+      {
+       "strike": 190.0,
+       "bid": 114.5,
+       "ask": 119.0,
+       "spread_pct": 3.9,
+       "open_interest": 1,
+       "volume": 0,
+       "iv": 1.2304,
+       "delta": 0.786,
+       "quote": "ok"
+      },
+      {
+       "strike": 195.0,
+       "bid": 84.0,
+       "ask": 88.0,
+       "spread_pct": 4.7,
+       "open_interest": 2,
+       "volume": 0,
+       "iv": 0.8051,
+       "delta": 0.755,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 11,
+     "with_bid": 0,
+     "stale": 11,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 51,
+     "with_bid": 15,
+     "stale": 36,
+     "band_60_90": [
+      {
+       "strike": 115.0,
+       "bid": 150.0,
+       "ask": 154.5,
+       "spread_pct": 3.0,
+       "open_interest": 7,
+       "volume": 5,
+       "iv": 1.0744,
+       "delta": 0.895,
+       "quote": "ok"
+      },
+      {
+       "strike": 155.0,
+       "bid": 147.0,
+       "ask": 151.5,
+       "spread_pct": 3.0,
+       "open_interest": 20,
+       "volume": 10,
+       "iv": 1.3224,
+       "delta": 0.853,
+       "quote": "ok"
+      },
+      {
+       "strike": 160.0,
+       "bid": 115.0,
+       "ask": 119.0,
+       "spread_pct": 3.4,
+       "open_interest": 14,
+       "volume": 2,
+       "iv": 0.8618,
+       "delta": 0.828,
+       "quote": "ok"
+      },
+      {
+       "strike": 170.0,
+       "bid": 135.5,
+       "ask": 140.0,
+       "spread_pct": 3.3,
+       "open_interest": 7,
+       "volume": 1,
+       "iv": 1.2238,
+       "delta": 0.83,
+       "quote": "ok"
+      },
+      {
+       "strike": 175.0,
+       "bid": 104.5,
+       "ask": 108.5,
+       "spread_pct": 3.8,
+       "open_interest": 9,
+       "volume": 1,
+       "iv": 0.8153,
+       "delta": 0.802,
+       "quote": "ok"
+      },
+      {
+       "strike": 180.0,
+       "bid": 128.5,
+       "ask": 132.5,
+       "spread_pct": 3.1,
+       "open_interest": 18,
+       "volume": 1,
+       "iv": 1.1688,
+       "delta": 0.814,
+       "quote": "ok"
+      },
+      {
+       "strike": 185.0,
+       "bid": 125.0,
+       "ask": 129.0,
+       "spread_pct": 3.1,
+       "open_interest": 21,
+       "volume": 5,
+       "iv": 1.1441,
+       "delta": 0.806,
+       "quote": "ok"
+      },
+      {
+       "strike": 210.0,
+       "bid": 108.0,
+       "ask": 112.5,
+       "spread_pct": 4.1,
+       "open_interest": 25,
+       "volume": 1,
+       "iv": 1.0364,
+       "delta": 0.763,
+       "quote": "ok"
+      },
+      {
+       "strike": 240.0,
+       "bid": 66.5,
+       "ask": 70.0,
+       "spread_pct": 5.1,
+       "open_interest": 54,
+       "volume": 1,
+       "iv": 0.6817,
+       "delta": 0.665,
+       "quote": "ok"
+      }
+     ]
+    }
+   ],
+   "n_contracts": 131,
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 195.0,
+    "bid": 84.0,
+    "ask": 88.0,
+    "open_interest": 2,
+    "volume": 0,
+    "days_to_expiry": 297,
+    "quote": "ok",
+    "mid": 86.0,
+    "spread_pct": 4.7,
+    "iv": 0.8051,
+    "iv_source": "chain",
+    "delta": 0.755,
+    "cost_usd": 8800.0,
+    "breakeven": 283.0,
+    "breakeven_pct_above_last": 18.3,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 240.0,
+    "bid": 66.5,
+    "ask": 70.0,
+    "open_interest": 54,
+    "volume": 1,
+    "days_to_expiry": 423,
+    "quote": "ok",
+    "mid": 68.25,
+    "spread_pct": 5.1,
+    "iv": 0.6817,
+    "iv_source": "chain",
+    "delta": 0.665,
+    "cost_usd": 7000.0,
+    "breakeven": 310.0,
+    "breakeven_pct_above_last": 29.6,
+    "liquidity": "thin"
+   }
+  },
+  "TECH": {
+   "sym": "TECH",
+   "last": 72.81,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
      "calls": 11,
      "with_bid": 6,
      "stale": 2,
@@ -753,7 +1200,7 @@
        "spread_pct": 18.8,
        "open_interest": 6,
        "volume": 0,
-       "iv": 0.5299,
+       "iv": 0.5305,
        "delta": 0.885,
        "quote": "ok"
       },
@@ -764,7 +1211,7 @@
        "spread_pct": 24.1,
        "open_interest": 7,
        "volume": 9,
-       "iv": 0.433,
+       "iv": 0.4334,
        "delta": 0.863,
        "quote": "ok"
       },
@@ -775,7 +1222,7 @@
        "spread_pct": 33.1,
        "open_interest": 515,
        "volume": 2,
-       "iv": 0.3744,
+       "iv": 0.3748,
        "delta": 0.818,
        "quote": "ok"
       },
@@ -786,15 +1233,15 @@
        "spread_pct": 51.5,
        "open_interest": 250,
        "volume": 2,
-       "iv": 0.2806,
-       "delta": 0.773,
+       "iv": 0.281,
+       "delta": 0.774,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
+     "days_to_expiry": 234,
      "calls": 4,
      "with_bid": 0,
      "stale": 4,
@@ -802,10 +1249,10 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 6,
+     "days_to_expiry": 388,
+     "calls": 7,
      "with_bid": 1,
-     "stale": 5,
+     "stale": 6,
      "band_60_90": [
       {
        "strike": 55.0,
@@ -822,7 +1269,7 @@
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 8,
      "with_bid": 2,
      "stale": 6,
@@ -834,7 +1281,7 @@
        "spread_pct": 62.5,
        "open_interest": 2,
        "volume": 1,
-       "iv": 0.1956,
+       "iv": 0.1955,
        "delta": 0.806,
        "quote": "ok"
       },
@@ -852,7 +1299,7 @@
      ]
     }
    ],
-   "n_contracts": 29,
+   "n_contracts": 30,
    "option": {
     "expiry": "2027-06-17",
     "strike": 60.0,
@@ -860,11 +1307,11 @@
     "ask": 15.5,
     "open_interest": 515,
     "volume": 2,
-    "days_to_expiry": 206,
+    "days_to_expiry": 205,
     "quote": "ok",
     "mid": 13.3,
     "spread_pct": 33.1,
-    "iv": 0.3744,
+    "iv": 0.3748,
     "iv_source": "chain",
     "delta": 0.818,
     "cost_usd": 1550.0,
@@ -873,559 +1320,62 @@
     "liquidity": "thin"
    }
   },
-  "EXPE": {
-   "sym": "EXPE",
-   "last": 239.46,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 40,
-     "with_bid": 5,
-     "stale": 35,
-     "band_60_90": [
-      {
-       "strike": 155.0,
-       "bid": 109.7,
-       "ask": 113.4,
-       "spread_pct": 3.3,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 1.0602,
-       "delta": 0.835,
-       "quote": "ok"
-      },
-      {
-       "strike": 165.0,
-       "bid": 180.0,
-       "ask": 184.0,
-       "spread_pct": 2.2,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 2.808,
-       "delta": 0.893,
-       "quote": "ok"
-      },
-      {
-       "strike": 195.0,
-       "bid": 78.0,
-       "ask": 81.4,
-       "spread_pct": 4.3,
-       "open_interest": 26,
-       "volume": 25,
-       "iv": 0.8563,
-       "delta": 0.75,
-       "quote": "ok"
-      }
-     ]
-    },
-    {
-     "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 1,
-     "with_bid": 0,
-     "stale": 1,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 27,
-     "with_bid": 2,
-     "stale": 25,
-     "band_60_90": [
-      {
-       "strike": 190.0,
-       "bid": 114.5,
-       "ask": 119.0,
-       "spread_pct": 3.9,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 1.2259,
-       "delta": 0.786,
-       "quote": "ok"
-      },
-      {
-       "strike": 195.0,
-       "bid": 84.0,
-       "ask": 88.0,
-       "spread_pct": 4.7,
-       "open_interest": 2,
-       "volume": 0,
-       "iv": 0.8016,
-       "delta": 0.755,
-       "quote": "ok"
-      }
-     ]
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 11,
-     "with_bid": 0,
-     "stale": 11,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 51,
-     "with_bid": 15,
-     "stale": 36,
-     "band_60_90": [
-      {
-       "strike": 115.0,
-       "bid": 150.0,
-       "ask": 154.5,
-       "spread_pct": 3.0,
-       "open_interest": 7,
-       "volume": 5,
-       "iv": 1.0696,
-       "delta": 0.895,
-       "quote": "ok"
-      },
-      {
-       "strike": 155.0,
-       "bid": 147.0,
-       "ask": 151.5,
-       "spread_pct": 3.0,
-       "open_interest": 20,
-       "volume": 10,
-       "iv": 1.3181,
-       "delta": 0.853,
-       "quote": "ok"
-      },
-      {
-       "strike": 160.0,
-       "bid": 115.0,
-       "ask": 119.0,
-       "spread_pct": 3.4,
-       "open_interest": 14,
-       "volume": 2,
-       "iv": 0.8584,
-       "delta": 0.829,
-       "quote": "ok"
-      },
-      {
-       "strike": 170.0,
-       "bid": 135.5,
-       "ask": 140.0,
-       "spread_pct": 3.3,
-       "open_interest": 7,
-       "volume": 1,
-       "iv": 1.2199,
-       "delta": 0.83,
-       "quote": "ok"
-      },
-      {
-       "strike": 175.0,
-       "bid": 104.5,
-       "ask": 108.5,
-       "spread_pct": 3.8,
-       "open_interest": 9,
-       "volume": 1,
-       "iv": 0.8122,
-       "delta": 0.802,
-       "quote": "ok"
-      },
-      {
-       "strike": 180.0,
-       "bid": 128.5,
-       "ask": 132.5,
-       "spread_pct": 3.1,
-       "open_interest": 18,
-       "volume": 1,
-       "iv": 1.1652,
-       "delta": 0.814,
-       "quote": "ok"
-      },
-      {
-       "strike": 185.0,
-       "bid": 125.0,
-       "ask": 129.0,
-       "spread_pct": 3.1,
-       "open_interest": 21,
-       "volume": 5,
-       "iv": 1.1406,
-       "delta": 0.806,
-       "quote": "ok"
-      },
-      {
-       "strike": 210.0,
-       "bid": 108.0,
-       "ask": 112.5,
-       "spread_pct": 4.1,
-       "open_interest": 25,
-       "volume": 1,
-       "iv": 1.0333,
-       "delta": 0.763,
-       "quote": "ok"
-      },
-      {
-       "strike": 240.0,
-       "bid": 66.5,
-       "ask": 70.0,
-       "spread_pct": 5.1,
-       "open_interest": 54,
-       "volume": 1,
-       "iv": 0.6795,
-       "delta": 0.665,
-       "quote": "ok"
-      }
-     ]
-    }
-   ],
-   "n_contracts": 130,
-   "option": {
-    "expiry": "2027-09-17",
-    "strike": 195.0,
-    "bid": 84.0,
-    "ask": 88.0,
-    "open_interest": 2,
-    "volume": 0,
-    "days_to_expiry": 298,
-    "quote": "ok",
-    "mid": 86.0,
-    "spread_pct": 4.7,
-    "iv": 0.8016,
-    "iv_source": "chain",
-    "delta": 0.755,
-    "cost_usd": 8800.0,
-    "breakeven": 283.0,
-    "breakeven_pct_above_last": 18.2,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 240.0,
-    "bid": 66.5,
-    "ask": 70.0,
-    "open_interest": 54,
-    "volume": 1,
-    "days_to_expiry": 424,
-    "quote": "ok",
-    "mid": 68.25,
-    "spread_pct": 5.1,
-    "iv": 0.6795,
-    "iv_source": "chain",
-    "delta": 0.665,
-    "cost_usd": 7000.0,
-    "breakeven": 310.0,
-    "breakeven_pct_above_last": 29.5,
-    "liquidity": "thin"
-   }
-  },
-  "HWM": {
-   "sym": "HWM",
-   "last": 217.28,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 36,
-     "with_bid": 3,
-     "stale": 33,
-     "band_60_90": [
-      {
-       "strike": 145.0,
-       "bid": 122.5,
-       "ask": 127.0,
-       "spread_pct": 3.6,
-       "open_interest": 4,
-       "volume": 0,
-       "iv": 1.6648,
-       "delta": 0.833,
-       "quote": "ok"
-      }
-     ]
-    },
-    {
-     "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 33,
-     "with_bid": 4,
-     "stale": 29,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 10,
-     "with_bid": 0,
-     "stale": 10,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 42,
-     "with_bid": 5,
-     "stale": 37,
-     "band_60_90": [
-      {
-       "strike": 115.0,
-       "bid": 154.0,
-       "ask": 158.7,
-       "spread_pct": 3.0,
-       "open_interest": 13,
-       "volume": 6,
-       "iv": 1.5667,
-       "delta": 0.894,
-       "quote": "ok"
-      }
-     ]
-    }
-   ],
-   "n_contracts": 121,
-   "option": {
-    "expiry": "2027-06-17",
-    "strike": 145.0,
-    "bid": 122.5,
-    "ask": 127.0,
-    "open_interest": 4,
-    "volume": 0,
-    "days_to_expiry": 206,
-    "quote": "ok",
-    "mid": 124.75,
-    "spread_pct": 3.6,
-    "iv": 1.6648,
-    "iv_source": "chain",
-    "delta": 0.833,
-    "cost_usd": 12700.0,
-    "breakeven": 272.0,
-    "breakeven_pct_above_last": 25.2,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 115.0,
-    "bid": 154.0,
-    "ask": 158.7,
-    "open_interest": 13,
-    "volume": 6,
-    "days_to_expiry": 424,
-    "quote": "ok",
-    "mid": 156.35,
-    "spread_pct": 3.0,
-    "iv": 1.5667,
-    "iv_source": "chain",
-    "delta": 0.894,
-    "cost_usd": 15870.0,
-    "breakeven": 273.7,
-    "breakeven_pct_above_last": 26.0,
-    "liquidity": "thin"
-   }
-  },
-  "CDW": {
-   "sym": "CDW",
-   "last": 170.06,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 15,
-     "with_bid": 0,
-     "stale": 15,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 10,
-     "with_bid": 0,
-     "stale": 10,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 25,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
-   }
-  },
   "AAON": {
    "sym": "AAON",
-   "last": 80.16,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 75.05,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 2,
-     "with_bid": 0,
-     "stale": 2,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-10-15",
-     "days_to_expiry": 326,
-     "calls": 19,
-     "with_bid": 0,
-     "stale": 19,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 21,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
-   }
-  },
-  "SN": {
-   "sym": "SN",
-   "last": 225.37,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 16,
-     "with_bid": 0,
-     "stale": 16,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 40,
-     "with_bid": 16,
-     "stale": 24,
-     "band_60_90": [
-      {
-       "strike": 170.0,
-       "bid": 78.0,
-       "ask": 82.0,
-       "spread_pct": 5.0,
-       "open_interest": 11,
-       "volume": 1,
-       "iv": 0.5681,
-       "delta": 0.8,
-       "quote": "ok"
-      },
-      {
-       "strike": 230.0,
-       "bid": 31.5,
-       "ask": 36.5,
-       "spread_pct": 14.7,
-       "open_interest": 8,
-       "volume": 2,
-       "iv": 0.399,
-       "delta": 0.609,
-       "quote": "ok"
-      }
-     ]
-    }
-   ],
-   "n_contracts": 56,
-   "option": {
-    "expiry": "2028-01-21",
-    "strike": 170.0,
-    "bid": 78.0,
-    "ask": 82.0,
-    "open_interest": 11,
-    "volume": 1,
-    "days_to_expiry": 424,
-    "quote": "ok",
-    "mid": 80.0,
-    "spread_pct": 5.0,
-    "iv": 0.5681,
-    "iv_source": "chain",
-    "delta": 0.8,
-    "cost_usd": 8200.0,
-    "breakeven": 252.0,
-    "breakeven_pct_above_last": 11.8,
-    "liquidity": "thin"
-   }
-  },
-  "BG": {
-   "sym": "BG",
-   "last": 91.97,
-   "pulled_utc": "2026-11-24 07:13",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-07-16",
-     "days_to_expiry": 235,
+     "days_to_expiry": 234,
      "calls": 4,
      "with_bid": 0,
      "stale": 4,
      "band_60_90": []
     },
     {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 35,
-     "with_bid": 1,
-     "stale": 34,
+     "expiry": "2027-10-15",
+     "days_to_expiry": 325,
+     "calls": 19,
+     "with_bid": 0,
+     "stale": 19,
      "band_60_90": []
     }
    ],
-   "n_contracts": 39,
+   "n_contracts": 23,
    "option": {
-    "liquidity": "none"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
-  "COHR": {
-   "sym": "COHR",
-   "last": 215.81,
-   "pulled_utc": "2026-11-24 07:13",
+  "MANH": {
+   "sym": "MANH",
+   "last": 249.66,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 50,
-     "with_bid": 0,
-     "stale": 50,
-     "band_60_90": []
-    },
-    {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 8,
+     "days_to_expiry": 234,
+     "calls": 2,
      "with_bid": 0,
-     "stale": 8,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 39,
-     "with_bid": 0,
-     "stale": 39,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 77,
-     "with_bid": 4,
-     "stale": 73,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 75,
-     "with_bid": 2,
-     "stale": 73,
+     "stale": 2,
      "band_60_90": []
     }
    ],
-   "n_contracts": 249,
+   "n_contracts": 2,
    "option": {
-    "liquidity": "none"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "BURL": {
    "sym": "BURL",
-   "last": 235.16,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 244.34,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 12,
      "with_bid": 0,
      "stale": 12,
@@ -1433,7 +1383,7 @@
     },
     {
      "expiry": "2027-08-20",
-     "days_to_expiry": 270,
+     "days_to_expiry": 269,
      "calls": 1,
      "with_bid": 0,
      "stale": 1,
@@ -1441,7 +1391,7 @@
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 8,
      "with_bid": 0,
      "stale": 8,
@@ -1449,22 +1399,11 @@
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 46,
      "with_bid": 9,
      "stale": 37,
      "band_60_90": [
-      {
-       "strike": 125.0,
-       "bid": 131.5,
-       "ask": 136.0,
-       "spread_pct": 3.4,
-       "open_interest": 4,
-       "volume": 1,
-       "iv": 0.889,
-       "delta": 0.882,
-       "quote": "ok"
-      },
       {
        "strike": 130.0,
        "bid": 127.0,
@@ -1472,8 +1411,8 @@
        "spread_pct": 3.5,
        "open_interest": 3,
        "volume": 1,
-       "iv": 0.8585,
-       "delta": 0.876,
+       "iv": 0.7083,
+       "delta": 0.898,
        "quote": "ok"
       },
       {
@@ -1483,8 +1422,8 @@
        "spread_pct": 4.4,
        "open_interest": 23,
        "volume": 1,
-       "iv": 0.6909,
-       "delta": 0.786,
+       "iv": 0.5991,
+       "delta": 0.807,
        "quote": "ok"
       },
       {
@@ -1494,8 +1433,8 @@
        "spread_pct": 5.6,
        "open_interest": 8,
        "volume": 3,
-       "iv": 0.6682,
-       "delta": 0.742,
+       "iv": 0.5909,
+       "delta": 0.76,
        "quote": "ok"
       }
      ]
@@ -1509,27 +1448,165 @@
     "ask": 93.5,
     "open_interest": 23,
     "volume": 1,
-    "days_to_expiry": 424,
+    "days_to_expiry": 423,
     "quote": "ok",
     "mid": 91.5,
     "spread_pct": 4.4,
-    "iv": 0.6909,
+    "iv": 0.5991,
     "iv_source": "chain",
-    "delta": 0.786,
+    "delta": 0.807,
     "cost_usd": 9350.0,
     "breakeven": 273.5,
-    "breakeven_pct_above_last": 16.3,
+    "breakeven_pct_above_last": 11.9,
     "liquidity": "thin"
+   }
+  },
+  "BG": {
+   "sym": "BG",
+   "last": 84.06,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 5,
+     "with_bid": 0,
+     "stale": 5,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 35,
+     "with_bid": 0,
+     "stale": 35,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 40,
+   "option": {
+    "liquidity": "none",
+    "quote": "stale"
+   }
+  },
+  "TTWO": {
+   "sym": "TTWO",
+   "last": 220.41,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
+     "calls": 36,
+     "with_bid": 0,
+     "stale": 36,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 35,
+     "with_bid": 0,
+     "stale": 35,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 25,
+     "with_bid": 0,
+     "stale": 25,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 40,
+     "with_bid": 3,
+     "stale": 37,
+     "band_60_90": [
+      {
+       "strike": 145.0,
+       "bid": 87.0,
+       "ask": 90.5,
+       "spread_pct": 3.9,
+       "open_interest": 5,
+       "volume": 0,
+       "iv": 0.5281,
+       "delta": 0.865,
+       "quote": "ok"
+      }
+     ]
+    }
+   ],
+   "n_contracts": 136,
+   "option": {
+    "liquidity": "none"
+   }
+  },
+  "ADP": {
+   "sym": "ADP",
+   "last": 310.79,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
+     "calls": 30,
+     "with_bid": 7,
+     "stale": 23,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 17,
+     "with_bid": 1,
+     "stale": 16,
+     "band_60_90": [
+      {
+       "strike": 230.0,
+       "bid": 83.0,
+       "ask": 87.5,
+       "spread_pct": 5.3,
+       "open_interest": 1,
+       "volume": 1,
+       "iv": 0.3344,
+       "delta": 0.896,
+       "quote": "ok"
+      }
+     ]
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 9,
+     "with_bid": 0,
+     "stale": 9,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 42,
+     "with_bid": 12,
+     "stale": 30,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 98,
+   "option": {
+    "liquidity": "none"
    }
   },
   "CELH": {
    "sym": "CELH",
-   "last": 28.78,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 28.51,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 16,
      "with_bid": 0,
      "stale": 16,
@@ -1537,15 +1614,15 @@
     },
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 4,
+     "days_to_expiry": 234,
+     "calls": 6,
      "with_bid": 0,
-     "stale": 4,
+     "stale": 6,
      "band_60_90": []
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 26,
      "with_bid": 0,
      "stale": 26,
@@ -1553,34 +1630,35 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 30,
-     "with_bid": 1,
-     "stale": 29,
+     "with_bid": 0,
+     "stale": 30,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 30,
      "with_bid": 0,
      "stale": 30,
      "band_60_90": []
     }
    ],
-   "n_contracts": 106,
+   "n_contracts": 108,
    "option": {
-    "liquidity": "none"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "VRT": {
    "sym": "VRT",
-   "last": 186.35,
-   "pulled_utc": "2026-11-24 07:13",
+   "last": 173.82,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 50,
      "with_bid": 2,
      "stale": 48,
@@ -1592,8 +1670,8 @@
        "spread_pct": 3.9,
        "open_interest": 7,
        "volume": 1,
-       "iv": 0.7026,
-       "delta": 0.889,
+       "iv": 1.038,
+       "delta": 0.829,
        "quote": "ok"
       },
       {
@@ -1603,15 +1681,15 @@
        "spread_pct": 4.5,
        "open_interest": 3,
        "volume": 1,
-       "iv": 0.704,
-       "delta": 0.82,
+       "iv": 0.9528,
+       "delta": 0.771,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 43,
      "with_bid": 0,
      "stale": 43,
@@ -1619,69 +1697,50 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 32,
+     "days_to_expiry": 388,
+     "calls": 33,
      "with_bid": 0,
-     "stale": 32,
+     "stale": 33,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 58,
      "with_bid": 0,
      "stale": 58,
      "band_60_90": []
     }
    ],
-   "n_contracts": 183,
+   "n_contracts": 184,
    "option": {
-    "expiry": "2027-06-17",
-    "strike": 135.0,
-    "bid": 63.55,
-    "ask": 66.5,
-    "open_interest": 3,
-    "volume": 1,
-    "days_to_expiry": 206,
-    "quote": "ok",
-    "mid": 65.03,
-    "spread_pct": 4.5,
-    "iv": 0.704,
-    "iv_source": "chain",
-    "delta": 0.82,
-    "cost_usd": 6650.0,
-    "breakeven": 201.5,
-    "breakeven_pct_above_last": 8.1,
-    "liquidity": "thin"
-   },
-   "option_alt": {
     "expiry": "2027-06-17",
     "strike": 115.0,
     "bid": 77.2,
     "ask": 80.3,
     "open_interest": 7,
     "volume": 1,
-    "days_to_expiry": 206,
+    "days_to_expiry": 205,
     "quote": "ok",
     "mid": 78.75,
     "spread_pct": 3.9,
-    "iv": 0.7026,
+    "iv": 1.038,
     "iv_source": "chain",
-    "delta": 0.889,
+    "delta": 0.829,
     "cost_usd": 8030.0,
     "breakeven": 195.3,
-    "breakeven_pct_above_last": 4.8,
+    "breakeven_pct_above_last": 12.4,
     "liquidity": "thin"
    }
   },
   "SMCI": {
    "sym": "SMCI",
-   "last": 24.53,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 22.62,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 28,
      "with_bid": 1,
      "stale": 27,
@@ -1689,7 +1748,7 @@
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 26,
      "with_bid": 1,
      "stale": 25,
@@ -1697,27 +1756,15 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 34,
-     "with_bid": 2,
-     "stale": 32,
-     "band_60_90": [
-      {
-       "strike": 18.0,
-       "bid": 11.05,
-       "ask": 13.65,
-       "spread_pct": 21.1,
-       "open_interest": 137,
-       "volume": 8,
-       "iv": 1.0501,
-       "delta": 0.807,
-       "quote": "ok"
-      }
-     ]
+     "with_bid": 1,
+     "stale": 33,
+     "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 34,
      "with_bid": 1,
      "stale": 33,
@@ -1726,36 +1773,21 @@
    ],
    "n_contracts": 122,
    "option": {
-    "expiry": "2027-12-17",
-    "strike": 18.0,
-    "bid": 11.05,
-    "ask": 13.65,
-    "open_interest": 137,
-    "volume": 8,
-    "days_to_expiry": 389,
-    "quote": "ok",
-    "mid": 12.35,
-    "spread_pct": 21.1,
-    "iv": 1.0501,
-    "iv_source": "chain",
-    "delta": 0.807,
-    "cost_usd": 1365.0,
-    "breakeven": 31.65,
-    "breakeven_pct_above_last": 29.0,
-    "liquidity": "thin"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "REGN": {
    "sym": "REGN",
-   "last": 942.24,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 987.09,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 45,
+     "days_to_expiry": 205,
+     "calls": 47,
      "with_bid": 8,
-     "stale": 37,
+     "stale": 39,
      "band_60_90": [
       {
        "strike": 860.0,
@@ -1764,34 +1796,34 @@
        "spread_pct": 4.9,
        "open_interest": 14,
        "volume": 5,
-       "iv": 0.3449,
-       "delta": 0.715,
+       "iv": 0.1956,
+       "delta": 0.878,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 30,
+     "days_to_expiry": 297,
+     "calls": 31,
      "with_bid": 0,
-     "stale": 30,
+     "stale": 31,
      "band_60_90": []
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 8,
+     "days_to_expiry": 388,
+     "calls": 9,
      "with_bid": 0,
-     "stale": 8,
+     "stale": 9,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 71,
-     "with_bid": 18,
-     "stale": 53,
+     "with_bid": 15,
+     "stale": 56,
      "band_60_90": [
       {
        "strike": 800.0,
@@ -1800,14 +1832,14 @@
        "spread_pct": 4.5,
        "open_interest": 20,
        "volume": 1,
-       "iv": 0.3845,
-       "delta": 0.762,
+       "iv": 0.2788,
+       "delta": 0.842,
        "quote": "ok"
       }
      ]
     }
    ],
-   "n_contracts": 154,
+   "n_contracts": 158,
    "option": {
     "expiry": "2028-01-21",
     "strike": 800.0,
@@ -1815,27 +1847,27 @@
     "ask": 225.0,
     "open_interest": 20,
     "volume": 1,
-    "days_to_expiry": 424,
+    "days_to_expiry": 423,
     "quote": "ok",
     "mid": 220.0,
     "spread_pct": 4.5,
-    "iv": 0.3845,
+    "iv": 0.2788,
     "iv_source": "chain",
-    "delta": 0.762,
+    "delta": 0.842,
     "cost_usd": 22500.0,
     "breakeven": 1025.0,
-    "breakeven_pct_above_last": 8.8,
+    "breakeven_pct_above_last": 3.8,
     "liquidity": "thin"
    }
   },
   "ANET": {
    "sym": "ANET",
-   "last": 178.31,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 168.56,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 39,
      "with_bid": 1,
      "stale": 38,
@@ -1843,7 +1875,7 @@
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 33,
      "with_bid": 0,
      "stale": 33,
@@ -1851,15 +1883,15 @@
     },
     {
      "expiry": "2027-11-19",
-     "days_to_expiry": 361,
-     "calls": 14,
+     "days_to_expiry": 360,
+     "calls": 19,
      "with_bid": 0,
-     "stale": 14,
+     "stale": 19,
      "band_60_90": []
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 28,
      "with_bid": 0,
      "stale": 28,
@@ -1867,67 +1899,88 @@
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 40,
      "with_bid": 0,
      "stale": 40,
      "band_60_90": []
     }
    ],
-   "n_contracts": 154,
+   "n_contracts": 159,
    "option": {
-    "liquidity": "none",
-    "quote": "stale"
+    "liquidity": "none"
    }
   },
   "DELL": {
    "sym": "DELL",
-   "last": 334.91,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 295.28,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 98,
-     "with_bid": 9,
-     "stale": 89,
+     "with_bid": 7,
+     "stale": 91,
      "band_60_90": [
       {
-       "strike": 240.0,
-       "bid": 122.45,
-       "ask": 126.0,
-       "spread_pct": 2.9,
-       "open_interest": 29,
-       "volume": 5,
-       "iv": 0.7871,
-       "delta": 0.815,
+       "strike": 175.0,
+       "bid": 167.5,
+       "ask": 170.9,
+       "spread_pct": 2.0,
+       "open_interest": 60,
+       "volume": 1,
+       "iv": 1.4921,
+       "delta": 0.852,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 12,
+     "days_to_expiry": 234,
+     "calls": 22,
      "with_bid": 0,
-     "stale": 12,
+     "stale": 22,
      "band_60_90": []
     },
     {
      "expiry": "2027-08-20",
-     "days_to_expiry": 270,
-     "calls": 16,
+     "days_to_expiry": 269,
+     "calls": 20,
      "with_bid": 0,
-     "stale": 16,
+     "stale": 20,
      "band_60_90": []
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 96,
      "with_bid": 13,
      "stale": 83,
      "band_60_90": [
+      {
+       "strike": 145.0,
+       "bid": 195.0,
+       "ask": 199.0,
+       "spread_pct": 2.0,
+       "open_interest": 14,
+       "volume": 1,
+       "iv": 1.4878,
+       "delta": 0.89,
+       "quote": "ok"
+      },
+      {
+       "strike": 155.0,
+       "bid": 187.5,
+       "ask": 191.1,
+       "spread_pct": 1.9,
+       "open_interest": 4,
+       "volume": 1,
+       "iv": 1.4267,
+       "delta": 0.879,
+       "quote": "ok"
+      },
       {
        "strike": 185.0,
        "bid": 165.5,
@@ -1935,74 +1988,137 @@
        "spread_pct": 2.4,
        "open_interest": 21,
        "volume": 11,
-       "iv": 0.7583,
-       "delta": 0.896,
+       "iv": 1.2827,
+       "delta": 0.844,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-10-15",
-     "days_to_expiry": 326,
+     "days_to_expiry": 325,
+     "calls": 14,
+     "with_bid": 0,
+     "stale": 14,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-11-19",
+     "days_to_expiry": 360,
+     "calls": 20,
+     "with_bid": 0,
+     "stale": 20,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 103,
+     "with_bid": 7,
+     "stale": 96,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 98,
+     "with_bid": 4,
+     "stale": 94,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 471,
+   "option": {
+    "expiry": "2027-09-17",
+    "strike": 185.0,
+    "bid": 165.5,
+    "ask": 169.5,
+    "open_interest": 21,
+    "volume": 11,
+    "days_to_expiry": 297,
+    "quote": "ok",
+    "mid": 167.5,
+    "spread_pct": 2.4,
+    "iv": 1.2827,
+    "iv_source": "chain",
+    "delta": 0.844,
+    "cost_usd": 16950.0,
+    "breakeven": 354.5,
+    "breakeven_pct_above_last": 20.1,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2027-06-17",
+    "strike": 175.0,
+    "bid": 167.5,
+    "ask": 170.9,
+    "open_interest": 60,
+    "volume": 1,
+    "days_to_expiry": 205,
+    "quote": "ok",
+    "mid": 169.2,
+    "spread_pct": 2.0,
+    "iv": 1.4921,
+    "iv_source": "chain",
+    "delta": 0.852,
+    "cost_usd": 17090.0,
+    "breakeven": 345.9,
+    "breakeven_pct_above_last": 17.1,
+    "liquidity": "thin"
+   }
+  },
+  "HPE": {
+   "sym": "HPE",
+   "last": 40.19,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
+     "calls": 21,
+     "with_bid": 0,
+     "stale": 21,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 17,
+     "with_bid": 0,
+     "stale": 17,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
      "calls": 12,
      "with_bid": 0,
      "stale": 12,
      "band_60_90": []
     },
     {
-     "expiry": "2027-11-19",
-     "days_to_expiry": 361,
-     "calls": 13,
-     "with_bid": 0,
-     "stale": 13,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 103,
-     "with_bid": 10,
-     "stale": 93,
-     "band_60_90": []
-    },
-    {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 98,
-     "with_bid": 6,
-     "stale": 92,
+     "days_to_expiry": 423,
+     "calls": 26,
+     "with_bid": 0,
+     "stale": 26,
      "band_60_90": []
     }
    ],
-   "n_contracts": 448,
+   "n_contracts": 76,
    "option": {
-    "expiry": "2027-06-17",
-    "strike": 240.0,
-    "bid": 122.45,
-    "ask": 126.0,
-    "open_interest": 29,
-    "volume": 5,
-    "days_to_expiry": 206,
-    "quote": "ok",
-    "mid": 124.22,
-    "spread_pct": 2.9,
-    "iv": 0.7871,
-    "iv_source": "chain",
-    "delta": 0.815,
-    "cost_usd": 12600.0,
-    "breakeven": 366.0,
-    "breakeven_pct_above_last": 9.3,
-    "liquidity": "thin"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "FN": {
    "sym": "FN",
-   "last": 329.22,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 290.12,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
+     "days_to_expiry": 234,
      "calls": 38,
      "with_bid": 0,
      "stale": 38,
@@ -2010,7 +2126,7 @@
     },
     {
      "expiry": "2027-10-15",
-     "days_to_expiry": 326,
+     "days_to_expiry": 325,
      "calls": 39,
      "with_bid": 4,
      "stale": 35,
@@ -2022,15 +2138,15 @@
        "spread_pct": 9.8,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.8118,
-       "delta": 0.845,
+       "iv": 1.2208,
+       "delta": 0.813,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 38,
      "with_bid": 4,
      "stale": 34,
@@ -2042,8 +2158,8 @@
        "spread_pct": 9.9,
        "open_interest": 2,
        "volume": 0,
-       "iv": 0.8113,
-       "delta": 0.857,
+       "iv": 1.2121,
+       "delta": 0.831,
        "quote": "ok"
       },
       {
@@ -2053,8 +2169,8 @@
        "spread_pct": 10.3,
        "open_interest": 2,
        "volume": 0,
-       "iv": 0.7933,
-       "delta": 0.802,
+       "iv": 1.1111,
+       "delta": 0.781,
        "quote": "ok"
       },
       {
@@ -2064,15 +2180,15 @@
        "spread_pct": 10.8,
        "open_interest": 1,
        "volume": 3,
-       "iv": 0.7859,
-       "delta": 0.773,
+       "iv": 1.0734,
+       "delta": 0.755,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 35,
      "with_bid": 3,
      "stale": 32,
@@ -2087,16 +2203,16 @@
     "ask": 160.2,
     "open_interest": 1,
     "volume": 1,
-    "days_to_expiry": 326,
+    "days_to_expiry": 325,
     "quote": "ok",
     "mid": 152.7,
     "spread_pct": 9.8,
-    "iv": 0.8118,
+    "iv": 1.2208,
     "iv_source": "chain",
-    "delta": 0.845,
+    "delta": 0.813,
     "cost_usd": 16020.0,
     "breakeven": 370.2,
-    "breakeven_pct_above_last": 12.4,
+    "breakeven_pct_above_last": 27.6,
     "liquidity": "thin"
    },
    "option_alt": {
@@ -2106,42 +2222,31 @@
     "ask": 172.2,
     "open_interest": 2,
     "volume": 0,
-    "days_to_expiry": 389,
+    "days_to_expiry": 388,
     "quote": "ok",
     "mid": 164.1,
     "spread_pct": 9.9,
-    "iv": 0.8113,
+    "iv": 1.2121,
     "iv_source": "chain",
-    "delta": 0.857,
+    "delta": 0.831,
     "cost_usd": 17220.0,
     "breakeven": 372.2,
-    "breakeven_pct_above_last": 13.1,
+    "breakeven_pct_above_last": 28.3,
     "liquidity": "thin"
    }
   },
   "URI": {
    "sym": "URI",
-   "last": 1040.7,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 1029.68,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 60,
-     "with_bid": 7,
-     "stale": 53,
+     "days_to_expiry": 205,
+     "calls": 61,
+     "with_bid": 6,
+     "stale": 55,
      "band_60_90": [
-      {
-       "strike": 780.0,
-       "bid": 344.0,
-       "ask": 358.0,
-       "spread_pct": 4.0,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 0.7221,
-       "delta": 0.801,
-       "quote": "ok"
-      },
       {
        "strike": 800.0,
        "bid": 348.0,
@@ -2149,8 +2254,8 @@
        "spread_pct": 4.5,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.7936,
-       "delta": 0.781,
+       "iv": 0.8311,
+       "delta": 0.774,
        "quote": "ok"
       },
       {
@@ -2160,15 +2265,15 @@
        "spread_pct": 4.6,
        "open_interest": 2,
        "volume": 0,
-       "iv": 0.5479,
-       "delta": 0.783,
+       "iv": 0.5839,
+       "delta": 0.769,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 43,
      "with_bid": 3,
      "stale": 40,
@@ -2180,8 +2285,8 @@
        "spread_pct": 3.7,
        "open_interest": 2,
        "volume": 0,
-       "iv": 0.6003,
-       "delta": 0.879,
+       "iv": 0.6469,
+       "delta": 0.866,
        "quote": "ok"
       },
       {
@@ -2191,8 +2296,8 @@
        "spread_pct": 5.7,
        "open_interest": 2,
        "volume": 2,
-       "iv": 0.5569,
-       "delta": 0.827,
+       "iv": 0.5921,
+       "delta": 0.815,
        "quote": "ok"
       },
       {
@@ -2202,38 +2307,27 @@
        "spread_pct": 6.7,
        "open_interest": 4,
        "volume": 3,
-       "iv": 0.5112,
-       "delta": 0.747,
+       "iv": 0.5372,
+       "delta": 0.737,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 10,
+     "days_to_expiry": 388,
+     "calls": 12,
      "with_bid": 0,
-     "stale": 10,
+     "stale": 12,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 89,
-     "with_bid": 30,
-     "stale": 59,
+     "with_bid": 27,
+     "stale": 62,
      "band_60_90": [
-      {
-       "strike": 540.0,
-       "bid": 562.0,
-       "ask": 578.0,
-       "spread_pct": 2.8,
-       "open_interest": 2,
-       "volume": 2,
-       "iv": 0.7559,
-       "delta": 0.898,
-       "quote": "ok"
-      },
       {
        "strike": 640.0,
        "bid": 502.0,
@@ -2241,8 +2335,8 @@
        "spread_pct": 3.1,
        "open_interest": 1,
        "volume": 0,
-       "iv": 0.7611,
-       "delta": 0.855,
+       "iv": 0.7961,
+       "delta": 0.85,
        "quote": "ok"
       },
       {
@@ -2252,8 +2346,8 @@
        "spread_pct": 2.8,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.7551,
-       "delta": 0.847,
+       "iv": 0.7885,
+       "delta": 0.842,
        "quote": "ok"
       },
       {
@@ -2263,8 +2357,8 @@
        "spread_pct": 3.9,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.4995,
-       "delta": 0.88,
+       "iv": 0.506,
+       "delta": 0.874,
        "quote": "ok"
       },
       {
@@ -2274,8 +2368,8 @@
        "spread_pct": 4.6,
        "open_interest": 13,
        "volume": 3,
-       "iv": 0.5533,
-       "delta": 0.828,
+       "iv": 0.5827,
+       "delta": 0.82,
        "quote": "ok"
       },
       {
@@ -2284,9 +2378,9 @@
        "ask": 434.0,
        "spread_pct": 4.2,
        "open_interest": 1,
-       "volume": 0,
-       "iv": 0.6793,
-       "delta": 0.81,
+       "volume": 1,
+       "iv": 0.7072,
+       "delta": 0.805,
        "quote": "ok"
       },
       {
@@ -2296,19 +2390,8 @@
        "spread_pct": 4.1,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.7442,
-       "delta": 0.803,
-       "quote": "ok"
-      },
-      {
-       "strike": 770.0,
-       "bid": 394.0,
-       "ask": 407.7,
-       "spread_pct": 3.4,
-       "open_interest": 2,
-       "volume": 1,
-       "iv": 0.638,
-       "delta": 0.802,
+       "iv": 0.7716,
+       "delta": 0.799,
        "quote": "ok"
       },
       {
@@ -2318,8 +2401,8 @@
        "spread_pct": 5.2,
        "open_interest": 24,
        "volume": 1,
-       "iv": 0.5325,
-       "delta": 0.796,
+       "iv": 0.558,
+       "delta": 0.787,
        "quote": "ok"
       },
       {
@@ -2329,8 +2412,8 @@
        "spread_pct": 4.0,
        "open_interest": 5,
        "volume": 1,
-       "iv": 0.7168,
-       "delta": 0.77,
+       "iv": 0.741,
+       "delta": 0.766,
        "quote": "ok"
       },
       {
@@ -2340,8 +2423,8 @@
        "spread_pct": 4.2,
        "open_interest": 5,
        "volume": 1,
-       "iv": 0.7048,
-       "delta": 0.756,
+       "iv": 0.7278,
+       "delta": 0.752,
        "quote": "ok"
       },
       {
@@ -2351,8 +2434,8 @@
        "spread_pct": 4.3,
        "open_interest": 8,
        "volume": 1,
-       "iv": 0.7007,
-       "delta": 0.751,
+       "iv": 0.7233,
+       "delta": 0.747,
        "quote": "ok"
       },
       {
@@ -2362,8 +2445,8 @@
        "spread_pct": 4.8,
        "open_interest": 0,
        "volume": 2,
-       "iv": 0.606,
-       "delta": 0.744,
+       "iv": 0.6277,
+       "delta": 0.739,
        "quote": "ok"
       },
       {
@@ -2373,8 +2456,8 @@
        "spread_pct": 4.6,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.6832,
-       "delta": 0.73,
+       "iv": 0.7044,
+       "delta": 0.727,
        "quote": "ok"
       },
       {
@@ -2384,8 +2467,8 @@
        "spread_pct": 9.3,
        "open_interest": 2,
        "volume": 1,
-       "iv": 0.1508,
-       "delta": 0.855,
+       "iv": 0.175,
+       "delta": 0.811,
        "quote": "ok"
       },
       {
@@ -2395,19 +2478,8 @@
        "spread_pct": 6.3,
        "open_interest": 20,
        "volume": 1,
-       "iv": 0.573,
-       "delta": 0.697,
-       "quote": "ok"
-      },
-      {
-       "strike": 1040.0,
-       "bid": 242.0,
-       "ask": 258.0,
-       "spread_pct": 6.4,
-       "open_interest": 4,
-       "volume": 3,
-       "iv": 0.5667,
-       "delta": 0.649,
+       "iv": 0.5919,
+       "delta": 0.692,
        "quote": "ok"
       },
       {
@@ -2417,14 +2489,14 @@
        "spread_pct": 6.3,
        "open_interest": 9,
        "volume": 6,
-       "iv": 0.5971,
-       "delta": 0.637,
+       "iv": 0.6135,
+       "delta": 0.634,
        "quote": "ok"
       }
      ]
     }
    ],
-   "n_contracts": 202,
+   "n_contracts": 205,
    "option": {
     "expiry": "2027-09-17",
     "strike": 760.0,
@@ -2432,16 +2504,16 @@
     "ask": 362.0,
     "open_interest": 2,
     "volume": 2,
-    "days_to_expiry": 298,
+    "days_to_expiry": 297,
     "quote": "ok",
     "mid": 352.0,
     "spread_pct": 5.7,
-    "iv": 0.5569,
+    "iv": 0.5921,
     "iv_source": "chain",
-    "delta": 0.827,
+    "delta": 0.815,
     "cost_usd": 36200.0,
     "breakeven": 1122.0,
-    "breakeven_pct_above_last": 7.8,
+    "breakeven_pct_above_last": 9.0,
     "liquidity": "thin"
    },
    "option_alt": {
@@ -2451,27 +2523,55 @@
     "ask": 358.0,
     "open_interest": 24,
     "volume": 1,
-    "days_to_expiry": 424,
+    "days_to_expiry": 423,
     "quote": "ok",
     "mid": 349.0,
     "spread_pct": 5.2,
-    "iv": 0.5325,
+    "iv": 0.558,
     "iv_source": "chain",
-    "delta": 0.796,
+    "delta": 0.787,
     "cost_usd": 35800.0,
     "breakeven": 1158.0,
-    "breakeven_pct_above_last": 11.3,
+    "breakeven_pct_above_last": 12.5,
     "liquidity": "thin"
+   }
+  },
+  "FLEX": {
+   "sym": "FLEX",
+   "last": 66.44,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 5,
+     "with_bid": 0,
+     "stale": 5,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 38,
+     "with_bid": 0,
+     "stale": 38,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 43,
+   "option": {
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "EOG": {
    "sym": "EOG",
-   "last": 145.34,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 146.59,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 23,
      "with_bid": 1,
      "stale": 22,
@@ -2479,7 +2579,7 @@
     },
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
+     "days_to_expiry": 234,
      "calls": 1,
      "with_bid": 0,
      "stale": 1,
@@ -2487,7 +2587,7 @@
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 15,
      "with_bid": 1,
      "stale": 14,
@@ -2499,15 +2599,15 @@
        "spread_pct": 5.6,
        "open_interest": 9,
        "volume": 4,
-       "iv": 0.6741,
-       "delta": 0.706,
+       "iv": 0.6567,
+       "delta": 0.71,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 3,
      "with_bid": 0,
      "stale": 3,
@@ -2515,22 +2615,11 @@
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 35,
      "with_bid": 7,
      "stale": 28,
      "band_60_90": [
-      {
-       "strike": 95.0,
-       "bid": 52.0,
-       "ask": 56.0,
-       "spread_pct": 7.4,
-       "open_interest": 4,
-       "volume": 2,
-       "iv": 0.4435,
-       "delta": 0.89,
-       "quote": "ok"
-      },
       {
        "strike": 97.5,
        "bid": 66.5,
@@ -2538,8 +2627,8 @@
        "spread_pct": 6.5,
        "open_interest": 27,
        "volume": 1,
-       "iv": 0.8089,
-       "delta": 0.828,
+       "iv": 0.7855,
+       "delta": 0.831,
        "quote": "ok"
       }
      ]
@@ -2553,27 +2642,27 @@
     "ask": 71.0,
     "open_interest": 27,
     "volume": 1,
-    "days_to_expiry": 424,
+    "days_to_expiry": 423,
     "quote": "ok",
     "mid": 68.75,
     "spread_pct": 6.5,
-    "iv": 0.8089,
+    "iv": 0.7855,
     "iv_source": "chain",
-    "delta": 0.828,
+    "delta": 0.831,
     "cost_usd": 7100.0,
     "breakeven": 168.5,
-    "breakeven_pct_above_last": 15.9,
+    "breakeven_pct_above_last": 14.9,
     "liquidity": "thin"
    }
   },
   "BTSG": {
    "sym": "BTSG",
-   "last": 64.36,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 65.37,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
+     "days_to_expiry": 234,
      "calls": 2,
      "with_bid": 0,
      "stale": 2,
@@ -2581,7 +2670,7 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 15,
      "with_bid": 1,
      "stale": 14,
@@ -2595,12 +2684,12 @@
   },
   "COP": {
    "sym": "COP",
-   "last": 132.19,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 134.64,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 34,
      "with_bid": 7,
      "stale": 27,
@@ -2612,15 +2701,15 @@
        "spread_pct": 6.6,
        "open_interest": 15,
        "volume": 2,
-       "iv": 0.5752,
-       "delta": 0.877,
+       "iv": 0.5481,
+       "delta": 0.893,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 25,
      "with_bid": 0,
      "stale": 25,
@@ -2628,7 +2717,7 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 40,
      "with_bid": 5,
      "stale": 35,
@@ -2640,15 +2729,15 @@
        "spread_pct": 7.2,
        "open_interest": 96,
        "volume": 1,
-       "iv": 0.4787,
-       "delta": 0.842,
+       "iv": 0.42,
+       "delta": 0.869,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 40,
      "with_bid": 3,
      "stale": 37,
@@ -2657,329 +2746,123 @@
    ],
    "n_contracts": 139,
    "option": {
-    "expiry": "2027-12-17",
-    "strike": 95.0,
-    "bid": 42.25,
-    "ask": 45.4,
-    "open_interest": 96,
-    "volume": 1,
-    "days_to_expiry": 389,
-    "quote": "ok",
-    "mid": 43.83,
-    "spread_pct": 7.2,
-    "iv": 0.4787,
-    "iv_source": "chain",
-    "delta": 0.842,
-    "cost_usd": 4540.0,
-    "breakeven": 140.4,
-    "breakeven_pct_above_last": 6.2,
-    "liquidity": "thin"
-   }
-  },
-  "FLEX": {
-   "sym": "FLEX",
-   "last": 73.94,
-   "pulled_utc": "2026-11-24 07:14",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 2,
-     "with_bid": 0,
-     "stale": 2,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 38,
-     "with_bid": 0,
-     "stale": 38,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 40,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
+    "liquidity": "none"
    }
   },
   "APP": {
    "sym": "APP",
-   "last": 373.92,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 381.11,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 111,
-     "with_bid": 5,
-     "stale": 106,
+     "with_bid": 4,
+     "stale": 107,
      "band_60_90": []
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 47,
+     "days_to_expiry": 297,
+     "calls": 49,
      "with_bid": 0,
-     "stale": 47,
+     "stale": 49,
      "band_60_90": []
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 40,
+     "days_to_expiry": 388,
+     "calls": 43,
      "with_bid": 0,
-     "stale": 40,
+     "stale": 43,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 105,
      "with_bid": 0,
      "stale": 105,
      "band_60_90": []
     }
    ],
-   "n_contracts": 303,
+   "n_contracts": 308,
    "option": {
     "liquidity": "none"
    }
   },
-  "MCK": {
-   "sym": "MCK",
-   "last": 1048.42,
-   "pulled_utc": "2026-11-24 07:14",
+  "NVDA": {
+   "sym": "NVDA",
+   "last": 155.38,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 48,
-     "with_bid": 9,
-     "stale": 39,
-     "band_60_90": [
-      {
-       "strike": 680.0,
-       "bid": 398.0,
-       "ask": 406.3,
-       "spread_pct": 2.1,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 0.6005,
-       "delta": 0.892,
-       "quote": "ok"
-      },
-      {
-       "strike": 700.0,
-       "bid": 379.9,
-       "ask": 388.0,
-       "spread_pct": 2.1,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 0.5822,
-       "delta": 0.884,
-       "quote": "ok"
-      },
-      {
-       "strike": 740.0,
-       "bid": 343.0,
-       "ask": 351.4,
-       "spread_pct": 2.4,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 0.543,
-       "delta": 0.867,
-       "quote": "ok"
-      },
-      {
-       "strike": 760.0,
-       "bid": 325.0,
-       "ask": 333.7,
-       "spread_pct": 2.6,
-       "open_interest": 1,
-       "volume": 1,
-       "iv": 0.5261,
-       "delta": 0.857,
-       "quote": "ok"
-      },
-      {
-       "strike": 780.0,
-       "bid": 307.3,
-       "ask": 315.9,
-       "spread_pct": 2.8,
-       "open_interest": 1,
-       "volume": 0,
-       "iv": 0.5093,
-       "delta": 0.847,
-       "quote": "ok"
-      },
-      {
-       "strike": 800.0,
-       "bid": 290.5,
-       "ask": 299.0,
-       "spread_pct": 2.9,
-       "open_interest": 2,
-       "volume": 1,
-       "iv": 0.5167,
-       "delta": 0.829,
-       "quote": "ok"
-      },
-      {
-       "strike": 880.0,
-       "bid": 226.2,
-       "ask": 233.6,
-       "spread_pct": 3.2,
-       "open_interest": 3,
-       "volume": 2,
-       "iv": 0.4627,
-       "delta": 0.771,
-       "quote": "ok"
-      },
-      {
-       "strike": 1000.0,
-       "bid": 143.4,
-       "ask": 150.0,
-       "spread_pct": 4.5,
-       "open_interest": 26,
-       "volume": 1,
-       "iv": 0.4065,
-       "delta": 0.649,
-       "quote": "ok"
-      }
-     ]
+     "days_to_expiry": 205,
+     "calls": 96,
+     "with_bid": 0,
+     "stale": 96,
+     "band_60_90": []
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 29,
-     "with_bid": 2,
-     "stale": 27,
-     "band_60_90": [
-      {
-       "strike": 920.0,
-       "bid": 216.0,
-       "ask": 225.0,
-       "spread_pct": 4.1,
-       "open_interest": 1,
-       "volume": 1,
-       "iv": 0.4324,
-       "delta": 0.73,
-       "quote": "ok"
-      }
-     ]
+     "days_to_expiry": 297,
+     "calls": 77,
+     "with_bid": 0,
+     "stale": 77,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-11-19",
+     "days_to_expiry": 360,
+     "calls": 55,
+     "with_bid": 0,
+     "stale": 55,
+     "band_60_90": []
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 18,
+     "days_to_expiry": 388,
+     "calls": 78,
      "with_bid": 0,
-     "stale": 18,
+     "stale": 78,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 76,
-     "with_bid": 22,
-     "stale": 54,
-     "band_60_90": [
-      {
-       "strike": 650.0,
-       "bid": 450.0,
-       "ask": 459.0,
-       "spread_pct": 2.0,
-       "open_interest": 23,
-       "volume": 6,
-       "iv": 0.5474,
-       "delta": 0.882,
-       "quote": "ok"
-      },
-      {
-       "strike": 840.0,
-       "bid": 298.0,
-       "ask": 307.0,
-       "spread_pct": 3.0,
-       "open_interest": 39,
-       "volume": 2,
-       "iv": 0.4605,
-       "delta": 0.785,
-       "quote": "ok"
-      }
-     ]
+     "days_to_expiry": 423,
+     "calls": 79,
+     "with_bid": 1,
+     "stale": 78,
+     "band_60_90": []
     }
    ],
-   "n_contracts": 171,
+   "n_contracts": 385,
    "option": {
-    "expiry": "2027-06-17",
-    "strike": 880.0,
-    "bid": 226.2,
-    "ask": 233.6,
-    "open_interest": 3,
-    "volume": 2,
-    "days_to_expiry": 206,
-    "quote": "ok",
-    "mid": 229.9,
-    "spread_pct": 3.2,
-    "iv": 0.4627,
-    "iv_source": "chain",
-    "delta": 0.771,
-    "cost_usd": 23360.0,
-    "breakeven": 1113.6,
-    "breakeven_pct_above_last": 6.2,
-    "liquidity": "thin"
-   },
-   "option_alt": {
-    "expiry": "2028-01-21",
-    "strike": 840.0,
-    "bid": 298.0,
-    "ask": 307.0,
-    "open_interest": 39,
-    "volume": 2,
-    "days_to_expiry": 424,
-    "quote": "ok",
-    "mid": 302.5,
-    "spread_pct": 3.0,
-    "iv": 0.4605,
-    "iv_source": "chain",
-    "delta": 0.785,
-    "cost_usd": 30700.0,
-    "breakeven": 1147.0,
-    "breakeven_pct_above_last": 9.4,
-    "liquidity": "thin"
+    "liquidity": "none",
+    "quote": "stale"
    }
   },
   "NBIX": {
    "sym": "NBIX",
-   "last": 158.08,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 163.47,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
      "calls": 13,
      "with_bid": 1,
      "stale": 12,
-     "band_60_90": [
-      {
-       "strike": 140.0,
-       "bid": 19.1,
-       "ask": 23.1,
-       "spread_pct": 19.0,
-       "open_interest": 0,
-       "volume": 1,
-       "iv": 0.2681,
-       "delta": 0.793,
-       "quote": "ok"
-      }
-     ]
+     "band_60_90": []
     },
     {
      "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 11,
+     "days_to_expiry": 234,
+     "calls": 12,
      "with_bid": 3,
-     "stale": 8,
+     "stale": 9,
      "band_60_90": [
       {
        "strike": 155.0,
@@ -2988,15 +2871,15 @@
        "spread_pct": 26.0,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.3244,
-       "delta": 0.62,
+       "iv": 0.2586,
+       "delta": 0.686,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 1,
      "with_bid": 0,
      "stale": 1,
@@ -3004,7 +2887,7 @@
     },
     {
      "expiry": "2027-10-15",
-     "days_to_expiry": 326,
+     "days_to_expiry": 325,
      "calls": 5,
      "with_bid": 0,
      "stale": 5,
@@ -3012,7 +2895,7 @@
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
+     "days_to_expiry": 388,
      "calls": 30,
      "with_bid": 8,
      "stale": 22,
@@ -3024,19 +2907,8 @@
        "spread_pct": 4.6,
        "open_interest": 0,
        "volume": 2,
-       "iv": 1.1119,
-       "delta": 0.886,
-       "quote": "ok"
-      },
-      {
-       "strike": 85.0,
-       "bid": 84.0,
-       "ask": 88.5,
-       "spread_pct": 5.2,
-       "open_interest": 1,
-       "volume": 1,
-       "iv": 0.837,
-       "delta": 0.885,
+       "iv": 0.9675,
+       "delta": 0.896,
        "quote": "ok"
       },
       {
@@ -3046,8 +2918,8 @@
        "spread_pct": 5.2,
        "open_interest": 1,
        "volume": 1,
-       "iv": 0.8951,
-       "delta": 0.829,
+       "iv": 0.7934,
+       "delta": 0.842,
        "quote": "ok"
       },
       {
@@ -3057,57 +2929,38 @@
        "spread_pct": 13.3,
        "open_interest": 2,
        "volume": 2,
-       "iv": 0.4505,
-       "delta": 0.747,
+       "iv": 0.3784,
+       "delta": 0.787,
        "quote": "ok"
       }
      ]
     }
    ],
-   "n_contracts": 60,
+   "n_contracts": 61,
    "option": {
-    "expiry": "2027-06-17",
-    "strike": 140.0,
-    "bid": 19.1,
-    "ask": 23.1,
-    "open_interest": 0,
-    "volume": 1,
-    "days_to_expiry": 206,
-    "quote": "ok",
-    "mid": 21.1,
-    "spread_pct": 19.0,
-    "iv": 0.2681,
-    "iv_source": "chain",
-    "delta": 0.793,
-    "cost_usd": 2310.0,
-    "breakeven": 163.1,
-    "breakeven_pct_above_last": 3.2,
-    "liquidity": "thin"
-   },
-   "option_alt": {
     "expiry": "2027-12-17",
     "strike": 135.0,
     "bid": 35.0,
     "ask": 40.0,
     "open_interest": 2,
     "volume": 2,
-    "days_to_expiry": 389,
+    "days_to_expiry": 388,
     "quote": "ok",
     "mid": 37.5,
     "spread_pct": 13.3,
-    "iv": 0.4505,
+    "iv": 0.3784,
     "iv_source": "chain",
-    "delta": 0.747,
+    "delta": 0.787,
     "cost_usd": 4000.0,
     "breakeven": 175.0,
-    "breakeven_pct_above_last": 10.7,
+    "breakeven_pct_above_last": 7.1,
     "liquidity": "thin"
    }
   },
   "ALSN": {
    "sym": "ALSN",
-   "last": 122.14,
-   "pulled_utc": "2026-11-24 07:14",
+   "last": 117.66,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [],
    "n_contracts": 0,
    "option": {
@@ -3115,14 +2968,66 @@
    },
    "note": "no expiry 180 to 460 days out"
   },
-  "AFL": {
-   "sym": "AFL",
-   "last": 125.0,
-   "pulled_utc": "2026-11-24 07:14",
+  "MAR": {
+   "sym": "MAR",
+   "last": 416.23,
+   "pulled_utc": "2026-11-25 05:50",
    "expiries_in_window": [
     {
      "expiry": "2027-06-17",
-     "days_to_expiry": 206,
+     "days_to_expiry": 205,
+     "calls": 31,
+     "with_bid": 0,
+     "stale": 31,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-07-16",
+     "days_to_expiry": 234,
+     "calls": 8,
+     "with_bid": 0,
+     "stale": 8,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-09-17",
+     "days_to_expiry": 297,
+     "calls": 28,
+     "with_bid": 0,
+     "stale": 28,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2027-12-17",
+     "days_to_expiry": 388,
+     "calls": 20,
+     "with_bid": 0,
+     "stale": 20,
+     "band_60_90": []
+    },
+    {
+     "expiry": "2028-01-21",
+     "days_to_expiry": 423,
+     "calls": 49,
+     "with_bid": 1,
+     "stale": 48,
+     "band_60_90": []
+    }
+   ],
+   "n_contracts": 136,
+   "option": {
+    "liquidity": "none",
+    "quote": "stale"
+   }
+  },
+  "AFL": {
+   "sym": "AFL",
+   "last": 125.78,
+   "pulled_utc": "2026-11-25 05:50",
+   "expiries_in_window": [
+    {
+     "expiry": "2027-06-17",
+     "days_to_expiry": 205,
      "calls": 19,
      "with_bid": 0,
      "stale": 19,
@@ -3130,7 +3035,7 @@
     },
     {
      "expiry": "2027-09-17",
-     "days_to_expiry": 298,
+     "days_to_expiry": 297,
      "calls": 14,
      "with_bid": 2,
      "stale": 12,
@@ -3142,8 +3047,8 @@
        "spread_pct": 18.0,
        "open_interest": 39,
        "volume": 1,
-       "iv": 0.3209,
-       "delta": 0.707,
+       "iv": 0.3085,
+       "delta": 0.718,
        "quote": "ok"
       },
       {
@@ -3153,23 +3058,23 @@
        "spread_pct": 29.2,
        "open_interest": 5,
        "volume": 1,
-       "iv": 0.2963,
-       "delta": 0.658,
+       "iv": 0.2856,
+       "delta": 0.669,
        "quote": "ok"
       }
      ]
     },
     {
      "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 2,
+     "days_to_expiry": 388,
+     "calls": 3,
      "with_bid": 0,
-     "stale": 2,
+     "stale": 3,
      "band_60_90": []
     },
     {
      "expiry": "2028-01-21",
-     "days_to_expiry": 424,
+     "days_to_expiry": 423,
      "calls": 25,
      "with_bid": 8,
      "stale": 17,
@@ -3181,8 +3086,8 @@
        "spread_pct": 9.4,
        "open_interest": 54,
        "volume": 1,
-       "iv": 0.2886,
-       "delta": 0.882,
+       "iv": 0.2667,
+       "delta": 0.9,
        "quote": "ok"
       },
       {
@@ -3192,68 +3097,51 @@
        "spread_pct": 19.8,
        "open_interest": 8,
        "volume": 1,
-       "iv": 0.327,
-       "delta": 0.749,
+       "iv": 0.3154,
+       "delta": 0.758,
        "quote": "ok"
       }
      ]
     }
    ],
-   "n_contracts": 60,
+   "n_contracts": 61,
    "option": {
-    "liquidity": "none"
-   }
-  },
-  "MAR": {
-   "sym": "MAR",
-   "last": 415.63,
-   "pulled_utc": "2026-11-24 07:14",
-   "expiries_in_window": [
-    {
-     "expiry": "2027-06-17",
-     "days_to_expiry": 206,
-     "calls": 31,
-     "with_bid": 0,
-     "stale": 31,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-07-16",
-     "days_to_expiry": 235,
-     "calls": 7,
-     "with_bid": 0,
-     "stale": 7,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-09-17",
-     "days_to_expiry": 298,
-     "calls": 27,
-     "with_bid": 0,
-     "stale": 27,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2027-12-17",
-     "days_to_expiry": 389,
-     "calls": 19,
-     "with_bid": 0,
-     "stale": 19,
-     "band_60_90": []
-    },
-    {
-     "expiry": "2028-01-21",
-     "days_to_expiry": 424,
-     "calls": 49,
-     "with_bid": 1,
-     "stale": 48,
-     "band_60_90": []
-    }
-   ],
-   "n_contracts": 133,
-   "option": {
-    "liquidity": "none",
-    "quote": "stale"
+    "expiry": "2028-01-21",
+    "strike": 110.0,
+    "bid": 20.5,
+    "ask": 25.0,
+    "open_interest": 8,
+    "volume": 1,
+    "days_to_expiry": 423,
+    "quote": "ok",
+    "mid": 22.75,
+    "spread_pct": 19.8,
+    "iv": 0.3154,
+    "iv_source": "chain",
+    "delta": 0.758,
+    "cost_usd": 2500.0,
+    "breakeven": 135.0,
+    "breakeven_pct_above_last": 7.3,
+    "liquidity": "thin"
+   },
+   "option_alt": {
+    "expiry": "2028-01-21",
+    "strike": 95.0,
+    "bid": 30.5,
+    "ask": 33.5,
+    "open_interest": 54,
+    "volume": 1,
+    "days_to_expiry": 423,
+    "quote": "ok",
+    "mid": 32.0,
+    "spread_pct": 9.4,
+    "iv": 0.2667,
+    "iv_source": "chain",
+    "delta": 0.9,
+    "cost_usd": 3350.0,
+    "breakeven": 128.5,
+    "breakeven_pct_above_last": 2.2,
+    "liquidity": "thin"
    }
   }
  }

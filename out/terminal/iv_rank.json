@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "out/history/iv",
-  "pulled_utc": "2026-11-24 07:22",
+  "pulled_utc": "2026-11-25 05:59",
   "notes": [
    "iv_rank = percentile of today's 30-day at-the-money iv in the ticker's own snapshots; needs 60 observations"
   ]
@@ -709,10 +709,10 @@
   },
   {
    "ticker": "BSY",
-   "date": "2026-11-18",
-   "iv_atm_30d": 0.6329,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-25",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "BTSG",
@@ -3285,10 +3285,10 @@
   },
   {
    "ticker": "NWSA",
-   "date": "2026-11-19",
-   "iv_atm_30d": 0.5889,
-   "n_obs": 4,
-   "status": "building, 4 days"
+   "date": "2026-11-25",
+   "iv_atm_30d": 0.125,
+   "n_obs": 5,
+   "status": "building, 5 days"
   },
   {
    "ticker": "NXST",
@@ -3712,10 +3712,10 @@
   },
   {
    "ticker": "SYF",
-   "date": "2026-11-24",
-   "iv_atm_30d": 1.0664,
-   "n_obs": 6,
-   "status": "building, 6 days"
+   "date": "2026-11-25",
+   "iv_atm_30d": 1.0928,
+   "n_obs": 7,
+   "status": "building, 7 days"
   },
   {
    "ticker": "SYY",
@@ -3817,10 +3817,10 @@
   },
   {
    "ticker": "TTEK",
-   "date": "2026-11-24",
+   "date": "2026-11-25",
    "iv_atm_30d": 0.0625,
-   "n_obs": 4,
-   "status": "building, 4 days"
+   "n_obs": 5,
+   "status": "building, 5 days"
   },
   {
    "ticker": "TTWO",
