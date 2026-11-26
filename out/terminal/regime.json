@@ -1,7 +1,7 @@
 {
  "meta": {
-  "asof": "2026-11-24",
-  "generated_utc": "2026-11-25 05:53",
+  "asof": "2026-11-25",
+  "generated_utc": "2026-11-26 05:32",
   "thresholds": {
    "trend": "stress below the 200-day; caution below the 50-day or 7%+ off the 52-week high",
    "breadth": "caution under 50% above the 200-day, stress under 35%",
@@ -14,91 +14,87 @@
  },
  "overall": "red",
  "n_stress": 7,
- "n_caution": 1,
+ "n_caution": 0,
  "gauges": {
   "trend_SPY": {
    "state": "stress",
    "value": {
-    "last": 718.78,
-    "vs_50d_pct": -5.3,
-    "vs_200d_pct": -1.9,
-    "off_52w_high_pct": -7.7
+    "last": 716.7,
+    "vs_50d_pct": -5.4,
+    "vs_200d_pct": -2.2,
+    "off_52w_high_pct": -8.0
    },
-   "reading": "SPY -1.9% vs its 200-day, -5.3% vs its 50-day, -7.7% from its 52-week high"
+   "reading": "SPY -2.2% vs its 200-day, -5.4% vs its 50-day, -8.0% from its 52-week high"
   },
   "trend_QQQ": {
    "state": "stress",
    "value": {
-    "last": 638.1,
-    "vs_50d_pct": -9.9,
-    "vs_200d_pct": -6.6,
-    "off_52w_high_pct": -16.0
+    "last": 633.93,
+    "vs_50d_pct": -10.3,
+    "vs_200d_pct": -7.3,
+    "off_52w_high_pct": -16.6
    },
-   "reading": "QQQ -6.6% vs its 200-day, -9.9% vs its 50-day, -16.0% from its 52-week high"
+   "reading": "QQQ -7.3% vs its 200-day, -10.3% vs its 50-day, -16.6% from its 52-week high"
   },
   "trend_IWM": {
    "state": "stress",
    "value": {
-    "last": 267.14,
-    "vs_50d_pct": -3.7,
-    "vs_200d_pct": -4.4,
-    "off_52w_high_pct": -12.4
+    "last": 268.87,
+    "vs_50d_pct": -3.0,
+    "vs_200d_pct": -3.8,
+    "off_52w_high_pct": -11.9
    },
-   "reading": "IWM -4.4% vs its 200-day, -3.7% vs its 50-day, -12.4% from its 52-week high"
+   "reading": "IWM -3.8% vs its 200-day, -3.0% vs its 50-day, -11.9% from its 52-week high"
   },
   "breadth": {
-   "state": "caution",
+   "state": "ok",
    "value": {
-    "pct_above_200d": 49.7,
-    "pct_above_50d": 52.2,
-    "change_20d_200d_pts": -3.6,
-    "change_20d_50d_pts": -2.0
+    "pct_above_200d": 51.5,
+    "pct_above_50d": 56.7,
+    "change_20d_200d_pts": -1.3,
+    "change_20d_50d_pts": 4.0
    },
-   "reading": "50% of the universe above its 200-day (-4 pts in 20 sessions), 52% above its 50-day"
+   "reading": "52% of the universe above its 200-day (-1 pts in 20 sessions), 57% above its 50-day"
   },
   "credit_HYG_LQD": {
    "state": "stress",
    "value": {
-    "ratio": 0.7364,
-    "vs_50d_pct": -1.42,
-    "vs_200d_pct": -0.42,
-    "change_20d_pct": -1.02
+    "ratio": 0.7337,
+    "vs_50d_pct": -1.74,
+    "vs_200d_pct": -0.79,
+    "change_20d_pct": -1.59
    },
-   "reading": "HYG/LQD -1.42% vs its 50-day, -0.42% vs its 200-day, -1.02% in 20 sessions"
+   "reading": "HYG/LQD -1.74% vs its 50-day, -0.79% vs its 200-day, -1.59% in 20 sessions"
   },
   "credit_HYG_IEF": {
    "state": "stress",
    "value": {
-    "ratio": 0.834,
-    "vs_50d_pct": -2.33,
-    "vs_200d_pct": -1.59,
-    "change_20d_pct": -2.09
+    "ratio": 0.8312,
+    "vs_50d_pct": -2.58,
+    "vs_200d_pct": -1.92,
+    "change_20d_pct": -2.68
    },
-   "reading": "HYG/IEF -2.33% vs its 50-day, -1.59% vs its 200-day, -2.09% in 20 sessions"
+   "reading": "HYG/IEF -2.58% vs its 50-day, -1.92% vs its 200-day, -2.68% in 20 sessions"
   },
   "volatility": {
    "state": "stress",
    "value": {
-    "vix": 26.36,
-    "vix3m": 25.47
+    "vix": 28.29,
+    "vix3m": 26.29
    },
-   "reading": "VIX 26.4 vs VIX3M 25.5 (backwardation)"
+   "reading": "VIX 28.3 vs VIX3M 26.3 (backwardation)"
   },
   "leadership": {
    "state": "stress",
    "value": {
-    "smh_vs_spy_20d_pts": -16.9,
-    "smh_vs_spy_60d_pts": -17.0,
-    "smh_vs_200d_pct": -18.8
+    "smh_vs_spy_20d_pts": -18.4,
+    "smh_vs_spy_60d_pts": -16.6,
+    "smh_vs_200d_pct": -19.6
    },
-   "reading": "SMH -16.9 pts vs SPY over 20 sessions, -17.0 over 60; -18.8% vs its own 200-day"
+   "reading": "SMH -18.4 pts vs SPY over 20 sessions, -16.6 over 60; -19.6% vs its own 200-day"
   }
  },
  "history_250": [
-  {
-   "date": "2025-11-26",
-   "state": "yellow"
-  },
   {
    "date": "2025-11-28",
    "state": "yellow"
@@ -1094,24 +1090,28 @@
   {
    "date": "2026-11-24",
    "state": "red"
+  },
+  {
+   "date": "2026-11-25",
+   "state": "red"
   }
  ],
  "backfill": {
   "by_state": {
    "green": {
-    "days": 788,
+    "days": 787,
     "months": 66,
-    "fwd60_spy_mean_pct": 1.69,
+    "fwd60_spy_mean_pct": 1.68,
     "fwd60_spy_median_pct": 3.46,
-    "worst_drawdown_60d_mean_pct": -4.39,
+    "worst_drawdown_60d_mean_pct": -4.4,
     "pct_drawdown_worse_than_10": 7.4
    },
    "yellow": {
-    "days": 618,
-    "months": 84,
-    "fwd60_spy_mean_pct": 4.21,
-    "fwd60_spy_median_pct": 4.58,
-    "worst_drawdown_60d_mean_pct": -3.62,
+    "days": 619,
+    "months": 85,
+    "fwd60_spy_mean_pct": 4.2,
+    "fwd60_spy_median_pct": 4.57,
+    "worst_drawdown_60d_mean_pct": -3.63,
     "pct_drawdown_worse_than_10": 6.0
    },
    "red": {
@@ -1124,6 +1124,6 @@
    }
   },
   "summary": "Over 2314 sessions, red days (848 days in 69 months) were followed by a 60-session SPY return of +3.9% on average vs +1.7% after green, and an average worst drawdown of -5.9% vs -4.4%. A drawdown worse than 10% followed 24% of red days vs 7% of green days. Red covers 37% of all days, and the days overlap heavily (few independent episodes). Red has marked a fatter tail of drawdowns but not a lower average return, so it reads as a risk gauge for sizing, not a timing signal. Credit and leadership gauges are in the history too; the universe is today's index members, which flatters breadth in the past.",
-  "first_date": "2017-09-12"
+  "first_date": "2017-09-13"
  }
 }

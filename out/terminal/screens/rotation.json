@@ -1,8 +1,8 @@
 {
  "meta": {
   "rule": "Groups = GICS sub-industries with 5 or more names in the universe, plus the sector ETFs. Equal-weight 1 and 2 month return vs SPY, percent of members above their 50-day now and a month ago, rank change of the 1-month relative return (month ago rank minus rank now). Top 10 most improving groups; inside each, $5B+ members within 8 percent of their 50-day.",
-  "asof": "2026-11-24",
-  "generated_utc": "2026-11-25 06:01",
+  "asof": "2026-11-25",
+  "generated_utc": "2026-11-26 05:38",
   "caveats": [
    "Descriptive only: screen.py's own tests found chart patterns alone showed no reliable edge, so this is a place to look, not a signal."
   ],
@@ -12,445 +12,202 @@
   {
    "group": "Casinos & Gaming",
    "members": 5,
-   "rel_1m_pct": 18.06,
-   "rel_2m_pct": 14.08,
-   "rel_1m_month_ago_pct": -3.24,
+   "rel_1m_pct": 22.58,
+   "rel_2m_pct": 17.82,
+   "rel_1m_month_ago_pct": -4.03,
    "pct_above_50d": 100.0,
-   "pct_above_50d_month_ago": 20.0,
+   "pct_above_50d_month_ago": 0.0,
    "rank_now": 1,
-   "rank_month_ago": 68,
-   "rank_change": 67,
-   "breadth_change": 80.0,
+   "rank_month_ago": 70,
+   "rank_change": 69,
+   "breadth_change": 100.0,
    "candidates": [
     {
      "ticker": "LVS",
      "name": "Las Vegas Sands",
-     "mcap_busd": 24.84,
-     "vs_50d_pct": 3.3
-    },
-    {
-     "ticker": "MGM",
-     "name": "MGM Resorts",
-     "mcap_busd": 8.68,
-     "vs_50d_pct": 7.7
-    },
-    {
-     "ticker": "WYNN",
-     "name": "Wynn Resorts",
-     "mcap_busd": 8.63,
-     "vs_50d_pct": 6.4
+     "mcap_busd": 24.93,
+     "vs_50d_pct": 3.7
     },
     {
      "ticker": "BYD",
      "name": "Boyd Gaming",
-     "mcap_busd": 5.47,
-     "vs_50d_pct": 6.3
-    },
-    {
-     "ticker": "CHDN",
-     "name": "Churchill Downs Inc.",
-     "mcap_busd": 6.4,
-     "vs_50d_pct": 8.0
-    }
-   ]
-  },
-  {
-   "group": "Passenger Airlines",
-   "members": 5,
-   "rel_1m_pct": 11.87,
-   "rel_2m_pct": 3.17,
-   "rel_1m_month_ago_pct": -8.17,
-   "pct_above_50d": 40.0,
-   "pct_above_50d_month_ago": 20.0,
-   "rank_now": 10,
-   "rank_month_ago": 77,
-   "rank_change": 67,
-   "breadth_change": 20.0,
-   "candidates": [
-    {
-     "ticker": "DAL",
-     "name": "Delta Air Lines",
-     "mcap_busd": 55.59,
-     "vs_50d_pct": 2.3
-    },
-    {
-     "ticker": "LUV",
-     "name": "Southwest Airlines",
-     "mcap_busd": 22.42,
-     "vs_50d_pct": 7.0
-    },
-    {
-     "ticker": "UAL",
-     "name": "United Airlines Holdings",
-     "mcap_busd": 35.02,
-     "vs_50d_pct": -0.1
-    },
-    {
-     "ticker": "AAL",
-     "name": "American Airlines Group",
-     "mcap_busd": 8.35,
-     "vs_50d_pct": -2.3
-    }
-   ]
-  },
-  {
-   "group": "Automotive Retail",
-   "members": 8,
-   "rel_1m_pct": 12.75,
-   "rel_2m_pct": 14.37,
-   "rel_1m_month_ago_pct": 1.7,
-   "pct_above_50d": 75.0,
-   "pct_above_50d_month_ago": 62.5,
-   "rank_now": 9,
-   "rank_month_ago": 53,
-   "rank_change": 44,
-   "breadth_change": 12.5,
-   "candidates": [
-    {
-     "ticker": "CVNA",
-     "name": "Carvana",
-     "mcap_busd": 165.65,
-     "vs_50d_pct": 0.9
-    },
-    {
-     "ticker": "ORLY",
-     "name": "O'Reilly Automotive",
-     "mcap_busd": 76.54,
-     "vs_50d_pct": 7.7
-    },
-    {
-     "ticker": "AN",
-     "name": "AutoNation",
-     "mcap_busd": 5.72,
-     "vs_50d_pct": 5.7
-    },
-    {
-     "ticker": "LAD",
-     "name": "Lithia Motors",
-     "mcap_busd": 6.31,
-     "vs_50d_pct": -2.6
-    },
-    {
-     "ticker": "MUSA",
-     "name": "Murphy USA",
-     "mcap_busd": 9.24,
-     "vs_50d_pct": -2.2
-    },
-    {
-     "ticker": "PAG",
-     "name": "Penske Automotive Group",
-     "mcap_busd": 13.98,
-     "vs_50d_pct": 1.9
+     "mcap_busd": 5.51,
+     "vs_50d_pct": 6.8
     }
    ]
   },
   {
    "group": "Health Care REITs",
    "members": 8,
-   "rel_1m_pct": 11.18,
-   "rel_2m_pct": 12.27,
-   "rel_1m_month_ago_pct": 1.14,
+   "rel_1m_pct": 15.96,
+   "rel_2m_pct": 12.65,
+   "rel_1m_month_ago_pct": -3.14,
    "pct_above_50d": 100.0,
-   "pct_above_50d_month_ago": 37.5,
-   "rank_now": 13,
-   "rank_month_ago": 55,
-   "rank_change": 42,
-   "breadth_change": 62.5,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 7,
+   "rank_month_ago": 69,
+   "rank_change": 62,
+   "breadth_change": 100.0,
    "candidates": [
     {
      "ticker": "DOC",
      "name": "Healthpeak Properties",
-     "mcap_busd": 14.79,
-     "vs_50d_pct": 4.1
+     "mcap_busd": 15.04,
+     "vs_50d_pct": 5.8
     },
     {
      "ticker": "VTR",
      "name": "Ventas",
-     "mcap_busd": 46.1,
-     "vs_50d_pct": 1.2
+     "mcap_busd": 46.2,
+     "vs_50d_pct": 1.5
     },
     {
      "ticker": "WELL",
      "name": "Welltower",
-     "mcap_busd": 179.84,
-     "vs_50d_pct": 4.0
+     "mcap_busd": 180.6,
+     "vs_50d_pct": 4.3
     },
     {
      "ticker": "CTRE",
      "name": "CareTrust REIT",
-     "mcap_busd": 9.88,
-     "vs_50d_pct": 3.6
+     "mcap_busd": 9.93,
+     "vs_50d_pct": 4.1
     },
     {
      "ticker": "OHI",
      "name": "Omega Healthcare Investors",
-     "mcap_busd": 14.98,
-     "vs_50d_pct": 1.5
+     "mcap_busd": 15.07,
+     "vs_50d_pct": 2.1
     },
     {
      "ticker": "SBRA",
      "name": "Sabra Health Care REIT",
-     "mcap_busd": 5.51,
-     "vs_50d_pct": 5.8
+     "mcap_busd": 5.54,
+     "vs_50d_pct": 6.4
     }
    ]
   },
   {
    "group": "Movies & Entertainment",
    "members": 6,
-   "rel_1m_pct": 8.4,
-   "rel_2m_pct": 5.81,
-   "rel_1m_month_ago_pct": -3.33,
+   "rel_1m_pct": 9.74,
+   "rel_2m_pct": 6.23,
+   "rel_1m_month_ago_pct": -4.42,
    "pct_above_50d": 66.7,
    "pct_above_50d_month_ago": 33.3,
-   "rank_now": 29,
-   "rank_month_ago": 69,
-   "rank_change": 40,
+   "rank_now": 28,
+   "rank_month_ago": 71,
+   "rank_change": 43,
    "breadth_change": 33.400000000000006,
    "candidates": [
     {
      "ticker": "LYV",
      "name": "Live Nation Entertainment",
-     "mcap_busd": 43.28,
-     "vs_50d_pct": 5.6
+     "mcap_busd": 42.83,
+     "vs_50d_pct": 4.4
     },
     {
      "ticker": "TKO",
      "name": "TKO Group Holdings",
-     "mcap_busd": 35.73,
-     "vs_50d_pct": 3.4
+     "mcap_busd": 36.11,
+     "vs_50d_pct": 4.5
     },
     {
      "ticker": "WMG",
      "name": "Warner Music Group",
-     "mcap_busd": 17.04,
-     "vs_50d_pct": 8.0
-    }
-   ]
-  },
-  {
-   "group": "Industrial Machinery & Supplies & Components",
-   "members": 28,
-   "rel_1m_pct": 9.1,
-   "rel_2m_pct": 7.57,
-   "rel_1m_month_ago_pct": -1.6,
-   "pct_above_50d": 46.4,
-   "pct_above_50d_month_ago": 32.1,
-   "rank_now": 24,
-   "rank_month_ago": 63,
-   "rank_change": 39,
-   "breadth_change": 14.299999999999997,
-   "candidates": [
-    {
-     "ticker": "DOV",
-     "name": "Dover Corporation",
-     "mcap_busd": 27.18,
-     "vs_50d_pct": 3.1
-    },
-    {
-     "ticker": "HUBB",
-     "name": "Hubbell Incorporated",
-     "mcap_busd": 22.3,
-     "vs_50d_pct": -6.2
-    },
-    {
-     "ticker": "IEX",
-     "name": "IDEX Corporation",
-     "mcap_busd": 16.58,
-     "vs_50d_pct": -2.6
-    },
-    {
-     "ticker": "ITW",
-     "name": "Illinois Tool Works",
-     "mcap_busd": 80.64,
-     "vs_50d_pct": 3.2
-    },
-    {
-     "ticker": "IR",
-     "name": "Ingersoll Rand",
-     "mcap_busd": 31.85,
-     "vs_50d_pct": 5.3
-    },
-    {
-     "ticker": "NDSN",
-     "name": "Nordson Corporation",
-     "mcap_busd": 17.83,
-     "vs_50d_pct": -1.2
-    },
-    {
-     "ticker": "PH",
-     "name": "Parker Hannifin",
-     "mcap_busd": 114.27,
-     "vs_50d_pct": -3.7
-    },
-    {
-     "ticker": "SNA",
-     "name": "Snap-on",
-     "mcap_busd": 18.45,
-     "vs_50d_pct": -1.9
-    },
-    {
-     "ticker": "GWW",
-     "name": "W. W. Grainger",
-     "mcap_busd": 65.45,
-     "vs_50d_pct": 3.6
-    },
-    {
-     "ticker": "XYL",
-     "name": "Xylem Inc.",
-     "mcap_busd": 21.83,
-     "vs_50d_pct": -5.4
-    },
-    {
-     "ticker": "CR",
-     "name": "Crane",
-     "mcap_busd": 12.21,
-     "vs_50d_pct": 3.5
-    },
-    {
-     "ticker": "DCI",
-     "name": "Donaldson Company",
-     "mcap_busd": 9.59,
-     "vs_50d_pct": -4.0
-    },
-    {
-     "ticker": "GGG",
-     "name": "Graco Inc.",
-     "mcap_busd": 11.56,
-     "vs_50d_pct": -2.9
-    },
-    {
-     "ticker": "ITT",
-     "name": "ITT Inc.",
-     "mcap_busd": 18.93,
-     "vs_50d_pct": 4.2
-    },
-    {
-     "ticker": "LECO",
-     "name": "Lincoln Electric",
-     "mcap_busd": 13.79,
-     "vs_50d_pct": -5.1
-    },
-    {
-     "ticker": "RBC",
-     "name": "RBC Bearings",
-     "mcap_busd": 14.98,
-     "vs_50d_pct": -3.7
-    }
-   ]
-  },
-  {
-   "group": "Construction Materials",
-   "members": 6,
-   "rel_1m_pct": 10.81,
-   "rel_2m_pct": 12.58,
-   "rel_1m_month_ago_pct": 1.66,
-   "pct_above_50d": 83.3,
-   "pct_above_50d_month_ago": 33.3,
-   "rank_now": 17,
-   "rank_month_ago": 54,
-   "rank_change": 37,
-   "breadth_change": 50.0,
-   "candidates": [
-    {
-     "ticker": "CRH",
-     "name": "CRH plc",
-     "mcap_busd": 62.31,
-     "vs_50d_pct": 6.8
-    },
-    {
-     "ticker": "MLM",
-     "name": "Martin Marietta Materials",
-     "mcap_busd": 37.42,
-     "vs_50d_pct": 4.4
-    },
-    {
-     "ticker": "EXP",
-     "name": "Eagle Materials",
-     "mcap_busd": 5.43,
-     "vs_50d_pct": 1.0
-    },
-    {
-     "ticker": "JHX",
-     "name": "James Hardie Industries",
-     "mcap_busd": 16.43,
-     "vs_50d_pct": 6.4
+     "mcap_busd": 17.07,
+     "vs_50d_pct": 7.9
     }
    ]
   },
   {
    "group": "XLC (Communication Services ETF)",
    "members": 1,
-   "rel_1m_pct": 6.67,
-   "rel_2m_pct": -0.72,
-   "rel_1m_month_ago_pct": -7.29,
+   "rel_1m_pct": 8.62,
+   "rel_2m_pct": 1.17,
+   "rel_1m_month_ago_pct": -7.36,
    "pct_above_50d": 0.0,
    "pct_above_50d_month_ago": 0.0,
-   "rank_now": 39,
-   "rank_month_ago": 76,
-   "rank_change": 37,
+   "rank_now": 40,
+   "rank_month_ago": 80,
+   "rank_change": 40,
    "breadth_change": 0.0,
    "candidates": []
   },
   {
-   "group": "Retail REITs",
-   "members": 9,
-   "rel_1m_pct": 11.1,
-   "rel_2m_pct": 13.36,
-   "rel_1m_month_ago_pct": 2.21,
+   "group": "Homebuilding",
+   "members": 6,
+   "rel_1m_pct": 13.45,
+   "rel_2m_pct": 13.89,
+   "rel_1m_month_ago_pct": 0.3,
    "pct_above_50d": 100.0,
-   "pct_above_50d_month_ago": 22.2,
-   "rank_now": 15,
-   "rank_month_ago": 50,
-   "rank_change": 35,
-   "breadth_change": 77.8,
+   "pct_above_50d_month_ago": 66.7,
+   "rank_now": 16,
+   "rank_month_ago": 55,
+   "rank_change": 39,
+   "breadth_change": 33.3,
    "candidates": [
     {
-     "ticker": "FRT",
-     "name": "Federal Realty Investment Trust",
-     "mcap_busd": 9.74,
-     "vs_50d_pct": 2.7
+     "ticker": "LEN",
+     "name": "Lennar",
+     "mcap_busd": 20.65,
+     "vs_50d_pct": 5.8
     },
     {
-     "ticker": "O",
-     "name": "Realty Income",
-     "mcap_busd": 56.79,
-     "vs_50d_pct": 5.1
+     "ticker": "NVR",
+     "name": "NVR, Inc.",
+     "mcap_busd": 15.92,
+     "vs_50d_pct": 0.5
+    }
+   ]
+  },
+  {
+   "group": "Transaction & Payment Processing Services",
+   "members": 13,
+   "rel_1m_pct": 15.13,
+   "rel_2m_pct": 17.36,
+   "rel_1m_month_ago_pct": 2.15,
+   "pct_above_50d": 84.6,
+   "pct_above_50d_month_ago": 30.8,
+   "rank_now": 8,
+   "rank_month_ago": 46,
+   "rank_change": 38,
+   "breadth_change": 53.8,
+   "candidates": [
+    {
+     "ticker": "XYZ",
+     "name": "Block, Inc.",
+     "mcap_busd": 46.0,
+     "vs_50d_pct": -2.1
     },
     {
-     "ticker": "REG",
-     "name": "Regency Centers",
-     "mcap_busd": 14.01,
-     "vs_50d_pct": 1.7
+     "ticker": "MA",
+     "name": "Mastercard",
+     "mcap_busd": 574.95,
+     "vs_50d_pct": 7.9
     },
     {
-     "ticker": "SPG",
-     "name": "Simon Property Group",
-     "mcap_busd": 87.0,
-     "vs_50d_pct": 7.8
+     "ticker": "PYPL",
+     "name": "PayPal",
+     "mcap_busd": 48.02,
+     "vs_50d_pct": 3.0
     },
     {
-     "ticker": "ADC",
-     "name": "Agree Realty",
-     "mcap_busd": 9.46,
-     "vs_50d_pct": 7.0
+     "ticker": "V",
+     "name": "Visa Inc.",
+     "mcap_busd": 791.83,
+     "vs_50d_pct": 6.8
     },
     {
-     "ticker": "BRX",
-     "name": "Brixmor Property Group",
-     "mcap_busd": 9.47,
-     "vs_50d_pct": 7.8
+     "ticker": "TOST",
+     "name": "Toast, Inc.",
+     "mcap_busd": 19.59,
+     "vs_50d_pct": 5.4
     },
     {
-     "ticker": "KRG",
-     "name": "Kite Realty Group Trust",
-     "mcap_busd": 5.12,
-     "vs_50d_pct": 1.3
-    },
-    {
-     "ticker": "NNN",
-     "name": "NNN Reit",
-     "mcap_busd": 8.12,
+     "ticker": "WEX",
+     "name": "WEX Inc.",
+     "mcap_busd": 6.06,
      "vs_50d_pct": 1.8
     }
    ]
@@ -458,57 +215,198 @@
   {
    "group": "Pharmaceuticals",
    "members": 10,
-   "rel_1m_pct": 9.01,
-   "rel_2m_pct": 8.58,
-   "rel_1m_month_ago_pct": -0.86,
+   "rel_1m_pct": 9.51,
+   "rel_2m_pct": 7.3,
+   "rel_1m_month_ago_pct": -2.74,
    "pct_above_50d": 70.0,
    "pct_above_50d_month_ago": 50.0,
-   "rank_now": 26,
-   "rank_month_ago": 61,
-   "rank_change": 35,
+   "rank_now": 30,
+   "rank_month_ago": 67,
+   "rank_change": 37,
    "breadth_change": 20.0,
    "candidates": [
     {
      "ticker": "BMY",
      "name": "Bristol Myers Squibb",
-     "mcap_busd": 126.77,
-     "vs_50d_pct": 1.1
+     "mcap_busd": 125.83,
+     "vs_50d_pct": 0.4
     },
     {
      "ticker": "JNJ",
      "name": "Johnson & Johnson",
-     "mcap_busd": 665.53,
-     "vs_50d_pct": 3.3
+     "mcap_busd": 659.46,
+     "vs_50d_pct": 2.3
     },
     {
      "ticker": "MRK",
      "name": "Merck & Co.",
-     "mcap_busd": 349.0,
-     "vs_50d_pct": -2.4
+     "mcap_busd": 345.85,
+     "vs_50d_pct": -3.2
     },
     {
      "ticker": "PFE",
      "name": "Pfizer",
      "mcap_busd": 162.22,
-     "vs_50d_pct": -1.3
+     "vs_50d_pct": -1.4
     },
     {
      "ticker": "VTRS",
      "name": "Viatris",
-     "mcap_busd": 22.76,
-     "vs_50d_pct": 6.8
+     "mcap_busd": 22.73,
+     "vs_50d_pct": 6.3
     },
     {
      "ticker": "ZTS",
      "name": "Zoetis",
-     "mcap_busd": 33.1,
-     "vs_50d_pct": 5.2
+     "mcap_busd": 33.56,
+     "vs_50d_pct": 6.4
     },
     {
      "ticker": "JAZZ",
      "name": "Jazz Pharmaceuticals",
-     "mcap_busd": 15.52,
-     "vs_50d_pct": 5.8
+     "mcap_busd": 15.74,
+     "vs_50d_pct": 7.3
+    }
+   ]
+  },
+  {
+   "group": "Retail REITs",
+   "members": 9,
+   "rel_1m_pct": 12.87,
+   "rel_2m_pct": 14.25,
+   "rel_1m_month_ago_pct": 1.2,
+   "pct_above_50d": 100.0,
+   "pct_above_50d_month_ago": 44.4,
+   "rank_now": 18,
+   "rank_month_ago": 54,
+   "rank_change": 36,
+   "breadth_change": 55.6,
+   "candidates": [
+    {
+     "ticker": "FRT",
+     "name": "Federal Realty Investment Trust",
+     "mcap_busd": 9.89,
+     "vs_50d_pct": 4.2
+    },
+    {
+     "ticker": "O",
+     "name": "Realty Income",
+     "mcap_busd": 57.46,
+     "vs_50d_pct": 6.2
+    },
+    {
+     "ticker": "REG",
+     "name": "Regency Centers",
+     "mcap_busd": 14.12,
+     "vs_50d_pct": 2.4
+    },
+    {
+     "ticker": "KRG",
+     "name": "Kite Realty Group Trust",
+     "mcap_busd": 5.2,
+     "vs_50d_pct": 2.8
+    },
+    {
+     "ticker": "NNN",
+     "name": "NNN Reit",
+     "mcap_busd": 8.14,
+     "vs_50d_pct": 2.1
+    }
+   ]
+  },
+  {
+   "group": "Packaged Foods & Meats",
+   "members": 11,
+   "rel_1m_pct": 15.06,
+   "rel_2m_pct": 17.73,
+   "rel_1m_month_ago_pct": 2.38,
+   "pct_above_50d": 100.0,
+   "pct_above_50d_month_ago": 45.5,
+   "rank_now": 9,
+   "rank_month_ago": 44,
+   "rank_change": 35,
+   "breadth_change": 54.5,
+   "candidates": [
+    {
+     "ticker": "GIS",
+     "name": "General Mills",
+     "mcap_busd": 19.38,
+     "vs_50d_pct": 6.6
+    },
+    {
+     "ticker": "MKC",
+     "name": "McCormick & Company",
+     "mcap_busd": 13.41,
+     "vs_50d_pct": 5.7
+    },
+    {
+     "ticker": "MDLZ",
+     "name": "Mondelez International",
+     "mcap_busd": 85.84,
+     "vs_50d_pct": 7.1
+    },
+    {
+     "ticker": "SJM",
+     "name": "J.M. Smucker Company (The)",
+     "mcap_busd": 13.89,
+     "vs_50d_pct": 2.9
+    },
+    {
+     "ticker": "PPC",
+     "name": "Pilgrim's Pride",
+     "mcap_busd": 6.96,
+     "vs_50d_pct": 3.5
+    }
+   ]
+  },
+  {
+   "group": "Construction Machinery & Heavy Transportation Equipment",
+   "members": 8,
+   "rel_1m_pct": 8.34,
+   "rel_2m_pct": 2.11,
+   "rel_1m_month_ago_pct": -6.09,
+   "pct_above_50d": 75.0,
+   "pct_above_50d_month_ago": 0.0,
+   "rank_now": 44,
+   "rank_month_ago": 77,
+   "rank_change": 33,
+   "breadth_change": 75.0,
+   "candidates": [
+    {
+     "ticker": "PCAR",
+     "name": "Paccar",
+     "mcap_busd": 56.84,
+     "vs_50d_pct": 0.2
+    },
+    {
+     "ticker": "WAB",
+     "name": "Wabtec",
+     "mcap_busd": 48.26,
+     "vs_50d_pct": 0.3
+    },
+    {
+     "ticker": "ALSN",
+     "name": "Allison Transmission",
+     "mcap_busd": 10.11,
+     "vs_50d_pct": 6.4
+    },
+    {
+     "ticker": "GATX",
+     "name": "GATX",
+     "mcap_busd": 6.5,
+     "vs_50d_pct": 5.2
+    },
+    {
+     "ticker": "OSK",
+     "name": "Oshkosh",
+     "mcap_busd": 8.56,
+     "vs_50d_pct": 3.7
+    },
+    {
+     "ticker": "TEX",
+     "name": "Terex",
+     "mcap_busd": 6.63,
+     "vs_50d_pct": 7.5
     }
    ]
   }
