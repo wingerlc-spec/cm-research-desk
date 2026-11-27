@@ -1,7 +1,7 @@
 {
  "meta": {
   "asof": "2026-11-25",
-  "generated_utc": "2026-11-26 05:32",
+  "generated_utc": "2026-11-27 05:29",
   "thresholds": {
    "trend": "stress below the 200-day; caution below the 50-day or 7%+ off the 52-week high",
    "breadth": "caution under 50% above the 200-day, stress under 35%",

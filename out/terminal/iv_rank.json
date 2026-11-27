@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "out/history/iv",
-  "pulled_utc": "2026-11-26 05:36",
+  "pulled_utc": "2026-11-27 05:34",
   "notes": [
    "iv_rank = percentile of today's 30-day at-the-money iv in the ticker's own snapshots; needs 60 observations"
   ]
@@ -1381,10 +1381,10 @@
   },
   {
    "ticker": "DDOG",
-   "date": "2026-11-20",
-   "iv_atm_30d": 0.6912,
-   "n_obs": 3,
-   "status": "building, 3 days"
+   "date": "2026-11-27",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 4,
+   "status": "building, 4 days"
   },
   {
    "ticker": "DE",
@@ -2550,10 +2550,10 @@
   },
   {
    "ticker": "IRM",
-   "date": "2026-11-20",
-   "iv_atm_30d": 0.3925,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-27",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "ISRG",
@@ -2683,10 +2683,10 @@
   },
   {
    "ticker": "KIM",
-   "date": "2026-11-20",
-   "iv_atm_30d": 0.3052,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-27",
+   "iv_atm_30d": 0.0625,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "KKR",
@@ -3341,10 +3341,10 @@
   },
   {
    "ticker": "NXST",
-   "date": "2026-11-20",
-   "iv_atm_30d": 0.4835,
-   "n_obs": 1,
-   "status": "building, 1 days"
+   "date": "2026-11-27",
+   "iv_atm_30d": 1.4954,
+   "n_obs": 2,
+   "status": "building, 2 days"
   },
   {
    "ticker": "NXT",

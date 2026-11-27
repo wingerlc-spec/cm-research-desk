@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "SEC 8-K Item 2.02 dates (backfill) and Yahoo earnings dates (nightly); prices from Yahoo",
-  "pulled_utc": "2026-11-26 05:36",
+  "pulled_utc": "2026-11-27 05:34",
   "notes": [
    "Reaction day = whichever of the earnings date and the next session traded more volume (timing is not known). move_pct is close-to-close on that day; move5_pct runs from the close before it through 4 sessions after.",
    "implied_move_pct = at-the-money straddle mid of the first expiry after the print / price, from the last iv snapshot before it; backfilled rows have no implied move."
@@ -1784,14 +1784,6 @@
    "ticker": "ADSK",
    "moves": [
     {
-     "earnings_date": "2024-02-29",
-     "source": "8-K Item 2.02 backfill",
-     "reaction_date": "2024-03-01",
-     "move_pct": 2.54,
-     "move5_pct": -1.68,
-     "implied_move_pct": null
-    },
-    {
      "earnings_date": "2024-06-03",
      "source": "8-K Item 2.02 backfill",
      "reaction_date": "2024-06-03",
@@ -1878,10 +1870,25 @@
      "move_pct": 6.21,
      "move5_pct": -5.12,
      "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-24",
+     "source": "nightly",
+     "reaction_date": "2026-11-25",
+     "move_pct": -3.48,
+     "move5_pct": null,
+     "implied_move_pct": 9.7
     }
    ],
    "median_abs_move_pct": 4.29,
-   "n": 12
+   "n": 12,
+   "implied_vs_actual": [
+    {
+     "earnings_date": "2026-11-24",
+     "implied": 9.7,
+     "actual_abs": 3.48
+    }
+   ]
   },
   {
    "ticker": "AEE",
@@ -25870,14 +25877,6 @@
    "ticker": "DY",
    "moves": [
     {
-     "earnings_date": "2023-11-21",
-     "source": "8-K Item 2.02 backfill",
-     "reaction_date": "2023-11-21",
-     "move_pct": 17.35,
-     "move5_pct": 16.13,
-     "implied_move_pct": null
-    },
-    {
      "earnings_date": "2024-02-28",
      "source": "8-K Item 2.02 backfill",
      "reaction_date": "2024-02-28",
@@ -25964,10 +25963,25 @@
      "move_pct": -11.62,
      "move5_pct": -18.33,
      "implied_move_pct": null
+    },
+    {
+     "earnings_date": "2026-11-24",
+     "source": "nightly",
+     "reaction_date": "2026-11-24",
+     "move_pct": -18.02,
+     "move5_pct": null,
+     "implied_move_pct": 18.9
     }
    ],
    "median_abs_move_pct": 9.04,
-   "n": 12
+   "n": 12,
+   "implied_vs_actual": [
+    {
+     "earnings_date": "2026-11-24",
+     "implied": 18.9,
+     "actual_abs": 18.02
+    }
+   ]
   },
   {
    "ticker": "EAT",

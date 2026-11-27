@@ -2,7 +2,7 @@
  "meta": {
   "rule": "One-day drop of 10 percent or more on at least 2.5 times the prior 20-day volume in the last 15 sessions, $5B+ names, where next-year EPS estimates have fallen less than 2 percent since the day before the drop.",
   "asof": "2026-11-25",
-  "generated_utc": "2026-11-26 05:38",
+  "generated_utc": "2026-11-27 05:35",
   "caveats": [
    "Until estimate snapshots cover the drop date, the estimate change uses Yahoo's 7 or 30 day trend fields and is flagged 'estimate history building'.",
    "gap_left_pct = how far the pre-drop close is above today's price."
@@ -34,19 +34,6 @@
    "pre_drop_close": 233.13,
    "gap_left_pct": 16.6,
    "next_earnings": "2027-02-04"
-  },
-  {
-   "ticker": "DY",
-   "name": "Dycom Industries",
-   "drop_date": "2026-11-24",
-   "drop_pct": -18.0,
-   "volume_multiple": 3.0,
-   "est_change_pct": -1.76,
-   "est_basis": "estimate snapshots",
-   "last": 177.64,
-   "pre_drop_close": 218.37,
-   "gap_left_pct": 22.9,
-   "next_earnings": null
   },
   {
    "ticker": "MU",
@@ -145,7 +132,7 @@
    "drop_date": "2026-11-05",
    "drop_pct": -15.2,
    "volume_multiple": 2.9,
-   "est_change_pct": 4.86,
+   "est_change_pct": 4.73,
    "est_basis": "Yahoo trend vs 30daysAgo; estimate history building",
    "last": 212.15,
    "pre_drop_close": 250.99,
@@ -345,7 +332,7 @@
    "last": 1099.58,
    "pre_drop_close": 1091.31,
    "gap_left_pct": -0.8,
-   "next_earnings": null
+   "next_earnings": "2027-02-18"
   },
   {
    "ticker": "ON",
@@ -397,7 +384,7 @@
    "last": 104.06,
    "pre_drop_close": 118.66,
    "gap_left_pct": 14.0,
-   "next_earnings": null
+   "next_earnings": "2027-02-11"
   },
   {
    "ticker": "CGNX",
@@ -423,7 +410,7 @@
    "last": 27.23,
    "pre_drop_close": 29.38,
    "gap_left_pct": 7.9,
-   "next_earnings": null
+   "next_earnings": "2027-02-03"
   },
   {
    "ticker": "MPWR",
@@ -436,7 +423,7 @@
    "last": 1194.63,
    "pre_drop_close": 1261.08,
    "gap_left_pct": 5.6,
-   "next_earnings": null
+   "next_earnings": "2027-02-04"
   },
   {
    "ticker": "UNH",

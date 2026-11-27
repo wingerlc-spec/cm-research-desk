@@ -2,13 +2,13 @@
  "meta": {
   "rule": "Market cap $5B or more; cash spent on repurchases over the last four quarters (XBRL PaymentsForRepurchaseOfCommonStock) at least 5 percent of market cap; shares outstanding (XBRL dei cover page, else us-gaap) down 4 percent or more year over year; forward P/E between 0 and 12.",
   "asof": "2026-11-25",
-  "generated_utc": "2026-11-26 05:38",
+  "generated_utc": "2026-11-27 05:35",
   "caveats": [
    "SEC data is refreshed for about a fifth of the universe per night plus the ranked names, so a name can lag its latest filing by up to a week.",
    "Repurchase cash includes shares withheld for taxes at some companies.",
    "839 of 831 $5B+ names have SEC data cached so far."
   ],
-  "xbrl_refreshed_this_run": 172
+  "xbrl_refreshed_this_run": 134
  },
  "rows": [
   {
@@ -18,10 +18,10 @@
    "mcap_busd": 11.3,
    "buyback_yield_pct": 22.35,
    "share_change_yoy_pct": -100.0,
-   "fwd_pe": 7.45,
+   "fwd_pe": 8.69,
    "last": 19.71,
    "pct_from_52w_high": -29.1,
-   "next_earnings": null
+   "next_earnings": "2027-02-11"
   },
   {
    "ticker": "CRBG",
@@ -54,10 +54,10 @@
    "mcap_busd": 5.84,
    "buyback_yield_pct": 17.01,
    "share_change_yoy_pct": -12.31,
-   "fwd_pe": 7.57,
+   "fwd_pe": 7.85,
    "last": 182.61,
    "pct_from_52w_high": -20.6,
-   "next_earnings": null
+   "next_earnings": "2027-02-12"
   },
   {
    "ticker": "CART",
@@ -276,18 +276,6 @@
    "next_earnings": "2027-02-12"
   },
   {
-   "ticker": "HUBS",
-   "name": "HubSpot",
-   "sector": "Information Technology",
-   "mcap_busd": 10.27,
-   "buyback_yield_pct": 9.63,
-   "share_change_yoy_pct": -6.77,
-   "fwd_pe": 11.44,
-   "last": 210.21,
-   "pct_from_52w_high": -48.2,
-   "next_earnings": null
-  },
-  {
    "ticker": "CROX",
    "name": "Crocs",
    "sector": "Consumer Discretionary",
@@ -330,7 +318,7 @@
    "mcap_busd": 12.63,
    "buyback_yield_pct": 8.44,
    "share_change_yoy_pct": -7.38,
-   "fwd_pe": 8.8,
+   "fwd_pe": 9.52,
    "last": 81.51,
    "pct_from_52w_high": -15.6,
    "next_earnings": "2027-02-02"
@@ -339,8 +327,8 @@
    "ticker": "INTU",
    "name": "Intuit",
    "sector": "Information Technology",
-   "mcap_busd": 71.74,
-   "buyback_yield_pct": 8.41,
+   "mcap_busd": 71.59,
+   "buyback_yield_pct": 8.42,
    "share_change_yoy_pct": -5.17,
    "fwd_pe": 10.09,
    "last": 271.72,
@@ -447,8 +435,8 @@
    "ticker": "GAP",
    "name": "Gap Inc.",
    "sector": "Consumer Discretionary",
-   "mcap_busd": 8.15,
-   "buyback_yield_pct": 7.41,
+   "mcap_busd": 8.17,
+   "buyback_yield_pct": 7.39,
    "share_change_yoy_pct": -5.31,
    "fwd_pe": 9.23,
    "last": 23.21,
@@ -534,7 +522,7 @@
    "mcap_busd": 10.53,
    "buyback_yield_pct": 6.6,
    "share_change_yoy_pct": -4.37,
-   "fwd_pe": 9.55,
+   "fwd_pe": 9.61,
    "last": 22.36,
    "pct_from_52w_high": -14.8,
    "next_earnings": "2027-01-13"
@@ -570,10 +558,10 @@
    "mcap_busd": 14.52,
    "buyback_yield_pct": 6.01,
    "share_change_yoy_pct": -6.84,
-   "fwd_pe": 5.12,
+   "fwd_pe": 4.89,
    "last": 85.76,
    "pct_from_52w_high": -33.1,
-   "next_earnings": null
+   "next_earnings": "2027-02-17"
   },
   {
    "ticker": "WFC",
@@ -609,7 +597,7 @@
    "fwd_pe": 8.76,
    "last": 99.27,
    "pct_from_52w_high": -5.3,
-   "next_earnings": null
+   "next_earnings": "2027-02-02"
   },
   {
    "ticker": "CF",
