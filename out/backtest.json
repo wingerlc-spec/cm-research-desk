@@ -1,38 +1,38 @@
 {
  "RECOVERY_LEADER": {
-  "n": 1061,
+  "n": 1064,
   "months_with_signals": 100,
   "e60": {
-   "mean_excess": 7.16,
+   "mean_excess": 7.14,
    "baseline": 0.28,
-   "edge": 6.88,
-   "edge_month_matched": 4.6,
+   "edge": 6.86,
+   "edge_month_matched": 4.62,
    "t_clustered": 3.7,
    "pct_months_positive": 62.0,
-   "median": 5.21,
+   "median": 5.09,
    "baseline_median": -0.64,
    "pct_beat_spy": 58.0,
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 11.28,
+   "mean_excess": 11.25,
    "baseline": 0.4,
-   "edge": 10.88,
-   "edge_month_matched": 10.91,
-   "t_clustered": 5.6,
+   "edge": 10.85,
+   "edge_month_matched": 10.95,
+   "t_clustered": 5.7,
    "pct_months_positive": 74.0,
-   "median": 4.41,
+   "median": 4.38,
    "baseline_median": -1.66,
    "pct_beat_spy": 56.0,
    "baseline_pct_beat_spy": 46.0
   },
   "edge120_first_half": 12.03,
-  "edge120_second_half": 10.0,
+  "edge120_second_half": 9.96,
   "by_condition": {
    "spy_above_200d": {
-    "n": 828,
-    "edge120": 11.83,
-    "t_clustered": 4.7
+    "n": 831,
+    "edge120": 11.8,
+    "t_clustered": 4.8
    },
    "spy_below_200d": {
     "n": 233,
@@ -40,13 +40,13 @@
     "t_clustered": 2.6
    },
    "sector_leading": {
-    "n": 668,
-    "edge120": 11.16,
-    "t_clustered": 4.9
+    "n": 669,
+    "edge120": 11.19,
+    "t_clustered": 5.0
    },
    "sector_lagging": {
-    "n": 393,
-    "edge120": 10.39,
+    "n": 395,
+    "edge120": 10.26,
     "t_clustered": 3.1
    }
   },
@@ -106,13 +106,13 @@
   "verdict": "WORKS"
  },
  "BASE_COIL": {
-  "n": 18305,
+  "n": 18310,
   "months_with_signals": 103,
   "e60": {
    "mean_excess": -1.16,
    "baseline": 0.28,
    "edge": -1.44,
-   "edge_month_matched": -1.66,
+   "edge_month_matched": -1.67,
    "t_clustered": -4.5,
    "pct_months_positive": 35.0,
    "median": -1.26,
@@ -123,11 +123,11 @@
   "e120": {
    "mean_excess": -1.63,
    "baseline": 0.4,
-   "edge": -2.04,
+   "edge": -2.03,
    "edge_month_matched": -2.45,
    "t_clustered": -5.1,
    "pct_months_positive": 26.0,
-   "median": -2.35,
+   "median": -2.34,
    "baseline_median": -1.66,
    "pct_beat_spy": 44.0,
    "baseline_pct_beat_spy": 46.0
@@ -136,7 +136,7 @@
   "edge120_second_half": -1.98,
   "by_condition": {
    "spy_above_200d": {
-    "n": 16565,
+    "n": 16570,
     "edge120": -1.68,
     "t_clustered": -3.5
    },
@@ -148,10 +148,10 @@
    "sector_leading": {
     "n": 9296,
     "edge120": -2.47,
-    "t_clustered": -5.4
+    "t_clustered": -5.5
    },
    "sector_lagging": {
-    "n": 9009,
+    "n": 9014,
     "edge120": -1.59,
     "t_clustered": -3.1
    }
@@ -159,7 +159,7 @@
   "verdict": "HURTS"
  },
  "MOMENTUM": {
-  "n": 18076,
+  "n": 18078,
   "months_with_signals": 104,
   "e60": {
    "mean_excess": -0.26,
@@ -177,7 +177,7 @@
    "mean_excess": -0.05,
    "baseline": 0.4,
    "edge": -0.45,
-   "edge_month_matched": -0.26,
+   "edge_month_matched": -0.25,
    "t_clustered": -0.5,
    "pct_months_positive": 50.0,
    "median": -1.9,
@@ -189,7 +189,7 @@
   "edge120_second_half": 1.1,
   "by_condition": {
    "spy_above_200d": {
-    "n": 16950,
+    "n": 16952,
     "edge120": -0.01,
     "t_clustered": -0.6
    },
@@ -204,7 +204,7 @@
     "t_clustered": -0.3
    },
    "sector_lagging": {
-    "n": 7880,
+    "n": 7882,
     "edge120": -0.4,
     "t_clustered": -0.3
    }
@@ -265,13 +265,13 @@
   "verdict": "WORKS"
  },
  "VALUE_DIVERGENCE": {
-  "n": 10799,
+  "n": 10804,
   "months_with_signals": 104,
   "e60": {
    "mean_excess": 1.64,
    "baseline": 0.28,
    "edge": 1.36,
-   "edge_month_matched": 0.09,
+   "edge_month_matched": 0.08,
    "t_clustered": 0.2,
    "pct_months_positive": 46.0,
    "median": 0.17,
@@ -283,7 +283,7 @@
    "mean_excess": 3.84,
    "baseline": 0.4,
    "edge": 3.44,
-   "edge_month_matched": 1.18,
+   "edge_month_matched": 1.15,
    "t_clustered": 2.0,
    "pct_months_positive": 52.0,
    "median": 0.42,
@@ -292,10 +292,10 @@
    "baseline_pct_beat_spy": 46.0
   },
   "edge120_first_half": 5.32,
-  "edge120_second_half": 2.27,
+  "edge120_second_half": 2.26,
   "by_condition": {
    "spy_above_200d": {
-    "n": 6710,
+    "n": 6715,
     "edge120": 3.48,
     "t_clustered": 0.9
    },
@@ -305,23 +305,23 @@
     "t_clustered": 1.6
    },
    "sector_leading": {
-    "n": 4518,
-    "edge120": 5.25,
-    "t_clustered": 3.3
+    "n": 4519,
+    "edge120": 5.24,
+    "t_clustered": 3.4
    },
    "sector_lagging": {
-    "n": 6281,
-    "edge120": 2.13,
+    "n": 6285,
+    "edge120": 2.14,
     "t_clustered": 0.7
    }
   },
   "verdict": "WORKS"
  },
  "MACRO_PUNISHED": {
-  "n": 18066,
+  "n": 18077,
   "months_with_signals": 104,
   "e60": {
-   "mean_excess": 0.52,
+   "mean_excess": 0.53,
    "baseline": 0.28,
    "edge": 0.25,
    "edge_month_matched": 0.05,
@@ -333,22 +333,22 @@
    "baseline_pct_beat_spy": 48.0
   },
   "e120": {
-   "mean_excess": 0.66,
+   "mean_excess": 0.67,
    "baseline": 0.4,
-   "edge": 0.26,
-   "edge_month_matched": 0.16,
+   "edge": 0.27,
+   "edge_month_matched": 0.15,
    "t_clustered": 0.4,
    "pct_months_positive": 58.0,
-   "median": -1.74,
+   "median": -1.73,
    "baseline_median": -1.66,
    "pct_beat_spy": 47.0,
    "baseline_pct_beat_spy": 46.0
   },
   "edge120_first_half": 0.92,
-  "edge120_second_half": -0.23,
+  "edge120_second_half": -0.22,
   "by_condition": {
    "spy_above_200d": {
-    "n": 15616,
+    "n": 15627,
     "edge120": 0.04,
     "t_clustered": -1.2
    },
@@ -358,20 +358,20 @@
     "t_clustered": 0.6
    },
    "sector_leading": {
-    "n": 10155,
+    "n": 10156,
     "edge120": 0.5,
     "t_clustered": 0.6
    },
    "sector_lagging": {
-    "n": 7911,
-    "edge120": -0.05,
+    "n": 7921,
+    "edge120": -0.04,
     "t_clustered": 0.9
    }
   },
   "verdict": "NOT SHOWN"
  },
  "_baseline": {
-  "n": 184183,
+  "n": 184192,
   "mean_excess_60": 0.28,
   "mean_excess_120": 0.4,
   "median_120": -1.66,
@@ -379,12 +379,12 @@
   "split_month": 202204,
   "trim": {
    "e60": [
-    -34.43083919703928,
-    52.059308725489444
+    -34.431354581474544,
+    52.05860643540629
    ],
    "e120": [
-    -46.902033222940574,
-    87.05732196537116
+    -46.90194533357419,
+    87.05658529787672
    ]
   }
  },
